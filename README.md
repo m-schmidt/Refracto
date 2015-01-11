@@ -18,7 +18,7 @@ Refracto - Refractometer Calculator for Homebrewers
 
 1. The resulting *original gravity* (OG).
 - The estimated *alcohol* concentration as percent by volume.
-- The *final fravity* (FG), displayed on the top as *apparent gravity* and as *actual gravity* on the bottom. The apparent gravity corresponds to a measurement with a hydrometer.
+- The *final gravity* (FG), displayed on the top as *apparent gravity* and as *actual gravity* on the bottom. The apparent gravity corresponds to a measurement with a hydrometer.
 - The amount of sugars consumed by the yeast so far, again displayed as *apparent fermentation rate* on top and as *actual fermentation rate* below.
 
 <img src="./Images/Output.png" alt="Computed Values" align="center" width="360" />
