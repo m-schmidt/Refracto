@@ -1,0 +1,32 @@
+"modeStandard" = "Standard";
+"modeTerrillLinear" = "Terrill Linear";
+"modeTerrillCubic" = "Terrill Cubic";
+
+"mailSubject" = "About Refracto";
+"mailBody" = "Hello,\n\n";
+
+"mailFailedTitle" = "Sending Failed";
+"mailFailedMessage" = "Your mail could not be sent. Please check your network settings or try again later.";
+
+"mailNoAccountTitle" = "No Mail Account Configured";
+"mailNoAccountMessage" = "You must first configure a mail account for your system to contact support.\n\nAlternatively you can write to %@ by other means.";
+
+"settingsTitle" = "Settings";
+
+"detailUnitPlato" = "°Plato (°P)";
+"detailUnitSG" = "Specific Gravity (SG)";
+"detailUnitSGShort" = "Specific Gravity (SG)";
+
+"headerSupport" = "Support";
+"headerStore" = "App Store";
+
+"footerSettings" = "The wort correction factor is used to convert from °Brix to °Plato for unfermented wort.";
+"footerStore" = "If you like Refracto, please take the time to give it a nice review. It really helps.";
+
+"itemUnitTitle" = "Gravity Unit";
+"itemCorrectionTitle" = "Wort Correction Factor";
+"itemWebsiteTitle" = "Visit Refracto Website";
+"itemContactTitle" = "Contact Support";
+"itemRateTitle" = "Rate on App Store";
+
+"outOfRange" = "Value out of range";

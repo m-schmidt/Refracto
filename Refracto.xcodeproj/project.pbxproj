@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D3584F619EC5067007EEC22 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3584F519EC5067007EEC22 /* SettingsController.m */; };
+		4D3584FD19EC6B9B007EEC22 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3584FC19EC6B9B007EEC22 /* SliderCell.m */; };
+		4D35850019EEBDE8007EEC22 /* VerticalRefractionPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3584FF19EEBDE8007EEC22 /* VerticalRefractionPicker.m */; };
+		4D35850419EED827007EEC22 /* VerticalRefractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D35850319EED827007EEC22 /* VerticalRefractionCell.m */; };
+		4D35850719EF104E007EEC22 /* VerticalRefractionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D35850619EF104E007EEC22 /* VerticalRefractionLayout.m */; };
+		4D35850A19EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D35850919EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m */; };
+		4D4F860619F3D67500DEDB55 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4F860519F3D67500DEDB55 /* MessageUI.framework */; };
+		4DA96B2E1A2FBE8F00E4091A /* RefractometerDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA96B2D1A2FBE8F00E4091A /* RefractometerDisplayController.m */; };
+		4DA96B311A2FC30500E4091A /* RefractometerInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA96B301A2FC30500E4091A /* RefractometerInputController.m */; };
+		4DAB297619C24CF300AF04FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB297519C24CF300AF04FF /* main.m */; };
+		4DAB297919C24CF300AF04FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB297819C24CF300AF04FF /* AppDelegate.m */; };
+		4DAB297C19C24CF300AF04FF /* RefractometerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB297B19C24CF300AF04FF /* RefractometerController.m */; };
+		4DAB298219C24CF300AF04FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB298019C24CF300AF04FF /* Main.storyboard */; };
+		4DAB298419C24CF300AF04FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB298319C24CF300AF04FF /* Images.xcassets */; };
+		4DAB298719C24CF300AF04FF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB298519C24CF300AF04FF /* LaunchScreen.xib */; };
+		4DAB299319C24CF300AF04FF /* RefractoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB299219C24CF300AF04FF /* RefractoTests.m */; };
+		4DAB299E19C24DF100AF04FF /* RefractometerComputation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB299D19C24DF100AF04FF /* RefractometerComputation.m */; };
+		4DB1179B19C7841C0027AB70 /* HorizontalModeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1179A19C7841C0027AB70 /* HorizontalModeLayout.m */; };
+		4DB1179E19C788420027AB70 /* HorizontalModeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1179D19C788420027AB70 /* HorizontalModeCell.m */; };
+		4DB117A119C7932E0027AB70 /* HorizontalModePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB117A019C7932E0027AB70 /* HorizontalModePicker.m */; };
+		4DDFD44B1A52BBA6003AD7F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DDFD44D1A52BBA6003AD7F7 /* Localizable.strings */; };
+		4DEE84561A4F5DF6004BFAC3 /* VerticalRefractionDottedNeedle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE84551A4F5DF6004BFAC3 /* VerticalRefractionDottedNeedle.m */; };
+		4DEE84591A50217C004BFAC3 /* NSDecimalNumber+Refracto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE84581A50217C004BFAC3 /* NSDecimalNumber+Refracto.m */; };
+		4DF58A3C1A5615B0007F508B /* RootTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF58A3B1A5615B0007F508B /* RootTabController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DAB298D19C24CF300AF04FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DAB296819C24CF300AF04FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DAB296F19C24CF300AF04FF;
+			remoteInfo = Refractometer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4D3584F419EC5067007EEC22 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
+		4D3584F519EC5067007EEC22 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
+		4D3584FB19EC6B9B007EEC22 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
+		4D3584FC19EC6B9B007EEC22 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
+		4D3584FE19EEBDE8007EEC22 /* VerticalRefractionPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalRefractionPicker.h; sourceTree = "<group>"; };
+		4D3584FF19EEBDE8007EEC22 /* VerticalRefractionPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionPicker.m; sourceTree = "<group>"; };
+		4D35850219EED827007EEC22 /* VerticalRefractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalRefractionCell.h; sourceTree = "<group>"; };
+		4D35850319EED827007EEC22 /* VerticalRefractionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionCell.m; sourceTree = "<group>"; };
+		4D35850519EF104E007EEC22 /* VerticalRefractionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalRefractionLayout.h; sourceTree = "<group>"; };
+		4D35850619EF104E007EEC22 /* VerticalRefractionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionLayout.m; sourceTree = "<group>"; };
+		4D35850819EFB92C007EEC22 /* VerticalRefractionSupplementaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalRefractionSupplementaryView.h; sourceTree = "<group>"; };
+		4D35850919EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionSupplementaryView.m; sourceTree = "<group>"; };
+		4D4F860519F3D67500DEDB55 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4D4F860719F3DED400DEDB55 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4D9796A41A521E1100B91C6C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		4D9796A51A521E1100B91C6C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4DA96B2C1A2FBE8F00E4091A /* RefractometerDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefractometerDisplayController.h; sourceTree = "<group>"; };
+		4DA96B2D1A2FBE8F00E4091A /* RefractometerDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefractometerDisplayController.m; sourceTree = "<group>"; };
+		4DA96B2F1A2FC30500E4091A /* RefractometerInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefractometerInputController.h; sourceTree = "<group>"; };
+		4DA96B301A2FC30500E4091A /* RefractometerInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefractometerInputController.m; sourceTree = "<group>"; };
+		4DAB297019C24CF300AF04FF /* Refracto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Refracto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DAB297419C24CF300AF04FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DAB297519C24CF300AF04FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4DAB297719C24CF300AF04FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4DAB297819C24CF300AF04FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4DAB297A19C24CF300AF04FF /* RefractometerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefractometerController.h; sourceTree = "<group>"; };
+		4DAB297B19C24CF300AF04FF /* RefractometerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefractometerController.m; sourceTree = "<group>"; };
+		4DAB298119C24CF300AF04FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DAB298319C24CF300AF04FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4DAB298619C24CF300AF04FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4DAB298C19C24CF300AF04FF /* RefractoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RefractoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DAB299119C24CF300AF04FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DAB299219C24CF300AF04FF /* RefractoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefractoTests.m; sourceTree = "<group>"; };
+		4DAB299C19C24DF100AF04FF /* RefractometerComputation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefractometerComputation.h; sourceTree = "<group>"; };
+		4DAB299D19C24DF100AF04FF /* RefractometerComputation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefractometerComputation.m; sourceTree = "<group>"; };
+		4DB1179919C7841C0027AB70 /* HorizontalModeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalModeLayout.h; sourceTree = "<group>"; };
+		4DB1179A19C7841C0027AB70 /* HorizontalModeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalModeLayout.m; sourceTree = "<group>"; };
+		4DB1179C19C788420027AB70 /* HorizontalModeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalModeCell.h; sourceTree = "<group>"; };
+		4DB1179D19C788420027AB70 /* HorizontalModeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalModeCell.m; sourceTree = "<group>"; };
+		4DB1179F19C7932E0027AB70 /* HorizontalModePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalModePicker.h; sourceTree = "<group>"; };
+		4DB117A019C7932E0027AB70 /* HorizontalModePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalModePicker.m; sourceTree = "<group>"; };
+		4DB117A219C79E080027AB70 /* Refracto-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Refracto-Prefix.pch"; sourceTree = "<group>"; };
+		4DC43B251A3E3CBD0062FBB9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4DD7E21A19C5BE7400E9447E /* StyleSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StyleSettings.plist; sourceTree = "<group>"; };
+		4DDFD44C1A52BBA6003AD7F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4DDFD44E1A52BBA8003AD7F7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4DEE84541A4F5DF6004BFAC3 /* VerticalRefractionDottedNeedle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalRefractionDottedNeedle.h; sourceTree = "<group>"; };
+		4DEE84551A4F5DF6004BFAC3 /* VerticalRefractionDottedNeedle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionDottedNeedle.m; sourceTree = "<group>"; };
+		4DEE84571A50217C004BFAC3 /* NSDecimalNumber+Refracto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Refracto.h"; sourceTree = "<group>"; };
+		4DEE84581A50217C004BFAC3 /* NSDecimalNumber+Refracto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Refracto.m"; sourceTree = "<group>"; };
+		4DF58A3A1A5615B0007F508B /* RootTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabController.h; sourceTree = "<group>"; };
+		4DF58A3B1A5615B0007F508B /* RootTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DAB296D19C24CF300AF04FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D4F860619F3D67500DEDB55 /* MessageUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DAB298919C24CF300AF04FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D3584FA19EC69BD007EEC22 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4D3584FB19EC6B9B007EEC22 /* SliderCell.h */,
+				4D3584FC19EC6B9B007EEC22 /* SliderCell.m */,
+				4D3584F419EC5067007EEC22 /* SettingsController.h */,
+				4D3584F519EC5067007EEC22 /* SettingsController.m */,
+				4DF58A3A1A5615B0007F508B /* RootTabController.h */,
+				4DF58A3B1A5615B0007F508B /* RootTabController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		4D35850119EEBE13007EEC22 /* Vertical Picker for Refraction Values */ = {
+			isa = PBXGroup;
+			children = (
+				4D3584FE19EEBDE8007EEC22 /* VerticalRefractionPicker.h */,
+				4D3584FF19EEBDE8007EEC22 /* VerticalRefractionPicker.m */,
+				4D35850519EF104E007EEC22 /* VerticalRefractionLayout.h */,
+				4D35850619EF104E007EEC22 /* VerticalRefractionLayout.m */,
+				4D35850219EED827007EEC22 /* VerticalRefractionCell.h */,
+				4D35850319EED827007EEC22 /* VerticalRefractionCell.m */,
+				4D35850819EFB92C007EEC22 /* VerticalRefractionSupplementaryView.h */,
+				4D35850919EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m */,
+				4DEE84541A4F5DF6004BFAC3 /* VerticalRefractionDottedNeedle.h */,
+				4DEE84551A4F5DF6004BFAC3 /* VerticalRefractionDottedNeedle.m */,
+			);
+			name = "Vertical Picker for Refraction Values";
+			sourceTree = "<group>";
+		};
+		4D4F860919F3DEE200DEDB55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DC43B251A3E3CBD0062FBB9 /* AVFoundation.framework */,
+				4D4F860719F3DED400DEDB55 /* StoreKit.framework */,
+				4D4F860519F3D67500DEDB55 /* MessageUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D4F860E19F3F13D00DEDB55 /* Refractometer */ = {
+			isa = PBXGroup;
+			children = (
+				4DAB299C19C24DF100AF04FF /* RefractometerComputation.h */,
+				4DAB299D19C24DF100AF04FF /* RefractometerComputation.m */,
+				4DAB297A19C24CF300AF04FF /* RefractometerController.h */,
+				4DAB297B19C24CF300AF04FF /* RefractometerController.m */,
+				4DA96B2C1A2FBE8F00E4091A /* RefractometerDisplayController.h */,
+				4DA96B2D1A2FBE8F00E4091A /* RefractometerDisplayController.m */,
+				4DA96B2F1A2FC30500E4091A /* RefractometerInputController.h */,
+				4DA96B301A2FC30500E4091A /* RefractometerInputController.m */,
+			);
+			name = Refractometer;
+			sourceTree = "<group>";
+		};
+		4DAB296719C24CF300AF04FF = {
+			isa = PBXGroup;
+			children = (
+				4DAB297219C24CF300AF04FF /* Refracto */,
+				4DAB298F19C24CF300AF04FF /* RefractoTests */,
+				4D4F860919F3DEE200DEDB55 /* Frameworks */,
+				4DAB297119C24CF300AF04FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4DAB297119C24CF300AF04FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DAB297019C24CF300AF04FF /* Refracto.app */,
+				4DAB298C19C24CF300AF04FF /* RefractoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DAB297219C24CF300AF04FF /* Refracto */ = {
+			isa = PBXGroup;
+			children = (
+				4DAB297719C24CF300AF04FF /* AppDelegate.h */,
+				4DAB297819C24CF300AF04FF /* AppDelegate.m */,
+				4DEE84571A50217C004BFAC3 /* NSDecimalNumber+Refracto.h */,
+				4DEE84581A50217C004BFAC3 /* NSDecimalNumber+Refracto.m */,
+				4DB1179819C783A00027AB70 /* Horizontal Picker for Computation Mode */,
+				4D35850119EEBE13007EEC22 /* Vertical Picker for Refraction Values */,
+				4D4F860E19F3F13D00DEDB55 /* Refractometer */,
+				4D3584FA19EC69BD007EEC22 /* Settings */,
+				4DDFD44F1A52BBCE003AD7F7 /* Resources */,
+				4DAB298319C24CF300AF04FF /* Images.xcassets */,
+				4DAB297319C24CF300AF04FF /* Supporting Files */,
+			);
+			path = Refracto;
+			sourceTree = "<group>";
+		};
+		4DAB297319C24CF300AF04FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DB117A219C79E080027AB70 /* Refracto-Prefix.pch */,
+				4DAB297519C24CF300AF04FF /* main.m */,
+				4DAB297419C24CF300AF04FF /* Info.plist */,
+				4DD7E21A19C5BE7400E9447E /* StyleSettings.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DAB298F19C24CF300AF04FF /* RefractoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DAB299219C24CF300AF04FF /* RefractoTests.m */,
+				4DAB299019C24CF300AF04FF /* Supporting Files */,
+			);
+			path = RefractoTests;
+			sourceTree = "<group>";
+		};
+		4DAB299019C24CF300AF04FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DAB299119C24CF300AF04FF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DB1179819C783A00027AB70 /* Horizontal Picker for Computation Mode */ = {
+			isa = PBXGroup;
+			children = (
+				4DB1179F19C7932E0027AB70 /* HorizontalModePicker.h */,
+				4DB117A019C7932E0027AB70 /* HorizontalModePicker.m */,
+				4DB1179919C7841C0027AB70 /* HorizontalModeLayout.h */,
+				4DB1179A19C7841C0027AB70 /* HorizontalModeLayout.m */,
+				4DB1179C19C788420027AB70 /* HorizontalModeCell.h */,
+				4DB1179D19C788420027AB70 /* HorizontalModeCell.m */,
+			);
+			name = "Horizontal Picker for Computation Mode";
+			sourceTree = "<group>";
+		};
+		4DDFD44F1A52BBCE003AD7F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DDFD44D1A52BBA6003AD7F7 /* Localizable.strings */,
+				4DAB298019C24CF300AF04FF /* Main.storyboard */,
+				4DAB298519C24CF300AF04FF /* LaunchScreen.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DAB296F19C24CF300AF04FF /* Refracto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DAB299619C24CF300AF04FF /* Build configuration list for PBXNativeTarget "Refracto" */;
+			buildPhases = (
+				4DAB296C19C24CF300AF04FF /* Sources */,
+				4DAB296D19C24CF300AF04FF /* Frameworks */,
+				4DAB296E19C24CF300AF04FF /* Resources */,
+				OBJCLEANCUSTOMRUNSCRIPTT /* Objective-Clean Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Refracto;
+			productName = Refractometer;
+			productReference = 4DAB297019C24CF300AF04FF /* Refracto.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4DAB298B19C24CF300AF04FF /* RefractoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DAB299919C24CF300AF04FF /* Build configuration list for PBXNativeTarget "RefractoTests" */;
+			buildPhases = (
+				4DAB298819C24CF300AF04FF /* Sources */,
+				4DAB298919C24CF300AF04FF /* Frameworks */,
+				4DAB298A19C24CF300AF04FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DAB298E19C24CF300AF04FF /* PBXTargetDependency */,
+			);
+			name = RefractoTests;
+			productName = RefractometerTests;
+			productReference = 4DAB298C19C24CF300AF04FF /* RefractoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DAB296819C24CF300AF04FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Michael Schmidt";
+				TargetAttributes = {
+					4DAB296F19C24CF300AF04FF = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = V3YNQKY4J7;
+					};
+					4DAB298B19C24CF300AF04FF = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 4DAB296F19C24CF300AF04FF;
+					};
+				};
+			};
+			buildConfigurationList = 4DAB296B19C24CF300AF04FF /* Build configuration list for PBXProject "Refracto" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = 4DAB296719C24CF300AF04FF;
+			productRefGroup = 4DAB297119C24CF300AF04FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DAB296F19C24CF300AF04FF /* Refracto */,
+				4DAB298B19C24CF300AF04FF /* RefractoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DAB296E19C24CF300AF04FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DAB298219C24CF300AF04FF /* Main.storyboard in Resources */,
+				4DDFD44B1A52BBA6003AD7F7 /* Localizable.strings in Resources */,
+				4DAB298719C24CF300AF04FF /* LaunchScreen.xib in Resources */,
+				4DAB298419C24CF300AF04FF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DAB298A19C24CF300AF04FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		OBJCLEANCUSTOMRUNSCRIPTT /* Objective-Clean Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Objective-Clean Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "if [[ -z ${SKIP_OBJCLEAN} || ${SKIP_OBJCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Objective-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Objective-Clean.app/Contents/Resources/ObjClean.app/Contents/MacOS/ObjClean \"${SRCROOT}\" \nelse\necho \"warning: You have to install and set up Objective-Clean to use its features!\" \nfi\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DAB296C19C24CF300AF04FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA96B311A2FC30500E4091A /* RefractometerInputController.m in Sources */,
+				4DAB297919C24CF300AF04FF /* AppDelegate.m in Sources */,
+				4DAB297C19C24CF300AF04FF /* RefractometerController.m in Sources */,
+				4D35850019EEBDE8007EEC22 /* VerticalRefractionPicker.m in Sources */,
+				4DAB299E19C24DF100AF04FF /* RefractometerComputation.m in Sources */,
+				4DB117A119C7932E0027AB70 /* HorizontalModePicker.m in Sources */,
+				4DEE84591A50217C004BFAC3 /* NSDecimalNumber+Refracto.m in Sources */,
+				4DA96B2E1A2FBE8F00E4091A /* RefractometerDisplayController.m in Sources */,
+				4DB1179B19C7841C0027AB70 /* HorizontalModeLayout.m in Sources */,
+				4DF58A3C1A5615B0007F508B /* RootTabController.m in Sources */,
+				4D3584FD19EC6B9B007EEC22 /* SliderCell.m in Sources */,
+				4DEE84561A4F5DF6004BFAC3 /* VerticalRefractionDottedNeedle.m in Sources */,
+				4DB1179E19C788420027AB70 /* HorizontalModeCell.m in Sources */,
+				4D35850719EF104E007EEC22 /* VerticalRefractionLayout.m in Sources */,
+				4D35850A19EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m in Sources */,
+				4D3584F619EC5067007EEC22 /* SettingsController.m in Sources */,
+				4D35850419EED827007EEC22 /* VerticalRefractionCell.m in Sources */,
+				4DAB297619C24CF300AF04FF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DAB298819C24CF300AF04FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DAB299319C24CF300AF04FF /* RefractoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DAB298E19C24CF300AF04FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DAB296F19C24CF300AF04FF /* Refracto */;
+			targetProxy = 4DAB298D19C24CF300AF04FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4DAB298019C24CF300AF04FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DAB298119C24CF300AF04FF /* Base */,
+				4D9796A41A521E1100B91C6C /* de */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4DAB298519C24CF300AF04FF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DAB298619C24CF300AF04FF /* Base */,
+				4D9796A51A521E1100B91C6C /* de */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		4DDFD44D1A52BBA6003AD7F7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DDFD44C1A52BBA6003AD7F7 /* en */,
+				4DDFD44E1A52BBA8003AD7F7 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4DAB299419C24CF300AF04FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4DAB299519C24CF300AF04FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DAB299719C24CF300AF04FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Refracto/Refracto-Prefix.pch";
+				INFOPLIST_FILE = Refracto/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Refracto;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4DAB299819C24CF300AF04FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Refracto/Refracto-Prefix.pch";
+				INFOPLIST_FILE = Refracto/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Refracto;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		4DAB299A19C24CF300AF04FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Refracto/Refracto-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RefractoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = RefractoTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Refracto.app/Refracto";
+			};
+			name = Debug;
+		};
+		4DAB299B19C24CF300AF04FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Refracto/Refracto-Prefix.pch";
+				INFOPLIST_FILE = RefractoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = RefractoTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Refracto.app/Refracto";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DAB296B19C24CF300AF04FF /* Build configuration list for PBXProject "Refracto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DAB299419C24CF300AF04FF /* Debug */,
+				4DAB299519C24CF300AF04FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DAB299619C24CF300AF04FF /* Build configuration list for PBXNativeTarget "Refracto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DAB299719C24CF300AF04FF /* Debug */,
+				4DAB299819C24CF300AF04FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DAB299919C24CF300AF04FF /* Build configuration list for PBXNativeTarget "RefractoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DAB299A19C24CF300AF04FF /* Debug */,
+				4DAB299B19C24CF300AF04FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DAB296819C24CF300AF04FF /* Project object */;
+}

@@ -1,0 +1,32 @@
+"modeStandard" = "Standard";
+"modeTerrillLinear" = "Terrill Linear";
+"modeTerrillCubic" = "Terrill Kubisch";
+
+"mailSubject" = "Refracto-App";
+"mailBody" = "Hallo,\n\n";
+
+"mailFailedTitle" = "Senden Fehlgeschlagen";
+"mailFailedMessage" = "Ihre Email konnte nicht gesendet werden. Überprüfen Sie ihre Netzwerkeinstellungen oder versuchen Sie es später noch einmal.";
+
+"mailNoAccountTitle" = "Kein Email-Account";
+"mailNoAccountMessage" = "Sie müssen zuerst einen Email-Account im System einrichten.\n\nAlternativ können Sie auf anderem Weg eine Email an %@ schreiben.";
+
+"settingsTitle" = "Einstellungen";
+
+"detailUnitPlato" = "°Plato (°P)";
+"detailUnitSG" = "Spezifisches Gewicht (SG)";
+"detailUnitSGShort" = "Spezif. Gewicht (SG)";
+
+"headerSupport" = "Support";
+"headerStore" = "App Store";
+
+"footerSettings" = "Mit dem Würzekorrekturfaktor wird der Brechungsindex von unvergorener Würze in °Plato umgerechnet.";
+"footerStore" = "Wenn Ihnen Refracto gefällt, schreiben Sie bitte ein nette Bewertung. Vielen Dank!";
+
+"itemUnitTitle" = "Anzeige";
+"itemCorrectionTitle" = "Würzekorrekturfaktor";
+"itemWebsiteTitle" = "Refracto Webseite besuchen";
+"itemContactTitle" = "Email an Support schreiben";
+"itemRateTitle" = "Im App Store bewerten";
+
+"outOfRange" = "Wert nicht berechenbar";
