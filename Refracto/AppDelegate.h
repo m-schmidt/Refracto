@@ -6,17 +6,17 @@
 // Units for gravity/extract
 typedef NS_ENUM(NSInteger, RFGravityUnit) {
 
-    RFGravityUnitPlato = 0,
-    RFGravityUnitSG    = 1,
+    RFGravityUnitPlato,
+    RFGravityUnitSG,
 };
 
 
 // Modes for computation of specific gravity
 typedef NS_ENUM(NSInteger, RFSpecificGravityMode) {
 
-    RFSpecifiyGravityModeStandard     = 0,
-    RFSpecifiyGravityModeTerrill      = 1,
-    RFSpecifiyGravityModeTerrillCubic = 2,
+    RFSpecifiyGravityModeStandard,
+    RFSpecifiyGravityModeTerrill,
+    RFSpecifiyGravityModeTerrillCubic,
 };
 
 

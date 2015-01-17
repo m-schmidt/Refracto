@@ -7,8 +7,8 @@
 // Modes for horizontal alignment of refraction ticks in picker view
 typedef NS_ENUM(NSInteger, RefractionPickerAlignment) {
 
-    RefractionPickerAlignmentLeft  = 0,
-    RefractionPickerAlignmentRight = 1,
+    RefractionPickerAlignmentLeft,
+    RefractionPickerAlignmentRight,
 };
 
 
