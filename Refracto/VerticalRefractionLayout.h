@@ -5,11 +5,11 @@
 
 
 // Modes for horizontal alignment of refraction ticks in picker view
-typedef enum RefractionPickerAlignment {
+typedef NS_ENUM(NSInteger, RefractionPickerAlignment) {
 
     RefractionPickerAlignmentLeft  = 0,
     RefractionPickerAlignmentRight = 1,
-} RefractionPickerAlignment;
+};
 
 
 // Constants for dimensions of tick-cells
