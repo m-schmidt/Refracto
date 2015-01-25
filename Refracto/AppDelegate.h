@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, RFSpecificGravityMode) {
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-+ (AppDelegate *)sharedAppDelegate;
++ (AppDelegate *)appDelegate;
 
 @property (strong, nonatomic) UIWindow *window;
 

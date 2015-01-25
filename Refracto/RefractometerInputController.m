@@ -35,7 +35,7 @@
 
     [super viewDidAppear:animated];
 
-    AppDelegate *sharedAppDelegate = [AppDelegate sharedAppDelegate];
+    AppDelegate *sharedAppDelegate = [AppDelegate appDelegate];
     NSDecimalNumber *recentBeforeRefraction = sharedAppDelegate.recentBeforeRefraction;
     NSDecimalNumber *recentCurrentRefraction = sharedAppDelegate.recentCurrentRefraction;
 

@@ -44,7 +44,7 @@
     if ([self.displayController tryUpdateForRefractionBefore:beforeRefraction current:currentRefraction]) {
 
         // Store plausible refraction values in preferences
-        AppDelegate *sharedAppDelegate = [AppDelegate sharedAppDelegate];
+        AppDelegate *sharedAppDelegate = [AppDelegate appDelegate];
 
         sharedAppDelegate.recentBeforeRefraction  = beforeRefraction;
         sharedAppDelegate.recentCurrentRefraction = currentRefraction;

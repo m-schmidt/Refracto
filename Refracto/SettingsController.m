@@ -155,7 +155,7 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 
         if (indexPath) {
 
-            [AppDelegate sharedAppDelegate].preferredGravityUnit = (RFGravityUnit)indexPath.row;
+            [AppDelegate appDelegate].preferredGravityUnit = (RFGravityUnit)indexPath.row;
 
             [self updateDisplayUnitCell];
         }
@@ -171,7 +171,7 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 
     // Round slider value to full 1/100ths
     NSDecimal newDivisor = [@(rint([(UISlider *)sender value] * 200.0) / 200.0) decimalValue];
-    [AppDelegate sharedAppDelegate].preferredWortCorrectionDivisor = [NSDecimalNumber decimalNumberWithDecimal:newDivisor];
+    [AppDelegate appDelegate].preferredWortCorrectionDivisor = [NSDecimalNumber decimalNumberWithDecimal:newDivisor];
 
     [self updateWortCorrectionCell];
 }
@@ -185,7 +185,7 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:kSettingsUnitRow inSection:kSettingsSection]];
     CGFloat screenWidth = CGRectGetWidth ([UIScreen mainScreen].bounds);
 
-    switch ([AppDelegate sharedAppDelegate].preferredGravityUnit) {
+    switch ([AppDelegate appDelegate].preferredGravityUnit) {
 
         case RFGravityUnitPlato:
             cell.detailTextLabel.text = NSLocalizedString(kDetailUnitPlatoKey, nil);
@@ -206,7 +206,7 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 
         SliderCell *wortCorrectionCell = (SliderCell *)cell;
 
-        NSDecimalNumber *divisor = [AppDelegate sharedAppDelegate].preferredWortCorrectionDivisor;
+        NSDecimalNumber *divisor = [AppDelegate appDelegate].preferredWortCorrectionDivisor;
 
         [wortCorrectionCell.detailLabel setText:[[AppDelegate numberFormatterWortCorrectionDivisor] stringFromNumber:divisor]];
         [wortCorrectionCell.slider setValue:[divisor floatValue] animated:YES];

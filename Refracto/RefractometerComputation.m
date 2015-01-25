@@ -105,7 +105,7 @@
 // Applies a correction factor (e.g. 1/1.03) to refraction values to accomodate to wort
 + (NSDecimalNumber *)wortCorrectedRefraction:(NSDecimalNumber *)brix {
 
-    NSDecimalNumber *divisor = [AppDelegate sharedAppDelegate].preferredWortCorrectionDivisor;
+    NSDecimalNumber *divisor = [AppDelegate appDelegate].preferredWortCorrectionDivisor;
     NSDecimalNumber *result = [brix decimalNumberByDividingBy:divisor];
 
     return [result decimalNumberByRoundingAccordingToBehavior:[self defaultBehaviour]];

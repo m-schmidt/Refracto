@@ -54,7 +54,7 @@
 
     dispatch_async(dispatch_get_main_queue(), ^{ [self updateContent]; });
 
-    [self.modePicker selectItemAtIndex:(NSInteger)[AppDelegate sharedAppDelegate].preferredSpecificGravityMode animated:YES];
+    [self.modePicker selectItemAtIndex:(NSInteger)[AppDelegate appDelegate].preferredSpecificGravityMode animated:YES];
 }
 
 
@@ -99,7 +99,7 @@
     if ([self.beforeRefraction isGreaterThan:[NSDecimalNumber zero]]) {
 
         // User preferences for units/modes
-        AppDelegate *sharedAppDelegate = [AppDelegate sharedAppDelegate];
+        AppDelegate *sharedAppDelegate = [AppDelegate appDelegate];
         RFGravityUnit preferredGravityUnit = sharedAppDelegate.preferredGravityUnit;
         RFSpecificGravityMode preferredGravityMode = sharedAppDelegate.preferredSpecificGravityMode;
 
@@ -176,7 +176,7 @@
 
 - (void)pickerView:(HorizontalModePicker *)pickerView didSelectItemAtIndex:(NSInteger)index {
 
-    [AppDelegate sharedAppDelegate].preferredSpecificGravityMode = (RFSpecificGravityMode)index;
+    [AppDelegate appDelegate].preferredSpecificGravityMode = (RFSpecificGravityMode)index;
 
     dispatch_async(dispatch_get_main_queue(), ^{ [self updateContent]; });
 }

@@ -17,22 +17,17 @@
 
 @implementation AppDelegate
 
-+ (AppDelegate *)sharedAppDelegate {
++ (AppDelegate *)appDelegate {
 
-    static id<UIApplicationDelegate> sharedAppDelegate = nil;
-    static dispatch_once_t once;
+    id<UIApplicationDelegate> delegate = [UIApplication sharedApplication].delegate;
 
-    dispatch_once(&once, ^{
+    if ([delegate isKindOfClass:[self class]] == NO) {
 
-        sharedAppDelegate = [UIApplication sharedApplication].delegate;
+        ALog(@"Unexpected type for application delegate: %@", [delegate class]);
+        return nil;
+    };
 
-        if ([sharedAppDelegate isKindOfClass:[self class]] == NO) {
-
-            ALog(@"Unexpected type for application delegate: %@", [sharedAppDelegate class]);
-        }
-    });
-
-    return (AppDelegate *)sharedAppDelegate;
+    return (AppDelegate *)delegate;
 }
 
 

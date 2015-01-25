@@ -21,7 +21,7 @@
 - (void)setUp {
 
     // Computation tests below depend on assumed WCF of 1.04
-    [AppDelegate sharedAppDelegate].preferredWortCorrectionDivisor = [NSDecimalNumber decimalNumberWithDecimal:[@(1.04) decimalValue]];
+    [AppDelegate appDelegate].preferredWortCorrectionDivisor = [NSDecimalNumber decimalNumberWithDecimal:[@(1.04) decimalValue]];
 }
 
 
