@@ -3,6 +3,8 @@ Refracto - Refractometer Calculator for Homebrewers
 
 *Refracto* is a tool for homebrewers that will help you to convert your refractometer measurements during a fermentation process from °Brix to SG or °Plato. It automatically compensates the alcohol effect during fermentation.
 
+Refracto is available on the [App Store](https://itunes.apple.com/app/id954981822)
+
 ## How to use Refracto
 
 1. Swipe vertically to enter your initial refractometer reading, i.e. the measurement result for the original wort, just before adding the yeast.
