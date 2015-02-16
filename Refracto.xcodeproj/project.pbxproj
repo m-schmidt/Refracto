@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D247D841A92A23A00FA5525 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D247D861A92A23A00FA5525 /* Main_iPad.storyboard */; };
 		4D3584F619EC5067007EEC22 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3584F519EC5067007EEC22 /* SettingsController.m */; };
 		4D3584FD19EC6B9B007EEC22 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3584FC19EC6B9B007EEC22 /* SliderCell.m */; };
 		4D35850019EEBDE8007EEC22 /* VerticalRefractionPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3584FF19EEBDE8007EEC22 /* VerticalRefractionPicker.m */; };
@@ -19,7 +20,7 @@
 		4DAB297619C24CF300AF04FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB297519C24CF300AF04FF /* main.m */; };
 		4DAB297919C24CF300AF04FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB297819C24CF300AF04FF /* AppDelegate.m */; };
 		4DAB297C19C24CF300AF04FF /* RefractometerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB297B19C24CF300AF04FF /* RefractometerController.m */; };
-		4DAB298219C24CF300AF04FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB298019C24CF300AF04FF /* Main.storyboard */; };
+		4DAB298219C24CF300AF04FF /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB298019C24CF300AF04FF /* Main_iPhone.storyboard */; };
 		4DAB298419C24CF300AF04FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB298319C24CF300AF04FF /* Images.xcassets */; };
 		4DAB298719C24CF300AF04FF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB298519C24CF300AF04FF /* LaunchScreen.xib */; };
 		4DAB299319C24CF300AF04FF /* RefractoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB299219C24CF300AF04FF /* RefractoTests.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D247D851A92A23A00FA5525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		4D247D881A92A23C00FA5525 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPad.strings; sourceTree = "<group>"; };
 		4D3584F419EC5067007EEC22 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
 		4D3584F519EC5067007EEC22 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
 		4D3584FB19EC6B9B007EEC22 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
@@ -58,7 +61,7 @@
 		4D35850919EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionSupplementaryView.m; sourceTree = "<group>"; };
 		4D4F860519F3D67500DEDB55 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4D4F860719F3DED400DEDB55 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		4D9796A41A521E1100B91C6C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		4D9796A41A521E1100B91C6C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
 		4D9796A51A521E1100B91C6C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4DA96B2C1A2FBE8F00E4091A /* RefractometerDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefractometerDisplayController.h; sourceTree = "<group>"; };
 		4DA96B2D1A2FBE8F00E4091A /* RefractometerDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefractometerDisplayController.m; sourceTree = "<group>"; };
@@ -71,7 +74,7 @@
 		4DAB297819C24CF300AF04FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4DAB297A19C24CF300AF04FF /* RefractometerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefractometerController.h; sourceTree = "<group>"; };
 		4DAB297B19C24CF300AF04FF /* RefractometerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefractometerController.m; sourceTree = "<group>"; };
-		4DAB298119C24CF300AF04FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DAB298119C24CF300AF04FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		4DAB298319C24CF300AF04FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4DAB298619C24CF300AF04FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4DAB298C19C24CF300AF04FF /* RefractoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RefractoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,7 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				4DDFD44D1A52BBA6003AD7F7 /* Localizable.strings */,
-				4DAB298019C24CF300AF04FF /* Main.storyboard */,
+				4DAB298019C24CF300AF04FF /* Main_iPhone.storyboard */,
+				4D247D861A92A23A00FA5525 /* Main_iPad.storyboard */,
 				4DAB298519C24CF300AF04FF /* LaunchScreen.xib */,
 			);
 			name = Resources;
@@ -344,7 +348,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DAB298219C24CF300AF04FF /* Main.storyboard in Resources */,
+				4D247D841A92A23A00FA5525 /* Main_iPad.storyboard in Resources */,
+				4DAB298219C24CF300AF04FF /* Main_iPhone.storyboard in Resources */,
 				4DDFD44B1A52BBA6003AD7F7 /* Localizable.strings in Resources */,
 				4DAB298719C24CF300AF04FF /* LaunchScreen.xib in Resources */,
 				4DAB298419C24CF300AF04FF /* Images.xcassets in Resources */,
@@ -436,13 +441,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4DAB298019C24CF300AF04FF /* Main.storyboard */ = {
+		4D247D861A92A23A00FA5525 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D247D851A92A23A00FA5525 /* Base */,
+				4D247D881A92A23C00FA5525 /* de */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		4DAB298019C24CF300AF04FF /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4DAB298119C24CF300AF04FF /* Base */,
 				4D9796A41A521E1100B91C6C /* de */,
 			);
-			name = Main.storyboard;
+			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		4DAB298519C24CF300AF04FF /* LaunchScreen.xib */ = {
