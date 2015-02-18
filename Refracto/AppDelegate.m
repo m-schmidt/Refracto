@@ -229,7 +229,7 @@
     static NSNumberFormatter *formatter = nil;
     static dispatch_once_t once;
 
-    dispatch_once(&once, ^{
+    dispatch_once (&once, ^{
 
         formatter = [[NSNumberFormatter alloc] init];
         formatter.positiveFormat = @"#0.0";
@@ -245,7 +245,7 @@
     static NSNumberFormatter *formatter = nil;
     static dispatch_once_t once;
 
-    dispatch_once(&once, ^{
+    dispatch_once (&once, ^{
 
         formatter = [[NSNumberFormatter alloc] init];
         formatter.positiveFormat = @"#0.0'\u2009°P'";
@@ -262,10 +262,19 @@
     static NSNumberFormatter *formatter = nil;
     static dispatch_once_t once;
 
-    dispatch_once(&once, ^{
+    dispatch_once (&once, ^{
 
         formatter = [[NSNumberFormatter alloc] init];
-        formatter.positiveFormat = @"#0.000";
+
+        if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPad) {
+
+            formatter.positiveFormat = @"#0.0000";
+        }
+        else {
+
+            formatter.positiveFormat = @"#0.000";
+        }
+
         formatter.locale = [NSLocale autoupdatingCurrentLocale];
     });
 
@@ -295,7 +304,7 @@
     static NSNumberFormatter *formatter = nil;
     static dispatch_once_t once;
 
-    dispatch_once(&once, ^{
+    dispatch_once (&once, ^{
 
         formatter = [[NSNumberFormatter alloc] init];
         formatter.positiveFormat = @"#0'\u2009%'";
@@ -311,7 +320,7 @@
     static NSNumberFormatter *formatter = nil;
     static dispatch_once_t once;
 
-    dispatch_once(&once, ^{
+    dispatch_once (&once, ^{
 
         formatter = [[NSNumberFormatter alloc] init];
         formatter.positiveFormat = @"#0.0'\u2009%'";
@@ -327,7 +336,7 @@
     static NSNumberFormatter *formatter = nil;
     static dispatch_once_t once;
 
-    dispatch_once(&once, ^{
+    dispatch_once (&once, ^{
 
         formatter = [[NSNumberFormatter alloc] init];
         formatter.positiveFormat = @"'1/'0.000";
