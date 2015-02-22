@@ -183,7 +183,7 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 - (void)updateDisplayUnitCell {
 
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:kSettingsUnitRow inSection:kSettingsSection]];
-    CGFloat screenWidth = CGRectGetWidth ([UIScreen mainScreen].bounds);
+    BOOL shortSGDetail = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad || CGRectGetWidth ([UIScreen mainScreen].bounds) <= 320);
 
     switch ([AppDelegate appDelegate].preferredGravityUnit) {
 
@@ -192,7 +192,7 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
             break;
 
         case RFGravityUnitSG:
-            cell.detailTextLabel.text = NSLocalizedString((screenWidth > 320.0) ? kDetailUnitSGKey : kDetailUnitSGShortKey, nil);
+            cell.detailTextLabel.text = NSLocalizedString(shortSGDetail ? kDetailUnitSGShortKey : kDetailUnitSGKey, nil);
             break;
     }
 }
