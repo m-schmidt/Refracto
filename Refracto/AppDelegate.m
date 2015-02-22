@@ -67,6 +67,12 @@
 #pragma mark Properties for User Preferences
 
 
+- (void)postComputationDefaultsChangedNotification {
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:kRefractoComputationDefaultsChangedNotification object:nil];
+}
+
+
 - (RFGravityUnit)preferredGravityUnit {
 
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
@@ -92,6 +98,8 @@
 
         [standardUserDefaults setObject:@((NSInteger)gravityUnit) forKey:kSpecificGravityUnit];
         [standardUserDefaults synchronize];
+
+        [self postComputationDefaultsChangedNotification];
     }
     else {
 
@@ -161,6 +169,8 @@
 
         [standardUserDefaults setObject:divisor forKey:kWortCorrectionDivisor];
         [standardUserDefaults synchronize];
+
+        [self postComputationDefaultsChangedNotification];
     }
     else {
 
