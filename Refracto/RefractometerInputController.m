@@ -42,7 +42,27 @@
     self.beforePicker.refraction = recentBeforeRefraction;
     self.currentPicker.refraction = recentCurrentRefraction;
 
+    [[NSNotificationCenter defaultCenter]
+        addObserver:self
+           selector:@selector(handleComputationDefaultsChanged:)
+               name:kRefractoComputationDefaultsChangedNotification
+             object:nil];
+
     UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, self.beforePicker);
+}
+
+
+- (void)viewDidDisappear:(BOOL)animated {
+
+    [super viewDidDisappear:animated];
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
+- (void)handleComputationDefaultsChanged:(NSNotification *)notification {
+
+    [self.delegate refractionInputDidChangeToBefore:self.beforePicker.refraction current:self.currentPicker.refraction];
 }
 
 

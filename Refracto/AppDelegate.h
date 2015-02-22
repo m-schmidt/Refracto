@@ -3,6 +3,10 @@
 //
 
 
+// Notification sent when gravity unit or wort correction factor changes
+#define kRefractoComputationDefaultsChangedNotification (@"RefractoComputationDefaultsChangedNotification")
+
+
 // Units for gravity/extract
 typedef NS_ENUM(NSInteger, RFGravityUnit) {
 
