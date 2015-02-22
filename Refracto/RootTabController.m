@@ -11,7 +11,7 @@
 
 - (NSUInteger)supportedInterfaceOrientations {
 
-    return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
 }
 
 @end
