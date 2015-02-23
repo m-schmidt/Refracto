@@ -1,6 +1,7 @@
 "modeStandard" = "Standard";
 "modeTerrillLinear" = "Terrill Linear";
 "modeTerrillCubic" = "Terrill Cubic";
+"modeKleier" = "Kleier";
 
 "mailSubject" = "About Refracto";
 "mailBody" = "Hello,\n\n";

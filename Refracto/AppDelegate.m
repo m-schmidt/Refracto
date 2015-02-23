@@ -105,7 +105,7 @@
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     NSInteger specificGravityMode = [[standardUserDefaults objectForKey:kSpecificGravityMode] integerValue];
 
-    if (0 <= specificGravityMode && specificGravityMode <= 2) {
+    if (0 <= specificGravityMode && specificGravityMode <= 3) {
 
         return (RFSpecificGravityMode)specificGravityMode;
     }
@@ -119,7 +119,7 @@
 
 - (void)setPreferredSpecificGravityMode:(RFSpecificGravityMode)specificGravityMode {
 
-    if (specificGravityMode == RFSpecifiyGravityModeStandard || specificGravityMode == RFSpecifiyGravityModeTerrill || specificGravityMode == RFSpecifiyGravityModeTerrillCubic) {
+    if (specificGravityMode == RFSpecifiyGravityModeStandard || specificGravityMode == RFSpecifiyGravityModeTerrill || specificGravityMode == RFSpecifiyGravityModeTerrillCubic || specificGravityMode == RFSpecifiyGravityModeKleier) {
 
         NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
 

@@ -19,7 +19,7 @@
 #define kModeStandardKey      (@"modeStandard")
 #define kModeTerrillLinearKey (@"modeTerrillLinear")
 #define kModeTerrillCubicKey  (@"modeTerrillCubic")
-
+#define kModeKleierKey        (@"modeKleier")
 
 @interface RefractometerDisplayController ()
 
@@ -154,7 +154,7 @@
 
 - (NSInteger)numberOfItemsInPickerView:(HorizontalModePicker *)pickerView {
 
-    return 3;
+    return 4;
 }
 
 
@@ -165,6 +165,7 @@
         case 0: return NSLocalizedString(kModeStandardKey, nil);
         case 1: return NSLocalizedString(kModeTerrillLinearKey, nil);
         case 2: return NSLocalizedString(kModeTerrillCubicKey, nil);
+        case 3: return NSLocalizedString(kModeKleierKey, nil);
     }
 
     return nil;
