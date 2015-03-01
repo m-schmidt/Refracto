@@ -165,7 +165,8 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
     [self updateFisheyeTransform];
     [self updateLayerMask];
-    [self reloadData];
+
+    [self.collectionView.collectionViewLayout invalidateLayout];
 }
 
 
@@ -187,70 +188,7 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 }
 
 
-- (NSInteger)itemIndexForContentOffset:(CGFloat)contentOffset {
-
-    if ([self collectionView:self.collectionView numberOfItemsInSection:0]) {
-
-        CGFloat offset = 0.0;
-
-        if (contentOffset < 0.0)
-            return 0;
-
-        for (NSInteger i = 0; i < [self collectionView:self.collectionView numberOfItemsInSection:0]; i++) {
-
-            NSString *title = [self.datasource pickerView:self titleForItemAtIndex:i];
-            CGSize size = [self sizeForString:title];
-
-            if (i == 0)
-                offset = -size.width / 2;
-
-            if (offset <= contentOffset && contentOffset < offset + size.width)
-                return i;
-
-            offset += size.width;
-        }
-
-        return [self collectionView:self.collectionView numberOfItemsInSection:0] - 1;
-    }
-
-    ALog(@"Computation of itemIndexForContentOffset with no items");
-    return 0;
-}
-
-
-- (CGFloat)contentOffsetForItemAtIndex:(NSInteger)index {
-
-    if (index < [self collectionView:self.collectionView numberOfItemsInSection:0]) {
-
-        CGFloat offset = 0.0;
-
-        if (index > 0) {
-
-            for (NSInteger i = 0; i <= index; i++) {
-
-                CGFloat itemWidth = [self sizeForString:[self.datasource pickerView:self titleForItemAtIndex:i]].width;
-                offset += (i == 0 || i == index) ? itemWidth / 2 : itemWidth;
-            }
-        }
-
-        return rint(offset);
-    }
-
-    ALog(@"Invalid itemIndex in contentOffsetForItemAtIndex");
-    return 0.0;
-}
-
-
 #pragma mark - Collection View Support
-
-
-- (void)reloadData {
-
-    [self invalidateIntrinsicContentSize];
-
-    [self.collectionView.collectionViewLayout invalidateLayout];
-    [self.collectionView reloadData];
-}
 
 
 - (NSInteger)selectedItemIndex {
@@ -272,11 +210,8 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
     [self.delegate pickerView:self didSelectItemAtIndex:index];
 
     [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]
-                                      animated:NO
-                                scrollPosition:UICollectionViewScrollPositionNone];
-
-    [self.collectionView setContentOffset:CGPointMake([self contentOffsetForItemAtIndex:index], self.collectionView.contentOffset.y)
-                                 animated:animated];
+                                      animated:YES
+                                scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
 }
 
 

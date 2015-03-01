@@ -37,7 +37,6 @@ extern NSDictionary *horizontalModeSelectedTextAttributes;
 @property (weak, nonatomic) IBOutlet id <HorizontalModePickerDataSource> datasource;
 @property (weak, nonatomic) IBOutlet id <HorizontalModePickerDelegate> delegate;
 
-- (void)reloadData;
 - (void)selectItemAtIndex:(NSInteger)index animated:(BOOL)animated;
 
 @end
