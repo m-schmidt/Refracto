@@ -40,14 +40,6 @@
 
 @implementation RefractometerDisplayController
 
-- (void)viewDidLoad {
-
-    [super viewDidLoad];
-
-    [self.modePicker reloadData];
-}
-
-
 - (void)viewDidAppear:(BOOL)animated {
 
     [super viewDidAppear:animated];
@@ -55,6 +47,21 @@
     dispatch_async(dispatch_get_main_queue(), ^{ [self updateContent]; });
 
     [self.modePicker selectItemAtIndex:(NSInteger)[AppDelegate appDelegate].preferredSpecificGravityMode animated:YES];
+}
+
+
+#pragma mark - Content Rotationon iPad
+
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+
+    NSInteger previousMode = (NSInteger)[AppDelegate appDelegate].preferredSpecificGravityMode;
+
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+
+                                                [self.modePicker selectItemAtIndex:previousMode animated:YES];
+                                            }
+                                 completion:nil];
 }
 
 
