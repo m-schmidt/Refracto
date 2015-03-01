@@ -163,8 +163,6 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
 - (void)layoutSubviews {
 
-    [super layoutSubviews];
-
     [self updateFisheyeTransform];
     [self updateLayerMask];
     [self reloadData];
