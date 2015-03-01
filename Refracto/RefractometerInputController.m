@@ -9,6 +9,9 @@
 #import "NSDecimalNumber+Refracto.h"
 
 
+#define kShowSettingsPopoverSegue  (@"showSettingsPopoverSegue")
+
+
 @interface RefractometerInputController () <VerticalRecfractionPickerDelegate>
 
 @property (weak, nonatomic) IBOutlet VerticalRefractionPicker *beforePicker;
@@ -42,11 +45,14 @@
     self.beforePicker.refraction = recentBeforeRefraction;
     self.currentPicker.refraction = recentCurrentRefraction;
 
-    [[NSNotificationCenter defaultCenter]
-        addObserver:self
-           selector:@selector(handleComputationDefaultsChanged:)
-               name:kRefractoComputationDefaultsChangedNotification
-             object:nil];
+    if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPad) {
+
+        [[NSNotificationCenter defaultCenter]
+            addObserver:self
+               selector:@selector(handleComputationDefaultsChanged:)
+                   name:kRefractoComputationDefaultsChangedNotification
+                 object:nil];
+    }
 
     UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, self.beforePicker);
 }
@@ -60,9 +66,37 @@
 }
 
 
+#pragma mark - iPad Customization
+
+
 - (void)handleComputationDefaultsChanged:(NSNotification *)notification {
 
     [self.delegate refractionInputDidChangeToBefore:self.beforePicker.refraction current:self.currentPicker.refraction];
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    if ([segue.identifier isEqualToString:kShowSettingsPopoverSegue]) {
+
+        UIViewController *destinationController = segue.destinationViewController;
+        destinationController.preferredContentSize = CGSizeMake(320, 520);
+    }
+}
+
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+
+    AppDelegate *sharedAppDelegate = [AppDelegate appDelegate];
+    NSDecimalNumber *beforeRefraction = sharedAppDelegate.recentBeforeRefraction;
+    NSDecimalNumber *currentRefraction = sharedAppDelegate.recentCurrentRefraction;
+
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+
+                                                self.beforePicker.refraction = beforeRefraction;
+                                                self.currentPicker.refraction = currentRefraction;
+                                            }
+                                 completion:nil];
 }
 
 
