@@ -46,12 +46,11 @@ NSInteger const kVerticalPickerTickInset       =  2;
 }
 
 
-// Relayout when width of view changes
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
 
     CGRect oldBounds = self.collectionView.bounds;
 
-    if (CGRectGetWidth(newBounds) != CGRectGetWidth(oldBounds)) {
+    if (!CGSizeEqualToSize(oldBounds.size, newBounds.size)) {
 
         return YES;
     }
