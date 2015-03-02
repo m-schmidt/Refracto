@@ -73,7 +73,9 @@
     XCTAssert([[RefractometerComputation apparentSpecificGravityForInitialRefraction:initial finalRefraction:final mode:RFSpecifiyGravityModeStandard]
                compare:[NSDecimalNumber decimalNumberWithString:@"1.01019504"]] == NSOrderedSame, @"Standard 12.8 -> 6.4)");
 
-
+    XCTAssert([[RefractometerComputation apparentSpecificGravityForInitialRefraction:initial finalRefraction:final mode:RFSpecifiyGravityModeKleier]
+               compare:[NSDecimalNumber decimalNumberWithString:@"1.00960862"]] == NSOrderedSame, @"Kleier 12.8 -> 6.4)");
+    
     // SG to °Plato
     XCTAssert([[RefractometerComputation platoForSpecificGravity:[NSDecimalNumber decimalNumberWithString:@"1.048"]]
                compare:[NSDecimalNumber decimalNumberWithString:@"11.91512851"]] == NSOrderedSame, @"SG 1.048 to Plato");
