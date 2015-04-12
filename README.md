@@ -9,7 +9,7 @@ Refracto is available on the [App Store](https://itunes.apple.com/app/id95498182
 
 1. Swipe vertically to enter your initial refractometer reading, i.e. the measurement result for the original wort, just before adding the yeast.
 - Swipe vertically to enter your current refractometer reading, i.e. a measurement result after the fermentation process has started.
-- Swipe horizontally to switch between the computation modes. Available modes are the Standard formula and Sean Terrill’s linear and cubic formula.
+- Swipe horizontally to switch between the computation modes. Available modes are the Standard formula, the Kleier formula -- a slightly modernized variant of the Standard formula -- and Sean Terrill’s linear and cubic formula.
 - You are done! In the upper section you can now see the computed values for your beer.
 
 <img src="./Images/Input.png" alt="How to use Refracto" align="center" width="360" />
