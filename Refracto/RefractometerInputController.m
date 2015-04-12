@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *beforeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currentLabel;
 
+@property (nonatomic) BOOL propagateUpdatesOnScroll;
+
 @end
 
 
@@ -31,6 +33,7 @@
 
     self.beforePicker.alignment = RefractionPickerAlignmentRight;
     self.currentPicker.alignment = RefractionPickerAlignmentLeft;
+    self.propagateUpdatesOnScroll = YES;
 }
 
 
@@ -87,16 +90,21 @@
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
 
+    self.propagateUpdatesOnScroll = NO;
+
     AppDelegate *sharedAppDelegate = [AppDelegate appDelegate];
     NSDecimalNumber *beforeRefraction = sharedAppDelegate.recentBeforeRefraction;
     NSDecimalNumber *currentRefraction = sharedAppDelegate.recentCurrentRefraction;
 
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 
-                                                self.beforePicker.refraction = beforeRefraction;
-                                                self.currentPicker.refraction = currentRefraction;
-                                            }
-                                 completion:nil];
+            self.beforePicker.refraction = beforeRefraction;
+            self.currentPicker.refraction = currentRefraction;
+        }
+        completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+
+            self.propagateUpdatesOnScroll = YES;
+        }];
 }
 
 
@@ -104,6 +112,9 @@
 
 
 - (void)refractionPickerView:(VerticalRefractionPicker *)pickerView didSelectRefraction:(NSDecimalNumber *)refraction {
+
+    if (self.propagateUpdatesOnScroll == NO)
+        return;
 
     NSString *description = [[AppDelegate numberFormatterBrix] stringFromNumber:refraction];
 
