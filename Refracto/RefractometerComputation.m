@@ -142,22 +142,79 @@
                          decimalNumberByMultiplyingBy:
                              [NSDecimalNumber decimalNumberWithMantissa:34 exponent:-9 isNegative:NO]]];
 
-        // + 0.00574*final
+        // + 0.00574*RIf
         result = [result decimalNumberByAdding:
                      [final decimalNumberByMultiplyingBy:
                          [NSDecimalNumber decimalNumberWithMantissa:574 exponent:-5 isNegative:NO]]];
 
-        // + 0.00003344*final^2
+        // + 0.00003344*RIf^2
         result = [result decimalNumberByAdding:
                      [[final decimalNumberByRaisingToPower:2]
                          decimalNumberByMultiplyingBy:
                              [NSDecimalNumber decimalNumberWithMantissa:3344 exponent:-8 isNegative:NO]]];
 
-        // + 0.000000086*final^3
+        // + 0.000000086*RIf^3
         result = [result decimalNumberByAdding:
                      [[final decimalNumberByRaisingToPower:3]
                          decimalNumberByMultiplyingBy:
                              [NSDecimalNumber decimalNumberWithMantissa:86 exponent:-9 isNegative:NO]]];
+    }
+    else if (mode == RFSpecifiyGravityModeKleier) {
+
+        // Formula according Hobbybrauer.de-user "Kleier" (code for Refracto thankfully provided by Hobbybrauer.de-user "realholgi")
+        //
+        // The original discussion thread can be found in the Hobbybrauer.de-forums (German language):
+        // http://hobbybrauer.de/modules.php?name=eBoard&file=viewthread&tid=11943&page=2#pid129201
+
+
+        // Wort correction from user preferences, i.e a value in 1.02..1.06
+        NSDecimalNumber *wortCorrection = [AppDelegate appDelegate].preferredWortCorrectionDivisor;
+
+        // Balling constant: 2.0665
+        NSDecimalNumber *ballingConstant = [NSDecimalNumber decimalNumberWithMantissa:20665 exponent:-4 isNegative:NO];
+
+        // Correction value for fermentation: 0.44552
+        NSDecimalNumber *fermentationCorrection = [NSDecimalNumber decimalNumberWithMantissa:44552 exponent:-5 isNegative:NO];
+
+
+        // Actual final gravity:
+        //
+        // tr = (ballingConstant*RIf - fermentationCorrection*RIi) ...
+        NSDecimalNumber *tr = [[ballingConstant decimalNumberByMultiplyingBy:final]
+                               decimalNumberBySubtracting:
+                               [fermentationCorrection decimalNumberByMultiplyingBy:initial]];
+
+        // ... / (ballingConstant*wortCorrection - fermentationCorrection)
+        tr = [tr decimalNumberByDividingBy:
+              [[ballingConstant decimalNumberByMultiplyingBy:wortCorrection]
+               decimalNumberBySubtracting:fermentationCorrection]];
+
+
+        // Apparent final gravity:
+        //
+        // result = tr * (1.22 + 0.001 * RIi)
+
+
+        // 1.22
+        result = [NSDecimalNumber decimalNumberWithMantissa:122 exponent:-2 isNegative:NO];
+
+        // + 0.001*RIi
+        result = [result decimalNumberByAdding:
+                  [initial decimalNumberByMultiplyingBy:
+                   [NSDecimalNumber decimalNumberWithMantissa:1 exponent:-3 isNegative:NO]]];
+
+        // (...)*tr
+        result = [result decimalNumberByMultiplyingBy:tr];
+
+        // - ((0.22 + 0.001*RIi) * RIi);
+        result = [result decimalNumberBySubtracting:
+                  [[[NSDecimalNumber decimalNumberWithMantissa:22 exponent:-2 isNegative:NO]
+                    decimalNumberByAdding:
+                    [initial decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithMantissa:1 exponent:-3 isNegative:NO]]]
+                   decimalNumberByMultiplyingBy:initial]];
+
+        // convert plato to specific gravity
+        result = [self specificGravityForPlato:result];
     }
     else if (mode == RFSpecifiyGravityModeTerrill) {
 
@@ -213,55 +270,6 @@
                      [[correctedFinal decimalNumberByRaisingToPower:3]
                          decimalNumberByMultiplyingBy:
                              [NSDecimalNumber decimalNumberWithMantissa:63293 exponent:-9 isNegative:NO]]];
-    }
-    else if (mode == RFSpecifiyGravityModeKleier) {
-        
-        //Variante von User Kleier -> Quelle:
-        //http://hobbybrauer.de/modules.php?name=eBoard&file=viewthread&tid=11943&page=2#pid129201
-        
-        //double sw = [initial doubleValue];
-        //double value = [final doubleValue];
-        //double FaktorBrixPlato = [[AppDelegate appDelegate].preferredWortCorrectionDivisor doubleValue];
-        NSDecimalNumber *FaktorBrixPlato = [AppDelegate appDelegate].preferredWortCorrectionDivisor;
-        
-        //double Ballingkonstante = 2.0665;
-        //double Gaerungskorrektur = 0.44552;
-        
-        NSDecimalNumber *Ballingkonstante = [NSDecimalNumber decimalNumberWithMantissa:20665 exponent:-4 isNegative:NO];
-        NSDecimalNumber *Gaerungskorrektur = [NSDecimalNumber decimalNumberWithMantissa:44552 exponent:-5 isNegative:NO];
-        
-        //tatsächlicher Restextrakt
-        //double tr =(Ballingkonstante * value - Gaerungskorrektur * sw)/(Ballingkonstante * FaktorBrixPlato - Gaerungskorrektur);
-        NSDecimalNumber *tr = [[Ballingkonstante decimalNumberByMultiplyingBy:
-                                final]
-                               decimalNumberBySubtracting:
-                               [Gaerungskorrektur decimalNumberByMultiplyingBy:
-                                initial]];
-        
-        tr = [tr decimalNumberByDividingBy:
-              [[Ballingkonstante decimalNumberByMultiplyingBy:
-                FaktorBrixPlato]
-               decimalNumberBySubtracting:
-               Gaerungskorrektur]];
-        
-        //Scheinbarer Restextrakt
-        //double d = tr * (1.22 + 0.001 * sw) - ((0.22 + 0.001 * sw) * sw);
-        NSDecimalNumber *d = [NSDecimalNumber decimalNumberWithMantissa:122 exponent:-2 isNegative:NO];
-        d = [d decimalNumberByAdding:
-          [initial decimalNumberByMultiplyingBy:
-           [NSDecimalNumber decimalNumberWithMantissa:1 exponent:-3 isNegative:NO]]];
-        d = [d decimalNumberByMultiplyingBy:
-             tr];
-        d = [d decimalNumberBySubtracting:
-             [[[NSDecimalNumber decimalNumberWithMantissa:22 exponent:-2 isNegative:NO]
-               decimalNumberByAdding:
-               [initial decimalNumberByMultiplyingBy:
-                [NSDecimalNumber decimalNumberWithMantissa:1 exponent:-3 isNegative:NO]]]
-              decimalNumberByMultiplyingBy:
-              initial]];
-        
-        //result = [self specificGravityForPlato:[NSDecimalNumber decimalNumberWithString:[NSString stringWithFormat:@"%lf", d]]];
-        result = [self specificGravityForPlato:d];
     }
     else {
 
