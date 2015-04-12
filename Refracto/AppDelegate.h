@@ -19,9 +19,9 @@ typedef NS_ENUM(NSInteger, RFGravityUnit) {
 typedef NS_ENUM(NSInteger, RFSpecificGravityMode) {
 
     RFSpecifiyGravityModeStandard,
+    RFSpecifiyGravityModeKleier,
     RFSpecifiyGravityModeTerrill,
     RFSpecifiyGravityModeTerrillCubic,
-    RFSpecifiyGravityModeKleier,
 };
 
 

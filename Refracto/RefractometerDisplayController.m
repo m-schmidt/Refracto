@@ -21,6 +21,7 @@
 #define kModeTerrillCubicKey  (@"modeTerrillCubic")
 #define kModeKleierKey        (@"modeKleier")
 
+
 @interface RefractometerDisplayController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *originalGravity;
@@ -170,9 +171,9 @@
     switch (index) {
 
         case 0: return NSLocalizedString(kModeStandardKey, nil);
-        case 1: return NSLocalizedString(kModeTerrillLinearKey, nil);
-        case 2: return NSLocalizedString(kModeTerrillCubicKey, nil);
-        case 3: return NSLocalizedString(kModeKleierKey, nil);
+        case 1: return NSLocalizedString(kModeKleierKey, nil);
+        case 2: return NSLocalizedString(kModeTerrillLinearKey, nil);
+        case 3: return NSLocalizedString(kModeTerrillCubicKey, nil);
     }
 
     return nil;
