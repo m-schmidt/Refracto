@@ -88,7 +88,7 @@ static NSInteger const kMaxRefraction = 30;
 
 - (void)layoutSubviews {
 
-    [self.collectionView.collectionViewLayout invalidateLayout];
+    [self.collectionView reloadData];
 
     CGFloat needleXCenter;
 
@@ -288,7 +288,7 @@ static NSInteger const kMaxRefraction = 30;
 #pragma mark - UIScrollViewDelegate
 
 
-// Update currect refraction on scrolling
+// Update current refraction on scrolling
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
     NSDecimalNumber *newRefraction = [self refractionValueForItemAtIndexPath:[self indexPathForContentOffset:self.collectionView.contentOffset]];

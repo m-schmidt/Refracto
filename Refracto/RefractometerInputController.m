@@ -103,7 +103,10 @@
         }
         completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 
-            self.propagateUpdatesOnScroll = YES;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 400ull * NSEC_PER_MSEC), dispatch_get_main_queue(), ^{
+
+                self.propagateUpdatesOnScroll = YES;
+            });
         }];
 }
 
