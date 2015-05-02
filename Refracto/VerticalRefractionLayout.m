@@ -67,12 +67,19 @@ NSInteger const kVerticalPickerTickInset       =  2;
     // Enforce a single cell per line
     self.minimumInteritemSpacing = ceil(CGRectGetWidth(self.collectionView.bounds) - kVerticalPickerCellWidth);
 
+    // Check for compatible delegate
+    id<UICollectionViewDelegateFlowLayout>delegate = (id<UICollectionViewDelegateFlowLayout>)self.collectionView.delegate;
+
+    if ([delegate respondsToSelector:@selector(collectionView:layout:insetForSectionAtIndex:)] == NO)
+        delegate = nil;
+
     // Number of sections or fallback to 1
     NSInteger numberOfSections = 1;
 
     if ([self.collectionView.dataSource respondsToSelector:@selector(numberOfSectionsInCollectionView:)])
         numberOfSections = [self.collectionView.dataSource numberOfSectionsInCollectionView:self.collectionView];
 
+    // Precompute y-position of header cells
     self.headerYPositions = [[NSMutableArray alloc] initWithCapacity:numberOfSections];
 
     CGFloat yPosition = 0;
@@ -80,12 +87,7 @@ NSInteger const kVerticalPickerTickInset       =  2;
     for (NSInteger section = 0; section < numberOfSections; section++) {
 
         // Insets for section or fallback to fixed value
-        UIEdgeInsets insets = self.sectionInset;
-
-        id<UICollectionViewDelegateFlowLayout>delegate = (id<UICollectionViewDelegateFlowLayout>)self.collectionView.delegate;
-
-        if ([delegate respondsToSelector:@selector(collectionView:layout:insetForSectionAtIndex:)])
-            insets = [delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:section];
+        UIEdgeInsets insets = (delegate == nil) ? self.sectionInset : [delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:section];
 
         // Compute position and advance to next section
         yPosition += insets.top;
