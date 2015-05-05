@@ -62,7 +62,7 @@
 "XCZ-Bi-U3x.accessibilityHint" = "Messwert nach Beginn der Gärung";
 
 // "Computation mode"
-"J0S-0A-h0q.U3x.accessibilityLabel" = "Berechnungsformel";
+"J0S-0A-h0q.accessibilityLabel" = "Berechnungsformel";
 
 // "Original gravity"
 "dve-EV-7dE.accessibilityLabel" = "Stammwürze";
