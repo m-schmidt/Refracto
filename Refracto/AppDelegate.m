@@ -267,6 +267,23 @@
 }
 
 
++ (NSNumberFormatter *)accessibleNumberFormatterPlato {
+
+    static NSNumberFormatter *formatter = nil;
+    static dispatch_once_t once;
+
+    dispatch_once (&once, ^{
+
+        formatter = [[NSNumberFormatter alloc] init];
+        formatter.positiveFormat = @"#0.0'\u2009°Plato'";
+        formatter.locale = [NSLocale autoupdatingCurrentLocale];
+    });
+
+    return formatter;
+    return [self numberFormatterBrix];
+}
+
+
 + (NSNumberFormatter *)numberFormatterSG {
 
     static NSNumberFormatter *formatter = nil;
@@ -292,12 +309,12 @@
 }
 
 
-+ (NSNumberFormatter *)numberFormatterForGravityUnit:(RFGravityUnit)gravityUnit {
++ (NSNumberFormatter *)numberFormatterForGravityUnit:(RFGravityUnit)gravityUnit accessible:(BOOL)accessible {
 
     switch (gravityUnit) {
 
         case RFGravityUnitPlato:
-            return [self numberFormatterPlato];
+            return accessible ? [self accessibleNumberFormatterPlato] : [self numberFormatterPlato];
 
         case RFGravityUnitSG:
             return [self numberFormatterSG];

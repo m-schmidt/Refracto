@@ -112,15 +112,17 @@
         RFSpecificGravityMode preferredGravityMode = sharedAppDelegate.preferredSpecificGravityMode;
 
         // Localized number formatters
-        NSNumberFormatter *gravityFormatter = [AppDelegate numberFormatterForGravityUnit:preferredGravityUnit];
+        NSNumberFormatter *gravityFormatter = [AppDelegate numberFormatterForGravityUnit:preferredGravityUnit accessible:NO];
+        NSNumberFormatter *accessibleGravityFormatter = [AppDelegate numberFormatterForGravityUnit:preferredGravityUnit accessible:YES];
         NSNumberFormatter *attenuationFormatter = [AppDelegate numberFormatterAttenuation];
         NSNumberFormatter *alcoholFormatter = [AppDelegate numberFormatterPercentABV];
 
 
         // Original gravity
         NSDecimalNumber *originalGravity = [RefractometerComputation wortCorrectedRefraction:self.beforeRefraction];
-        self.originalGravity.text = [gravityFormatter stringFromNumber:[RefractometerComputation gravityFromPlato:originalGravity withGravityUnit:preferredGravityUnit]];
-        self.originalGravity.accessibilityValue = self.originalGravity.text;
+        NSDecimalNumber *convertedGravity = [RefractometerComputation gravityFromPlato:originalGravity withGravityUnit:preferredGravityUnit];
+        self.originalGravity.text = [gravityFormatter stringFromNumber:convertedGravity];
+        self.originalGravity.accessibilityValue = [accessibleGravityFormatter stringFromNumber:convertedGravity];
 
         if ([self.currentRefraction isGreaterThan:[NSDecimalNumber zero]] && [self.currentRefraction isLessThan:self.beforeRefraction]) {
 
@@ -129,13 +131,15 @@
 
             if ([apparentFinalGravity isGreaterThanOrEqual:[NSDecimalNumber one]]) {
 
-                self.finalGravity.text = [gravityFormatter stringFromNumber:[RefractometerComputation gravityFromSG:apparentFinalGravity withGravityUnit:preferredGravityUnit]];
-                self.finalGravity.accessibilityValue = self.finalGravity.text;
+                convertedGravity = [RefractometerComputation gravityFromSG:apparentFinalGravity withGravityUnit:preferredGravityUnit];
+                self.finalGravity.text = [gravityFormatter stringFromNumber:convertedGravity];
+                self.finalGravity.accessibilityValue = [accessibleGravityFormatter stringFromNumber:convertedGravity];
 
                 // Actual final gravity
                 NSDecimalNumber *actualFinalGravity = [RefractometerComputation trueSpecificGravityForApparentSpecificGravity:apparentFinalGravity initialRefraction:self.beforeRefraction];
-                self.actualFinalGravity.text = [gravityFormatter stringFromNumber:[RefractometerComputation gravityFromSG:actualFinalGravity withGravityUnit:preferredGravityUnit]];
-                self.actualFinalGravity.accessibilityValue = self.actualFinalGravity.text;
+                convertedGravity = [RefractometerComputation gravityFromSG:actualFinalGravity withGravityUnit:preferredGravityUnit];
+                self.actualFinalGravity.text = [gravityFormatter stringFromNumber:convertedGravity];
+                self.actualFinalGravity.accessibilityValue = [accessibleGravityFormatter stringFromNumber:convertedGravity];
 
                 // Apparent attenuation
                 NSDecimalNumber *apparentAttenuation = [RefractometerComputation attenuationForInitialRefraction:self.beforeRefraction currentSpecificGravity:apparentFinalGravity];
