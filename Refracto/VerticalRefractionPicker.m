@@ -207,7 +207,7 @@ static NSInteger const kMaxRefraction = 30;
     }
     else if (section == [self numberOfSectionsInCollectionView:collectionView] - 1) {
 
-        CGFloat insetBot = collectionView.bounds.size.height - self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
+        CGFloat insetBot = CGRectGetHeight(collectionView.bounds) - self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
 
         return UIEdgeInsetsMake(0.0, 0.0, insetBot, 0.0);
     }
