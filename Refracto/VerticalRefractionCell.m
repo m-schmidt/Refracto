@@ -9,15 +9,10 @@
 
 @implementation VerticalRefractionCell
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (void)awakeFromNib {
 
-    if ((self = [super initWithFrame:frame])) {
-
-        _barLength = NSIntegerMax;
-        _alignment = RefractionPickerAlignmentLeft;
-    }
-
-    return self;
+    _barLength = NSIntegerMax;
+    _alignment = RefractionPickerAlignmentLeft;
 }
 
 

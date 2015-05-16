@@ -27,9 +27,6 @@ static NSInteger const kMaxRefraction = 30;
 
     _alignment = RefractionPickerAlignmentLeft;
     _refraction = [NSDecimalNumber decimalNumberWithInteger:kMaxRefraction];
-
-    [self.collectionView registerClass:[VerticalRefractionCell class]
-            forCellWithReuseIdentifier:@"RefractionCell"];
 }
 
 
