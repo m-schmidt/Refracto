@@ -14,8 +14,6 @@ NSInteger const kVerticalPickerCellSpacing =   0;
 NSInteger const kVerticalPickerSupplementaryViewWidth  = 22;
 NSInteger const kVerticalPickerSupplementaryViewHeight = 16;
 
-NSInteger const kVerticalPickerNeedleWidth     = 90;
-NSInteger const kVerticalPickerNeedleHeight    =  9;
 NSInteger const kVerticalPickerLongTickWidth   = 52;
 NSInteger const kVerticalPickerMediumTickWidth = 32;
 NSInteger const kVerticalPickerSmallTickWidth  = 20;

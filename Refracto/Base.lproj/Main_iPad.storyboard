@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -589,6 +589,17 @@
                                         <color key="textColor" red="0.49803921580314636" green="0.49803921580314636" blue="0.49803921580314636" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gK7-se-FLe" userLabel="Needle" customClass="VerticalRefractionDottedNeedle">
+                                        <rect key="frame" x="208" y="165" width="90" height="9"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="9" id="64L-95-1MP"/>
+                                            <constraint firstAttribute="width" constant="90" id="gID-tp-hjU"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" hint="Refractometer reading before start of fermentation" label="Original refraction">
@@ -598,11 +609,13 @@
                                 <constraints>
                                     <constraint firstItem="oF0-Ls-GvN" firstAttribute="width" secondItem="cGK-X1-4qo" secondAttribute="width" id="51o-6P-LUe"/>
                                     <constraint firstItem="cr6-NW-xdh" firstAttribute="top" secondItem="oF0-Ls-GvN" secondAttribute="bottom" constant="4" id="Ft1-9g-Ysk"/>
+                                    <constraint firstAttribute="trailing" secondItem="gK7-se-FLe" secondAttribute="trailing" constant="2" id="IzS-s0-2Zw"/>
                                     <constraint firstItem="oF0-Ls-GvN" firstAttribute="centerX" secondItem="cGK-X1-4qo" secondAttribute="centerX" id="MG0-2K-Nzi"/>
                                     <constraint firstItem="oF0-Ls-GvN" firstAttribute="centerY" secondItem="ckx-sO-xbs" secondAttribute="centerY" id="OFt-4e-r7t"/>
                                     <constraint firstItem="cr6-NW-xdh" firstAttribute="width" secondItem="oF0-Ls-GvN" secondAttribute="width" id="OfC-FA-zPA"/>
                                     <constraint firstItem="cr6-NW-xdh" firstAttribute="centerX" secondItem="oF0-Ls-GvN" secondAttribute="centerX" id="TZC-kJ-gg7"/>
                                     <constraint firstItem="oF0-Ls-GvN" firstAttribute="top" secondItem="cGK-X1-4qo" secondAttribute="bottom" constant="2" id="fqd-5f-sXg"/>
+                                    <constraint firstAttribute="centerY" secondItem="gK7-se-FLe" secondAttribute="centerY" id="vh8-lH-Qyk"/>
                                     <constraint firstAttribute="trailing" secondItem="oF0-Ls-GvN" secondAttribute="trailing" constant="88" id="zYc-mj-7Ak"/>
                                 </constraints>
                                 <connections>
@@ -653,6 +666,17 @@
                                             </segue>
                                         </connections>
                                     </button>
+                                    <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nP-Cu-XB4" userLabel="Needle">
+                                        <rect key="frame" x="2" y="165" width="90" height="9"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="ff6-ac-cP3"/>
+                                            <constraint firstAttribute="height" constant="9" id="rpI-nR-G59"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" hint="Refractometer reading after start of fermentation" label="Final refraction">
@@ -660,6 +684,8 @@
                                 </accessibility>
                                 <constraints>
                                     <constraint firstItem="CEp-4x-xhl" firstAttribute="centerY" secondItem="XCZ-Bi-U3x" secondAttribute="centerY" id="8sb-mq-xH9"/>
+                                    <constraint firstItem="1nP-Cu-XB4" firstAttribute="leading" secondItem="XCZ-Bi-U3x" secondAttribute="leading" constant="2" id="L6W-jC-Gmc"/>
+                                    <constraint firstAttribute="centerY" secondItem="1nP-Cu-XB4" secondAttribute="centerY" id="SmB-K5-ppe"/>
                                     <constraint firstItem="CEp-4x-xhl" firstAttribute="centerX" secondItem="V2D-aN-sd7" secondAttribute="centerX" id="U5L-6s-hfJ"/>
                                     <constraint firstItem="CEp-4x-xhl" firstAttribute="leading" secondItem="XCZ-Bi-U3x" secondAttribute="leading" constant="88" id="UEh-cC-myq"/>
                                     <constraint firstItem="DV4-Ja-rym" firstAttribute="top" secondItem="CEp-4x-xhl" secondAttribute="bottom" constant="4" id="XsM-Xj-vuw"/>

@@ -7,7 +7,6 @@
 #import "VerticalRefractionPicker.h"
 #import "VerticalRefractionCell.h"
 #import "VerticalRefractionSupplementaryView.h"
-#import "VerticalRefractionDottedNeedle.h"
 #import "NSDecimalNumber+Refracto.h"
 #import "AppDelegate.h"
 
@@ -20,7 +19,6 @@ static NSInteger const kMaxRefraction = 30;
 @interface VerticalRefractionPicker () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) UICollectionView *collectionView;
-@property (strong, nonatomic) VerticalRefractionDottedNeedle *needleView;
 
 @end
 
@@ -51,16 +49,6 @@ static NSInteger const kMaxRefraction = 30;
                    withReuseIdentifier:@"RefractionHeader"];
 
     [self insertSubview:self.collectionView atIndex:0];
-
-
-    // Needle subview
-    [self.needleView removeFromSuperview];
-
-    self.needleView = [[VerticalRefractionDottedNeedle alloc] initWithFrame:CGRectMake(0.0, 0.0, kVerticalPickerNeedleWidth, kVerticalPickerNeedleHeight)];
-    self.needleView.opaque = NO;
-    self.needleView.userInteractionEnabled = NO;
-
-    [self addSubview:self.needleView];
 }
 
 
@@ -89,19 +77,6 @@ static NSInteger const kMaxRefraction = 30;
 - (void)layoutSubviews {
 
     [self.collectionView reloadData];
-
-    CGFloat needleXCenter;
-
-    if (self.alignment == RefractionPickerAlignmentLeft) {
-
-        needleXCenter = kVerticalPickerNeedleWidth / 2 + kVerticalPickerTickInset;
-    }
-    else {
-
-        needleXCenter = self.bounds.size.width - kVerticalPickerNeedleWidth / 2 - kVerticalPickerTickInset;
-    }
-
-    self.needleView.center = CGPointMake(needleXCenter, rint(CGRectGetMidY(self.bounds)) + 0.5);
 }
 
 
@@ -270,13 +245,13 @@ static NSInteger const kMaxRefraction = 30;
 
     if (section == 0) {
 
-        CGFloat insetTop = floor(self.needleView.center.y) - (kVerticalPickerCellHeight / 2);
+        CGFloat insetTop = self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
 
         return UIEdgeInsetsMake(insetTop, 0.0, 0.0, 0.0);
     }
     else if (section == [self numberOfSectionsInCollectionView:collectionView] - 1) {
 
-        CGFloat insetBot = collectionView.bounds.size.height - ceil(self.needleView.center.y) - (kVerticalPickerCellHeight / 2);
+        CGFloat insetBot = collectionView.bounds.size.height - self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
 
         return UIEdgeInsetsMake(0.0, 0.0, insetBot, 0.0);
     }

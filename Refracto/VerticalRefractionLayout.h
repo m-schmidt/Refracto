@@ -21,14 +21,11 @@ extern NSInteger const kVerticalPickerCellSpacing;
 extern NSInteger const kVerticalPickerSupplementaryViewWidth;
 extern NSInteger const kVerticalPickerSupplementaryViewHeight;
 
-// Constants for tick and needle sizes
+// Constants for tick sizes
 extern NSInteger const kVerticalPickerLongTickWidth;
 extern NSInteger const kVerticalPickerMediumTickWidth;
 extern NSInteger const kVerticalPickerSmallTickWidth;
 extern NSInteger const kVerticalPickerTickInset;
-
-extern NSInteger const kVerticalPickerNeedleWidth;
-extern NSInteger const kVerticalPickerNeedleHeight;
 
 
 // Delegate with methods to convert between index path of items and content offsets to support scrolling
