@@ -29,18 +29,13 @@ NSInteger const kVerticalPickerTickInset       =  2;
 
 @implementation VerticalRefractionLayout
 
-- (instancetype)init {
+- (void)awakeFromNib {
 
-    if ((self = [super init])) {
+    _alignment = RefractionPickerAlignmentLeft;
 
-        _alignment = RefractionPickerAlignmentLeft;
-
-        self.itemSize = CGSizeMake(kVerticalPickerCellWidth, kVerticalPickerCellHeight);
-        self.minimumLineSpacing = kVerticalPickerCellSpacing;
-        self.headerReferenceSize = CGSizeMake(0.0, 0.0);
-    }
-
-    return self;
+    self.itemSize = CGSizeMake(kVerticalPickerCellWidth, kVerticalPickerCellHeight);
+    self.minimumLineSpacing = kVerticalPickerCellSpacing;
+    self.headerReferenceSize = CGSizeMake(0.0, 0.0);
 }
 
 

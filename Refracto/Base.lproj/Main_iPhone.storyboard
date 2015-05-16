@@ -572,13 +572,28 @@
                         <viewControllerLayoutGuide type="top" id="gUP-ih-lxa"/>
                         <viewControllerLayoutGuide type="bottom" id="6pJ-v9-Oq4"/>
                     </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GN9-OF-BlS">
+                    <view key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GN9-OF-BlS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="330"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckx-sO-xbs" userLabel="Picker Before" customClass="VerticalRefractionPicker">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="330"/>
                                 <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="THb-TV-oXY">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="330"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bIF-O8-Jyg" customClass="VerticalRefractionLayout">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="ckx-sO-xbs" id="76b-Cz-PuH"/>
+                                            <outlet property="delegate" destination="ckx-sO-xbs" id="TnZ-Ka-G2O"/>
+                                        </connections>
+                                    </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGK-X1-4qo" userLabel="OG">
                                         <rect key="frame" x="0.0" y="135" width="212" height="14"/>
                                         <accessibility key="accessibilityConfiguration">
@@ -623,9 +638,12 @@
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="THb-TV-oXY" secondAttribute="trailing" id="1gZ-Df-Pp9"/>
                                     <constraint firstItem="oF0-Ls-GvN" firstAttribute="width" secondItem="cGK-X1-4qo" secondAttribute="width" id="51o-6P-LUe"/>
+                                    <constraint firstItem="THb-TV-oXY" firstAttribute="top" secondItem="ckx-sO-xbs" secondAttribute="top" id="9Ub-Cc-RpQ"/>
                                     <constraint firstItem="cr6-NW-xdh" firstAttribute="top" secondItem="oF0-Ls-GvN" secondAttribute="bottom" constant="4" id="Ft1-9g-Ysk"/>
                                     <constraint firstItem="oF0-Ls-GvN" firstAttribute="centerX" secondItem="cGK-X1-4qo" secondAttribute="centerX" id="MG0-2K-Nzi"/>
+                                    <constraint firstAttribute="bottom" secondItem="THb-TV-oXY" secondAttribute="bottom" id="Mpw-mI-Rw8"/>
                                     <constraint firstItem="oF0-Ls-GvN" firstAttribute="centerY" secondItem="ckx-sO-xbs" secondAttribute="centerY" id="OFt-4e-r7t"/>
                                     <constraint firstItem="cr6-NW-xdh" firstAttribute="width" secondItem="oF0-Ls-GvN" secondAttribute="width" id="OfC-FA-zPA"/>
                                     <constraint firstAttribute="centerY" secondItem="fwx-sh-zey" secondAttribute="centerY" id="St8-dg-evV"/>
@@ -633,9 +651,11 @@
                                     <constraint firstAttribute="trailing" secondItem="fwx-sh-zey" secondAttribute="trailing" constant="2" id="dnt-ul-D7k"/>
                                     <constraint firstItem="oF0-Ls-GvN" firstAttribute="width" secondItem="ckx-sO-xbs" secondAttribute="width" constant="-88" id="eAA-pw-wVb"/>
                                     <constraint firstItem="oF0-Ls-GvN" firstAttribute="top" secondItem="cGK-X1-4qo" secondAttribute="bottom" constant="2" id="fqd-5f-sXg"/>
+                                    <constraint firstItem="THb-TV-oXY" firstAttribute="leading" secondItem="ckx-sO-xbs" secondAttribute="leading" id="jDD-DZ-CdX"/>
                                     <constraint firstItem="oF0-Ls-GvN" firstAttribute="leading" secondItem="ckx-sO-xbs" secondAttribute="leading" id="uRe-sb-CmH"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="collectionView" destination="THb-TV-oXY" id="dQ5-ed-xdp"/>
                                     <outlet property="delegate" destination="uiq-t7-SDj" id="Hk6-cx-mgD"/>
                                     <outlet property="needleView" destination="fwx-sh-zey" id="QBD-QY-msH"/>
                                 </connections>
@@ -643,6 +663,21 @@
                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XCZ-Bi-U3x" userLabel="Picker Current" customClass="VerticalRefractionPicker">
                                 <rect key="frame" x="301" y="0.0" width="299" height="330"/>
                                 <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L7Q-Y1-cyy">
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="330"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="w2A-Ww-bt4" customClass="VerticalRefractionLayout">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="XCZ-Bi-U3x" id="Iu5-oa-4hX"/>
+                                            <outlet property="delegate" destination="XCZ-Bi-U3x" id="xrW-aS-WM2"/>
+                                        </connections>
+                                    </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2D-aN-sd7" userLabel="FG">
                                         <rect key="frame" x="88" y="135" width="211" height="14"/>
                                         <accessibility key="accessibilityConfiguration">
@@ -689,8 +724,12 @@
                                 <constraints>
                                     <constraint firstItem="CEp-4x-xhl" firstAttribute="centerY" secondItem="XCZ-Bi-U3x" secondAttribute="centerY" id="8sb-mq-xH9"/>
                                     <constraint firstItem="CEp-4x-xhl" firstAttribute="trailing" secondItem="XCZ-Bi-U3x" secondAttribute="trailing" id="AQ5-4c-ZtU"/>
+                                    <constraint firstItem="L7Q-Y1-cyy" firstAttribute="leading" secondItem="XCZ-Bi-U3x" secondAttribute="leading" id="SI2-PI-sdd"/>
                                     <constraint firstItem="CEp-4x-xhl" firstAttribute="centerX" secondItem="V2D-aN-sd7" secondAttribute="centerX" id="U5L-6s-hfJ"/>
                                     <constraint firstItem="DV4-Ja-rym" firstAttribute="top" secondItem="CEp-4x-xhl" secondAttribute="bottom" constant="4" id="XsM-Xj-vuw"/>
+                                    <constraint firstItem="L7Q-Y1-cyy" firstAttribute="top" secondItem="XCZ-Bi-U3x" secondAttribute="top" id="cGB-h7-Rnl"/>
+                                    <constraint firstAttribute="trailing" secondItem="L7Q-Y1-cyy" secondAttribute="trailing" id="g4N-Ib-8sT"/>
+                                    <constraint firstAttribute="bottom" secondItem="L7Q-Y1-cyy" secondAttribute="bottom" id="iCk-qh-cbv"/>
                                     <constraint firstItem="DV4-Ja-rym" firstAttribute="centerX" secondItem="CEp-4x-xhl" secondAttribute="centerX" id="itN-xp-3hM"/>
                                     <constraint firstItem="CEp-4x-xhl" firstAttribute="width" secondItem="XCZ-Bi-U3x" secondAttribute="width" constant="-88" id="j90-h1-a0a"/>
                                     <constraint firstAttribute="centerY" secondItem="aOg-im-o8R" secondAttribute="centerY" id="lzf-gc-sGJ"/>
@@ -700,6 +739,7 @@
                                     <constraint firstItem="CEp-4x-xhl" firstAttribute="width" secondItem="V2D-aN-sd7" secondAttribute="width" id="zoL-ex-8Rg"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="collectionView" destination="L7Q-Y1-cyy" id="wsT-7v-80R"/>
                                     <outlet property="delegate" destination="uiq-t7-SDj" id="qDS-zh-cYg"/>
                                     <outlet property="needleView" destination="aOg-im-o8R" id="y3W-zY-ujk"/>
                                 </connections>

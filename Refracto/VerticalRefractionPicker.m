@@ -18,28 +18,15 @@ static NSInteger const kMaxRefraction = 30;
 
 @interface VerticalRefractionPicker () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
-@property (strong, nonatomic) UICollectionView *collectionView;
-
 @end
 
 
 @implementation VerticalRefractionPicker
 
-- (void)initialize {
+- (void)awakeFromNib {
 
     _alignment = RefractionPickerAlignmentLeft;
     _refraction = [NSDecimalNumber decimalNumberWithInteger:kMaxRefraction];
-
-    // Collection subview
-    [self.collectionView removeFromSuperview];
-
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:[VerticalRefractionLayout new]];
-    self.collectionView.showsVerticalScrollIndicator = NO;
-    self.collectionView.backgroundColor = [UIColor whiteColor];
-    self.collectionView.decelerationRate = UIScrollViewDecelerationRateNormal;
-    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
 
     [self.collectionView registerClass:[VerticalRefractionCell class]
             forCellWithReuseIdentifier:@"RefractionCell"];
@@ -47,30 +34,6 @@ static NSInteger const kMaxRefraction = 30;
     [self.collectionView registerClass:[VerticalRefractionSupplementaryView class]
             forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                    withReuseIdentifier:@"RefractionHeader"];
-
-    [self insertSubview:self.collectionView atIndex:0];
-}
-
-
-- (instancetype)initWithFrame:(CGRect)frame {
-
-    if ((self = [super initWithFrame:frame])) {
-
-        [self initialize];
-    }
-
-    return self;
-}
-
-
-- (instancetype)initWithCoder:(NSCoder *)decoder {
-
-    if ((self = [super initWithCoder:decoder])) {
-
-        [self initialize];
-    }
-
-    return self;
 }
 
 

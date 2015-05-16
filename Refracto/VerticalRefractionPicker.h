@@ -21,6 +21,8 @@
 @interface VerticalRefractionPicker : UIView <VerticalRefractionLayoutDelegate>
 
 @property (weak, nonatomic) IBOutlet id <VerticalRecfractionPickerDelegate> delegate;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet VerticalRefractionNeedle *needleView;
 
 // Currently selected refraction value
