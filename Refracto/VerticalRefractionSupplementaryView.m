@@ -9,24 +9,17 @@
 
 @implementation VerticalRefractionSupplementaryView
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (void)awakeFromNib {
 
-    if ((self = [super initWithFrame:frame])) {
+    self.label = [[UILabel alloc] initWithFrame:self.bounds];
+    self.label.textColor = [UIColor blackColor];
+    self.label.backgroundColor = [UIColor clearColor];
+    self.label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
+    self.label.textAlignment = NSTextAlignmentCenter;
+    self.label.opaque = NO;
+    self.label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
-        self.backgroundColor = [UIColor clearColor];
-        self.opaque = NO;
-
-        self.label = [[UILabel alloc] initWithFrame:self.bounds];
-        self.label.textColor = [UIColor blackColor];
-        self.label.backgroundColor = [UIColor clearColor];
-        self.label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
-        self.label.textAlignment = NSTextAlignmentCenter;
-        self.label.opaque = NO;
-
-        [self addSubview:self.label];
-    }
-
-    return self;
+    [self addSubview:self.label];
 }
 
 @end

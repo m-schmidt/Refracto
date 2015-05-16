@@ -584,11 +584,16 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bIF-O8-Jyg" customClass="VerticalRefractionLayout">
                                             <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="headerReferenceSize" width="50" height="50"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells/>
+                                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RefractionHeader" id="7p0-dm-3xv" customClass="VerticalRefractionSupplementaryView">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </collectionReusableView>
                                         <connections>
                                             <outlet property="dataSource" destination="ckx-sO-xbs" id="76b-Cz-PuH"/>
                                             <outlet property="delegate" destination="ckx-sO-xbs" id="TnZ-Ka-G2O"/>
@@ -668,11 +673,16 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="w2A-Ww-bt4" customClass="VerticalRefractionLayout">
                                             <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="headerReferenceSize" width="50" height="50"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells/>
+                                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RefractionHeader" id="7aI-3X-1AW" customClass="VerticalRefractionSupplementaryView">
+                                            <rect key="frame" x="0.0" y="0.0" width="299" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </collectionReusableView>
                                         <connections>
                                             <outlet property="dataSource" destination="XCZ-Bi-U3x" id="Iu5-oa-4hX"/>
                                             <outlet property="delegate" destination="XCZ-Bi-U3x" id="xrW-aS-WM2"/>

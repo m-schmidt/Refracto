@@ -30,10 +30,6 @@ static NSInteger const kMaxRefraction = 30;
 
     [self.collectionView registerClass:[VerticalRefractionCell class]
             forCellWithReuseIdentifier:@"RefractionCell"];
-
-    [self.collectionView registerClass:[VerticalRefractionSupplementaryView class]
-            forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
-                   withReuseIdentifier:@"RefractionHeader"];
 }
 
 
