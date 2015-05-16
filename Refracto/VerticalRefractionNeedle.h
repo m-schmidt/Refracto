@@ -1,5 +1,5 @@
 //
-//  VerticalRefractionDottedNeedle.h
+//  VerticalRefractionNeedle.h
 //  Custom View for Selection Needles
 //
 
@@ -7,7 +7,7 @@
 #import "VerticalRefractionLayout.h"
 
 
-@interface VerticalRefractionDottedNeedle : UIView
+@interface VerticalRefractionNeedle : UIView
 
 @property (nonatomic) RefractionPickerAlignment alignment;
 

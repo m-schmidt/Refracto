@@ -29,7 +29,7 @@
 		4DB1179E19C788420027AB70 /* HorizontalModeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1179D19C788420027AB70 /* HorizontalModeCell.m */; };
 		4DB117A119C7932E0027AB70 /* HorizontalModePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB117A019C7932E0027AB70 /* HorizontalModePicker.m */; };
 		4DDFD44B1A52BBA6003AD7F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DDFD44D1A52BBA6003AD7F7 /* Localizable.strings */; };
-		4DEE84561A4F5DF6004BFAC3 /* VerticalRefractionDottedNeedle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE84551A4F5DF6004BFAC3 /* VerticalRefractionDottedNeedle.m */; };
+		4DEE84561A4F5DF6004BFAC3 /* VerticalRefractionNeedle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE84551A4F5DF6004BFAC3 /* VerticalRefractionNeedle.m */; };
 		4DEE84591A50217C004BFAC3 /* NSDecimalNumber+Refracto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE84581A50217C004BFAC3 /* NSDecimalNumber+Refracto.m */; };
 		4DF58A3C1A5615B0007F508B /* RootTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF58A3B1A5615B0007F508B /* RootTabController.m */; };
 /* End PBXBuildFile section */
@@ -93,8 +93,8 @@
 		4DD7E21A19C5BE7400E9447E /* StyleSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StyleSettings.plist; sourceTree = "<group>"; };
 		4DDFD44C1A52BBA6003AD7F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4DDFD44E1A52BBA8003AD7F7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4DEE84541A4F5DF6004BFAC3 /* VerticalRefractionDottedNeedle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalRefractionDottedNeedle.h; sourceTree = "<group>"; };
-		4DEE84551A4F5DF6004BFAC3 /* VerticalRefractionDottedNeedle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionDottedNeedle.m; sourceTree = "<group>"; };
+		4DEE84541A4F5DF6004BFAC3 /* VerticalRefractionNeedle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalRefractionNeedle.h; sourceTree = "<group>"; };
+		4DEE84551A4F5DF6004BFAC3 /* VerticalRefractionNeedle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionNeedle.m; sourceTree = "<group>"; };
 		4DEE84571A50217C004BFAC3 /* NSDecimalNumber+Refracto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Refracto.h"; sourceTree = "<group>"; };
 		4DEE84581A50217C004BFAC3 /* NSDecimalNumber+Refracto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Refracto.m"; sourceTree = "<group>"; };
 		4DF58A3A1A5615B0007F508B /* RootTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabController.h; sourceTree = "<group>"; };
@@ -144,8 +144,8 @@
 				4D35850319EED827007EEC22 /* VerticalRefractionCell.m */,
 				4D35850819EFB92C007EEC22 /* VerticalRefractionSupplementaryView.h */,
 				4D35850919EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m */,
-				4DEE84541A4F5DF6004BFAC3 /* VerticalRefractionDottedNeedle.h */,
-				4DEE84551A4F5DF6004BFAC3 /* VerticalRefractionDottedNeedle.m */,
+				4DEE84541A4F5DF6004BFAC3 /* VerticalRefractionNeedle.h */,
+				4DEE84551A4F5DF6004BFAC3 /* VerticalRefractionNeedle.m */,
 			);
 			name = "Vertical Picker for Refraction Values";
 			sourceTree = "<group>";
@@ -412,7 +412,7 @@
 				4DB1179B19C7841C0027AB70 /* HorizontalModeLayout.m in Sources */,
 				4DF58A3C1A5615B0007F508B /* RootTabController.m in Sources */,
 				4D3584FD19EC6B9B007EEC22 /* SliderCell.m in Sources */,
-				4DEE84561A4F5DF6004BFAC3 /* VerticalRefractionDottedNeedle.m in Sources */,
+				4DEE84561A4F5DF6004BFAC3 /* VerticalRefractionNeedle.m in Sources */,
 				4DB1179E19C788420027AB70 /* HorizontalModeCell.m in Sources */,
 				4D35850719EF104E007EEC22 /* VerticalRefractionLayout.m in Sources */,
 				4D35850A19EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m in Sources */,

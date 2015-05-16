@@ -487,7 +487,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0S-0A-h0q" userLabel="Picker" customClass="HorizontalModePicker">
                                 <rect key="frame" x="0.0" y="156" width="600" height="44"/>
                                 <subviews>
-                                    <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6V-1h-hN7" userLabel="SelectionDot" customClass="VerticalRefractionDottedNeedle">
+                                    <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6V-1h-hN7" userLabel="SelectionDot" customClass="VerticalRefractionNeedle">
                                         <rect key="frame" x="296" y="0.0" width="9" height="9"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="9" id="ccX-vb-RAW"/>
@@ -605,7 +605,7 @@
                                         <color key="textColor" red="0.49803921580314636" green="0.49803921580314636" blue="0.49803921580314636" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwx-sh-zey" userLabel="Needle" customClass="VerticalRefractionDottedNeedle">
+                                    <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwx-sh-zey" userLabel="Needle" customClass="VerticalRefractionNeedle">
                                         <rect key="frame" x="208" y="160" width="90" height="9"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <accessibility key="accessibilityConfiguration">
@@ -670,7 +670,7 @@
                                         <color key="textColor" red="0.49803921580314636" green="0.49803921580314636" blue="0.49803921580314636" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOg-im-o8R" userLabel="Needle" customClass="VerticalRefractionDottedNeedle">
+                                    <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOg-im-o8R" userLabel="Needle" customClass="VerticalRefractionNeedle">
                                         <rect key="frame" x="2" y="160" width="90" height="9"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <accessibility key="accessibilityConfiguration">

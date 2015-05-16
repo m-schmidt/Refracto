@@ -1,13 +1,13 @@
 //
-//  VerticalRefractionDottedNeedle.m
+//  VerticalRefractionNeedle.m
 //  Custom View for Selection Needles
 //
 
 
-#import "VerticalRefractionDottedNeedle.h"
+#import "VerticalRefractionNeedle.h"
 
 
-@implementation VerticalRefractionDottedNeedle
+@implementation VerticalRefractionNeedle
 
 - (void)initialize {
 

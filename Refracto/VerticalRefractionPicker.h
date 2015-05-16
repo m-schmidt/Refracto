@@ -5,7 +5,7 @@
 
 
 #import "VerticalRefractionLayout.h"
-#import "VerticalRefractionDottedNeedle.h"
+#import "VerticalRefractionNeedle.h"
 
 
 @class VerticalRefractionPicker;
@@ -21,7 +21,7 @@
 @interface VerticalRefractionPicker : UIView <VerticalRefractionLayoutDelegate>
 
 @property (weak, nonatomic) IBOutlet id <VerticalRecfractionPickerDelegate> delegate;
-@property (weak, nonatomic) IBOutlet VerticalRefractionDottedNeedle *needleView;
+@property (weak, nonatomic) IBOutlet VerticalRefractionNeedle *needleView;
 
 // Currently selected refraction value
 @property (strong, nonatomic) NSDecimalNumber *refraction;
