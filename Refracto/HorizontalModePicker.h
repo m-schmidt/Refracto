@@ -4,9 +4,6 @@
 //
 
 
-#import "HorizontalModeLayout.h"
-
-
 // Text attributes shared with HorizontalModeCell
 extern NSDictionary *horizontalModeTextAttributes;
 extern NSDictionary *horizontalModeSelectedTextAttributes;
@@ -36,6 +33,8 @@ extern NSDictionary *horizontalModeSelectedTextAttributes;
 
 @property (weak, nonatomic) IBOutlet id <HorizontalModePickerDataSource> datasource;
 @property (weak, nonatomic) IBOutlet id <HorizontalModePickerDelegate> delegate;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 - (void)selectItemAtIndex:(NSInteger)index animated:(BOOL)animated;
 

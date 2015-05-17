@@ -25,7 +25,6 @@
 		4DAB298719C24CF300AF04FF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB298519C24CF300AF04FF /* LaunchScreen.xib */; };
 		4DAB299319C24CF300AF04FF /* RefractoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB299219C24CF300AF04FF /* RefractoTests.m */; };
 		4DAB299E19C24DF100AF04FF /* RefractometerComputation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB299D19C24DF100AF04FF /* RefractometerComputation.m */; };
-		4DB1179B19C7841C0027AB70 /* HorizontalModeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1179A19C7841C0027AB70 /* HorizontalModeLayout.m */; };
 		4DB1179E19C788420027AB70 /* HorizontalModeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1179D19C788420027AB70 /* HorizontalModeCell.m */; };
 		4DB117A119C7932E0027AB70 /* HorizontalModePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB117A019C7932E0027AB70 /* HorizontalModePicker.m */; };
 		4DDFD44B1A52BBA6003AD7F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DDFD44D1A52BBA6003AD7F7 /* Localizable.strings */; };
@@ -82,8 +81,6 @@
 		4DAB299219C24CF300AF04FF /* RefractoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefractoTests.m; sourceTree = "<group>"; };
 		4DAB299C19C24DF100AF04FF /* RefractometerComputation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefractometerComputation.h; sourceTree = "<group>"; };
 		4DAB299D19C24DF100AF04FF /* RefractometerComputation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefractometerComputation.m; sourceTree = "<group>"; };
-		4DB1179919C7841C0027AB70 /* HorizontalModeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalModeLayout.h; sourceTree = "<group>"; };
-		4DB1179A19C7841C0027AB70 /* HorizontalModeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalModeLayout.m; sourceTree = "<group>"; };
 		4DB1179C19C788420027AB70 /* HorizontalModeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalModeCell.h; sourceTree = "<group>"; };
 		4DB1179D19C788420027AB70 /* HorizontalModeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalModeCell.m; sourceTree = "<group>"; };
 		4DB1179F19C7932E0027AB70 /* HorizontalModePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalModePicker.h; sourceTree = "<group>"; };
@@ -245,8 +242,6 @@
 			children = (
 				4DB1179F19C7932E0027AB70 /* HorizontalModePicker.h */,
 				4DB117A019C7932E0027AB70 /* HorizontalModePicker.m */,
-				4DB1179919C7841C0027AB70 /* HorizontalModeLayout.h */,
-				4DB1179A19C7841C0027AB70 /* HorizontalModeLayout.m */,
 				4DB1179C19C788420027AB70 /* HorizontalModeCell.h */,
 				4DB1179D19C788420027AB70 /* HorizontalModeCell.m */,
 			);
@@ -409,7 +404,6 @@
 				4DB117A119C7932E0027AB70 /* HorizontalModePicker.m in Sources */,
 				4DEE84591A50217C004BFAC3 /* NSDecimalNumber+Refracto.m in Sources */,
 				4DA96B2E1A2FBE8F00E4091A /* RefractometerDisplayController.m in Sources */,
-				4DB1179B19C7841C0027AB70 /* HorizontalModeLayout.m in Sources */,
 				4DF58A3C1A5615B0007F508B /* RootTabController.m in Sources */,
 				4D3584FD19EC6B9B007EEC22 /* SliderCell.m in Sources */,
 				4DEE84561A4F5DF6004BFAC3 /* VerticalRefractionNeedle.m in Sources */,

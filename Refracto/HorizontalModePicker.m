@@ -6,7 +6,6 @@
 
 #import "HorizontalModePicker.h"
 #import "HorizontalModeCell.h"
-#import "HorizontalModeLayout.h"
 #import "AppDelegate.h"
 
 
@@ -16,8 +15,6 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
 @interface HorizontalModePicker () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
-@property (strong, nonatomic) UICollectionView *collectionView;
-
 @property (nonatomic) CGFloat lineHeight;
 
 @end
@@ -26,7 +23,7 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 @implementation HorizontalModePicker
 
 
-- (void)initialize {
+- (void)awakeFromNib {
 
     // Prepare text attributes for cells
     UIFont *font = [UIFont systemFontOfSize:17.0];
@@ -37,21 +34,8 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
     self.lineHeight = ceil(MAX(font.lineHeight, selectedFont.lineHeight));
 
-
     // Collection subview
-    [self.collectionView removeFromSuperview];
-
-    self.collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:[HorizontalModeLayout new]];
-    self.collectionView.showsHorizontalScrollIndicator = NO;
-    self.collectionView.backgroundColor = [UIColor clearColor];
     self.collectionView.decelerationRate = UIScrollViewDecelerationRateFast;
-    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
-    self.collectionView.userInteractionEnabled = NO;
-    [self.collectionView registerClass:[HorizontalModeCell class] forCellWithReuseIdentifier:@"HorizontalItemCell"];
-
-    [self addSubview:self.collectionView];
 
     // Layer mask for fade out
     CAGradientLayer *maskLayer = [CAGradientLayer layer];
@@ -74,29 +58,6 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     [self addGestureRecognizer:tapRecognizer];
-
-}
-
-
-- (instancetype)initWithFrame:(CGRect)frame {
-
-    if ((self = [super initWithFrame:frame])) {
-
-        [self initialize];
-    }
-
-    return self;
-}
-
-
-- (instancetype)initWithCoder:(NSCoder *)decoder {
-
-    if ((self = [super initWithCoder:decoder])) {
-
-        [self initialize];
-    }
-
-    return self;
 }
 
 
@@ -113,9 +74,11 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
 - (void)updateLayerMask {
 
+    CGRect visibleRect = (CGRect){self.collectionView.contentOffset, self.bounds.size};
+
     [CATransaction begin];
     [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
-    self.collectionView.layer.mask.frame = self.collectionView.bounds;
+    self.collectionView.layer.mask.frame = visibleRect;
     [CATransaction commit];
 }
 
@@ -166,7 +129,7 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
     [self updateFisheyeTransform];
     [self updateLayerMask];
 
-    [self.collectionView.collectionViewLayout invalidateLayout];
+    [self.collectionView reloadData];
 }
 
 

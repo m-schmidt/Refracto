@@ -487,6 +487,30 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0S-0A-h0q" userLabel="Picker" customClass="HorizontalModePicker">
                                 <rect key="frame" x="0.0" y="156" width="600" height="44"/>
                                 <subviews>
+                                    <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9cu-on-QxO">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Z4q-jj-LEU">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HorizontalItemCell" id="ElJ-Zq-JtF" customClass="HorizontalModeCell">
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="J0S-0A-h0q" id="rtO-TA-KRy"/>
+                                            <outlet property="delegate" destination="J0S-0A-h0q" id="Wjg-5c-9at"/>
+                                        </connections>
+                                    </collectionView>
                                     <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6V-1h-hN7" userLabel="SelectionDot" customClass="VerticalRefractionNeedle">
                                         <rect key="frame" x="296" y="0.0" width="9" height="9"/>
                                         <constraints>
@@ -502,9 +526,14 @@
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="d6V-1h-hN7" secondAttribute="centerX" id="LkT-1e-voU"/>
                                     <constraint firstItem="d6V-1h-hN7" firstAttribute="top" secondItem="J0S-0A-h0q" secondAttribute="top" id="QsT-Yy-rq7"/>
+                                    <constraint firstItem="9cu-on-QxO" firstAttribute="top" secondItem="J0S-0A-h0q" secondAttribute="top" id="gSg-P0-j8d"/>
+                                    <constraint firstAttribute="trailing" secondItem="9cu-on-QxO" secondAttribute="trailing" id="kRg-uK-54b"/>
                                     <constraint firstAttribute="height" constant="44" id="nMF-Iq-OIK"/>
+                                    <constraint firstAttribute="bottom" secondItem="9cu-on-QxO" secondAttribute="bottom" id="oi5-Ow-kBM"/>
+                                    <constraint firstItem="9cu-on-QxO" firstAttribute="leading" secondItem="J0S-0A-h0q" secondAttribute="leading" id="sOf-Nc-MWd"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="collectionView" destination="9cu-on-QxO" id="hFw-0o-MZv"/>
                                     <outlet property="datasource" destination="WLz-Ze-WVW" id="DTq-sZ-Jzd"/>
                                     <outlet property="delegate" destination="WLz-Ze-WVW" id="cgh-NM-OQY"/>
                                 </connections>
@@ -601,7 +630,7 @@
                                             </collectionViewCell>
                                         </cells>
                                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RefractionHeader" id="7p0-dm-3xv" customClass="VerticalRefractionSupplementaryView">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </collectionReusableView>
@@ -701,7 +730,7 @@
                                             </collectionViewCell>
                                         </cells>
                                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RefractionHeader" id="7aI-3X-1AW" customClass="VerticalRefractionSupplementaryView">
-                                            <rect key="frame" x="0.0" y="0.0" width="299" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="299" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </collectionReusableView>

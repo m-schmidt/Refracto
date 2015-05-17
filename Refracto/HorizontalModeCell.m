@@ -17,24 +17,19 @@
 
 @implementation HorizontalModeCell
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (void)awakeFromNib {
 
-    if ((self = [super initWithFrame:frame])) {
+    self.layer.doubleSided = NO;
 
-        self.layer.doubleSided = NO;
+    self.label = [[UILabel alloc] initWithFrame:self.contentView.bounds];
+    self.label.backgroundColor = [UIColor clearColor];
+    self.label.textAlignment = NSTextAlignmentCenter;
+    self.label.numberOfLines = 1;
+    self.label.lineBreakMode = NSLineBreakByTruncatingTail;
+    self.label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.label.attributedText = [[NSAttributedString alloc] initWithString:@""];
 
-        self.label = [[UILabel alloc] initWithFrame:self.contentView.bounds];
-        self.label.backgroundColor = [UIColor clearColor];
-        self.label.textAlignment = NSTextAlignmentCenter;
-        self.label.numberOfLines = 1;
-        self.label.lineBreakMode = NSLineBreakByTruncatingTail;
-        self.label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        self.label.attributedText = [[NSAttributedString alloc] initWithString:@""];
-
-        [self.contentView addSubview:self.label];
-    }
-
-    return self;
+    [self addSubview:self.label];
 }
 
 
