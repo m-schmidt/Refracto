@@ -15,6 +15,7 @@
 		4D35850719EF104E007EEC22 /* VerticalRefractionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D35850619EF104E007EEC22 /* VerticalRefractionLayout.m */; };
 		4D35850A19EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D35850919EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m */; };
 		4D4F860619F3D67500DEDB55 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4F860519F3D67500DEDB55 /* MessageUI.framework */; };
+		4D6A5F4A1B3F240A00BD8883 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6A5F491B3F240A00BD8883 /* SafariServices.framework */; };
 		4DA96B2E1A2FBE8F00E4091A /* RefractometerDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA96B2D1A2FBE8F00E4091A /* RefractometerDisplayController.m */; };
 		4DA96B311A2FC30500E4091A /* RefractometerInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA96B301A2FC30500E4091A /* RefractometerInputController.m */; };
 		4DAB297619C24CF300AF04FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB297519C24CF300AF04FF /* main.m */; };
@@ -59,7 +60,7 @@
 		4D35850819EFB92C007EEC22 /* VerticalRefractionSupplementaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalRefractionSupplementaryView.h; sourceTree = "<group>"; };
 		4D35850919EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionSupplementaryView.m; sourceTree = "<group>"; };
 		4D4F860519F3D67500DEDB55 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		4D4F860719F3DED400DEDB55 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4D6A5F491B3F240A00BD8883 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		4D9796A41A521E1100B91C6C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
 		4D9796A51A521E1100B91C6C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4DA96B2C1A2FBE8F00E4091A /* RefractometerDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefractometerDisplayController.h; sourceTree = "<group>"; };
@@ -86,7 +87,6 @@
 		4DB1179F19C7932E0027AB70 /* HorizontalModePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalModePicker.h; sourceTree = "<group>"; };
 		4DB117A019C7932E0027AB70 /* HorizontalModePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalModePicker.m; sourceTree = "<group>"; };
 		4DB117A219C79E080027AB70 /* Refracto-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Refracto-Prefix.pch"; sourceTree = "<group>"; };
-		4DC43B251A3E3CBD0062FBB9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4DD7E21A19C5BE7400E9447E /* StyleSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StyleSettings.plist; sourceTree = "<group>"; };
 		4DDFD44C1A52BBA6003AD7F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4DDFD44E1A52BBA8003AD7F7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -103,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6A5F4A1B3F240A00BD8883 /* SafariServices.framework in Frameworks */,
 				4D4F860619F3D67500DEDB55 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,8 +151,7 @@
 		4D4F860919F3DEE200DEDB55 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4DC43B251A3E3CBD0062FBB9 /* AVFoundation.framework */,
-				4D4F860719F3DED400DEDB55 /* StoreKit.framework */,
+				4D6A5F491B3F240A00BD8883 /* SafariServices.framework */,
 				4D4F860519F3D67500DEDB55 /* MessageUI.framework */,
 			);
 			name = Frameworks;
@@ -305,7 +305,7 @@
 		4DAB296819C24CF300AF04FF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Michael Schmidt";
 				TargetAttributes = {
 					4DAB296F19C24CF300AF04FF = {
@@ -494,6 +494,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -561,6 +562,7 @@
 				INFOPLIST_FILE = Refracto/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.mschmidt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Refracto;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -578,6 +580,7 @@
 				INFOPLIST_FILE = Refracto/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.mschmidt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Refracto;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -600,6 +603,7 @@
 				);
 				INFOPLIST_FILE = RefractoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.mschmidt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RefractoTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Refracto.app/Refracto";
 			};
@@ -617,6 +621,7 @@
 				GCC_PREFIX_HEADER = "Refracto/Refracto-Prefix.pch";
 				INFOPLIST_FILE = RefractoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.mschmidt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = RefractoTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Refracto.app/Refracto";
 			};
