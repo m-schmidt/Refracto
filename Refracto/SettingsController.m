@@ -5,7 +5,7 @@
 
 
 #import <MessageUI/MessageUI.h>
-
+#import <SafariServices/SafariServices.h>
 #import "SettingsController.h"
 #import "SliderCell.h"
 #import "AppDelegate.h"
@@ -86,7 +86,27 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 
 - (void)visitWebsite {
 
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kWebsiteURL]];
+    NSURL *websiteURL = [NSURL URLWithString:kWebsiteURL];
+
+    if (NSClassFromString(@"SFSafariViewController") != nil) {
+
+        SFSafariViewController *safariController = [[SFSafariViewController alloc] initWithURL:websiteURL
+                                                                       entersReaderIfAvailable:NO];
+
+        safariController.delegate = self;
+
+        [self presentViewController:safariController animated:YES completion:nil];
+    }
+    else {
+
+        [[UIApplication sharedApplication] openURL:websiteURL];
+    }
+}
+
+
+- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
+
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 

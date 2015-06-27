@@ -4,6 +4,6 @@
 //
 
 
-@interface SettingsController : UITableViewController <MFMailComposeViewControllerDelegate>
+@interface SettingsController : UITableViewController <MFMailComposeViewControllerDelegate, SFSafariViewControllerDelegate>
 
 @end
