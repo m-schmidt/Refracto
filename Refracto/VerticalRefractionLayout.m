@@ -80,7 +80,10 @@ NSInteger const kVerticalPickerTickInset       =  2;
     for (NSInteger section = 0; section < numberOfSections; section++) {
 
         // Insets for section or fallback to fixed value
-        UIEdgeInsets insets = (delegate == nil) ? self.sectionInset : [delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:section];
+        UIEdgeInsets insets = self.sectionInset;
+
+        if (delegate != nil && (section == 0 || section == numberOfSections - 1))
+            insets = [delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:section];
 
         // Compute position and advance to next section
         yPosition += insets.top;
