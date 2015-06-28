@@ -48,12 +48,12 @@ static NSInteger const kMaxRefraction = 30;
     newInsets.top = self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
     newInsets.bottom = CGRectGetHeight(self.collectionView.bounds) - self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
 
-    // updted content offset based on insets
+    // update content offset based on insets
     CGPoint newOffset = self.collectionView.contentOffset;
     newOffset.y += currentInsets.top - newInsets.top;
 
-    self.collectionView.contentOffset = newOffset;
     self.collectionView.contentInset = newInsets;
+    self.collectionView.contentOffset = newOffset;
 }
 
 
