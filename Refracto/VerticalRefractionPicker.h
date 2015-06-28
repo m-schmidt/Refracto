@@ -31,4 +31,7 @@
 // Horizontal alignment of the tick markers in the view
 @property (nonatomic) RefractionPickerAlignment alignment;
 
+// Update content insets for size changes on rotation
+- (void)updateForSizeTransition;
+
 @end

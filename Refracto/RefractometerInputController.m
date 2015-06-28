@@ -45,7 +45,10 @@
     NSDecimalNumber *recentBeforeRefraction = sharedAppDelegate.recentBeforeRefraction;
     NSDecimalNumber *recentCurrentRefraction = sharedAppDelegate.recentCurrentRefraction;
 
+    [self.beforePicker updateForSizeTransition];
     self.beforePicker.refraction = recentBeforeRefraction;
+
+    [self.currentPicker updateForSizeTransition];
     self.currentPicker.refraction = recentCurrentRefraction;
 
     if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPad) {
@@ -92,21 +95,20 @@
 
     self.propagateUpdatesOnScroll = NO;
 
-    AppDelegate *sharedAppDelegate = [AppDelegate appDelegate];
-    NSDecimalNumber *beforeRefraction = sharedAppDelegate.recentBeforeRefraction;
-    NSDecimalNumber *currentRefraction = sharedAppDelegate.recentCurrentRefraction;
+    NSDecimalNumber *beforeRefraction = self.beforePicker.refraction;//sharedAppDelegate.recentBeforeRefraction;
+    NSDecimalNumber *currentRefraction = self.currentPicker.refraction;//sharedAppDelegate.recentCurrentRefraction;
 
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 
-            self.beforePicker.refraction = beforeRefraction;
-            self.currentPicker.refraction = currentRefraction;
+            [self.beforePicker updateForSizeTransition];
+            [self.currentPicker updateForSizeTransition];
         }
         completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 400ull * NSEC_PER_MSEC), dispatch_get_main_queue(), ^{
+            self.propagateUpdatesOnScroll = YES;
 
-                self.propagateUpdatesOnScroll = YES;
-            });
+            self.beforePicker.refraction = beforeRefraction;
+            self.currentPicker.refraction = currentRefraction;
         }];
 }
 

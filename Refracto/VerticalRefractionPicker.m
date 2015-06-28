@@ -16,7 +16,7 @@ static NSInteger const kMinRefraction =  0;
 static NSInteger const kMaxRefraction = 30;
 
 
-@interface VerticalRefractionPicker () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface VerticalRefractionPicker () <UICollectionViewDataSource>
 
 @end
 
@@ -33,6 +33,27 @@ static NSInteger const kMaxRefraction = 30;
 - (void)layoutSubviews {
 
     [self.collectionView reloadData];
+}
+
+
+#pragma mark - Update Helpers on View Rotation
+
+
+- (void)updateForSizeTransition {
+
+    // new content inset based on height of view
+    UIEdgeInsets currentInsets = self.collectionView.contentInset;
+
+    UIEdgeInsets newInsets = currentInsets;
+    newInsets.top = self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
+    newInsets.bottom = CGRectGetHeight(self.collectionView.bounds) - self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
+
+    // updted content offset based on insets
+    CGPoint newOffset = self.collectionView.contentOffset;
+    newOffset.y += currentInsets.top - newInsets.top;
+
+    self.collectionView.contentOffset = newOffset;
+    self.collectionView.contentInset = newInsets;
 }
 
 
@@ -129,7 +150,8 @@ static NSInteger const kMaxRefraction = 30;
 
 - (NSIndexPath *)indexPathForContentOffset:(CGPoint)contentOffset {
 
-    NSInteger linearIndex = rint(contentOffset.y / (kVerticalPickerCellHeight + kVerticalPickerCellSpacing));
+    CGFloat inset = self.collectionView.contentInset.top;
+    NSInteger linearIndex = rint((inset + contentOffset.y) / (kVerticalPickerCellHeight + kVerticalPickerCellSpacing));
 
     linearIndex = MAX(linearIndex, 0);
     linearIndex = MIN(linearIndex, (kMaxRefraction - kMinRefraction) * 10);
@@ -140,7 +162,9 @@ static NSInteger const kMaxRefraction = 30;
 
 - (CGPoint)contentOffsetForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    return CGPointMake (0.0, [self linearIndexForIndexPath:indexPath] * (kVerticalPickerCellHeight + kVerticalPickerCellSpacing));
+    CGFloat inset = self.collectionView.contentInset.top;
+
+    return CGPointMake (0.0, [self linearIndexForIndexPath:indexPath] * (kVerticalPickerCellHeight + kVerticalPickerCellSpacing) - inset);
 }
 
 
@@ -193,29 +217,6 @@ static NSInteger const kMaxRefraction = 30;
 }
 
 
-#pragma mark - UICollectionViewDelegateFlowLayout
-
-
-// Inset first and last element such that they can be scrolled to the middle of the view
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-
-    if (section == 0) {
-
-        CGFloat insetTop = self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
-
-        return UIEdgeInsetsMake(insetTop, 0.0, 0.0, 0.0);
-    }
-    else if (section == [self numberOfSectionsInCollectionView:collectionView] - 1) {
-
-        CGFloat insetBot = CGRectGetHeight(collectionView.bounds) - self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
-
-        return UIEdgeInsetsMake(0.0, 0.0, insetBot, 0.0);
-    }
-
-    return UIEdgeInsetsZero;
-}
-
-
 #pragma mark - UIScrollViewDelegate
 
 
@@ -232,7 +233,7 @@ static NSInteger const kMaxRefraction = 30;
 }
 
 
-#pragma mark Accessibility
+#pragma mark - Accessibility
 
 
 - (NSString *)accessibilityValue {
