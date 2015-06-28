@@ -39,7 +39,7 @@ static NSInteger const kMaxRefraction = 30;
 #pragma mark - Update Helpers on View Rotation
 
 
-- (void)updateForSizeTransition {
+- (void)updateForSizeTransitionWithTargetContentOffset:(CGPoint)contentOffset {
 
     // new content inset based on height of view
     UIEdgeInsets currentInsets = self.collectionView.contentInset;
@@ -48,8 +48,8 @@ static NSInteger const kMaxRefraction = 30;
     newInsets.top = self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
     newInsets.bottom = CGRectGetHeight(self.collectionView.bounds) - self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
 
-    // update content offset based on insets
-    CGPoint newOffset = self.collectionView.contentOffset;
+    // new content offset based on insets
+    CGPoint newOffset = contentOffset;
     newOffset.y += currentInsets.top - newInsets.top;
 
     self.collectionView.contentInset = newInsets;
