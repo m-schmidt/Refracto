@@ -93,10 +93,12 @@
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
 
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+
     self.propagateUpdatesOnScroll = NO;
 
-    NSDecimalNumber *beforeRefraction = self.beforePicker.refraction;//sharedAppDelegate.recentBeforeRefraction;
-    NSDecimalNumber *currentRefraction = self.currentPicker.refraction;//sharedAppDelegate.recentCurrentRefraction;
+    NSDecimalNumber *beforeRefraction = self.beforePicker.refraction;
+    NSDecimalNumber *currentRefraction = self.currentPicker.refraction;
 
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 
