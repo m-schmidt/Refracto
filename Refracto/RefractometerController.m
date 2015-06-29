@@ -18,6 +18,27 @@
 
 @implementation RefractometerController
 
+// Settings on iPad show a popover or a fullscreen view in compact size width
+- (IBAction)showSettings:(id)sender {
+
+    UIViewController *settingsController = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsNavigation"];
+    settingsController.modalPresentationStyle = UIModalPresentationPopover;
+
+    UIPopoverPresentationController *popOverController = settingsController.popoverPresentationController;
+    popOverController.permittedArrowDirections = UIPopoverArrowDirectionAny;
+    popOverController.sourceView = sender;
+    popOverController.delegate = self;
+
+    [self presentViewController:settingsController animated:YES completion:nil];
+}
+
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+
+    return UIModalPresentationFullScreen;
+}
+
+
 // Catch segues to embedded controllers, init delegate
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
