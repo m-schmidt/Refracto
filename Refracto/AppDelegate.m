@@ -5,6 +5,7 @@
 
 #import "AppDelegate.h"
 #import "NSDecimalNumber+Refracto.h"
+#import "VerticalRefractionPicker.h"
 
 
 // Keys for user preferences
@@ -198,10 +199,20 @@
 
 - (void)setRecentBeforeRefraction:(NSDecimalNumber *)beforeRefraction {
 
-    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    NSDecimalNumber *min = [NSDecimalNumber decimalNumberWithMantissa:kMinRefraction exponent:0 isNegative:NO];
+    NSDecimalNumber *max = [NSDecimalNumber decimalNumberWithMantissa:kMaxRefraction exponent:0 isNegative:NO];
 
-    [standardUserDefaults setObject:beforeRefraction forKey:kInputRefractionBefore];
-    [standardUserDefaults synchronize];
+    if ([beforeRefraction isGreaterThanOrEqual:min] && [beforeRefraction isLessThanOrEqual:max]) {
+
+        NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+
+        [standardUserDefaults setObject:beforeRefraction forKey:kInputRefractionBefore];
+        [standardUserDefaults synchronize];
+    }
+    else {
+
+        ALog(@"'before' refraction value out of range: %@", beforeRefraction);
+    }
 }
 
 
@@ -224,10 +235,20 @@
 
 - (void)setRecentCurrentRefraction:(NSDecimalNumber *)currentRefraction {
 
-    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    NSDecimalNumber *min = [NSDecimalNumber decimalNumberWithMantissa:kMinRefraction exponent:0 isNegative:NO];
+    NSDecimalNumber *max = [NSDecimalNumber decimalNumberWithMantissa:kMaxRefraction exponent:0 isNegative:NO];
 
-    [standardUserDefaults setObject:currentRefraction forKey:kInputRefractionCurrent];
-    [standardUserDefaults synchronize];
+    if ([currentRefraction isGreaterThanOrEqual:min] && [currentRefraction isLessThanOrEqual:max]) {
+
+        NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+
+        [standardUserDefaults setObject:currentRefraction forKey:kInputRefractionCurrent];
+        [standardUserDefaults synchronize];
+    }
+    else {
+
+        ALog(@"'current' refraction value out of range: %@", currentRefraction);
+    }
 }
 
 
