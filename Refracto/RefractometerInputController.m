@@ -66,23 +66,7 @@
 }
 
 
-#pragma mark - iPad Customization
-
-
-- (void)handleComputationDefaultsChanged:(NSNotification *)notification {
-
-    [self.delegate refractionInputDidChangeToBefore:self.beforePicker.refraction current:self.currentPicker.refraction];
-}
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
-    if ([segue.identifier isEqualToString:kShowSettingsPopoverSegue]) {
-
-        UIViewController *destinationController = segue.destinationViewController;
-        destinationController.preferredContentSize = CGSizeMake(320, 520);
-    }
-}
+#pragma mark - iPad Rotation
 
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -96,13 +80,65 @@
 
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 
-            [self.beforePicker handleSizeTransitionWithTargetContentOffset:beforeContentOffset];
-            [self.currentPicker handleSizeTransitionWithTargetContentOffset:currentContentOffset];
-        }
-        completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        [self.beforePicker handleSizeTransitionWithTargetContentOffset:beforeContentOffset];
+        [self.currentPicker handleSizeTransitionWithTargetContentOffset:currentContentOffset];
+    }
+                                 completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 
-            self.propagateUpdatesOnScroll = YES;
-        }];
+                                     self.propagateUpdatesOnScroll = YES;
+                                 }];
+}
+
+
+#pragma mark - Customized Settings for iPad
+
+
+- (void)handleComputationDefaultsChanged:(NSNotification *)notification {
+
+    [self.delegate refractionInputDidChangeToBefore:self.beforePicker.refraction current:self.currentPicker.refraction];
+}
+
+
+- (IBAction)dismissSettings:(id)sender {
+
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    if ([segue.identifier isEqualToString:kShowSettingsPopoverSegue]) {
+
+        UIViewController *destinationController = segue.destinationViewController;
+        destinationController.preferredContentSize = CGSizeMake(320, 520);
+        destinationController.popoverPresentationController.delegate = self;
+    }
+}
+
+
+#pragma mark - UIAdaptivePresentationControllerDelegate
+
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+
+    return UIModalPresentationFullScreen;
+}
+
+
+- (UIViewController *)presentationController:(UIPresentationController *)controller viewControllerForAdaptivePresentationStyle:(UIModalPresentationStyle)style  {
+
+    UINavigationController *navController = (UINavigationController *)controller.presentedViewController;
+    UIBarButtonItem *doneButton = nil;
+
+    if (style == UIModalPresentationFullScreen) {
+
+        doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                   target:self
+                                                                   action:@selector(dismissSettings:)];
+    }
+
+    navController.topViewController.navigationItem.rightBarButtonItem = doneButton;
+    return navController;
 }
 
 

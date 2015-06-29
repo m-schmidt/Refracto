@@ -8,7 +8,7 @@
 #import "RefractometerDisplayController.h"
 
 
-@interface RefractometerController : UIViewController <RefractometerInputDelegate, UIPopoverPresentationControllerDelegate>
+@interface RefractometerController : UIViewController <RefractometerInputDelegate>
 
 @end
 
