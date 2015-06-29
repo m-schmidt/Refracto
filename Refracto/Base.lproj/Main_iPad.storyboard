@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="1449" y="404"/>
         </scene>
-        <!--Gravity Unit-->
+        <!--GravityUnit-->
         <scene sceneID="rpt-dD-j9i">
             <objects>
-                <tableViewController storyboardIdentifier="UnitSettings" title="Gravity Unit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lYu-q2-S98" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="UnitSettings" title="Gravity Unit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lYu-q2-S98" userLabel="GravityUnit" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Wi0-D2-LII">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,10 +254,10 @@
             </objects>
             <point key="canvasLocation" x="2172" y="404"/>
         </scene>
-        <!--Datasource-->
+        <!--DisplayController-->
         <scene sceneID="2Hd-Ry-a8q">
             <objects>
-                <viewController storyboardIdentifier="RefractometerDisplay" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WLz-Ze-WVW" customClass="RefractometerDisplayController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RefractometerDisplay" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WLz-Ze-WVW" userLabel="DisplayController" customClass="RefractometerDisplayController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CFA-Sm-Wae"/>
                         <viewControllerLayoutGuide type="bottom" id="AL6-nM-g0K"/>
@@ -587,10 +587,10 @@
             </objects>
             <point key="canvasLocation" x="732" y="-616"/>
         </scene>
-        <!--Delegate-->
+        <!--InputController-->
         <scene sceneID="6mx-4f-K9Z">
             <objects>
-                <viewController storyboardIdentifier="RefractometerInput" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uiq-t7-SDj" customClass="RefractometerInputController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RefractometerInput" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uiq-t7-SDj" userLabel="InputController" customClass="RefractometerInputController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gUP-ih-lxa"/>
                         <viewControllerLayoutGuide type="bottom" id="6pJ-v9-Oq4"/>
@@ -839,10 +839,10 @@
             </objects>
             <point key="canvasLocation" x="732" y="-281"/>
         </scene>
-        <!--Settings Navigation-->
+        <!--SettingsNavigation-->
         <scene sceneID="erR-XW-R1H">
             <objects>
-                <navigationController storyboardIdentifier="SettingsNavgation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="A7r-fg-Ksv" userLabel="Settings Navigation" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SettingsNavgation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="A7r-fg-Ksv" userLabel="SettingsNavigation" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="vmo-5F-aud" userLabel="Settings"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nys-SN-a1L">
