@@ -16,6 +16,7 @@
 		4D35850A19EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D35850919EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m */; };
 		4D4F860619F3D67500DEDB55 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4F860519F3D67500DEDB55 /* MessageUI.framework */; };
 		4D6A5F4A1B3F240A00BD8883 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6A5F491B3F240A00BD8883 /* SafariServices.framework */; };
+		4D9E61E31B415058001895D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9E61E51B415058001895D0 /* LaunchScreen.storyboard */; };
 		4DA96B2E1A2FBE8F00E4091A /* RefractometerDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA96B2D1A2FBE8F00E4091A /* RefractometerDisplayController.m */; };
 		4DA96B311A2FC30500E4091A /* RefractometerInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA96B301A2FC30500E4091A /* RefractometerInputController.m */; };
 		4DAB297619C24CF300AF04FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB297519C24CF300AF04FF /* main.m */; };
@@ -23,7 +24,6 @@
 		4DAB297C19C24CF300AF04FF /* RefractometerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB297B19C24CF300AF04FF /* RefractometerController.m */; };
 		4DAB298219C24CF300AF04FF /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB298019C24CF300AF04FF /* Main_iPhone.storyboard */; };
 		4DAB298419C24CF300AF04FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB298319C24CF300AF04FF /* Images.xcassets */; };
-		4DAB298719C24CF300AF04FF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB298519C24CF300AF04FF /* LaunchScreen.xib */; };
 		4DAB299319C24CF300AF04FF /* RefractoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB299219C24CF300AF04FF /* RefractoTests.m */; };
 		4DAB299E19C24DF100AF04FF /* RefractometerComputation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB299D19C24DF100AF04FF /* RefractometerComputation.m */; };
 		4DB1179E19C788420027AB70 /* HorizontalModeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1179D19C788420027AB70 /* HorizontalModeCell.m */; };
@@ -61,8 +61,9 @@
 		4D35850919EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionSupplementaryView.m; sourceTree = "<group>"; };
 		4D4F860519F3D67500DEDB55 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4D6A5F491B3F240A00BD8883 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		4D70FE5D1B4150BD00309C50 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		4D9796A41A521E1100B91C6C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
-		4D9796A51A521E1100B91C6C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4D9E61E41B415058001895D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DA96B2C1A2FBE8F00E4091A /* RefractometerDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefractometerDisplayController.h; sourceTree = "<group>"; };
 		4DA96B2D1A2FBE8F00E4091A /* RefractometerDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefractometerDisplayController.m; sourceTree = "<group>"; };
 		4DA96B2F1A2FC30500E4091A /* RefractometerInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefractometerInputController.h; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		4DAB297B19C24CF300AF04FF /* RefractometerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefractometerController.m; sourceTree = "<group>"; };
 		4DAB298119C24CF300AF04FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		4DAB298319C24CF300AF04FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4DAB298619C24CF300AF04FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4DAB298C19C24CF300AF04FF /* RefractoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RefractoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DAB299119C24CF300AF04FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DAB299219C24CF300AF04FF /* RefractoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefractoTests.m; sourceTree = "<group>"; };
@@ -254,7 +254,7 @@
 				4DDFD44D1A52BBA6003AD7F7 /* Localizable.strings */,
 				4DAB298019C24CF300AF04FF /* Main_iPhone.storyboard */,
 				4D247D861A92A23A00FA5525 /* Main_iPad.storyboard */,
-				4DAB298519C24CF300AF04FF /* LaunchScreen.xib */,
+				4D9E61E51B415058001895D0 /* LaunchScreen.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -346,7 +346,7 @@
 				4D247D841A92A23A00FA5525 /* Main_iPad.storyboard in Resources */,
 				4DAB298219C24CF300AF04FF /* Main_iPhone.storyboard in Resources */,
 				4DDFD44B1A52BBA6003AD7F7 /* Localizable.strings in Resources */,
-				4DAB298719C24CF300AF04FF /* LaunchScreen.xib in Resources */,
+				4D9E61E31B415058001895D0 /* LaunchScreen.storyboard in Resources */,
 				4DAB298419C24CF300AF04FF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +444,15 @@
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
+		4D9E61E51B415058001895D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D9E61E41B415058001895D0 /* Base */,
+				4D70FE5D1B4150BD00309C50 /* de */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		4DAB298019C24CF300AF04FF /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -451,15 +460,6 @@
 				4D9796A41A521E1100B91C6C /* de */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		4DAB298519C24CF300AF04FF /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4DAB298619C24CF300AF04FF /* Base */,
-				4D9796A51A521E1100B91C6C /* de */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 		4DDFD44D1A52BBA6003AD7F7 /* Localizable.strings */ = {
