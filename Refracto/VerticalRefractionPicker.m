@@ -268,7 +268,7 @@ NSInteger const kMaxRefraction = 30;
 }
 
 
-- (BOOL)accessibilityIncrementRefrectionByTicks:(NSInteger)increment postAnnouncement:(BOOL)announce {
+- (BOOL)accessibilityIncrementRefractionByTicks:(NSInteger)increment postAnnouncement:(BOOL)announce {
 
     BOOL negative = NO;
 
@@ -303,10 +303,10 @@ NSInteger const kMaxRefraction = 30;
     switch (direction) {
 
         case UIAccessibilityScrollDirectionDown:
-            return [self accessibilityIncrementRefrectionByTicks:10 postAnnouncement:YES];
+            return [self accessibilityIncrementRefractionByTicks:10 postAnnouncement:YES];
 
         case UIAccessibilityScrollDirectionUp:
-            return [self accessibilityIncrementRefrectionByTicks:-10 postAnnouncement:YES];
+            return [self accessibilityIncrementRefractionByTicks:-10 postAnnouncement:YES];
 
         default:
             return NO;
@@ -316,13 +316,13 @@ NSInteger const kMaxRefraction = 30;
 
 - (void)accessibilityIncrement {
 
-    [self accessibilityIncrementRefrectionByTicks:1 postAnnouncement:NO];
+    [self accessibilityIncrementRefractionByTicks:1 postAnnouncement:NO];
 }
 
 
 - (void)accessibilityDecrement {
 
-    [self accessibilityIncrementRefrectionByTicks:-1 postAnnouncement:NO];
+    [self accessibilityIncrementRefractionByTicks:-1 postAnnouncement:NO];
 }
 
 @end
