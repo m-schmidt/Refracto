@@ -140,10 +140,10 @@
                                     <constraints>
                                         <constraint firstAttribute="centerX" secondItem="dne-US-C4e" secondAttribute="centerX" id="AvL-4E-IkK"/>
                                         <constraint firstItem="Hwb-sa-3uZ" firstAttribute="top" secondItem="EZb-8F-xmF" secondAttribute="topMargin" constant="8" id="Gen-Vc-f7K"/>
-                                        <constraint firstItem="YGB-Nz-cU6" firstAttribute="leadingMargin" secondItem="EZb-8F-xmF" secondAttribute="leadingMargin" constant="15" id="Ijv-CV-Nbp"/>
+                                        <constraint firstItem="YGB-Nz-cU6" firstAttribute="leading" secondItem="EZb-8F-xmF" secondAttribute="leading" constant="15" id="Ijv-CV-Nbp"/>
                                         <constraint firstItem="YGB-Nz-cU6" firstAttribute="top" secondItem="EZb-8F-xmF" secondAttribute="topMargin" constant="8" id="MDU-IC-vOz"/>
                                         <constraint firstItem="Hwb-sa-3uZ" firstAttribute="leading" secondItem="YGB-Nz-cU6" secondAttribute="trailing" constant="8" id="Mgg-vP-OYi"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Hwb-sa-3uZ" secondAttribute="trailingMargin" constant="15" id="ODo-dV-LNj"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hwb-sa-3uZ" secondAttribute="trailing" constant="15" id="ODo-dV-LNj"/>
                                         <constraint firstItem="dne-US-C4e" firstAttribute="top" secondItem="YGB-Nz-cU6" secondAttribute="bottom" constant="16" id="nzv-9m-nBO"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="dne-US-C4e" secondAttribute="bottom" constant="8" id="uJQ-iZ-cR7"/>
                                     </constraints>
