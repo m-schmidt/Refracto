@@ -12,8 +12,8 @@
 
 
 // Default value range in °Brix for picker
-static NSInteger const kMinRefraction =  0;
-static NSInteger const kMaxRefraction = 30;
+NSInteger const kMinRefraction =  0;
+NSInteger const kMaxRefraction = 30;
 
 
 @interface VerticalRefractionPicker () <UICollectionViewDataSource>
@@ -36,21 +36,32 @@ static NSInteger const kMaxRefraction = 30;
 }
 
 
-#pragma mark - Update Helpers on View Rotation
+#pragma mark - View Rotation
 
 
-- (void)updateForSizeTransitionWithTargetContentOffset:(CGPoint)contentOffset {
+// Computed content insets that fit current bounds of view
+- (UIEdgeInsets)contentInsetsToFit {
 
-    // new content inset based on height of view
-    UIEdgeInsets currentInsets = self.collectionView.contentInset;
+    UIEdgeInsets insets = UIEdgeInsetsZero;
+    insets.top = self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
+    insets.bottom = CGRectGetHeight(self.collectionView.bounds) - self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
 
-    UIEdgeInsets newInsets = currentInsets;
-    newInsets.top = self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
-    newInsets.bottom = CGRectGetHeight(self.collectionView.bounds) - self.needleView.center.y - (kVerticalPickerCellHeight / 2) - 0.5;
+    return insets;
+}
 
-    // new content offset based on insets
+
+- (CGPoint)contentOffsetSnappedToTickMarker {
+
+    return [self contentOffsetForItemAtIndexPath:[self indexPathForContentOffset:self.collectionView.contentOffset]];
+}
+
+
+- (void)handleSizeTransitionWithTargetContentOffset:(CGPoint)contentOffset {
+
+    UIEdgeInsets newInsets = [self contentInsetsToFit];
+
     CGPoint newOffset = contentOffset;
-    newOffset.y += currentInsets.top - newInsets.top;
+    newOffset.y += self.collectionView.contentInset.top - newInsets.top;
 
     self.collectionView.contentInset = newInsets;
     self.collectionView.contentOffset = newOffset;
@@ -78,6 +89,13 @@ static NSInteger const kMaxRefraction = 30;
 
 
 - (void)setRefraction:(NSDecimalNumber *)refraction {
+
+    if (UIEdgeInsetsEqualToEdgeInsets(self.collectionView.contentInset, UIEdgeInsetsZero)) {
+
+        UIEdgeInsets insets = [self contentInsetsToFit];
+        self.collectionView.contentInset = insets;
+        self.collectionView.contentOffset = CGPointMake(0.0, -insets.top);
+    }
 
     [self setRefraction:refraction animated:YES];
 }

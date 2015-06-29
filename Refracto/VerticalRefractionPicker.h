@@ -8,6 +8,10 @@
 #import "VerticalRefractionNeedle.h"
 
 
+extern NSInteger const kMinRefraction;
+extern NSInteger const kMaxRefraction;
+
+
 @class VerticalRefractionPicker;
 
 @protocol VerticalRecfractionPickerDelegate <NSObject>
@@ -31,7 +35,10 @@
 // Horizontal alignment of the tick markers in the view
 @property (nonatomic) RefractionPickerAlignment alignment;
 
-// Update content insets and offset to handle size changes, e.g. on rotation
-- (void)updateForSizeTransitionWithTargetContentOffset:(CGPoint)contentOffset;
+// Returns current contentOffset modified to fit the nearest tick marker
+- (CGPoint)contentOffsetSnappedToTickMarker;
+
+// Update contentInset and -offset to handle size changes
+- (void)handleSizeTransitionWithTargetContentOffset:(CGPoint)contentOffset;
 
 @end

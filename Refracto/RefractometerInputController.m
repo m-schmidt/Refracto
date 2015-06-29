@@ -42,14 +42,8 @@
     [super viewDidAppear:animated];
 
     AppDelegate *sharedAppDelegate = [AppDelegate appDelegate];
-    NSDecimalNumber *recentBeforeRefraction = sharedAppDelegate.recentBeforeRefraction;
-    NSDecimalNumber *recentCurrentRefraction = sharedAppDelegate.recentCurrentRefraction;
-
-    [self.beforePicker updateForSizeTransitionWithTargetContentOffset:CGPointZero];
-    self.beforePicker.refraction = recentBeforeRefraction;
-
-    [self.currentPicker updateForSizeTransitionWithTargetContentOffset:CGPointZero];
-    self.currentPicker.refraction = recentCurrentRefraction;
+    self.beforePicker.refraction = sharedAppDelegate.recentBeforeRefraction;
+    self.currentPicker.refraction = sharedAppDelegate.recentCurrentRefraction;
 
     if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPad) {
 
@@ -97,13 +91,13 @@
 
     self.propagateUpdatesOnScroll = NO;
 
-    CGPoint beforeContentOffset = self.beforePicker.collectionView.contentOffset;
-    CGPoint currentContentOffset = self.currentPicker.collectionView.contentOffset;
+    CGPoint beforeContentOffset = [self.beforePicker contentOffsetSnappedToTickMarker];
+    CGPoint currentContentOffset = [self.currentPicker contentOffsetSnappedToTickMarker];
 
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 
-            [self.beforePicker updateForSizeTransitionWithTargetContentOffset:beforeContentOffset];
-            [self.currentPicker updateForSizeTransitionWithTargetContentOffset:currentContentOffset];
+            [self.beforePicker handleSizeTransitionWithTargetContentOffset:beforeContentOffset];
+            [self.currentPicker handleSizeTransitionWithTargetContentOffset:currentContentOffset];
         }
         completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 
