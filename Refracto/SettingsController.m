@@ -81,6 +81,21 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 }
 
 
+#pragma mark - Trait Changes on iPad
+
+
+- (void)willTransitionToTraitCollection:(nonnull UITraitCollection *)newCollection withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
+
+    [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
+
+    // Remove done button in navigation controller when leaving compat sice class
+    if (newCollection.horizontalSizeClass != UIUserInterfaceSizeClassCompact) {
+
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+}
+
+
 #pragma mark - User Actions - Show Website
 
 

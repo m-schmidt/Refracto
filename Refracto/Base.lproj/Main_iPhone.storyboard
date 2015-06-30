@@ -125,7 +125,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.04" minValue="1.02" maxValue="1.0600000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="dne-US-C4e" userLabel="Slider">
-                                            <rect key="frame" x="198" y="52" width="204" height="52"/>
+                                            <rect key="frame" x="198" y="52" width="204" height="31"/>
                                             <accessibility key="accessibilityConfiguration">
                                                 <bool key="isElement" value="NO"/>
                                             </accessibility>
@@ -145,7 +145,7 @@
                                         <constraint firstItem="Hwb-sa-3uZ" firstAttribute="leading" secondItem="YGB-Nz-cU6" secondAttribute="trailing" constant="8" id="Mgg-vP-OYi"/>
                                         <constraint firstAttribute="trailing" secondItem="Hwb-sa-3uZ" secondAttribute="trailing" constant="15" id="ODo-dV-LNj"/>
                                         <constraint firstItem="dne-US-C4e" firstAttribute="top" secondItem="YGB-Nz-cU6" secondAttribute="bottom" priority="999" constant="16" id="nzv-9m-nBO"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="dne-US-C4e" secondAttribute="bottom" constant="8" id="uJQ-iZ-cR7"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="dne-US-C4e" secondAttribute="bottom" constant="8" id="uJQ-iZ-cR7"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration">

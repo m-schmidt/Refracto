@@ -66,6 +66,12 @@
 }
 
 
+- (void)handleComputationDefaultsChanged:(NSNotification *)notification {
+
+    [self.delegate refractionInputDidChangeToBefore:self.beforePicker.refraction current:self.currentPicker.refraction];
+}
+
+
 #pragma mark - iPad Rotation
 
 
@@ -90,13 +96,7 @@
 }
 
 
-#pragma mark - Customized Settings for iPad
-
-
-- (void)handleComputationDefaultsChanged:(NSNotification *)notification {
-
-    [self.delegate refractionInputDidChangeToBefore:self.beforePicker.refraction current:self.currentPicker.refraction];
-}
+#pragma mark - Adaptive UIPopoverPresentation for Settings on iPad
 
 
 - (IBAction)dismissSettings:(id)sender {
