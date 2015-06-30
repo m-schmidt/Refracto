@@ -817,9 +817,9 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTt-AO-d43">
-                                        <rect key="frame" x="253" y="293" width="22" height="22"/>
-                                        <state key="normal" image="Settings">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTt-AO-d43" userLabel="Settings">
+                                        <rect key="frame" x="249" y="289" width="22" height="22"/>
+                                        <state key="normal" image="SettingsOutlined">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -856,10 +856,10 @@
                                     <constraint firstAttribute="bottom" secondItem="Hdr-kC-bCx" secondAttribute="bottom" id="gtr-UW-TK7"/>
                                     <constraint firstItem="DV4-Ja-rym" firstAttribute="centerX" secondItem="CEp-4x-xhl" secondAttribute="centerX" id="itN-xp-3hM"/>
                                     <constraint firstItem="CEp-4x-xhl" firstAttribute="top" secondItem="V2D-aN-sd7" secondAttribute="bottom" constant="2" id="mf1-sh-6py"/>
-                                    <constraint firstItem="mTt-AO-d43" firstAttribute="bottom" secondItem="XCZ-Bi-U3x" secondAttribute="bottomMargin" constant="-16" id="puR-Fm-mUO"/>
+                                    <constraint firstItem="mTt-AO-d43" firstAttribute="bottom" secondItem="XCZ-Bi-U3x" secondAttribute="bottomMargin" constant="-20" id="puR-Fm-mUO"/>
                                     <constraint firstItem="DV4-Ja-rym" firstAttribute="width" secondItem="CEp-4x-xhl" secondAttribute="width" id="qVL-UO-Hs5"/>
                                     <constraint firstAttribute="trailing" secondItem="Hdr-kC-bCx" secondAttribute="trailing" id="zWv-xI-rSO"/>
-                                    <constraint firstItem="mTt-AO-d43" firstAttribute="trailing" secondItem="XCZ-Bi-U3x" secondAttribute="trailingMargin" constant="-16" id="zaT-0c-8uJ"/>
+                                    <constraint firstItem="mTt-AO-d43" firstAttribute="trailing" secondItem="XCZ-Bi-U3x" secondAttribute="trailingMargin" constant="-20" id="zaT-0c-8uJ"/>
                                     <constraint firstItem="CEp-4x-xhl" firstAttribute="width" secondItem="V2D-aN-sd7" secondAttribute="width" id="zoL-ex-8Rg"/>
                                 </constraints>
                                 <connections>
@@ -916,5 +916,6 @@
     <resources>
         <image name="Refracto" width="33" height="22"/>
         <image name="Settings" width="22" height="22"/>
+        <image name="SettingsOutlined" width="22" height="22"/>
     </resources>
 </document>
