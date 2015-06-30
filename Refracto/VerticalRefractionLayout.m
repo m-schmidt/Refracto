@@ -83,12 +83,13 @@ NSInteger const kVerticalPickerTickInset       =  2;
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
 
-    NSMutableArray *layoutAttributes = [NSMutableArray new];
+    NSArray *superLayoutAttributes = [super layoutAttributesForElementsInRect:rect];
+    NSMutableArray *layoutAttributes = [[NSMutableArray alloc] initWithCapacity:[superLayoutAttributes count] + 10];
 
     // Match normal views and align them
     CGFloat width = CGRectGetWidth(self.collectionView.bounds);
 
-    for (UICollectionViewLayoutAttributes *attributes in [super layoutAttributesForElementsInRect:rect]) {
+    for (UICollectionViewLayoutAttributes *attributes in superLayoutAttributes) {
 
         CGRect frame = attributes.frame;
         frame.origin.x = (self.alignment == RefractionPickerAlignmentLeft) ? 2 : width - CGRectGetWidth(frame) - 2;
