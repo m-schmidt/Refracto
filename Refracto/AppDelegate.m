@@ -36,7 +36,7 @@
 
     [[NSUserDefaults standardUserDefaults] registerDefaults:
         @{kSpecificGravityUnit:    @([self gravityUnitGuessedFromLocale]),
-          kSpecificGravityMode:    @(RFSpecifiyGravityModeTerrill),
+          kSpecificGravityMode:    @([self gravityModeGuessedFromLocale]),
           kInputRefractionBefore:  [NSDecimalNumber decimalNumberWithMantissa:125 exponent:-1 isNegative:NO],
           kInputRefractionCurrent: [NSDecimalNumber decimalNumberWithMantissa:64  exponent:-1 isNegative:NO],
           kWortCorrectionDivisor:  [NSDecimalNumber decimalNumberWithMantissa:103 exponent:-2 isNegative:NO]}];
@@ -45,7 +45,7 @@
 }
 
 
-- (RFGravityUnit)gravityUnitGuessedFromLocale {
+- (BOOL)localeWithImperialCountryCode {
 
     NSString *country = [[NSLocale autoupdatingCurrentLocale] objectForKey:NSLocaleCountryCode];
 
@@ -56,12 +56,24 @@
         [country isEqualToString:@"AU"] ||
         [country isEqualToString:@"NZ"]) {
 
-        return RFGravityUnitSG;
+        return YES;
     }
     else {
 
-        return RFGravityUnitPlato;
+        return NO;
     }
+}
+
+
+- (RFGravityUnit)gravityUnitGuessedFromLocale {
+
+    return [self localeWithImperialCountryCode] ? RFGravityUnitSG : RFGravityUnitPlato;
+}
+
+
+- (RFSpecificGravityMode)gravityModeGuessedFromLocale {
+
+    return [self localeWithImperialCountryCode] ? RFSpecifiyGravityModeTerrill : RFSpecifiyGravityModeKleier;
 }
 
 
