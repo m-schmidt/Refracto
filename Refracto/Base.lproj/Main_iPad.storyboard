@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F25a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9pv-A4-QxB">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -692,6 +692,9 @@
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact">
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <mask key="constraints">
+                                                <exclude reference="tmc-gc-Bgq"/>
+                                            </mask>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°Brix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr6-NW-xdh" userLabel="Brix">
@@ -729,16 +732,31 @@
                                     <constraint firstItem="POq-1d-Zdi" firstAttribute="leading" secondItem="ckx-sO-xbs" secondAttribute="leading" id="F4J-05-PJ7"/>
                                     <constraint firstAttribute="bottom" secondItem="POq-1d-Zdi" secondAttribute="bottom" id="FFu-Fm-r1V"/>
                                     <constraint firstItem="cr6-NW-xdh" firstAttribute="top" secondItem="oF0-Ls-GvN" secondAttribute="bottom" constant="4" id="Ft1-9g-Ysk"/>
+                                    <constraint firstItem="oF0-Ls-GvN" firstAttribute="leading" secondItem="ckx-sO-xbs" secondAttribute="leading" id="Ggc-Oc-MrA"/>
                                     <constraint firstAttribute="trailing" secondItem="gK7-se-FLe" secondAttribute="trailing" constant="2" id="IzS-s0-2Zw"/>
                                     <constraint firstItem="oF0-Ls-GvN" firstAttribute="centerX" secondItem="cGK-X1-4qo" secondAttribute="centerX" id="MG0-2K-Nzi"/>
                                     <constraint firstItem="oF0-Ls-GvN" firstAttribute="centerY" secondItem="ckx-sO-xbs" secondAttribute="centerY" id="OFt-4e-r7t"/>
                                     <constraint firstItem="cr6-NW-xdh" firstAttribute="width" secondItem="oF0-Ls-GvN" secondAttribute="width" id="OfC-FA-zPA"/>
                                     <constraint firstItem="cr6-NW-xdh" firstAttribute="centerX" secondItem="oF0-Ls-GvN" secondAttribute="centerX" id="TZC-kJ-gg7"/>
                                     <constraint firstItem="oF0-Ls-GvN" firstAttribute="top" secondItem="cGK-X1-4qo" secondAttribute="bottom" constant="2" id="fqd-5f-sXg"/>
+                                    <constraint firstItem="oF0-Ls-GvN" firstAttribute="width" secondItem="POq-1d-Zdi" secondAttribute="width" constant="-88" id="gpy-xp-MQH"/>
                                     <constraint firstItem="POq-1d-Zdi" firstAttribute="top" secondItem="ckx-sO-xbs" secondAttribute="top" id="i5b-A3-ODM"/>
                                     <constraint firstAttribute="centerY" secondItem="gK7-se-FLe" secondAttribute="centerY" id="vh8-lH-Qyk"/>
                                     <constraint firstAttribute="trailing" secondItem="oF0-Ls-GvN" secondAttribute="trailing" constant="88" id="zYc-mj-7Ak"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ggc-Oc-MrA"/>
+                                        <exclude reference="gpy-xp-MQH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Ggc-Oc-MrA"/>
+                                        <include reference="gpy-xp-MQH"/>
+                                        <exclude reference="zYc-mj-7Ak"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="collectionView" destination="POq-1d-Zdi" id="BYY-5I-fTn"/>
                                     <outlet property="delegate" destination="uiq-t7-SDj" id="Hk6-cx-mgD"/>
@@ -803,6 +821,9 @@
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact">
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <mask key="constraints">
+                                                <exclude reference="Y5O-mi-JVl"/>
+                                            </mask>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°Brix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DV4-Ja-rym" userLabel="Brix">
@@ -846,9 +867,15 @@
                                 </accessibility>
                                 <constraints>
                                     <constraint firstItem="Hdr-kC-bCx" firstAttribute="leading" secondItem="XCZ-Bi-U3x" secondAttribute="leading" id="1hv-3c-9vj"/>
+                                    <constraint firstAttribute="trailing" secondItem="CEp-4x-xhl" secondAttribute="trailing" constant="-101" id="7Ez-V7-wT1">
+                                        <variation key="widthClass=compact" constant="0.0"/>
+                                    </constraint>
                                     <constraint firstItem="CEp-4x-xhl" firstAttribute="centerY" secondItem="XCZ-Bi-U3x" secondAttribute="centerY" id="8sb-mq-xH9"/>
                                     <constraint firstItem="1nP-Cu-XB4" firstAttribute="leading" secondItem="XCZ-Bi-U3x" secondAttribute="leading" constant="2" id="L6W-jC-Gmc"/>
                                     <constraint firstItem="Hdr-kC-bCx" firstAttribute="top" secondItem="XCZ-Bi-U3x" secondAttribute="top" id="PBg-8B-fE3"/>
+                                    <constraint firstItem="CEp-4x-xhl" firstAttribute="width" secondItem="XCZ-Bi-U3x" secondAttribute="width" id="Qez-eP-XU1">
+                                        <variation key="widthClass=compact" constant="-88"/>
+                                    </constraint>
                                     <constraint firstAttribute="centerY" secondItem="1nP-Cu-XB4" secondAttribute="centerY" id="SmB-K5-ppe"/>
                                     <constraint firstItem="CEp-4x-xhl" firstAttribute="centerX" secondItem="V2D-aN-sd7" secondAttribute="centerX" id="U5L-6s-hfJ"/>
                                     <constraint firstItem="CEp-4x-xhl" firstAttribute="leading" secondItem="XCZ-Bi-U3x" secondAttribute="leading" constant="88" id="UEh-cC-myq"/>
@@ -862,6 +889,19 @@
                                     <constraint firstItem="mTt-AO-d43" firstAttribute="trailing" secondItem="XCZ-Bi-U3x" secondAttribute="trailingMargin" constant="-20" id="zaT-0c-8uJ"/>
                                     <constraint firstItem="CEp-4x-xhl" firstAttribute="width" secondItem="V2D-aN-sd7" secondAttribute="width" id="zoL-ex-8Rg"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7Ez-V7-wT1"/>
+                                        <exclude reference="Qez-eP-XU1"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7Ez-V7-wT1"/>
+                                        <include reference="Qez-eP-XU1"/>
+                                        <exclude reference="UEh-cC-myq"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="collectionView" destination="Hdr-kC-bCx" id="3LU-Qw-52e"/>
                                     <outlet property="delegate" destination="uiq-t7-SDj" id="qDS-zh-cYg"/>
