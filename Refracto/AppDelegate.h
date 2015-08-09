@@ -43,8 +43,8 @@ typedef NS_ENUM(NSInteger, RFSpecificGravityMode) {
 
 + (NSNumberFormatter *)numberFormatterPlato;
 + (NSNumberFormatter *)accessibleNumberFormatterPlato;
-+ (NSNumberFormatter *)numberFormatterSG;
-+ (NSNumberFormatter *)numberFormatterForGravityUnit:(RFGravityUnit)gravityUnit accessible:(BOOL)accessible;
++ (NSNumberFormatter *)numberFormatterSGForHorizontalSizeClass:(UIUserInterfaceSizeClass)sizeClass;
++ (NSNumberFormatter *)numberFormatterForGravityUnit:(RFGravityUnit)gravityUnit horizontalSizeClass:(UIUserInterfaceSizeClass)sizeClass accessible:(BOOL)accessible;
 + (NSNumberFormatter *)numberFormatterAttenuation;
 + (NSNumberFormatter *)numberFormatterPercentABV;
 + (NSNumberFormatter *)numberFormatterWortCorrectionDivisor;

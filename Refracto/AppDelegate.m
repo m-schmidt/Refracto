@@ -317,32 +317,38 @@
 }
 
 
-+ (NSNumberFormatter *)numberFormatterSG {
++ (NSNumberFormatter *)numberFormatterSGForHorizontalSizeClass:(UIUserInterfaceSizeClass)sizeClass {
 
-    static NSNumberFormatter *formatter = nil;
+    static NSNumberFormatter *formatterRegular = nil;
+    static NSNumberFormatter *formatterCompact = nil;
+
     static dispatch_once_t once;
 
     dispatch_once (&once, ^{
 
-        formatter = [[NSNumberFormatter alloc] init];
+        formatterRegular = [[NSNumberFormatter alloc] init];
+        formatterCompact = [[NSNumberFormatter alloc] init];
 
         if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPad) {
 
-            formatter.positiveFormat = @"#0.0000";
+            formatterRegular.positiveFormat = @"#0.0000";
+            formatterCompact.positiveFormat = @"#0.000";
         }
         else {
 
-            formatter.positiveFormat = @"#0.000";
+            formatterRegular.positiveFormat = @"#0.000";
+            formatterCompact.positiveFormat = @"#0.000";
         }
 
-        formatter.locale = [NSLocale autoupdatingCurrentLocale];
+        formatterRegular.locale = [NSLocale autoupdatingCurrentLocale];
+        formatterCompact.locale = [NSLocale autoupdatingCurrentLocale];
     });
 
-    return formatter;
+    return (sizeClass == UIUserInterfaceSizeClassCompact) ? formatterCompact : formatterRegular;
 }
 
 
-+ (NSNumberFormatter *)numberFormatterForGravityUnit:(RFGravityUnit)gravityUnit accessible:(BOOL)accessible {
++ (NSNumberFormatter *)numberFormatterForGravityUnit:(RFGravityUnit)gravityUnit horizontalSizeClass:(UIUserInterfaceSizeClass)sizeClass accessible:(BOOL)accessible {
 
     switch (gravityUnit) {
 
@@ -350,12 +356,11 @@
             return accessible ? [self accessibleNumberFormatterPlato] : [self numberFormatterPlato];
 
         case RFGravityUnitSG:
-            return [self numberFormatterSG];
+            return [self numberFormatterSGForHorizontalSizeClass:sizeClass];
     }
 
     ALog(@"Unhandled gravity unit: %lld", (long long)gravityUnit);
     return nil;
-
 }
 
 

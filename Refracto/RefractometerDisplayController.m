@@ -112,8 +112,14 @@
         RFSpecificGravityMode preferredGravityMode = sharedAppDelegate.preferredSpecificGravityMode;
 
         // Localized number formatters
-        NSNumberFormatter *gravityFormatter = [AppDelegate numberFormatterForGravityUnit:preferredGravityUnit accessible:NO];
-        NSNumberFormatter *accessibleGravityFormatter = [AppDelegate numberFormatterForGravityUnit:preferredGravityUnit accessible:YES];
+        NSNumberFormatter *gravityFormatter = [AppDelegate numberFormatterForGravityUnit:preferredGravityUnit
+                                                                     horizontalSizeClass:self.traitCollection.horizontalSizeClass
+                                                                              accessible:NO];
+
+        NSNumberFormatter *accessibleGravityFormatter = [AppDelegate numberFormatterForGravityUnit:preferredGravityUnit
+                                                                               horizontalSizeClass:self.traitCollection.horizontalSizeClass
+                                                                                        accessible:YES];
+
         NSNumberFormatter *attenuationFormatter = [AppDelegate numberFormatterAttenuation];
         NSNumberFormatter *alcoholFormatter = [AppDelegate numberFormatterPercentABV];
 
