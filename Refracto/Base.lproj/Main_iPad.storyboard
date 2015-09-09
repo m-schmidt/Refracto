@@ -936,7 +936,7 @@
         <!--SettingsNavigation-->
         <scene sceneID="erR-XW-R1H">
             <objects>
-                <navigationController storyboardIdentifier="SettingsNavigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="A7r-fg-Ksv" userLabel="SettingsNavigation" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SettingsNavigation" automaticallyAdjustsScrollViewInsets="NO" id="A7r-fg-Ksv" userLabel="SettingsNavigation" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="vmo-5F-aud" userLabel="Settings"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nys-SN-a1L">
