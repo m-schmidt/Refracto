@@ -88,7 +88,7 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 
     [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
 
-    // Remove done button in navigation controller when leaving compat sice class
+    // Remove done button in navigation controller when leaving compact sice class
     if (newCollection.horizontalSizeClass != UIUserInterfaceSizeClassCompact) {
 
         self.navigationItem.rightBarButtonItem = nil;
