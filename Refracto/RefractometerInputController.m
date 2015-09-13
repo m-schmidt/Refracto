@@ -110,8 +110,11 @@
     if ([segue.identifier isEqualToString:kShowSettingsPopoverSegue]) {
 
         UIViewController *destinationController = segue.destinationViewController;
-        destinationController.preferredContentSize = CGSizeMake(320, 520);
+        destinationController.preferredContentSize = CGSizeMake(340, 540);
         destinationController.popoverPresentationController.delegate = self;
+
+        UIPopoverPresentationController *popoverController = (UIPopoverPresentationController *)destinationController.presentationController;
+        popoverController.sourceRect = CGRectInset(popoverController.sourceView.bounds, -5, -5);
     }
 }
 
