@@ -125,8 +125,6 @@
 				4D3584FC19EC6B9B007EEC22 /* SliderCell.m */,
 				4D3584F419EC5067007EEC22 /* SettingsController.h */,
 				4D3584F519EC5067007EEC22 /* SettingsController.m */,
-				4DF58A3A1A5615B0007F508B /* RootTabController.h */,
-				4DF58A3B1A5615B0007F508B /* RootTabController.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -172,6 +170,17 @@
 			name = Refractometer;
 			sourceTree = "<group>";
 		};
+		4D9F8CF41BA58844006264F2 /* Customizations */ = {
+			isa = PBXGroup;
+			children = (
+				4DEE84571A50217C004BFAC3 /* NSDecimalNumber+Refracto.h */,
+				4DEE84581A50217C004BFAC3 /* NSDecimalNumber+Refracto.m */,
+				4DF58A3A1A5615B0007F508B /* RootTabController.h */,
+				4DF58A3B1A5615B0007F508B /* RootTabController.m */,
+			);
+			name = Customizations;
+			sourceTree = "<group>";
+		};
 		4DAB296719C24CF300AF04FF = {
 			isa = PBXGroup;
 			children = (
@@ -196,12 +205,11 @@
 			children = (
 				4DAB297719C24CF300AF04FF /* AppDelegate.h */,
 				4DAB297819C24CF300AF04FF /* AppDelegate.m */,
-				4DEE84571A50217C004BFAC3 /* NSDecimalNumber+Refracto.h */,
-				4DEE84581A50217C004BFAC3 /* NSDecimalNumber+Refracto.m */,
 				4DB1179819C783A00027AB70 /* Horizontal Picker for Computation Mode */,
 				4D35850119EEBE13007EEC22 /* Vertical Picker for Refraction Values */,
 				4D4F860E19F3F13D00DEDB55 /* Refractometer */,
 				4D3584FA19EC69BD007EEC22 /* Settings */,
+				4D9F8CF41BA58844006264F2 /* Customizations */,
 				4DDFD44F1A52BBCE003AD7F7 /* Resources */,
 				4DAB298319C24CF300AF04FF /* Images.xcassets */,
 				4DAB297319C24CF300AF04FF /* Supporting Files */,
