@@ -426,7 +426,7 @@
     NSInteger bundleVersion = [[[NSBundle mainBundle] infoDictionary][(NSString *)kCFBundleVersionKey] integerValue];
     NSInteger stateVersion = [[coder decodeObjectForKey:UIApplicationStateRestorationBundleVersionKey] integerValue];
 
-    return (stateVersion <= bundleVersion);
+    return (stateVersion == bundleVersion);
 }
 
 @end
