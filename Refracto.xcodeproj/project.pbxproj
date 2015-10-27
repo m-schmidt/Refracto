@@ -313,7 +313,7 @@
 		4DAB296819C24CF300AF04FF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Michael Schmidt";
 				TargetAttributes = {
 					4DAB296F19C24CF300AF04FF = {
@@ -520,6 +520,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "ffca350d-3876-4266-990d-03e57b211ff3";
 				SDKROOT = iphoneos;
 			};
