@@ -105,6 +105,29 @@
 }
 
 
+- (void)updateNavigationItemForPresentedViewController:(UIViewController *)presentedViewController traitCollection:(UITraitCollection *)traits {
+
+    if ([presentedViewController isKindOfClass:[UINavigationController class]]) {
+
+        UINavigationController *navController = (UINavigationController *)presentedViewController;
+        UIBarButtonItem *doneButton = nil;
+
+        if (traits.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
+
+            doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                       target:self
+                                                                       action:@selector(dismissSettings:)];
+        }
+
+        navController.topViewController.navigationItem.rightBarButtonItem = doneButton;
+    }
+    else if (presentedViewController != nil) {
+
+        ALog(@"Presented viewcontroller (%@) must be of class UINavigationController", presentedViewController);
+    }
+}
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
     if ([segue.identifier isEqualToString:kShowSettingsPopoverSegue]) {
@@ -113,35 +136,19 @@
         destinationController.preferredContentSize = CGSizeMake(340, 540);
         destinationController.popoverPresentationController.delegate = self;
 
+        [self updateNavigationItemForPresentedViewController:destinationController traitCollection:self.traitCollection];
+
         UIPopoverPresentationController *popoverController = (UIPopoverPresentationController *)destinationController.presentationController;
         popoverController.sourceRect = CGRectInset(popoverController.sourceView.bounds, -5, -5);
     }
 }
 
 
-#pragma mark - UIAdaptivePresentationControllerDelegate
+- (void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
 
+    [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
 
-- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
-
-    return UIModalPresentationFullScreen;
-}
-
-
-- (UIViewController *)presentationController:(UIPresentationController *)controller viewControllerForAdaptivePresentationStyle:(UIModalPresentationStyle)style  {
-
-    UINavigationController *navController = (UINavigationController *)controller.presentedViewController;
-    UIBarButtonItem *doneButton = nil;
-
-    if (style == UIModalPresentationFullScreen) {
-
-        doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                   target:self
-                                                                   action:@selector(dismissSettings:)];
-    }
-
-    navController.topViewController.navigationItem.rightBarButtonItem = doneButton;
-    return navController;
+    [self updateNavigationItemForPresentedViewController:self.presentedViewController traitCollection:newCollection];
 }
 
 
