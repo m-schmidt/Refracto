@@ -60,9 +60,9 @@
 
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 
-                                                [self.modePicker selectItemAtIndex:previousMode animated:YES];
-                                            }
-                                 completion:nil];
+            [self.modePicker selectItemAtIndex:previousMode animated:YES];
+        }
+        completion:nil];
 }
 
 

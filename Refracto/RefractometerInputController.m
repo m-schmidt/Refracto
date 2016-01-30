@@ -86,13 +86,13 @@
 
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 
-        [self.beforePicker handleSizeTransitionWithTargetContentOffset:beforeContentOffset];
-        [self.currentPicker handleSizeTransitionWithTargetContentOffset:currentContentOffset];
-    }
-                                 completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+            [self.beforePicker handleSizeTransitionWithTargetContentOffset:beforeContentOffset];
+            [self.currentPicker handleSizeTransitionWithTargetContentOffset:currentContentOffset];
+        }
+        completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 
-                                     self.propagateUpdatesOnScroll = YES;
-                                 }];
+            self.propagateUpdatesOnScroll = YES;
+        }];
 }
 
 
