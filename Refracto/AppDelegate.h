@@ -38,6 +38,8 @@ typedef NS_ENUM(NSInteger, RFSpecificGravityMode) {
 @property (strong, nonatomic) NSDecimalNumber *recentBeforeRefraction;
 @property (strong, nonatomic) NSDecimalNumber *recentCurrentRefraction;
 
+- (BOOL)refractionValueIsValid:(NSDecimalNumber *)refraction;
+
 // Number formatters
 + (NSNumberFormatter *)numberFormatterBrix;
 

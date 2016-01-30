@@ -25,6 +25,17 @@
 }
 
 
+- (void)testRefractionRange {
+
+    XCTAssert([[AppDelegate appDelegate] refractionValueIsValid:[NSDecimalNumber decimalNumberWithMantissa:0 exponent:0 isNegative:NO]]);
+    XCTAssert([[AppDelegate appDelegate] refractionValueIsValid:[NSDecimalNumber decimalNumberWithMantissa:23 exponent:0 isNegative:NO]]);
+    XCTAssert([[AppDelegate appDelegate] refractionValueIsValid:[NSDecimalNumber decimalNumberWithMantissa:30 exponent:0 isNegative:NO]]);
+
+    XCTAssert(![[AppDelegate appDelegate] refractionValueIsValid:[NSDecimalNumber decimalNumberWithMantissa:1 exponent:0 isNegative:YES]]);
+    XCTAssert(![[AppDelegate appDelegate] refractionValueIsValid:[NSDecimalNumber decimalNumberWithMantissa:31 exponent:0 isNegative:NO]]);
+}
+
+
 - (void)testDecimalNumberExtensions {
 
     NSDecimalNumber *_0 = [NSDecimalNumber zero];

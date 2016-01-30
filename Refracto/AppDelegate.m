@@ -194,72 +194,78 @@
 
 - (NSDecimalNumber *)recentBeforeRefraction {
 
-    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    id rawRefraction = [standardUserDefaults objectForKey:kInputRefractionBefore];
-
-    if ([rawRefraction respondsToSelector:@selector(decimalValue)]) {
-
-        return [NSDecimalNumber decimalNumberWithDecimal:[rawRefraction decimalValue]];
-    }
-    else {
-
-        ALog(@"Userdefaults cannot be converted to decimal number: %@", rawRefraction);
-        return [NSDecimalNumber zero];
-    }
+    return [self recentRefractionForKey:kInputRefractionBefore];
 }
 
 
 - (void)setRecentBeforeRefraction:(NSDecimalNumber *)beforeRefraction {
 
-    NSDecimalNumber *min = [NSDecimalNumber decimalNumberWithMantissa:kMinRefraction exponent:0 isNegative:NO];
-    NSDecimalNumber *max = [NSDecimalNumber decimalNumberWithMantissa:kMaxRefraction exponent:0 isNegative:NO];
-
-    if ([beforeRefraction isGreaterThanOrEqual:min] && [beforeRefraction isLessThanOrEqual:max]) {
-
-        NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-
-        [standardUserDefaults setObject:beforeRefraction forKey:kInputRefractionBefore];
-        [standardUserDefaults synchronize];
-    }
-    else {
-
-        ALog(@"'before' refraction value out of range: %@", beforeRefraction);
-    }
+    [self setRecentRefraction:beforeRefraction forKey:kInputRefractionBefore];
 }
 
 
 - (NSDecimalNumber *)recentCurrentRefraction {
 
-    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    id rawRefraction = [standardUserDefaults objectForKey:kInputRefractionCurrent];
-
-    if ([rawRefraction respondsToSelector:@selector(decimalValue)]) {
-
-        return [NSDecimalNumber decimalNumberWithDecimal:[rawRefraction decimalValue]];
-    }
-    else {
-
-        ALog(@"Userdefaults cannot be converted to decimal number: %@", rawRefraction);
-        return [NSDecimalNumber zero];
-    }
+    return [self recentRefractionForKey:kInputRefractionCurrent];
 }
 
 
 - (void)setRecentCurrentRefraction:(NSDecimalNumber *)currentRefraction {
 
+    [self setRecentRefraction:currentRefraction forKey:kInputRefractionCurrent];
+}
+
+
+#pragma mark - Storage of Refraction Values
+
+
+- (BOOL)refractionValueIsValid:(NSDecimalNumber *)refraction {
+
     NSDecimalNumber *min = [NSDecimalNumber decimalNumberWithMantissa:kMinRefraction exponent:0 isNegative:NO];
     NSDecimalNumber *max = [NSDecimalNumber decimalNumberWithMantissa:kMaxRefraction exponent:0 isNegative:NO];
 
-    if ([currentRefraction isGreaterThanOrEqual:min] && [currentRefraction isLessThanOrEqual:max]) {
+    return [refraction isGreaterThanOrEqual:min] && [refraction isLessThanOrEqual:max];
+}
+
+
+- (NSDecimalNumber *)recentRefractionForKey:(NSString *)key {
+
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    id rawRefraction = [standardUserDefaults objectForKey:key];
+
+    if ([rawRefraction respondsToSelector:@selector(decimalValue)]) {
+
+        NSDecimalNumber *refraction = [NSDecimalNumber decimalNumberWithDecimal:[rawRefraction decimalValue]];
+
+        if ([self refractionValueIsValid:refraction]) {
+
+            return refraction;
+        }
+        else {
+
+            ALog(@"Userdefaults contain refraction value which is out of range: %@", refraction);
+        }
+    }
+    else {
+
+        ALog(@"Userdefaults cannot be converted to decimal number: %@", rawRefraction);
+    }
+
+    return [NSDecimalNumber zero];
+}
+
+
+- (void)setRecentRefraction:(NSDecimalNumber *)refraction forKey:(NSString *)key {
+
+    if ([self refractionValueIsValid:refraction]) {
 
         NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-
-        [standardUserDefaults setObject:currentRefraction forKey:kInputRefractionCurrent];
+        [standardUserDefaults setObject:refraction forKey:key];
         [standardUserDefaults synchronize];
     }
     else {
 
-        ALog(@"'current' refraction value out of range: %@", currentRefraction);
+        ALog(@"refraction value is out of range: %@", refraction);
     }
 }
 
