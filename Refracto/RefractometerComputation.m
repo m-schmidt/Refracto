@@ -10,6 +10,7 @@
 
 @implementation RefractometerComputation
 
+
 // Rounding behaviour for all computation results
 + (id<NSDecimalNumberBehaviors>)defaultBehaviour {
 
@@ -186,8 +187,8 @@
 
         // ... / (ballingConstant*wortCorrection - fermentationCorrection)
         tr = [tr decimalNumberByDividingBy:
-              [[ballingConstant decimalNumberByMultiplyingBy:wortCorrection]
-               decimalNumberBySubtracting:fermentationCorrection]];
+                [[ballingConstant decimalNumberByMultiplyingBy:wortCorrection]
+                    decimalNumberBySubtracting:fermentationCorrection]];
 
 
         // Apparent final gravity:
@@ -200,18 +201,18 @@
 
         // + 0.001*RIi
         result = [result decimalNumberByAdding:
-                  [initial decimalNumberByMultiplyingBy:
-                   [NSDecimalNumber decimalNumberWithMantissa:1 exponent:-3 isNegative:NO]]];
+                     [initial decimalNumberByMultiplyingBy:
+                         [NSDecimalNumber decimalNumberWithMantissa:1 exponent:-3 isNegative:NO]]];
 
         // (...)*tr
         result = [result decimalNumberByMultiplyingBy:tr];
 
         // - ((0.22 + 0.001*RIi) * RIi);
         result = [result decimalNumberBySubtracting:
-                  [[[NSDecimalNumber decimalNumberWithMantissa:22 exponent:-2 isNegative:NO]
-                    decimalNumberByAdding:
-                    [initial decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithMantissa:1 exponent:-3 isNegative:NO]]]
-                   decimalNumberByMultiplyingBy:initial]];
+                     [[[NSDecimalNumber decimalNumberWithMantissa:22 exponent:-2 isNegative:NO]
+                        decimalNumberByAdding:
+                            [initial decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithMantissa:1 exponent:-3 isNegative:NO]]]
+                                decimalNumberByMultiplyingBy:initial]];
 
         // convert plato to specific gravity
         result = [self specificGravityForPlato:result];
@@ -223,13 +224,13 @@
 
         // - 0.00085683*(corrected RIi)
         result = [result decimalNumberBySubtracting:
-                  [correctedInitial decimalNumberByMultiplyingBy:
-                   [NSDecimalNumber decimalNumberWithMantissa:85683 exponent:-8 isNegative:NO]]];
+                     [correctedInitial decimalNumberByMultiplyingBy:
+                         [NSDecimalNumber decimalNumberWithMantissa:85683 exponent:-8 isNegative:NO]]];
 
         // + 0.0034941*(corrected RIf)
         result = [result decimalNumberByAdding:
-                  [correctedFinal decimalNumberByMultiplyingBy:
-                   [NSDecimalNumber decimalNumberWithMantissa:34941 exponent:-7 isNegative:NO]]];
+                     [correctedFinal decimalNumberByMultiplyingBy:
+                         [NSDecimalNumber decimalNumberWithMantissa:34941 exponent:-7 isNegative:NO]]];
     }
     else if (mode == RFSpecifiyGravityModeTerrillCubic) {
 
