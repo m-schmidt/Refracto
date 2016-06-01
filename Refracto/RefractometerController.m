@@ -1,6 +1,6 @@
 //
 //  RefractometerController.m
-//  Controller for Refractomater Tab
+//  Controller for Refractometer Tab
 //
 
 
