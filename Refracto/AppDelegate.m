@@ -41,6 +41,8 @@
           kInputRefractionCurrent: [NSDecimalNumber decimalNumberWithMantissa:64  exponent:-1 isNegative:NO],
           kWortCorrectionDivisor:  [NSDecimalNumber decimalNumberWithMantissa:103 exponent:-2 isNegative:NO]}];
 
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+
     return YES;
 }
 
