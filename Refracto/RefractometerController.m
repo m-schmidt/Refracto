@@ -18,6 +18,13 @@
 
 @implementation RefractometerController
 
+// Always show status bar
+- (BOOL)prefersStatusBarHidden {
+
+    return NO;
+}
+
+
 // Catch segues to embedded controllers, init delegate
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 

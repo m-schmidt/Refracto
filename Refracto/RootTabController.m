@@ -9,6 +9,13 @@
 
 @implementation RootTabController
 
+// Always show status bar
+- (BOOL)prefersStatusBarHidden {
+
+    return NO;
+}
+
+
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
 
     return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;

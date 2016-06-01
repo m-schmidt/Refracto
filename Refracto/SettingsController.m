@@ -70,6 +70,13 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 @implementation SettingsController
 
 
+// Always show status bar
+- (BOOL)prefersStatusBarHidden {
+
+    return NO;
+}
+
+
 - (void)viewDidLoad {
 
     [super viewDidLoad];
