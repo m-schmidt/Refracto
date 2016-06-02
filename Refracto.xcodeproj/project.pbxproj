@@ -210,9 +210,9 @@
 				4D4F860E19F3F13D00DEDB55 /* Refractometer */,
 				4D3584FA19EC69BD007EEC22 /* Settings */,
 				4D9F8CF41BA58844006264F2 /* Customizations */,
+				4DAB297319C24CF300AF04FF /* Supporting Files */,
 				4DDFD44F1A52BBCE003AD7F7 /* Resources */,
 				4DAB298319C24CF300AF04FF /* Images.xcassets */,
-				4DAB297319C24CF300AF04FF /* Supporting Files */,
 			);
 			path = Refracto;
 			sourceTree = "<group>";

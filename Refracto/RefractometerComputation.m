@@ -103,7 +103,7 @@
 }
 
 
-// Applies a correction factor (e.g. 1/1.03) to refraction values to accomodate to wort
+// Applies a correction factor (e.g. 1/1.04) to refraction values to accomodate to wort
 + (NSDecimalNumber *)wortCorrectedRefraction:(NSDecimalNumber *)brix {
 
     NSDecimalNumber *divisor = [AppDelegate appDelegate].preferredWortCorrectionDivisor;
@@ -168,7 +168,7 @@
         // http://hobbybrauer.de/modules.php?name=eBoard&file=viewthread&tid=11943&page=2#pid129201
 
 
-        // Wort correction from user preferences, i.e a value in 1.02..1.06
+        // Wort correction from user preferences, i.e a value in 1.00..1.06
         NSDecimalNumber *wortCorrection = [AppDelegate appDelegate].preferredWortCorrectionDivisor;
 
         // Balling constant: 2.0665

@@ -26,7 +26,7 @@
 // Convert °Plato to specific gravity (SG)
 + (NSDecimalNumber *)specificGravityForPlato:(NSDecimalNumber *)plato;
 
-// Applies a correction factor (e.g. 1/1.03) to raw refraction values
+// Applies a correction factor (e.g. 1/1.04) to raw refraction values
 // For unfermented wort this converts Brix to Plato.
 + (NSDecimalNumber *)wortCorrectedRefraction:(NSDecimalNumber *)brix;
 

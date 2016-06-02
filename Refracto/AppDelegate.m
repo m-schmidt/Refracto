@@ -173,7 +173,7 @@
 
 - (void)setPreferredWortCorrectionDivisor:(NSDecimalNumber *)divisor {
 
-    NSDecimalNumber *min = [NSDecimalNumber decimalNumberWithMantissa:102 exponent:-2 isNegative:NO];
+    NSDecimalNumber *min = [NSDecimalNumber decimalNumberWithMantissa:100 exponent:-2 isNegative:NO];
     NSDecimalNumber *max = [NSDecimalNumber decimalNumberWithMantissa:106 exponent:-2 isNegative:NO];
 
     if ([divisor isGreaterThanOrEqual:min] && [divisor isLessThanOrEqual:max]) {
