@@ -379,6 +379,7 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
         return cell;
     }
 
+    ALog(@"Unhandled case in tableView:cellForRowAtIndexPath:");
     return nil;
 }
 

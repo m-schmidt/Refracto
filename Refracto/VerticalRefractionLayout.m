@@ -31,6 +31,9 @@ NSInteger const kVerticalPickerTickInset       =  2;
 
 - (void)awakeFromNib {
 
+    if ([super respondsToSelector:@selector(awakeFromNib)])
+        [super awakeFromNib];
+
     _alignment = RefractionPickerAlignmentLeft;
 
     self.itemSize = CGSizeMake(kVerticalPickerCellWidth, kVerticalPickerCellHeight);

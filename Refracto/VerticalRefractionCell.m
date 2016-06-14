@@ -11,6 +11,9 @@
 
 - (void)awakeFromNib {
 
+    if ([super respondsToSelector:@selector(awakeFromNib)])
+        [super awakeFromNib];
+
     _barLength = NSIntegerMax;
     _alignment = RefractionPickerAlignmentLeft;
 }

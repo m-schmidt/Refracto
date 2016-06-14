@@ -25,6 +25,9 @@ NSInteger const kMaxRefraction = 30;
 
 - (void)awakeFromNib {
 
+    if ([super respondsToSelector:@selector(awakeFromNib)])
+        [super awakeFromNib];
+
     _alignment = RefractionPickerAlignmentLeft;
     _refraction = [NSDecimalNumber decimalNumberWithInteger:kMaxRefraction];
 }

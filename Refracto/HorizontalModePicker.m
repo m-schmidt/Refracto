@@ -25,6 +25,9 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
 - (void)awakeFromNib {
 
+    if ([super respondsToSelector:@selector(awakeFromNib)])
+        [super awakeFromNib];
+
     // Prepare text attributes for cells
     UIFont *font = [UIFont systemFontOfSize:17.0];
     UIFont *selectedFont = [UIFont boldSystemFontOfSize:17.0];
