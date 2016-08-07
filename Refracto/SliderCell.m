@@ -33,7 +33,7 @@
 
 - (UIAccessibilityTraits)accessibilityTraits; {
 
-    return [super accessibilityTraits] | UIAccessibilityTraitAdjustable;
+    return super.accessibilityTraits | UIAccessibilityTraitAdjustable;
 }
 
 

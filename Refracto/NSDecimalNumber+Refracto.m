@@ -11,7 +11,7 @@
 
 + (instancetype)decimalNumberWithInteger:(NSInteger)value {
 
-    return [NSDecimalNumber decimalNumberWithDecimal:[@(value) decimalValue]];
+    return [NSDecimalNumber decimalNumberWithDecimal:(@(value)).decimalValue];
 }
 
 

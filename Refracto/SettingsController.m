@@ -142,7 +142,7 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 
         MFMailComposeViewController *mailComposer = [MFMailComposeViewController new];
 
-        [mailComposer setMailComposeDelegate:self];
+        mailComposer.mailComposeDelegate = self;
         [mailComposer setToRecipients:@[kSupportMailAddress]];
         [mailComposer setSubject:NSLocalizedString(kSupportMailSubjectKey, nil)];
         [mailComposer setMessageBody:NSLocalizedString(kSupportMailBodyKey, nil) isHTML:NO];
@@ -177,8 +177,8 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 
     if ([unwindSegue.identifier hasPrefix:@"gravityUnitSelectedSegue_"]) {
 
-        UITableViewController *gravityUnitController = (UITableViewController *)[unwindSegue sourceViewController];
-        NSIndexPath *indexPath = [gravityUnitController.tableView indexPathForSelectedRow];
+        UITableViewController *gravityUnitController = (UITableViewController *)unwindSegue.sourceViewController;
+        NSIndexPath *indexPath = (gravityUnitController.tableView).indexPathForSelectedRow;
 
         if (indexPath) {
 
@@ -197,7 +197,7 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 - (IBAction)sliderAction:(id)sender {
 
     // Round slider value to full 1/100ths
-    NSDecimal newDivisor = [@(rint([(UISlider *)sender value] * 200.0) / 200.0) decimalValue];
+    NSDecimal newDivisor = (@(rint(((UISlider *)sender).value * 200.0) / 200.0)).decimalValue;
     [AppDelegate appDelegate].preferredWortCorrectionDivisor = [NSDecimalNumber decimalNumberWithDecimal:newDivisor];
 
     [self updateWortCorrectionCell];
@@ -235,8 +235,8 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 
         NSDecimalNumber *divisor = [AppDelegate appDelegate].preferredWortCorrectionDivisor;
 
-        [wortCorrectionCell.detailLabel setText:[[AppDelegate numberFormatterWortCorrectionDivisor] stringFromNumber:divisor]];
-        [wortCorrectionCell.slider setValue:[divisor floatValue] animated:YES];
+        (wortCorrectionCell.detailLabel).text = [[AppDelegate numberFormatterWortCorrectionDivisor] stringFromNumber:divisor];
+        [wortCorrectionCell.slider setValue:divisor.floatValue animated:YES];
     }
     else {
 

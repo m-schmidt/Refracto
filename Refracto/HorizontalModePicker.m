@@ -38,7 +38,7 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
     CAGradientLayer *maskLayer = [CAGradientLayer layer];
 
     maskLayer.frame = self.collectionView.bounds;
-    maskLayer.colors = @[(id)[[UIColor clearColor] CGColor], (id)[[UIColor blackColor] CGColor], (id)[[UIColor blackColor] CGColor], (id)[[UIColor clearColor] CGColor]];
+    maskLayer.colors = @[(id)[UIColor clearColor].CGColor, (id)[UIColor blackColor].CGColor, (id)[UIColor blackColor].CGColor, (id)[UIColor clearColor].CGColor];
     maskLayer.locations = @[@0.0, @0.10, @0.90, @1.0];
     maskLayer.startPoint = CGPointMake(0.0, 0.0);
     maskLayer.endPoint = CGPointMake(1.0, 0.0);
@@ -166,7 +166,7 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
 - (NSInteger)selectedItemIndex {
 
-    NSArray *indexPaths = [self.collectionView indexPathsForSelectedItems];
+    NSArray *indexPaths = (self.collectionView).indexPathsForSelectedItems;
 
     if (indexPaths.count == 1) {
 
@@ -260,7 +260,7 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
 - (UIAccessibilityTraits)accessibilityTraits; {
 
-    return [super accessibilityTraits] | UIAccessibilityTraitAdjustable;
+    return super.accessibilityTraits | UIAccessibilityTraitAdjustable;
 }
 
 

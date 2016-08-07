@@ -87,7 +87,7 @@ NSInteger const kVerticalPickerTickInset       =  2;
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
 
     NSArray *superLayoutAttributes = [super layoutAttributesForElementsInRect:rect];
-    NSMutableArray *layoutAttributes = [[NSMutableArray alloc] initWithCapacity:[superLayoutAttributes count] + 10];
+    NSMutableArray *layoutAttributes = [[NSMutableArray alloc] initWithCapacity:superLayoutAttributes.count + 10];
 
     // Match normal views and align them
     CGFloat width = CGRectGetWidth(self.collectionView.bounds);
@@ -105,7 +105,7 @@ NSInteger const kVerticalPickerTickInset       =  2;
     }
 
     // Match supplementary views against given rectangle
-    for (NSInteger section = 0; section < [self.headerYPositions count]; section++) {
+    for (NSInteger section = 0; section < (self.headerYPositions).count; section++) {
 
         CGRect headerRect = CGRectMake(0, [self.headerYPositions[section] floatValue], width, kVerticalPickerSupplementaryViewHeight);
 

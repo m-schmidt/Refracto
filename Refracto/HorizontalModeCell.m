@@ -40,7 +40,7 @@
 
     if (self.selected != selected) {
 
-        [super setSelected:selected];
+        super.selected = selected;
 
         NSDictionary *attributes = selected ? horizontalModeSelectedTextAttributes : horizontalModeTextAttributes;
         [self setText:self.label.attributedText.string attributes:attributes];
@@ -51,8 +51,8 @@
 - (void)setText:(NSString *)text attributes:(NSDictionary *)attributes {
 
     CATransition *transition = [CATransition animation];
-    [transition setType:kCATransitionFade];
-    [transition setDuration:0.3];
+    transition.type = kCATransitionFade;
+    transition.duration = 0.3;
     [self.label.layer addAnimation:transition forKey:nil];
 
     self.label.attributedText = [[NSAttributedString alloc] initWithString:text attributes:attributes];

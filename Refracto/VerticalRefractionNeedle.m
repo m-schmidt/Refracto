@@ -48,7 +48,7 @@
 
     UIColor *needleColor = [UIColor colorWithRed:0.0 green:0.478431 blue:1.0 alpha:1.0];
 
-    CGContextSetFillColorWithColor(context, [needleColor CGColor]);
+    CGContextSetFillColorWithColor(context, needleColor.CGColor);
     CGContextFillEllipseInRect(context, CGRectMake((self.alignment == RefractionPickerAlignmentRight) ? 0 : width - height, 0, height, height));
 
     if (width > height) {

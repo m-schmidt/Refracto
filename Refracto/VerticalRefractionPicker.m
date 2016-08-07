@@ -150,7 +150,7 @@ NSInteger const kMaxRefraction = 30;
 - (NSIndexPath *)indexPathForRefractionValue:(NSDecimalNumber *)refraction {
 
     NSDecimalNumber *ten = [NSDecimalNumber decimalNumberWithInteger:10];
-    NSInteger index = [[refraction decimalNumberByMultiplyingBy:ten] integerValue];
+    NSInteger index = [refraction decimalNumberByMultiplyingBy:ten].integerValue;
 
     index = MIN(index, (kMaxRefraction * 10));
     index = MAX(index, (kMinRefraction * 10));
@@ -267,7 +267,7 @@ NSInteger const kMaxRefraction = 30;
 
 - (UIAccessibilityTraits)accessibilityTraits; {
 
-    return [super accessibilityTraits] | UIAccessibilityTraitAdjustable;
+    return super.accessibilityTraits | UIAccessibilityTraitAdjustable;
 }
 
 
@@ -291,7 +291,7 @@ NSInteger const kMaxRefraction = 30;
 
         if (announce) {
 
-            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, [self accessibilityValue]);
+            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, self.accessibilityValue);
         }
 
         return YES;

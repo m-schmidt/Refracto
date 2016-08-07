@@ -36,7 +36,7 @@ extern NSInteger const kMaxRefraction;
 @property (nonatomic) RefractionPickerAlignment alignment;
 
 // Returns current contentOffset modified to fit the nearest tick marker
-- (CGPoint)contentOffsetSnappedToTickMarker;
+@property (NS_NONATOMIC_IOSONLY, readonly) CGPoint contentOffsetSnappedToTickMarker;
 
 // Update contentInset and -offset to handle size changes
 - (void)handleSizeTransitionWithTargetContentOffset:(CGPoint)contentOffset;

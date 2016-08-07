@@ -28,14 +28,14 @@
 // Catch segues to embedded controllers, init delegate
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
-    UIViewController *destinationViewController = [segue destinationViewController];
+    UIViewController *destinationViewController = segue.destinationViewController;
 
-    if ([[segue destinationViewController] isKindOfClass:[RefractometerInputController class]]) {
+    if ([segue.destinationViewController isKindOfClass:[RefractometerInputController class]]) {
 
         self.inputController = (RefractometerInputController *)destinationViewController;
         self.inputController.delegate = self;
     }
-    else if ([[segue destinationViewController] isKindOfClass:[RefractometerDisplayController class]]) {
+    else if ([segue.destinationViewController isKindOfClass:[RefractometerDisplayController class]]) {
 
         self.displayController = (RefractometerDisplayController *)destinationViewController;
     }
