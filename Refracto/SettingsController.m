@@ -248,13 +248,6 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 #pragma mark - UITableViewDelegate
 
 
-- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    // Don't highlight the cell for wort correction factor
-    return (indexPath.section != kSettingsSection || indexPath.row != kSettingsWortCorrectionRow);
-}
-
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     if (indexPath.section == kSettingsSection && indexPath.row == kSettingsUnitRow) {
