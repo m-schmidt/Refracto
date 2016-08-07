@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="6Z5-YN-f8u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11185.3" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6Z5-YN-f8u">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,24 +15,22 @@
                         <viewControllerLayoutGuide type="bottom" id="aCW-KP-7fl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Yrh-EQ-mG6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="JJR-c3-pC6">
-                                <rect key="frame" x="225" y="225" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="7AE-Ib-eNf"/>
                                     <constraint firstAttribute="width" constant="150" id="WW5-zD-bbd"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2015 Michael Schmidt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="PDe-e9-gqd">
-                                <rect key="frame" x="0.0" y="565" width="600" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.93725490570000003" green="0.92941176889999999" blue="0.89411765340000005" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="textColor" red="0.92134958505630493" green="0.91303449869155884" blue="0.86862671375274658" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.56862747670000002" green="0.63921570780000003" blue="0.2941176593" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.49874478578567505" green="0.58249133825302124" blue="0.23036426305770874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aCW-KP-7fl" firstAttribute="top" secondItem="PDe-e9-gqd" secondAttribute="bottom" constant="20" id="9Oa-9V-ySy"/>
                             <constraint firstItem="JJR-c3-pC6" firstAttribute="centerY" secondItem="Yrh-EQ-mG6" secondAttribute="centerY" id="G9f-zL-U1A"/>
@@ -43,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpK-8x-Jrw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="737" y="432"/>
+            <point key="canvasLocation" x="249" y="211"/>
         </scene>
     </scenes>
     <resources>
