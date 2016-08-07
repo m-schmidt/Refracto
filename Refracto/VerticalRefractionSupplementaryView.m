@@ -11,6 +11,9 @@
 
 - (void)awakeFromNib {
 
+    if ([super respondsToSelector:@selector(awakeFromNib)])
+        [super awakeFromNib];
+
     self.label = [[UILabel alloc] initWithFrame:self.bounds];
     self.label.textColor = [UIColor blackColor];
     self.label.backgroundColor = [UIColor clearColor];

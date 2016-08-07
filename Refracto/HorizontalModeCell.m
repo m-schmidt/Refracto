@@ -19,6 +19,9 @@
 
 - (void)awakeFromNib {
 
+    if ([super respondsToSelector:@selector(awakeFromNib)])
+        [super awakeFromNib];
+
     self.layer.doubleSided = NO;
 
     self.label = [[UILabel alloc] initWithFrame:self.contentView.bounds];
