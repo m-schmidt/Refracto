@@ -29,13 +29,7 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
         [super awakeFromNib];
 
     // Prepare text attributes for cells
-    UIFont *font = [UIFont systemFontOfSize:17.0];
-    UIFont *selectedFont = [UIFont boldSystemFontOfSize:17.0];
-
-    horizontalModeTextAttributes = @{NSFontAttributeName:font, NSForegroundColorAttributeName:[UIColor blackColor]};
-    horizontalModeSelectedTextAttributes =  @{NSFontAttributeName:selectedFont, NSForegroundColorAttributeName:self.tintColor};
-
-    self.lineHeight = ceil(MAX(font.lineHeight, selectedFont.lineHeight));
+    self.lineHeight = [self configureTextAttributes];
 
     // Collection subview
     self.collectionView.decelerationRate = UIScrollViewDecelerationRateFast;
@@ -61,6 +55,19 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
     UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     [self addGestureRecognizer:tapRecognizer];
+}
+
+
+- (CGFloat)configureTextAttributes {
+
+    UIFont *font = [UIFont systemFontOfSize:17.0];
+    UIFont *selectedFont = [UIFont boldSystemFontOfSize:17.0];
+
+    horizontalModeTextAttributes = @{NSFontAttributeName:font, NSForegroundColorAttributeName:[UIColor blackColor]};
+    horizontalModeSelectedTextAttributes =  @{NSFontAttributeName:selectedFont, NSForegroundColorAttributeName:self.tintColor};
+
+    // Derive line height from front data
+    return ceil(MAX(font.lineHeight, selectedFont.lineHeight));
 }
 
 
