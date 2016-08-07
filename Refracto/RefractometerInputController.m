@@ -133,7 +133,7 @@
     if ([segue.identifier isEqualToString:kShowSettingsPopoverSegue]) {
 
         UIViewController *destinationController = segue.destinationViewController;
-        destinationController.preferredContentSize = CGSizeMake(340, 540);
+        destinationController.preferredContentSize = CGSizeMake(340, 584);
         destinationController.popoverPresentationController.delegate = self;
 
         [self updateNavigationItemForPresentedViewController:destinationController traitCollection:self.traitCollection];
