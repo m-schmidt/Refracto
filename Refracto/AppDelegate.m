@@ -110,7 +110,7 @@
     // Fade out screenshot to reveal new UI
     [viewController.view addSubview:overlayView];
     [UIView animateWithDuration:0.3f
-                          delay:0.0f
+                          delay:0.2f
                         options:UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
                          overlayView.alpha = 0;
