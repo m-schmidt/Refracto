@@ -6,6 +6,7 @@
 #import "AppDelegate.h"
 #import "NSDecimalNumber+Refracto.h"
 #import "VerticalRefractionPicker.h"
+#import "Theme.h"
 
 
 // Keys for user preferences
@@ -14,6 +15,7 @@
 #define kInputRefractionBefore  (@"inputBeforeRefraction")
 #define kInputRefractionCurrent (@"inputCurrentRefraction")
 #define kWortCorrectionDivisor  (@"wortCorrectionDivisor")
+#define kdarkInterface          (@"darkInterface")
 
 
 @implementation AppDelegate
@@ -39,8 +41,11 @@
           kSpecificGravityMode:    @([self gravityModeGuessedFromLocale]),
           kInputRefractionBefore:  [NSDecimalNumber decimalNumberWithMantissa:125 exponent:-1 isNegative:NO],
           kInputRefractionCurrent: [NSDecimalNumber decimalNumberWithMantissa:64  exponent:-1 isNegative:NO],
-          kWortCorrectionDivisor:  [NSDecimalNumber decimalNumberWithMantissa:103 exponent:-2 isNegative:NO]}];
+          kWortCorrectionDivisor:  [NSDecimalNumber decimalNumberWithMantissa:103 exponent:-2 isNegative:NO],
+          kdarkInterface:          @(NO)}];
 
+    self.window.tintColor = [Theme tintColor:self.darkInterface];
+    [Theme setupColors:self.darkInterface];
     return YES;
 }
 
@@ -77,7 +82,55 @@
 }
 
 
+#pragma mark Theme Support
+
+
+- (void)reloadUI:(BOOL)darkTheme {
+
+    // Update colors
+    self.window.tintColor = [Theme tintColor:darkTheme];
+    [Theme setupColors:darkTheme];
+
+    // Reload all view controllers from the storyboard with a current screenshot hiding the new content
+    UIView *overlayView = [[UIScreen mainScreen] snapshotViewAfterScreenUpdates:NO];
+    UIViewController *viewController = [self.window.rootViewController.storyboard instantiateInitialViewController];
+    [viewController.view addSubview:overlayView];
+
+    self.window.rootViewController = viewController;
+
+    // Fade out screenshot to reveal new UI
+    [UIView animateWithDuration:0.3f
+                          delay:0.0f
+                        options:UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         overlayView.alpha = 0;
+                     }
+                     completion:^(BOOL finished) {
+                         [overlayView removeFromSuperview];
+                     }];
+}
+
+
 #pragma mark Properties for User Preferences
+
+
+- (BOOL)darkInterface {
+
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+
+    return [[standardUserDefaults objectForKey:kdarkInterface] boolValue];
+}
+
+
+- (void)setDarkInterface:(BOOL)mode {
+
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+
+    [standardUserDefaults setObject:@(mode) forKey:kdarkInterface];
+    [standardUserDefaults synchronize];
+
+    [self reloadUI:mode];
+}
 
 
 - (void)postComputationDefaultsChangedNotification {

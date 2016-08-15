@@ -32,6 +32,7 @@ typedef NS_ENUM(NSInteger, RFSpecificGravityMode) {
 @property (strong, nonatomic) UIWindow *window;
 
 // Properties for user preferences
+@property (nonatomic) BOOL darkInterface;
 @property (nonatomic) RFGravityUnit preferredGravityUnit;
 @property (nonatomic) RFSpecificGravityMode preferredSpecificGravityMode;
 @property (strong, nonatomic) NSDecimalNumber *preferredWortCorrectionDivisor;
