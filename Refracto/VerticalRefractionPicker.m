@@ -100,19 +100,11 @@ NSInteger const kMaxRefraction = 30;
         self.collectionView.contentOffset = CGPointMake(0.0, -insets.top);
     }
 
-    [self setRefraction:refraction animated:YES];
-}
+    _refraction = refraction;
+    [self.delegate refractionPickerView:self didSelectRefraction:_refraction];
 
-
-- (void)setRefraction:(NSDecimalNumber *)refraction animated:(BOOL)animated {
-
-    if (refraction != nil && [self.refraction compare:refraction] != NSOrderedSame) {
-
-        _refraction = refraction;
-
-        CGPoint contentOffset = [self contentOffsetForItemAtIndexPath:[self indexPathForRefractionValue:refraction]];
-        [self.collectionView setContentOffset:contentOffset animated:animated];
-    }
+    CGPoint contentOffset = [self contentOffsetForItemAtIndexPath:[self indexPathForRefractionValue:refraction]];
+    [self.collectionView setContentOffset:contentOffset animated:NO];
 }
 
 
@@ -287,7 +279,7 @@ NSInteger const kMaxRefraction = 30;
 
     if ([_refraction compare:newRefraction] != NSOrderedSame) {
 
-        [self setRefraction:newRefraction animated:NO];
+        self.refraction = newRefraction;
         [self.delegate refractionPickerView:self didSelectRefraction:newRefraction];
 
         if (announce) {

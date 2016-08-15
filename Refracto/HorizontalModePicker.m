@@ -183,7 +183,7 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
     [self.delegate pickerView:self didSelectItemAtIndex:index];
 
     [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0]
-                                      animated:YES
+                                      animated:animated
                                 scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
 }
 

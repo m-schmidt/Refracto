@@ -55,7 +55,7 @@
 
     dispatch_async(dispatch_get_main_queue(), ^{ [self updateContent]; });
 
-    [self.modePicker selectItemAtIndex:(NSInteger)[AppDelegate appDelegate].preferredSpecificGravityMode animated:YES];
+    [self.modePicker selectItemAtIndex:(NSInteger)[AppDelegate appDelegate].preferredSpecificGravityMode animated:NO];
 }
 
 
