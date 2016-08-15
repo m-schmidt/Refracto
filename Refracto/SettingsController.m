@@ -17,8 +17,9 @@ static NSInteger const kSupportSection  = 1;
 static NSInteger const kStoreSection    = 2;
 
 // Row indexes for settings section
-static NSInteger const kSettingsUnitRow           = 0;
-static NSInteger const kSettingsWortCorrectionRow = 1;
+static NSInteger const kSettingsDarkInterfaceRow  = 0;
+static NSInteger const kSettingsUnitRow           = 1;
+static NSInteger const kSettingsWortCorrectionRow = 2;
 
 // Row indexes for support section
 static NSInteger const kSupportWebsiteRow = 0;
@@ -53,6 +54,7 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 #define kSectionSettingsFooterKey      (@"footerSettings")
 #define kSectionStoreFooterKey         (@"footerStore")
 
+#define kSettingsItemDarkInterfaceKey  (@"itemDarkInterfaceTitle")
 #define kSettingsItemGravityUnitKey    (@"itemUnitTitle")
 #define kSettingsItemWortCorrectionKey (@"itemCorrectionTitle")
 #define kSettingsItemVisitWebsiteKey   (@"itemWebsiteTitle")
@@ -204,6 +206,15 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 }
 
 
+- (void)switchInterfaceMode:(id)sender {
+
+    if ([sender respondsToSelector:@selector(isOn)]) {
+
+        [AppDelegate appDelegate].darkInterface = [sender isOn];
+    }
+}
+
+
 #pragma mark - Update Content of Cells
 
 
@@ -309,6 +320,8 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
     switch (section) {
 
         case kSettingsSection:
+            return 3;
+
         case kSupportSection:
             return 2;
 
@@ -324,7 +337,20 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 
     if (indexPath.section == kSettingsSection) {
 
-        if (indexPath.row == kSettingsUnitRow) {
+        if (indexPath.row == kSettingsDarkInterfaceRow) {
+
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SwitchCell" forIndexPath:indexPath];
+
+            cell.textLabel.text = NSLocalizedString(kSettingsItemDarkInterfaceKey, nil);
+
+            UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
+            [switchView setOn:[AppDelegate appDelegate].darkInterface animated:NO];
+            [switchView addTarget:self action:@selector(switchInterfaceMode:) forControlEvents:UIControlEventValueChanged];
+
+            cell.accessoryView = switchView;
+            return cell;
+        }
+        else if (indexPath.row == kSettingsUnitRow) {
 
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UnitCell" forIndexPath:indexPath];
 
