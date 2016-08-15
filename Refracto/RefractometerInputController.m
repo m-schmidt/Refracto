@@ -7,6 +7,7 @@
 #import "RefractometerInputController.h"
 #import "AppDelegate.h"
 #import "NSDecimalNumber+Refracto.h"
+#import "Theme.h"
 
 
 #define kShowSettingsPopoverSegue  (@"showSettingsPopoverSegue")
@@ -140,6 +141,7 @@
 
         UIPopoverPresentationController *popoverController = (UIPopoverPresentationController *)destinationController.presentationController;
         popoverController.sourceRect = CGRectInset(popoverController.sourceView.bounds, -5, -5);
+        popoverController.backgroundColor = [Theme settingsPopoverBackgroundColor:[AppDelegate appDelegate].darkInterface];
     }
 }
 
