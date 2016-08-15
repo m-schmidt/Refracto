@@ -4,7 +4,9 @@
 //
 
 
+#import "AppDelegate.h"
 #import "VerticalRefractionCell.h"
+#import "Theme.h"
 
 
 @implementation VerticalRefractionCell
@@ -21,16 +23,18 @@
 
 - (void)drawRect:(CGRect)rect {
 
+    BOOL dark = [AppDelegate appDelegate].darkInterface;
+
     CGContextRef context = UIGraphicsGetCurrentContext ();
 
-    CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
+    CGContextSetFillColorWithColor(context, [Theme inputBackgroundColor:dark].CGColor);
     CGContextFillRect(context, rect);
 
     CGFloat width = CGRectGetWidth(self.bounds);
     CGFloat height = CGRectGetHeight(self.bounds);
     CGFloat position = (self.alignment == RefractionPickerAlignmentLeft) ? 0 : floor(width - self.barLength);
 
-    CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
+    CGContextSetFillColorWithColor(context, [Theme labelForegroundColor:dark atLevel:0].CGColor);
     CGContextFillRect(context, CGRectMake(position, floor(height / 2), self.barLength, 1));
 }
 

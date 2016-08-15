@@ -128,7 +128,7 @@ NSInteger const kVerticalPickerTickInset       =  2;
     NSInteger section = [indexPath indexAtPosition:0];
     CGFloat width = CGRectGetWidth(self.collectionView.bounds);
     CGFloat yPosition = [self.headerYPositions [section] floatValue];
-    CGFloat xPosition = rint ((self.alignment == RefractionPickerAlignmentLeft) ? 55.0 : (width - 54.0 - kVerticalPickerSupplementaryViewWidth));
+    CGFloat xPosition = rint ((self.alignment == RefractionPickerAlignmentLeft) ? 55.0 : (width - 55.0 - kVerticalPickerSupplementaryViewWidth));
 
     attributes.zIndex = 1;
     attributes.frame = CGRectMake(xPosition, yPosition, kVerticalPickerSupplementaryViewWidth, kVerticalPickerSupplementaryViewHeight);

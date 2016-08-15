@@ -46,7 +46,7 @@
     CGFloat width = CGRectGetWidth(self.bounds);
     CGFloat height = CGRectGetHeight(self.bounds);
 
-    UIColor *needleColor = [UIColor colorWithRed:0.0 green:0.478431 blue:1.0 alpha:1.0];
+    UIColor *needleColor = self.tintColor;
 
     CGContextSetFillColorWithColor(context, needleColor.CGColor);
     CGContextFillEllipseInRect(context, CGRectMake((self.alignment == RefractionPickerAlignmentRight) ? 0 : width - height, 0, height, height));

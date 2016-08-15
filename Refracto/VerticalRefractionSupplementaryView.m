@@ -4,7 +4,9 @@
 //
 
 
+#import "AppDelegate.h"
 #import "VerticalRefractionSupplementaryView.h"
+#import "Theme.h"
 
 
 @implementation VerticalRefractionSupplementaryView
@@ -14,9 +16,11 @@
     if ([super respondsToSelector:@selector(awakeFromNib)])
         [super awakeFromNib];
 
+    BOOL dark = [AppDelegate appDelegate].darkInterface;
+
     self.label = [[UILabel alloc] initWithFrame:self.bounds];
-    self.label.textColor = [UIColor blackColor];
-    self.label.backgroundColor = [UIColor clearColor];
+    self.label.textColor = [Theme labelForegroundColor:dark atLevel:0];
+    self.label.backgroundColor = [Theme inputBackgroundColor:dark];
     self.label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
     self.label.textAlignment = NSTextAlignmentCenter;
     self.label.opaque = NO;

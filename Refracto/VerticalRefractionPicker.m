@@ -217,6 +217,7 @@ NSInteger const kMaxRefraction = 30;
         default: cell.barLength = kVerticalPickerSmallTickWidth; break;
     }
 
+    cell.contentView.backgroundColor = [UIColor clearColor];
     cell.alignment = self.alignment;
 
     return cell;
