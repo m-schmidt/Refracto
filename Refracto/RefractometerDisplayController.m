@@ -41,6 +41,14 @@
 
 @implementation RefractometerDisplayController
 
+- (void)viewWillAppear:(BOOL)animated  {
+
+    [super viewWillAppear:animated];
+
+    [self.modePicker setupTextAttributes];
+}
+
+
 - (void)viewDidAppear:(BOOL)animated {
 
     [super viewDidAppear:animated];

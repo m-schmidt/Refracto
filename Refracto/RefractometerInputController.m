@@ -81,8 +81,8 @@
 
     self.propagateUpdatesOnScroll = NO;
 
-    CGPoint beforeContentOffset = [self.beforePicker contentOffsetSnappedToTickMarker];
-    CGPoint currentContentOffset = [self.currentPicker contentOffsetSnappedToTickMarker];
+    CGPoint beforeContentOffset = (self.beforePicker).contentOffsetSnappedToTickMarker;
+    CGPoint currentContentOffset = (self.currentPicker).contentOffsetSnappedToTickMarker;
 
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
 

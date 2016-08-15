@@ -6,6 +6,7 @@
 
 #import "RefractometerController.h"
 #import "AppDelegate.h"
+#import "Theme.h"
 
 
 @interface RefractometerController ()
@@ -22,6 +23,12 @@
 - (BOOL)prefersStatusBarHidden {
 
     return NO;
+}
+
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+
+    return [Theme statusBarStyle:[AppDelegate appDelegate].darkInterface];
 }
 
 
