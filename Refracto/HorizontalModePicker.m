@@ -7,6 +7,7 @@
 #import "HorizontalModePicker.h"
 #import "HorizontalModeCell.h"
 #import "AppDelegate.h"
+#import "Theme.h"
 
 
 NSDictionary *horizontalModeTextAttributes = nil;
@@ -22,14 +23,13 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
 @implementation HorizontalModePicker
 
-
 - (void)awakeFromNib {
 
     if ([super respondsToSelector:@selector(awakeFromNib)])
         [super awakeFromNib];
 
-    // Prepare text attributes for cells
-    self.lineHeight = [self configureTextAttributes];
+    // Derive line height from front data
+    self.lineHeight = [self setupTextAttributes];
 
     // Collection subview
     self.collectionView.decelerationRate = UIScrollViewDecelerationRateFast;
@@ -58,15 +58,15 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 }
 
 
-- (CGFloat)configureTextAttributes {
+- (CGFloat)setupTextAttributes {
 
     UIFont *font = [UIFont systemFontOfSize:17.0];
     UIFont *selectedFont = [UIFont boldSystemFontOfSize:17.0];
 
-    horizontalModeTextAttributes = @{NSFontAttributeName:font, NSForegroundColorAttributeName:[UIColor blackColor]};
-    horizontalModeSelectedTextAttributes =  @{NSFontAttributeName:selectedFont, NSForegroundColorAttributeName:self.tintColor};
+    BOOL dark = [AppDelegate appDelegate].darkInterface;
+    horizontalModeTextAttributes = @{NSFontAttributeName:font, NSForegroundColorAttributeName:[Theme labelForegroundColor:dark atLevel:0]};
+    horizontalModeSelectedTextAttributes =  @{NSFontAttributeName:selectedFont, NSForegroundColorAttributeName:[Theme tintColor:dark]};
 
-    // Derive line height from front data
     return ceil(MAX(font.lineHeight, selectedFont.lineHeight));
 }
 

@@ -38,4 +38,6 @@ extern NSDictionary *horizontalModeSelectedTextAttributes;
 
 - (void)selectItemAtIndex:(NSInteger)index animated:(BOOL)animated;
 
+@property (NS_NONATOMIC_IOSONLY, readonly) CGFloat setupTextAttributes;
+
 @end
