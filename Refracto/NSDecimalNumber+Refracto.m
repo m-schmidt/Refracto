@@ -41,14 +41,11 @@
 
 - (NSDecimalNumber *)constrainedBetweenMinimum:(NSDecimalNumber *)min maximum:(NSDecimalNumber *)max {
 
-    if (min != nil && [self compare:min] != NSOrderedDescending) {
-
+    if ([self isLessThan:min])
         return min;
-    }
-    else if (max != nil && [self compare:max] != NSOrderedAscending) {
 
+    if ([self isGreaterThan:max])
         return max;
-    }
 
     return self;
 }
