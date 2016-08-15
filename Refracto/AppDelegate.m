@@ -87,14 +87,15 @@
 
 - (void)reloadUI:(BOOL)darkTheme {
 
-    // Update colors
+    // Screenshot of old UI
+    UIView *overlayView = [[UIScreen mainScreen] snapshotViewAfterScreenUpdates:NO];
+
+    // Switch theme
     self.window.tintColor = [Theme tintColor:darkTheme];
     [Theme setupColors:darkTheme];
 
-    // Reload all view controllers from the storyboard with a current screenshot hiding the new content
-    UIView *overlayView = [[UIScreen mainScreen] snapshotViewAfterScreenUpdates:NO];
+    // Reload view controllers from the storyboard
     UIViewController *viewController = [self.window.rootViewController.storyboard instantiateInitialViewController];
-    [viewController.view addSubview:overlayView];
 
     self.window.rootViewController = viewController;
 
@@ -107,8 +108,9 @@
     }
 
     // Fade out screenshot to reveal new UI
-    [UIView animateWithDuration:0.4f
-                          delay:0.1f
+    [viewController.view addSubview:overlayView];
+    [UIView animateWithDuration:0.3f
+                          delay:0.0f
                         options:UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
                          overlayView.alpha = 0;
