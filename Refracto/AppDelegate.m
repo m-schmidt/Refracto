@@ -98,9 +98,17 @@
 
     self.window.rootViewController = viewController;
 
+    if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPhone) {
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+
+            [(UITabBarController *)viewController setSelectedIndex:1];
+        });
+    }
+
     // Fade out screenshot to reveal new UI
-    [UIView animateWithDuration:0.3f
-                          delay:0.0f
+    [UIView animateWithDuration:0.4f
+                          delay:0.1f
                         options:UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
                          overlayView.alpha = 0;
