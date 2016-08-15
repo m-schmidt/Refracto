@@ -24,6 +24,7 @@
 "footerSettings" = "The wort correction factor is used to convert from °Brix to °Plato for unfermented wort.";
 "footerStore" = "If you like Refracto, please take the time to give it a nice review. It really helps.";
 
+"itemDarkInterfaceTitle" = "Dark Interface";
 "itemUnitTitle" = "Gravity Unit";
 "itemCorrectionTitle" = "Wort Correction Factor";
 "itemWebsiteTitle" = "Visit Refracto Website";

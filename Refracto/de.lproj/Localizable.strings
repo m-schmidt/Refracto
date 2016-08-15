@@ -24,6 +24,7 @@
 "footerSettings" = "Mit dem Würzekorrekturfaktor wird der Brechungsindex von unvergorener Würze in °Plato umgerechnet.";
 "footerStore" = "Wenn Ihnen Refracto gefällt, schreiben Sie bitte eine nette Bewertung. Vielen Dank!";
 
+"itemDarkInterfaceTitle" = "Nachtmodus";
 "itemUnitTitle" = "Anzeige";
 "itemCorrectionTitle" = "Würzekorrekturfaktor";
 "itemWebsiteTitle" = "Refracto Webseite besuchen";
