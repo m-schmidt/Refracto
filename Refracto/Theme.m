@@ -70,8 +70,8 @@
 + (UIColor *)labelForegroundColor:(BOOL)darkTheme atLevel:(int)level {
 
     switch (level) {
-        case 0: return [UIColor colorWithWhite:(darkTheme ? 0.9f : 0.0f) alpha:1.0];
-        case 1: return [UIColor colorWithWhite:(darkTheme ? 0.6f : 0.42f) alpha:1.0];
+        case 0: return [UIColor colorWithWhite:(darkTheme ? 0.95f : 0.0f) alpha:1.0];
+        case 1: return [UIColor colorWithWhite:(darkTheme ? 0.55f : 0.42f) alpha:1.0];
     }
 
     ALog(@"Unexpected level for label foreground color: %d", level);
@@ -82,14 +82,14 @@
 + (UIColor *)separatorColor:(BOOL)darkTheme atLevel:(int)level {
 
     switch (level) {
-        case 0: return [UIColor colorWithWhite:(darkTheme ? 0.27f : 0.86f) alpha:1.0];
-        case 1: return [UIColor colorWithWhite:(darkTheme ? 0.22f : 0.91f) alpha:1.0];
-        case 2: return [UIColor colorWithWhite:(darkTheme ? 0.3f  : 0.76f) alpha:1.0];
+        case 0: return [UIColor colorWithWhite:(darkTheme ? 0.32f : 0.86f) alpha:1.0];
+        case 1: return [UIColor colorWithWhite:(darkTheme ? 0.29f : 0.91f) alpha:1.0];
+        case 2: return [UIColor colorWithWhite:(darkTheme ? 0.38f : 0.76f) alpha:1.0];
 
         case 3:
             if (darkTheme) {
 
-                return [UIColor colorWithWhite:0.3f alpha:1.0f];
+                return [UIColor colorWithWhite:0.38f alpha:1.0f];
             }
             else {
 
@@ -104,13 +104,13 @@
 
 + (UIColor *)inputBackgroundColor:(BOOL)darkTheme {
 
-    return [UIColor colorWithWhite:(darkTheme ? 0.15f : 1.0f) alpha:1.0];
+    return [UIColor colorWithWhite:(darkTheme ? 0.2f : 1.0f) alpha:1.0];
 }
 
 
 + (UIColor *)displayBackgroundColor:(BOOL)darkTheme {
 
-    return [UIColor colorWithWhite:(darkTheme ? 0.2f : 0.96f) alpha:1.0];
+    return [UIColor colorWithWhite:(darkTheme ? 0.251f : 0.96f) alpha:1.0];
 }
 
 
