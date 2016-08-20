@@ -4,7 +4,6 @@
 
 #import "Theme.h"
 #import "RefractometerController.h"
-#import "VerticalRefractionCell.h"
 
 
 @interface Theme (private)
@@ -137,7 +136,7 @@
     [UICollectionView appearanceWhenContainedInInstancesOfClasses:
         @[[RefractometerInputController class], [RefractometerController class]]].themeBackgroundColor = @"inputBackgroundColor";
 
-    [UICollectionReusableView appearanceWhenContainedInInstancesOfClasses:
+    [UICollectionViewCell appearanceWhenContainedInInstancesOfClasses:
         @[[RefractometerInputController class], [RefractometerController class]]].themeBackgroundColor = @"inputBackgroundColor";
 
     [VerticalRefractionNeedle appearanceWhenContainedInInstancesOfClasses:

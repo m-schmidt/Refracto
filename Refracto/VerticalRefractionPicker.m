@@ -204,13 +204,13 @@ NSInteger const kMaxRefraction = 30;
 
     switch ([indexPath indexAtPosition:1]) {
 
-        case 0:  cell.barLength = kVerticalPickerLongTickWidth; break;
-        case 5:  cell.barLength = kVerticalPickerMediumTickWidth; break;
-        default: cell.barLength = kVerticalPickerSmallTickWidth; break;
+        case 0:  cell.content.barLength = kVerticalPickerLongTickWidth; break;
+        case 5:  cell.content.barLength = kVerticalPickerMediumTickWidth; break;
+        default: cell.content.barLength = kVerticalPickerSmallTickWidth; break;
     }
 
     cell.contentView.backgroundColor = [UIColor clearColor];
-    cell.alignment = self.alignment;
+    cell.content.alignment = self.alignment;
 
     return cell;
 }

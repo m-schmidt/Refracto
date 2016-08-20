@@ -16,10 +16,18 @@
     if ([super respondsToSelector:@selector(awakeFromNib)])
         [super awakeFromNib];
 
-    _barLength = NSIntegerMax;
-    _alignment = RefractionPickerAlignmentLeft;
+    self.content = [[VerticalRefractionCellContent alloc] initWithFrame:self.contentView.frame];
+    self.content.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.content.barLength = NSIntegerMax;
+    self.content.alignment = RefractionPickerAlignmentLeft;
+
+    [self.contentView addSubview:self.content];
 }
 
+@end
+
+
+@implementation VerticalRefractionCellContent
 
 - (void)drawRect:(CGRect)rect {
 
@@ -37,9 +45,6 @@
     CGContextSetFillColorWithColor(context, [sharedTheme labelColorLevel0].CGColor);
     CGContextFillRect(context, CGRectMake(position, floor(height / 2), self.barLength, 1));
 }
-
-
-#pragma mark Properties
 
 
 - (void)setBarLength:(NSInteger)barLength {
