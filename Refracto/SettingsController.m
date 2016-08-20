@@ -61,6 +61,9 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 #define kSettingsItemContactSupportKey (@"itemContactTitle")
 #define kSettingsItemRateOnAppStoreKey (@"itemRateTitle")
 
+// Data to restore content offset on theme switch
+static CGFloat previousContentYOffset = 0.0;
+
 
 @interface SettingsController ()
 
@@ -87,6 +90,18 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 
     self.title = NSLocalizedString(kSettingsTitleKey, nil);
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+
+    [super viewDidAppear:animated];
+
+    if (previousContentYOffset != 0.0) {
+
+        self.tableView.contentOffset = CGPointMake(0.0, previousContentYOffset);
+        previousContentYOffset = 0.0;
+    }
 }
 
 
@@ -211,6 +226,11 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
     if ([sender respondsToSelector:@selector(isOn)]) {
 
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+
+            if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPhone) {
+
+                previousContentYOffset = self.tableView.contentOffset.y;
+            }
 
             [AppDelegate appDelegate].darkInterface = [sender isOn];
         });
