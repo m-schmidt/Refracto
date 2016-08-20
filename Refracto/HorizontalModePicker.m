@@ -63,9 +63,9 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
     UIFont *font = [UIFont systemFontOfSize:17.0];
     UIFont *selectedFont = [UIFont boldSystemFontOfSize:17.0];
 
-    BOOL dark = [AppDelegate appDelegate].darkInterface;
-    horizontalModeTextAttributes = @{NSFontAttributeName:font, NSForegroundColorAttributeName:[Theme labelForegroundColor:dark atLevel:0]};
-    horizontalModeSelectedTextAttributes =  @{NSFontAttributeName:selectedFont, NSForegroundColorAttributeName:[Theme tintColor:dark]};
+    Theme *sharedTheme = [Theme sharedTheme];
+    horizontalModeTextAttributes = @{NSFontAttributeName:font, NSForegroundColorAttributeName:[sharedTheme labelColorLevel0]};
+    horizontalModeSelectedTextAttributes =  @{NSFontAttributeName:selectedFont, NSForegroundColorAttributeName:[sharedTheme tintColor]};
 
     return ceil(MAX(font.lineHeight, selectedFont.lineHeight));
 }

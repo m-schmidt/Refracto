@@ -23,18 +23,18 @@
 
 - (void)drawRect:(CGRect)rect {
 
-    BOOL dark = [AppDelegate appDelegate].darkInterface;
+    Theme *sharedTheme = [Theme sharedTheme];
 
     CGContextRef context = UIGraphicsGetCurrentContext ();
 
-    CGContextSetFillColorWithColor(context, [Theme inputBackgroundColor:dark].CGColor);
+    CGContextSetFillColorWithColor(context, [sharedTheme inputBackgroundColor].CGColor);
     CGContextFillRect(context, rect);
 
     CGFloat width = CGRectGetWidth(self.bounds);
     CGFloat height = CGRectGetHeight(self.bounds);
     CGFloat position = (self.alignment == RefractionPickerAlignmentLeft) ? 0 : floor(width - self.barLength);
 
-    CGContextSetFillColorWithColor(context, [Theme labelForegroundColor:dark atLevel:0].CGColor);
+    CGContextSetFillColorWithColor(context, [sharedTheme labelColorLevel0].CGColor);
     CGContextFillRect(context, CGRectMake(position, floor(height / 2), self.barLength, 1));
 }
 

@@ -141,7 +141,7 @@
 
         UIPopoverPresentationController *popoverController = (UIPopoverPresentationController *)destinationController.presentationController;
         popoverController.sourceRect = CGRectInset(popoverController.sourceView.bounds, -5, -5);
-        popoverController.backgroundColor = [Theme settingsPopoverBackgroundColor:[AppDelegate appDelegate].darkInterface];
+        popoverController.backgroundColor = [[Theme sharedTheme] settingsPopoverBackgroundColor];
     }
 }
 

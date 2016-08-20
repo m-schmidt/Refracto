@@ -16,11 +16,11 @@
     if ([super respondsToSelector:@selector(awakeFromNib)])
         [super awakeFromNib];
 
-    BOOL dark = [AppDelegate appDelegate].darkInterface;
+    Theme *sharedTheme = [Theme sharedTheme];
 
     self.label = [[UILabel alloc] initWithFrame:self.bounds];
-    self.label.textColor = [Theme labelForegroundColor:dark atLevel:0];
-    self.label.backgroundColor = [Theme inputBackgroundColor:dark];
+    self.label.textColor = [sharedTheme labelColorLevel0];
+    self.label.backgroundColor = [sharedTheme inputBackgroundColor];
     self.label.font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
     self.label.textAlignment = NSTextAlignmentCenter;
     self.label.opaque = NO;

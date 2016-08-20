@@ -44,8 +44,9 @@
           kWortCorrectionDivisor:  [NSDecimalNumber decimalNumberWithMantissa:103 exponent:-2 isNegative:NO],
           kdarkInterface:          @(NO)}];
 
-    self.window.tintColor = [Theme tintColor:self.darkInterface];
-    [Theme setupColors:self.darkInterface];
+    [Theme sharedTheme].darkInterface = self.darkInterface;
+    self.window.tintColor = [[Theme sharedTheme] tintColor];
+
     return YES;
 }
 
@@ -91,26 +92,22 @@
     UIView *overlayView = [[UIScreen mainScreen] snapshotViewAfterScreenUpdates:NO];
 
     // Switch theme
-    self.window.tintColor = [Theme tintColor:darkTheme];
-    [Theme setupColors:darkTheme];
+    [Theme sharedTheme].darkInterface = darkTheme;
+    self.window.tintColor = [[Theme sharedTheme] tintColor];
 
     // Reload view controllers from the storyboard
     UIViewController *viewController = [self.window.rootViewController.storyboard instantiateInitialViewController];
-
     self.window.rootViewController = viewController;
 
     if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPhone) {
 
-        dispatch_async(dispatch_get_main_queue(), ^{
-
-            [(UITabBarController *)viewController setSelectedIndex:1];
-        });
+        [(UITabBarController *)viewController setSelectedIndex:1];
     }
 
-    // Fade out screenshot to reveal new UI
+    // Fade from screenshot to new UI
     [viewController.view addSubview:overlayView];
-    [UIView animateWithDuration:0.3f
-                          delay:0.2f
+    [UIView animateWithDuration:0.2f
+                          delay:0.0f
                         options:UIViewAnimationOptionTransitionCrossDissolve
                      animations:^{
                          overlayView.alpha = 0;

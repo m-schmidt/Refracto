@@ -3,122 +3,217 @@
 //
 
 #import "Theme.h"
-#import "AppDelegate.h"
 #import "RefractometerController.h"
+#import "VerticalRefractionCell.h"
+
+
+@interface Theme (private)
+
+// Called once to setup UIAppearance proxies
+- (void)installAppearance;
+
+// Called by custom UIAppearance-properties to set target properties to values of current theme
+- (void)setObjValueNamed:(NSString *)getterName forProperty:(SEL)setter ofTarget:(UIView *)target;
+- (void)setIntValueNamed:(NSString *)getterName forProperty:(SEL)setter ofTarget:(UIView *)target;
+
+@end
 
 
 @implementation Theme
 
-+ (void)setupColors:(BOOL)darkTheme {
 
-    // Setting Navigation and TabBar
-    [UINavigationBar appearance].barStyle = [self barStyle:darkTheme];
-    [UINavigationBar appearance].barTintColor = [self barTintColor:darkTheme];
-    [UINavigationBar appearance].titleTextAttributes =
-        @{NSForegroundColorAttributeName: [self labelForegroundColor:darkTheme atLevel:0]};
-
-    [UITabBar appearance].barTintColor = [self barTintColor:darkTheme];
-
-    
-    // Settings Tab
-    [UITableView appearance].thmBackgroundColor = [self settingsBackgroundColor:darkTheme];
-    [UITableView appearance].separatorColor = [self separatorColor:darkTheme atLevel:3];
-    [UISlider appearance].thumbTintColor = [self settingsKnobColor:darkTheme];
-    [UISwitch appearance].thumbTintColor = [self settingsKnobColor:darkTheme];
-    [UISwitch appearance].onTintColor = [self onTintColor:darkTheme];
-
-    [UITableViewCell appearance].selectedBackgroundView = [self settingsSelectedCellBackgroundView:darkTheme];
-    [UITableViewCell appearance].thmBackgroundColor = [self settingsCellBackgroundColor:darkTheme];
-
-    [UILabel appearanceWhenContainedInInstancesOfClasses:
-        @[[UITableViewCell class]]].textColor = [self labelForegroundColor:darkTheme atLevel:0];
-
-    [UILabel appearanceWhenContainedInInstancesOfClasses:
-        @[[UITableViewHeaderFooterView class]]].textColor = [self labelForegroundColor:darkTheme atLevel:1];
+#pragma mark Theme Setup
 
 
-    // Refractometer Tab
-    [PrimaryLabel appearance].textColor = [self labelForegroundColor:darkTheme atLevel:0];
-    [SecondaryLabel appearance].textColor = [self labelForegroundColor:darkTheme atLevel:1];
++ (instancetype)sharedTheme {
+
+    static Theme *sharedInstance = nil;
+    static dispatch_once_t once;
+
+    dispatch_once(&once, ^{
+
+        sharedInstance = [[self alloc] init];
+
+        sharedInstance.darkInterface = NO;
+        [sharedInstance installAppearance];
+    });
+
+    return sharedInstance;
+}
+
+
+- (void)setObjValueNamed:(NSString *)getterName forProperty:(SEL)setter ofTarget:(UIView *)target  {
+
+    if ([target respondsToSelector:setter]) {
+
+        // Get object value
+        SEL getter = NSSelectorFromString(getterName);
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector:getter]];
+        [invocation setTarget:self];
+        [invocation setSelector:getter];
+        [invocation invoke];
+
+        id __unsafe_unretained tmpValue = nil;
+        [invocation getReturnValue:&tmpValue];
+        id value = tmpValue;
+
+        // Set object value at target
+        invocation = [NSInvocation invocationWithMethodSignature:[target methodSignatureForSelector:setter]];
+        [invocation setTarget:target];
+        [invocation setSelector:setter];
+        [invocation setArgument:&value atIndex:2];
+        [invocation invoke];
+    }
+}
+
+
+- (void)setIntValueNamed:(NSString *)getterName forProperty:(SEL)setter ofTarget:(UIView *)target  {
+
+    if ([target respondsToSelector:setter]) {
+
+        // Get integer value
+        SEL getter = NSSelectorFromString(getterName);
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector:getter]];
+        [invocation setTarget:self];
+        [invocation setSelector:getter];
+        [invocation invoke];
+
+        NSInteger value = 0;
+        [invocation getReturnValue:&value];
+
+        // Set integer value at target
+        invocation = [NSInvocation invocationWithMethodSignature:[target methodSignatureForSelector:setter]];
+        [invocation setTarget:target];
+        [invocation setSelector:setter];
+        [invocation setArgument:&value atIndex:2];
+        [invocation invoke];
+    }
+}
+
+
+- (void)installAppearance {
+
+    [UINavigationBar appearance].themeBarStyle = @"barStyle";
+    [UINavigationBar appearance].themeBarTintColor = @"barTintColor";
+    [UINavigationBar appearance].themeTitleTextAttributes = @"titleTextAttributes";
+
+    [UITabBar appearance].themeBarTintColor = @"barTintColor";
+
+    [UITableView appearance].themeBackgroundColor = @"settingsBackgroundColor";
+    [UITableView appearance].themeSeparatorColor = @"separatorColorTableView";
+
+    [UISlider appearance].themeThumbTintColor = @"settingsKnobColor";
+
+    [UISwitch appearance].themeThumbTintColor = @"settingsKnobColor";
+    [UISwitch appearance].themeOnTintColor = @"onTintColor";
+
+    [UITableViewCell appearance].themeSelectedBackgroundView = @"settingsSelectedCellBackgroundView";
+    [UITableViewCell appearance].themeBackgroundColor = @"settingsCellBackgroundColor";
 
     [UIView appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerController class]]].backgroundColor = [self displayBackgroundColor:darkTheme];
+        @[[RefractometerController class]]].themeBackgroundColor = @"displayBackgroundColor";
 
-    [PrimarySeparator appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerController class]]].backgroundColor = [self separatorColor:darkTheme atLevel:0];
+    [UILabel appearanceWhenContainedInInstancesOfClasses:
+        @[[UITableViewCell class]]].themeTextColor = @"labelColorLevel0";
 
-    [SecondarySeparator appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerController class]]].backgroundColor = [self separatorColor:darkTheme atLevel:1];
+    [UILabel appearanceWhenContainedInInstancesOfClasses:
+        @[[UITableViewHeaderFooterView class]]].themeTextColor = @"labelColorLevel1";
 
-    [TertiarySeparator appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerController class]]].backgroundColor = [self separatorColor:darkTheme atLevel:2];
+    [UILabel appearanceWhenContainedInInstancesOfClasses:
+        @[[RefractometerInputController class], [RefractometerController class]]].themeBackgroundColor = @"inputBackgroundColor";
+
+    [LabelL0 appearance].themeTextColor = @"labelColorLevel0";
+    [LabelL1 appearance].themeTextColor = @"labelColorLevel1";
+
+    [SeparatorL0 appearanceWhenContainedInInstancesOfClasses:
+        @[[RefractometerController class]]].themeBackgroundColor = @"separatorColorLevel0";
+
+    [SeparatorL1 appearanceWhenContainedInInstancesOfClasses:
+        @[[RefractometerController class]]].themeBackgroundColor = @"separatorColorLevel1";
+
+    [SeparatorL2 appearanceWhenContainedInInstancesOfClasses:
+        @[[RefractometerController class]]].themeBackgroundColor = @"separatorColorLevel2";
 
     [UICollectionView appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerInputController class], [RefractometerController class]]].backgroundColor = [self inputBackgroundColor:darkTheme];
+        @[[RefractometerInputController class], [RefractometerController class]]].themeBackgroundColor = @"inputBackgroundColor";
 
     [UICollectionReusableView appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerInputController class], [RefractometerController class]]].thmBackgroundColor = [self inputBackgroundColor:darkTheme];
+        @[[RefractometerInputController class], [RefractometerController class]]].themeBackgroundColor = @"inputBackgroundColor";
 
     [VerticalRefractionNeedle appearanceWhenContainedInInstancesOfClasses:
         @[[RefractometerInputController class], [RefractometerController class]]].backgroundColor = [UIColor clearColor];
-
-    [UILabel appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerInputController class], [RefractometerController class]]].backgroundColor = [self inputBackgroundColor:darkTheme];
 }
 
 
-+ (UIColor *)labelForegroundColor:(BOOL)darkTheme atLevel:(int)level {
+#pragma mark Accessors for Theme Values
 
-    switch (level) {
-        case 0: return [UIColor colorWithWhite:(darkTheme ? 0.95f : 0.0f) alpha:1.0];
-        case 1: return [UIColor colorWithWhite:(darkTheme ? 0.55f : 0.42f) alpha:1.0];
+
+- (UIColor *)labelColorLevel0 {
+
+    return [UIColor colorWithWhite:(_darkInterface ? 0.95f : 0.0f) alpha:1.0];
+}
+
+
+- (UIColor *)labelColorLevel1 {
+
+    return [UIColor colorWithWhite:(_darkInterface ? 0.55f : 0.42f) alpha:1.0];
+}
+
+
+- (UIColor *)separatorColorLevel0 {
+
+    return [UIColor colorWithWhite:(_darkInterface ? 0.32f : 0.86f) alpha:1.0];
+}
+
+
+- (UIColor *)separatorColorLevel1 {
+
+    return [UIColor colorWithWhite:(_darkInterface ? 0.29f : 0.91f) alpha:1.0];
+}
+
+
+- (UIColor *)separatorColorLevel2 {
+
+    return [UIColor colorWithWhite:(_darkInterface ? 0.38f : 0.76f) alpha:1.0];
+}
+
+
+- (NSDictionary *)titleTextAttributes {
+
+    return @{NSForegroundColorAttributeName: [self labelColorLevel0]};
+}
+
+
+- (UIColor *)separatorColorTableView {
+
+    if (_darkInterface) {
+
+        return [UIColor colorWithWhite:0.38f alpha:1.0f];
     }
+    else {
 
-    ALog(@"Unexpected level for label foreground color: %d", level);
-    return [UIColor blackColor];
-};
-
-
-+ (UIColor *)separatorColor:(BOOL)darkTheme atLevel:(int)level {
-
-    switch (level) {
-        case 0: return [UIColor colorWithWhite:(darkTheme ? 0.32f : 0.86f) alpha:1.0];
-        case 1: return [UIColor colorWithWhite:(darkTheme ? 0.29f : 0.91f) alpha:1.0];
-        case 2: return [UIColor colorWithWhite:(darkTheme ? 0.38f : 0.76f) alpha:1.0];
-
-        case 3:
-            if (darkTheme) {
-
-                return [UIColor colorWithWhite:0.38f alpha:1.0f];
-            }
-            else {
-
-                return [UIColor colorWithRed:0.784f green:0.78f blue:0.8f alpha:1.0f];
-            }
+        return [UIColor colorWithRed:0.784f green:0.78f blue:0.8f alpha:1.0f];
     }
-
-    ALog(@"Unexpected level for separator color: %d", level);
-    return [UIColor blackColor];
-};
-
-
-+ (UIColor *)inputBackgroundColor:(BOOL)darkTheme {
-
-    return [UIColor colorWithWhite:(darkTheme ? 0.2f : 1.0f) alpha:1.0];
 }
 
 
-+ (UIColor *)displayBackgroundColor:(BOOL)darkTheme {
+- (UIColor *)inputBackgroundColor {
 
-    return [UIColor colorWithWhite:(darkTheme ? 0.251f : 0.96f) alpha:1.0];
+    return [UIColor colorWithWhite:(_darkInterface ? 0.2f : 1.0f) alpha:1.0];
 }
 
 
-+ (UIColor *)settingsBackgroundColor:(BOOL)darkTheme {
+- (UIColor *)displayBackgroundColor {
 
-    if (darkTheme) {
+    return [UIColor colorWithWhite:(_darkInterface ? 0.251f : 0.96f) alpha:1.0];
+}
 
-        return [self inputBackgroundColor:YES];
+
+- (UIColor *)settingsBackgroundColor {
+
+    if (_darkInterface) {
+
+        return [self inputBackgroundColor];
     }
     else {
 
@@ -127,11 +222,11 @@
 }
 
 
-+ (UIColor *)settingsPopoverBackgroundColor:(BOOL)darkTheme {
+- (UIColor *)settingsPopoverBackgroundColor {
 
-    if (darkTheme) {
+    if (_darkInterface) {
 
-        return [self displayBackgroundColor:YES];
+        return [self displayBackgroundColor];
     }
     else {
 
@@ -140,11 +235,11 @@
 }
 
 
-+ (UIColor *)settingsCellBackgroundColor:(BOOL)darkTheme {
+- (UIColor *)settingsCellBackgroundColor {
 
-    if (darkTheme) {
+    if (_darkInterface) {
 
-        return [self displayBackgroundColor:YES];
+        return [self displayBackgroundColor];
     }
     else {
 
@@ -153,9 +248,9 @@
 }
 
 
-+ (UIView *)settingsSelectedCellBackgroundView:(BOOL)darkTheme {
+- (UIView *)settingsSelectedCellBackgroundView {
 
-    if (darkTheme) {
+    if (_darkInterface) {
 
         UIView *view = [UIView new];
         view.backgroundColor = [UIColor colorWithWhite:0.25f alpha:1.0f];
@@ -168,11 +263,11 @@
 }
 
 
-+ (UIColor *)settingsKnobColor:(BOOL)darkTheme {
+- (UIColor *)settingsKnobColor {
 
-    if (darkTheme) {
+    if (_darkInterface) {
 
-        return [self labelForegroundColor:darkTheme atLevel:0];
+        return [self labelColorLevel0];
     }
     else {
 
@@ -181,9 +276,9 @@
 }
 
 
-+ (UIColor *)tintColor:(BOOL)darkTheme {
+- (UIColor *)tintColor {
 
-    if (darkTheme) {
+    if (_darkInterface) {
 
         return [UIColor colorWithRed:0.71 green:0.84 blue:0.20 alpha:1.0];
     }
@@ -194,9 +289,9 @@
 }
 
 
-+ (UIColor *)barTintColor:(BOOL)darkTheme {
+- (UIColor *)barTintColor {
 
-    if (darkTheme) {
+    if (_darkInterface) {
 
         return [UIColor colorWithWhite:0.2f alpha:1.0f];
     }
@@ -207,9 +302,9 @@
 }
 
 
-+ (UIColor *)onTintColor:(BOOL)darkTheme {
+- (UIColor *)onTintColor {
 
-    if (darkTheme) {
+    if (_darkInterface) {
 
         return [UIColor colorWithRed:0.498f green:0.58f blue:0.231f alpha:1.0f];
     }
@@ -221,15 +316,15 @@
 }
 
 
-+ (UIStatusBarStyle)statusBarStyle:(BOOL)darkTheme {
+- (UIStatusBarStyle)statusBarStyle {
 
-    return (darkTheme ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault);
+    return (_darkInterface ? UIStatusBarStyleLightContent : UIStatusBarStyleDefault);
 }
 
 
-+ (UIBarStyle)barStyle:(BOOL)darkTheme {
+- (UIBarStyle)barStyle {
 
-    return (darkTheme ? UIBarStyleBlack : UIBarStyleDefault);
+    return (_darkInterface ? UIBarStyleBlack : UIBarStyleDefault);
 }
 
 @end
@@ -238,74 +333,138 @@
 #pragma mark Dummy Classes and UIAppearance Extensions
 
 
-@implementation UITableView (Appearance)
+@implementation UIView (Appearance)
 
-- (UIColor *)thmBackgroundColor {
+- (NSString *)themeBackgroundColor {
 
-    return self.backgroundColor;
+    return @"";
 }
 
 
-- (void)setThmBackgroundColor:(UIColor *)color {
+- (void)setThemeBackgroundColor:(NSString *)getterName {
 
-    self.backgroundColor = color;
+    [[Theme sharedTheme] setObjValueNamed:getterName forProperty:@selector(setBackgroundColor:) ofTarget:self];
+}
+
+
+- (NSString *)themeBarStyle {
+
+    return @"";
+}
+
+
+- (void)setThemeBarStyle:(NSString *)getterName {
+
+    [[Theme sharedTheme] setIntValueNamed:getterName forProperty:@selector(setBarStyle:) ofTarget:self];
+}
+
+
+- (NSString *)themeBarTintColor {
+
+    return @"";
+}
+
+
+- (void)setThemeBarTintColor:(NSString *)getterName {
+
+    [[Theme sharedTheme] setObjValueNamed:getterName forProperty:@selector(setBarTintColor:) ofTarget:self];
+}
+
+
+- (NSString *)themeOnTintColor {
+
+    return @"";
+}
+
+
+- (void)setThemeOnTintColor:(NSString *)getterName {
+
+    [[Theme sharedTheme] setObjValueNamed:getterName forProperty:@selector(setOnTintColor:) ofTarget:self];
+}
+
+
+- (NSString *)themeSelectedBackgroundView {
+
+    return @"";
+}
+
+
+- (void)setThemeSelectedBackgroundView:(NSString *)getterName {
+
+    [[Theme sharedTheme] setObjValueNamed:getterName forProperty:@selector(setSelectedBackgroundView:) ofTarget:self];
+}
+
+
+- (NSString *)themeSeparatorColor {
+
+    return @"";
+}
+
+
+- (void)setThemeSeparatorColor:(NSString *)getterName {
+
+    [[Theme sharedTheme] setObjValueNamed:getterName forProperty:@selector(setSeparatorColor:) ofTarget:self];
+}
+
+
+- (NSString *)themeTextColor {
+
+    return @"";
+}
+
+
+- (void)setThemeTextColor:(NSString *)getterName {
+
+    [[Theme sharedTheme] setObjValueNamed:getterName forProperty:@selector(setTextColor:) ofTarget:self];
+}
+
+
+- (NSString *)themeThumbTintColor {
+
+    return @"";
+}
+
+
+- (void)setThemeThumbTintColor:(NSString *)getterName {
+
+    [[Theme sharedTheme] setObjValueNamed:getterName forProperty:@selector(setThumbTintColor:) ofTarget:self];
+}
+
+
+- (NSString *)themeTitleTextAttributes {
+
+    return @"";
+}
+
+
+- (void)setThemeTitleTextAttributes:(NSString *)getterName {
+
+    [[Theme sharedTheme] setObjValueNamed:getterName forProperty:@selector(setTitleTextAttributes:) ofTarget:self];
 }
 
 @end
 
 
-@implementation UITableViewCell (Appearance)
-
-- (UIColor *)thmBackgroundColor {
-
-    return self.backgroundColor;
-}
-
-
-- (void)setThmBackgroundColor:(UIColor *)color {
-
-    self.backgroundColor = color;
-}
+@implementation LabelL0
 
 @end
 
 
-@implementation UICollectionReusableView (Appearance)
-
-- (UIColor *)thmBackgroundColor {
-
-    return self.backgroundColor;
-}
-
-
-- (void)setThmBackgroundColor:(UIColor *)color {
-
-    self.backgroundColor = color;
-}
+@implementation LabelL1
 
 @end
 
 
-@implementation PrimaryLabel
+@implementation SeparatorL0
 
 @end
 
 
-@implementation SecondaryLabel
+@implementation SeparatorL1
 
 @end
 
 
-@implementation PrimarySeparator
-
-@end
-
-
-@implementation SecondarySeparator
-
-@end
-
-
-@implementation TertiarySeparator
+@implementation SeparatorL2
 
 @end

@@ -28,7 +28,7 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
 
-    return [Theme statusBarStyle:[AppDelegate appDelegate].darkInterface];
+    return [[Theme sharedTheme] statusBarStyle];
 }
 
 

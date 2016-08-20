@@ -4,50 +4,59 @@
 
 @interface Theme : NSObject
 
-// Setup color theme via UIAppearance
-+ (void)setupColors:(BOOL)darkTheme;
++ (instancetype)sharedTheme;
 
-// Foreground color for labels (defined for level 0..1)
-+ (UIColor *)labelForegroundColor:(BOOL)darkTheme atLevel:(int)level;
+// Property to select the currently active theme
+@property (nonatomic) BOOL darkInterface;
 
-// Colors for separator lines (defined for level 0..3)
-+ (UIColor *)separatorColor:(BOOL)darkTheme atLevel:(int)level;
+// Foreground color for labels
+- (UIColor *)labelColorLevel0;
+- (UIColor *)labelColorLevel1;
+
+// Colors for separator lines
+- (UIColor *)separatorColorLevel0;
+- (UIColor *)separatorColorLevel1;
+- (UIColor *)separatorColorLevel2;
+- (UIColor *)separatorColorTableView;
+
+// Text attributes for navigation bar
+- (NSDictionary *)titleTextAttributes;
 
 // Background color for input area
-+ (UIColor *)inputBackgroundColor:(BOOL)darkTheme;
+- (UIColor *)inputBackgroundColor;
 
 // Background color for display area
-+ (UIColor *)displayBackgroundColor:(BOOL)darkTheme;
+- (UIColor *)displayBackgroundColor;
 
 // Background color for settings table view
-+ (UIColor *)settingsBackgroundColor:(BOOL)darkTheme;
+- (UIColor *)settingsBackgroundColor;
 
 // Background color for popover on iPad
-+ (UIColor *)settingsPopoverBackgroundColor:(BOOL)darkTheme;
+- (UIColor *)settingsPopoverBackgroundColor;
 
 // Background color for cells in settings table view
-+ (UIColor *)settingsCellBackgroundColor:(BOOL)darkTheme;
+- (UIColor *)settingsCellBackgroundColor;
 
 // View used as selection indicator in settings table view
-+ (UIView *)settingsSelectedCellBackgroundView:(BOOL)darkTheme;
+- (UIView *)settingsSelectedCellBackgroundView;
 
 // Color for slider knob in settings table view
-+ (UIColor *)settingsKnobColor:(BOOL)darkTheme;
+- (UIColor *)settingsKnobColor;
 
 // Global tint color
-+ (UIColor *)tintColor:(BOOL)darkTheme;
+- (UIColor *)tintColor;
 
 // Global tint color for navigation and tab bars
-+ (UIColor *)barTintColor:(BOOL)darkTheme;
+- (UIColor *)barTintColor;
 
 // Global tint color for on state of switches
-+ (UIColor *)onTintColor:(BOOL)darkTheme;
+- (UIColor *)onTintColor;
 
 // Status bar style for view controllers
-+ (UIStatusBarStyle)statusBarStyle:(BOOL)darkTheme;
+- (UIStatusBarStyle)statusBarStyle;
 
 // bar style for navigation bars
-+ (UIBarStyle)barStyle:(BOOL)darkTheme;
+- (UIBarStyle)barStyle;
 
 @end
 
@@ -55,47 +64,41 @@
 #pragma mark Dummy Classes and UIAppearance Extensions
 
 
-@interface UITableView (Appearance)<UIAppearance>
+@interface UIView (Appearance)<UIAppearance>
 
-@property (strong, nonatomic) UIColor *thmBackgroundColor UI_APPEARANCE_SELECTOR;
-
-@end
-
-
-@interface UITableViewCell (Appearance)<UIAppearance>
-
-@property (strong, nonatomic) UIColor *thmBackgroundColor UI_APPEARANCE_SELECTOR;
-
-@end
-
-
-@interface UICollectionReusableView (Appearance)<UIAppearance>
-
-@property (strong, nonatomic) UIColor *thmBackgroundColor UI_APPEARANCE_SELECTOR;
+@property (strong, nonatomic) NSString *themeBackgroundColor UI_APPEARANCE_SELECTOR;
+@property (strong, nonatomic) NSString *themeBarStyle UI_APPEARANCE_SELECTOR;
+@property (strong, nonatomic) NSString *themeBarTintColor UI_APPEARANCE_SELECTOR;
+@property (strong, nonatomic) NSString *themeOnTintColor UI_APPEARANCE_SELECTOR;
+@property (strong, nonatomic) NSString *themeSelectedBackgroundView UI_APPEARANCE_SELECTOR;
+@property (strong, nonatomic) NSString *themeSeparatorColor UI_APPEARANCE_SELECTOR;
+@property (strong, nonatomic) NSString *themeTextColor UI_APPEARANCE_SELECTOR;
+@property (strong, nonatomic) NSString *themeThumbTintColor UI_APPEARANCE_SELECTOR;
+@property (strong, nonatomic) NSString *themeTitleTextAttributes UI_APPEARANCE_SELECTOR;
 
 @end
 
 
-@interface PrimaryLabel : UILabel
+@interface LabelL0 : UILabel
 
 @end
 
 
-@interface SecondaryLabel : UILabel
+@interface LabelL1 : UILabel
 
 @end
 
 
-@interface PrimarySeparator : UIView
+@interface SeparatorL0 : UIView
 
 @end
 
 
-@interface SecondarySeparator : UIView
+@interface SeparatorL1 : UIView
 
 @end
 
 
-@interface TertiarySeparator : UIView
+@interface SeparatorL2 : UIView
 
 @end
