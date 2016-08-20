@@ -141,6 +141,9 @@
 
     [VerticalRefractionNeedle appearanceWhenContainedInInstancesOfClasses:
         @[[RefractometerInputController class], [RefractometerController class]]].backgroundColor = [UIColor clearColor];
+
+    [UIView appearanceWhenContainedInInstancesOfClasses:
+        @[[UIButton class], [RefractometerController class]]].themeBackgroundColor = @"inputBackgroundColor";
 }
 
 
@@ -324,6 +327,12 @@
 - (UIBarStyle)barStyle {
 
     return (_darkInterface ? UIBarStyleBlack : UIBarStyleDefault);
+}
+
+
+- (UIImage *)settingsButtonImage {
+
+    return [UIImage imageNamed:_darkInterface ? @"SettingsOutlinedDark" : @"SettingsOutlined"];
 }
 
 @end

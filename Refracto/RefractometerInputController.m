@@ -35,6 +35,9 @@
     self.beforePicker.alignment = RefractionPickerAlignmentRight;
     self.currentPicker.alignment = RefractionPickerAlignmentLeft;
     self.propagateUpdatesOnScroll = YES;
+
+    if (self.settingsButton)
+        [self.settingsButton setImage:[Theme sharedTheme].settingsButtonImage forState:UIControlStateNormal];
 }
 
 

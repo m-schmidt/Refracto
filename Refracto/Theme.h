@@ -55,8 +55,11 @@
 // Status bar style for view controllers
 - (UIStatusBarStyle)statusBarStyle;
 
-// bar style for navigation bars
+// Bar style for navigation bars
 - (UIBarStyle)barStyle;
+
+// Image of settings button on ipad is theme dependend
+- (UIImage *)settingsButtonImage;
 
 @end
 

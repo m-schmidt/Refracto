@@ -900,6 +900,7 @@
                         <outlet property="beforePicker" destination="ckx-sO-xbs" id="6pV-hE-Qtk"/>
                         <outlet property="currentLabel" destination="CEp-4x-xhl" id="0OJ-hG-JQu"/>
                         <outlet property="currentPicker" destination="XCZ-Bi-U3x" id="Pf7-fP-ro6"/>
+                        <outlet property="settingsButton" destination="mTt-AO-d43" id="jCd-7j-vyC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEY-nb-alW" userLabel="First Responder" sceneMemberID="firstResponder"/>
