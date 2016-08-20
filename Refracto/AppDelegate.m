@@ -133,10 +133,13 @@
 
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
 
-    [standardUserDefaults setObject:@(mode) forKey:kdarkInterface];
-    [standardUserDefaults synchronize];
+    if ([[standardUserDefaults objectForKey:kdarkInterface] boolValue] != mode) {
 
-    [self reloadUI:mode];
+        [standardUserDefaults setObject:@(mode) forKey:kdarkInterface];
+        [standardUserDefaults synchronize];
+
+        [self reloadUI:mode];
+    }
 }
 
 
