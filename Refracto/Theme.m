@@ -255,7 +255,7 @@
     if (_darkInterface) {
 
         UIView *view = [UIView new];
-        view.backgroundColor = [UIColor colorWithWhite:0.25f alpha:1.0f];
+        view.backgroundColor = [UIColor colorWithWhite:0.38f alpha:1.0f];
         return view;
     }
     else {
