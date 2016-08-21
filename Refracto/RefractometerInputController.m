@@ -59,6 +59,8 @@
     }
 
     UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, self.beforePicker);
+
+    [self tryAnimatedPickerHint];
 }
 
 
@@ -73,6 +75,34 @@
 - (void)handleComputationDefaultsChanged:(NSNotification *)notification {
 
     [self.delegate refractionInputDidChangeToBefore:self.beforePicker.refraction current:self.currentPicker.refraction];
+}
+
+
+- (void)tryAnimatedPickerHint {
+
+    AppDelegate *appDelegate = [AppDelegate appDelegate];
+
+    if (appDelegate.onceOnFirstAppLaunch) {
+
+        self.view.userInteractionEnabled = NO;
+
+        NSDecimalNumber *before = self.beforePicker.refraction;
+        NSDecimalNumber *current = self.currentPicker.refraction;
+
+        [UIView animateWithDuration:0.4
+                              delay:0.2
+                            options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             NSDecimalNumber *offset = [NSDecimalNumber decimalNumberWithMantissa:2 exponent:-1 isNegative:NO];
+                             self.beforePicker.refraction = [appDelegate constrainRefractionValue:[before decimalNumberByAdding:offset]];
+                             self.currentPicker.refraction = [appDelegate constrainRefractionValue:[current decimalNumberBySubtracting:offset]];
+                         }
+                         completion:^(BOOL finished) {
+                             self.beforePicker.refraction = before;
+                             self.currentPicker.refraction = current;
+                             self.view.userInteractionEnabled = YES;
+                         }];
+    }
 }
 
 

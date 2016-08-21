@@ -32,6 +32,7 @@ typedef NS_ENUM(NSInteger, RFSpecificGravityMode) {
 @property (strong, nonatomic) UIWindow *window;
 
 // Properties for user preferences
+@property (nonatomic, readonly) BOOL onceOnFirstAppLaunch;
 @property (nonatomic) BOOL darkInterface;
 @property (nonatomic) RFGravityUnit preferredGravityUnit;
 @property (nonatomic) RFSpecificGravityMode preferredSpecificGravityMode;
@@ -39,6 +40,7 @@ typedef NS_ENUM(NSInteger, RFSpecificGravityMode) {
 @property (strong, nonatomic) NSDecimalNumber *recentBeforeRefraction;
 @property (strong, nonatomic) NSDecimalNumber *recentCurrentRefraction;
 
+- (NSDecimalNumber *)constrainRefractionValue:(NSDecimalNumber *)refraction;
 - (BOOL)refractionValueIsValid:(NSDecimalNumber *)refraction;
 
 // Number formatters

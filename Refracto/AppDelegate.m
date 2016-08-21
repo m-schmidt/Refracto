@@ -15,7 +15,8 @@
 #define kInputRefractionBefore  (@"inputBeforeRefraction")
 #define kInputRefractionCurrent (@"inputCurrentRefraction")
 #define kWortCorrectionDivisor  (@"wortCorrectionDivisor")
-#define kdarkInterface          (@"darkInterface")
+#define kDarkInterface          (@"darkInterface")
+#define kFirstLaunch            (@"firstLaunch")
 
 
 @implementation AppDelegate
@@ -42,7 +43,8 @@
           kInputRefractionBefore:  [NSDecimalNumber decimalNumberWithMantissa:125 exponent:-1 isNegative:NO],
           kInputRefractionCurrent: [NSDecimalNumber decimalNumberWithMantissa:64  exponent:-1 isNegative:NO],
           kWortCorrectionDivisor:  [NSDecimalNumber decimalNumberWithMantissa:103 exponent:-2 isNegative:NO],
-          kdarkInterface:          @(NO)}];
+          kDarkInterface:          @(NO),
+          kFirstLaunch:            @(YES)}];
 
     [Theme sharedTheme].darkInterface = self.darkInterface;
     self.window.tintColor = [[Theme sharedTheme] tintColor];
@@ -121,11 +123,24 @@
 #pragma mark Properties for User Preferences
 
 
+- (BOOL)onceOnFirstAppLaunch {
+
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+
+    if ([[standardUserDefaults objectForKey:kFirstLaunch] boolValue] == NO)
+        return NO;
+
+    [standardUserDefaults setObject:@(NO) forKey:kFirstLaunch];
+    [standardUserDefaults synchronize];
+    return YES;
+}
+
+
 - (BOOL)darkInterface {
 
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
 
-    return [[standardUserDefaults objectForKey:kdarkInterface] boolValue];
+    return [[standardUserDefaults objectForKey:kDarkInterface] boolValue];
 }
 
 
@@ -133,9 +148,9 @@
 
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
 
-    if ([[standardUserDefaults objectForKey:kdarkInterface] boolValue] != mode) {
+    if ([[standardUserDefaults objectForKey:kDarkInterface] boolValue] != mode) {
 
-        [standardUserDefaults setObject:@(mode) forKey:kdarkInterface];
+        [standardUserDefaults setObject:@(mode) forKey:kDarkInterface];
         [standardUserDefaults synchronize];
 
         [self reloadUI:mode];
@@ -280,6 +295,15 @@
 
 
 #pragma mark - Storage of Refraction Values
+
+
+- (NSDecimalNumber *)constrainRefractionValue:(NSDecimalNumber *)refraction {
+
+    NSDecimalNumber *min = [NSDecimalNumber decimalNumberWithMantissa:kMinRefraction exponent:0 isNegative:NO];
+    NSDecimalNumber *max = [NSDecimalNumber decimalNumberWithMantissa:kMaxRefraction exponent:0 isNegative:NO];
+
+    return [refraction constrainedBetweenMinimum:min maximum:max];
+}
 
 
 - (BOOL)refractionValueIsValid:(NSDecimalNumber *)refraction {
