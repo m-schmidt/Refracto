@@ -146,7 +146,7 @@ NSInteger const kMaxRefraction = 30;
 }
 
 
-- (NSDecimalNumber *)constrainedRefractionValue:(NSDecimalNumber *)refraction {
+- (NSDecimalNumber *)snapRefractionValue:(NSDecimalNumber *)refraction {
 
     return [self refractionValueForItemAtIndexPath:[self indexPathForRefractionValue:refraction]];
 }
@@ -269,7 +269,7 @@ NSInteger const kMaxRefraction = 30;
     }
 
     NSDecimalNumber *step = [NSDecimalNumber decimalNumberWithMantissa:increment exponent:-1 isNegative:negative];
-    NSDecimalNumber *newRefraction = [self constrainedRefractionValue:[self.refraction decimalNumberByAdding:step]];
+    NSDecimalNumber *newRefraction = [self snapRefractionValue:[self.refraction decimalNumberByAdding:step]];
 
     if ([_refraction compare:newRefraction] != NSOrderedSame) {
 
