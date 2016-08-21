@@ -135,6 +135,8 @@
     [SeparatorL2 appearanceWhenContainedIn:
         [RefractometerController class], nil].themeBackgroundColor = @"separatorColorLevel2";
 
+    [VerticalRefractionPicker appearance].themeBackgroundColor = @"inputBackgroundColor";
+
     [UICollectionView appearanceWhenContainedIn:
         [RefractometerInputController class], [RefractometerController class], nil].themeBackgroundColor = @"inputBackgroundColor";
 

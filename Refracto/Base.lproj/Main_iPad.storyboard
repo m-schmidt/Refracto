@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN" customClass="Background">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyL-mb-SQu" userLabel="Display">
@@ -56,19 +56,19 @@
             <objects>
                 <tableViewController storyboardIdentifier="SettingsController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s7e-1F-VIL" userLabel="Settings" customClass="SettingsController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="3aG-VE-AR3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96546226739883423" green="0.96543341875076294" blue="0.96544981002807617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SwitchCell" textLabel="b4D-rC-wvA" style="IBUITableViewCellStyleDefault" id="5HT-SJ-pHp" userLabel="SwitchCell">
-                                <rect key="frame" x="0.0" y="119.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="120" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5HT-SJ-pHp" id="8mz-AD-OEW">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="768" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b4D-rC-wvA">
-                                            <frame key="frameInset" minX="15" width="345" height="43.5"/>
+                                            <frame key="frameInset" minX="48" width="672" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -78,21 +78,21 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UnitCell" textLabel="2w2-pg-npw" detailTextLabel="w5T-0V-Xcw" style="IBUITableViewCellStyleValue1" id="bOy-Z4-yBj">
-                                <rect key="frame" x="0.0" y="163.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="164" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bOy-Z4-yBj" id="ghi-LL-aXq">
-                                    <frame key="frameInset" width="342" height="43.5"/>
+                                    <frame key="frameInset" width="702" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2w2-pg-npw">
-                                            <frame key="frameInset" minX="15" minY="12" width="42" height="20.5"/>
+                                            <frame key="frameInset" minX="48" minY="11" width="42" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w5T-0V-Xcw">
-                                            <frame key="frameInset" minX="296" minY="12" width="44" height="20.5"/>
+                                            <frame key="frameInset" minX="658" minY="11" width="44" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" red="0.48361128568649292" green="0.48291862010955811" blue="0.50435942411422729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,10 +105,10 @@
                                 </accessibility>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SliderCell" rowHeight="120" id="2pq-2O-MCC" userLabel="SliderCell" customClass="SliderCell">
-                                <rect key="frame" x="0.0" y="207.5" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="208" width="768" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2pq-2O-MCC" id="EZb-8F-xmF">
-                                    <frame key="frameInset" width="375" height="119.5"/>
+                                    <frame key="frameInset" width="768" height="119"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGB-Nz-cU6">
@@ -163,14 +163,14 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LinkCell" textLabel="fMI-UQ-Sv3" style="IBUITableViewCellStyleDefault" id="Jt0-dZ-XEL">
-                                <rect key="frame" x="0.0" y="327.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="328" width="768" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jt0-dZ-XEL" id="A5E-qf-QvA">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="768" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fMI-UQ-Sv3">
-                                            <frame key="frameInset" minX="15" width="345" height="43.5"/>
+                                            <frame key="frameInset" minX="48" width="672" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -199,21 +199,21 @@
             <objects>
                 <tableViewController storyboardIdentifier="UnitSettings" title="Gravity Unit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lYu-q2-S98" userLabel="GravityUnit" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Wi0-D2-LII">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96546226739883423" green="0.96543341875076294" blue="0.96544981002807617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection id="NEY-GS-VKV">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="iw2-RP-w9P" style="IBUITableViewCellStyleDefault" id="fSA-CR-NNW">
-                                        <rect key="frame" x="0.0" y="99" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fSA-CR-NNW" id="309-Vf-KCI">
-                                            <frame key="frameInset" width="375" height="43.5"/>
+                                            <frame key="frameInset" width="768" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="°Plato (°P)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iw2-RP-w9P">
-                                                    <frame key="frameInset" minX="15" width="345" height="43.5"/>
+                                                    <frame key="frameInset" minX="48" width="672" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -226,14 +226,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="SMn-9j-rMm" style="IBUITableViewCellStyleDefault" id="Gaf-sa-qUp">
-                                        <rect key="frame" x="0.0" y="143" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="143" width="768" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gaf-sa-qUp" id="UlK-0u-xgJ">
-                                            <frame key="frameInset" width="375" height="43.5"/>
+                                            <frame key="frameInset" width="768" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Specific Gravity (SG)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SMn-9j-rMm">
-                                                    <frame key="frameInset" minX="15" width="345" height="43.5"/>
+                                                    <frame key="frameInset" minX="48" width="672" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -268,7 +268,7 @@
                         <viewControllerLayoutGuide type="bottom" id="AL6-nM-g0K"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GWp-oL-Vd2" userLabel="Container">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="240"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMP-Di-yYh" userLabel="Left">
@@ -512,7 +512,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HorizontalItemCell" id="2DP-PD-EdW" customClass="HorizontalModeCell">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="0.0" y="-3" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -613,13 +613,17 @@
                         <viewControllerLayoutGuide type="bottom" id="6pJ-v9-Oq4"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GN9-OF-BlS" userLabel="Background" customClass="SeparatorL2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="407"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="764"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckx-sO-xbs" userLabel="Picker Before" customClass="VerticalRefractionPicker">
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="POq-1d-Zdi">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="POq-1d-Zdi">
+                                        <frame key="frameInset" width="500" height="999"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="mdK-j6-EX7"/>
+                                        </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="VoL-7V-fTz" customClass="VerticalRefractionLayout">
                                             <size key="itemSize" width="100" height="11"/>
                                             <size key="headerReferenceSize" width="22" height="16"/>
@@ -628,7 +632,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RefractionCell" id="fhJ-kE-SKb" customClass="VerticalRefractionCell">
-                                                <rect key="frame" x="44" y="16" width="100" height="11"/>
+                                                <rect key="frame" x="0.0" y="16" width="100" height="11"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="11"/>
@@ -638,9 +642,14 @@
                                             </collectionViewCell>
                                         </cells>
                                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RefractionHeader" id="Du1-Xy-nM5" customClass="VerticalRefractionSupplementaryView">
-                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="16"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="500" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionReusableView>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="mdK-j6-EX7"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <outlet property="dataSource" destination="ckx-sO-xbs" id="tic-gX-hRx"/>
                                             <outlet property="delegate" destination="ckx-sO-xbs" id="DcN-Bt-69f"/>
@@ -720,12 +729,14 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="F4J-05-PJ7"/>
                                         <exclude reference="Ggc-Oc-MrA"/>
                                         <exclude reference="gpy-xp-MQH"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="constraints">
+                                        <include reference="F4J-05-PJ7"/>
                                         <include reference="Ggc-Oc-MrA"/>
                                         <include reference="gpy-xp-MQH"/>
                                         <exclude reference="zYc-mj-7Ak"/>
@@ -741,6 +752,9 @@
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hdr-kC-bCx">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="r77-1O-02D"/>
+                                        </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="rqz-fG-a7f" customClass="VerticalRefractionLayout">
                                             <size key="itemSize" width="100" height="11"/>
                                             <size key="headerReferenceSize" width="22" height="16"/>
@@ -749,7 +763,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RefractionCell" id="8L0-bi-23n" customClass="VerticalRefractionCell">
-                                                <rect key="frame" x="43.5" y="16" width="100" height="11"/>
+                                                <rect key="frame" x="0.0" y="16" width="100" height="11"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="11"/>
@@ -759,9 +773,14 @@
                                             </collectionViewCell>
                                         </cells>
                                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RefractionHeader" id="gSG-hE-Ta4" customClass="VerticalRefractionSupplementaryView">
-                                            <rect key="frame" x="0.0" y="0.0" width="186.5" height="16"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionReusableView>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="r77-1O-02D"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <outlet property="dataSource" destination="XCZ-Bi-U3x" id="JCo-Gz-9Q0"/>
                                             <outlet property="delegate" destination="XCZ-Bi-U3x" id="605-tb-hkY"/>
@@ -859,6 +878,7 @@
                                     <mask key="constraints">
                                         <exclude reference="7Ez-V7-wT1"/>
                                         <exclude reference="Qez-eP-XU1"/>
+                                        <exclude reference="zWv-xI-rSO"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -866,6 +886,7 @@
                                         <include reference="7Ez-V7-wT1"/>
                                         <include reference="Qez-eP-XU1"/>
                                         <exclude reference="UEh-cC-myq"/>
+                                        <include reference="zWv-xI-rSO"/>
                                     </mask>
                                 </variation>
                                 <connections>
