@@ -82,6 +82,11 @@
 @end
 
 
+@interface Background : UIView
+
+@end
+
+
 @interface LabelL0 : UILabel
 
 @end

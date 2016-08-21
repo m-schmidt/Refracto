@@ -7,16 +7,9 @@
 #import "VerticalRefractionLayout.h"
 
 
-@interface VerticalRefractionCellContent : UIView
+@interface VerticalRefractionCell : UICollectionViewCell
 
 @property (nonatomic) NSInteger barLength;
 @property (nonatomic) RefractionPickerAlignment alignment;
-
-@end
-
-
-@interface VerticalRefractionCell : UICollectionViewCell
-
-@property (nonatomic, strong) VerticalRefractionCellContent *content;
 
 @end

@@ -110,7 +110,7 @@
     [UITableViewCell appearance].themeBackgroundColor = @"settingsCellBackgroundColor";
 
     [UIView appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerController class]]].themeBackgroundColor = @"displayBackgroundColor";
+        @[[RefractometerDisplayController class]]].themeBackgroundColor = @"displayBackgroundColor";
 
     [UILabel appearanceWhenContainedInInstancesOfClasses:
         @[[UITableViewCell class]]].themeTextColor = @"labelColorLevel0";
@@ -123,6 +123,8 @@
 
     [LabelL0 appearance].themeTextColor = @"labelColorLevel0";
     [LabelL1 appearance].themeTextColor = @"labelColorLevel1";
+
+    [Background appearance].themeBackgroundColor = @"displayBackgroundColor";
 
     [SeparatorL0 appearanceWhenContainedInInstancesOfClasses:
         @[[RefractometerController class]]].themeBackgroundColor = @"separatorColorLevel0";
@@ -449,6 +451,11 @@
 
     [[Theme sharedTheme] setObjValueNamed:getterName forProperty:@selector(setTitleTextAttributes:) ofTarget:self];
 }
+
+@end
+
+
+@implementation Background
 
 @end
 

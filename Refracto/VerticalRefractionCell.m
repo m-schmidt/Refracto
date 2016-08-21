@@ -16,18 +16,10 @@
     if ([super respondsToSelector:@selector(awakeFromNib)])
         [super awakeFromNib];
 
-    self.content = [[VerticalRefractionCellContent alloc] initWithFrame:self.contentView.frame];
-    self.content.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.content.barLength = NSIntegerMax;
-    self.content.alignment = RefractionPickerAlignmentLeft;
-
-    [self.contentView addSubview:self.content];
+    self.barLength = NSIntegerMax;
+    self.alignment = RefractionPickerAlignmentLeft;
 }
 
-@end
-
-
-@implementation VerticalRefractionCellContent
 
 - (void)drawRect:(CGRect)rect {
 
