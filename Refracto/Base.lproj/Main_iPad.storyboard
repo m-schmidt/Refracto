@@ -505,20 +505,20 @@
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qts-MA-LnW">
                                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="682" id="Fio-MX-jFU"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="768" id="Fio-MX-jFU"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jnN-XS-wsk">
-                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="itemSize" width="50" height="21"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HorizontalItemCell" id="2DP-PD-EdW" customClass="HorizontalModeCell">
-                                                <rect key="frame" x="0.0" y="-3" width="50" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="21"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </view>
                                             </collectionViewCell>
