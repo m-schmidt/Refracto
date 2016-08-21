@@ -503,7 +503,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0S-0A-h0q" userLabel="Picker" customClass="HorizontalModePicker">
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qts-MA-LnW">
-                                        <color key="backgroundColor" red="0.96546226739883423" green="0.96543341875076294" blue="0.96544981002807617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="682" id="Fio-MX-jFU"/>
+                                        </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jnN-XS-wsk">
                                             <size key="itemSize" width="50" height="50"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -520,6 +523,11 @@
                                                 </view>
                                             </collectionViewCell>
                                         </cells>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Fio-MX-jFU"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <outlet property="dataSource" destination="J0S-0A-h0q" id="H7b-b7-oIG"/>
                                             <outlet property="delegate" destination="J0S-0A-h0q" id="4O2-7D-H5Y"/>
@@ -532,19 +540,26 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96546226739883423" green="0.96543341875076294" blue="0.96544981002807617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="Computation mode">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
                                 <constraints>
-                                    <constraint firstItem="Qts-MA-LnW" firstAttribute="leading" secondItem="J0S-0A-h0q" secondAttribute="leading" id="2tX-jU-6aK"/>
+                                    <constraint firstItem="Qts-MA-LnW" firstAttribute="leading" secondItem="J0S-0A-h0q" secondAttribute="leading" priority="750" id="2tX-jU-6aK"/>
+                                    <constraint firstItem="Qts-MA-LnW" firstAttribute="centerX" secondItem="J0S-0A-h0q" secondAttribute="centerX" id="60k-CS-vmw"/>
                                     <constraint firstAttribute="bottom" secondItem="Qts-MA-LnW" secondAttribute="bottom" id="JhH-uY-jfe"/>
                                     <constraint firstAttribute="centerX" secondItem="d6V-1h-hN7" secondAttribute="centerX" id="LkT-1e-voU"/>
                                     <constraint firstItem="Qts-MA-LnW" firstAttribute="top" secondItem="J0S-0A-h0q" secondAttribute="top" id="Ojf-yU-Udi"/>
                                     <constraint firstItem="d6V-1h-hN7" firstAttribute="top" secondItem="J0S-0A-h0q" secondAttribute="top" id="QsT-Yy-rq7"/>
                                     <constraint firstAttribute="height" constant="44" id="nMF-Iq-OIK"/>
-                                    <constraint firstAttribute="trailing" secondItem="Qts-MA-LnW" secondAttribute="trailing" id="u9h-5c-YVl"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qts-MA-LnW" secondAttribute="trailing" priority="750" id="u9h-5c-YVl"/>
                                 </constraints>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2tX-jU-6aK"/>
+                                        <include reference="u9h-5c-YVl"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="collectionView" destination="Qts-MA-LnW" id="gtg-Y4-VmU"/>
                                     <outlet property="datasource" destination="WLz-Ze-WVW" id="DTq-sZ-Jzd"/>
@@ -618,8 +633,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckx-sO-xbs" userLabel="Picker Before" customClass="VerticalRefractionPicker">
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="POq-1d-Zdi">
-                                        <frame key="frameInset" width="500" height="999"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="POq-1d-Zdi">
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="300" id="mdK-j6-EX7"/>
@@ -642,7 +656,7 @@
                                             </collectionViewCell>
                                         </cells>
                                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RefractionHeader" id="Du1-Xy-nM5" customClass="VerticalRefractionSupplementaryView">
-                                            <rect key="frame" x="0.0" y="0.0" width="500" height="16"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionReusableView>
                                         <variation key="widthClass=compact">

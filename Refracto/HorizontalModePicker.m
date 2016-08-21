@@ -113,7 +113,7 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
             if (currentSelectedItemIndex < [self.datasource numberOfItemsInPickerView:self] - 1) {
 
-                [self selectItemAtIndex:currentSelectedItemIndex  + 1 animated:YES];
+                [self selectItemAtIndex:currentSelectedItemIndex + 1 animated:YES];
             }
         }
     }
@@ -281,7 +281,7 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
     if (currentSelectedItemIndex < [self.datasource numberOfItemsInPickerView:self] - 1) {
 
-        [self selectItemAtIndex:currentSelectedItemIndex  + 1 animated:YES];
+        [self selectItemAtIndex:currentSelectedItemIndex + 1 animated:YES];
     }
 }
 
