@@ -109,43 +109,43 @@
     [UITableViewCell appearance].themeSelectedBackgroundView = @"settingsSelectedCellBackgroundView";
     [UITableViewCell appearance].themeBackgroundColor = @"settingsCellBackgroundColor";
 
-    [UIView appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerDisplayController class]]].themeBackgroundColor = @"displayBackgroundColor";
+    [UIView appearanceWhenContainedIn:
+        [RefractometerDisplayController class], nil].themeBackgroundColor = @"displayBackgroundColor";
 
-    [UILabel appearanceWhenContainedInInstancesOfClasses:
-        @[[UITableViewCell class]]].themeTextColor = @"labelColorLevel0";
+    [UILabel appearanceWhenContainedIn:
+        [UITableViewCell class], nil].themeTextColor = @"labelColorLevel0";
 
-    [UILabel appearanceWhenContainedInInstancesOfClasses:
-        @[[UITableViewHeaderFooterView class]]].themeTextColor = @"labelColorLevel1";
+    [UILabel appearanceWhenContainedIn:
+        [UITableViewHeaderFooterView class], nil].themeTextColor = @"labelColorLevel1";
 
-    [UILabel appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerInputController class], [RefractometerController class]]].themeBackgroundColor = @"inputBackgroundColor";
+    [UILabel appearanceWhenContainedIn:
+        [RefractometerInputController class], [RefractometerController class], nil].themeBackgroundColor = @"inputBackgroundColor";
 
     [LabelL0 appearance].themeTextColor = @"labelColorLevel0";
     [LabelL1 appearance].themeTextColor = @"labelColorLevel1";
 
     [Background appearance].themeBackgroundColor = @"displayBackgroundColor";
 
-    [SeparatorL0 appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerController class]]].themeBackgroundColor = @"separatorColorLevel0";
+    [SeparatorL0 appearanceWhenContainedIn:
+        [RefractometerController class], nil].themeBackgroundColor = @"separatorColorLevel0";
 
-    [SeparatorL1 appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerController class]]].themeBackgroundColor = @"separatorColorLevel1";
+    [SeparatorL1 appearanceWhenContainedIn:
+        [RefractometerController class], nil].themeBackgroundColor = @"separatorColorLevel1";
 
-    [SeparatorL2 appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerController class]]].themeBackgroundColor = @"separatorColorLevel2";
+    [SeparatorL2 appearanceWhenContainedIn:
+        [RefractometerController class], nil].themeBackgroundColor = @"separatorColorLevel2";
 
-    [UICollectionView appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerInputController class], [RefractometerController class]]].themeBackgroundColor = @"inputBackgroundColor";
+    [UICollectionView appearanceWhenContainedIn:
+        [RefractometerInputController class], [RefractometerController class], nil].themeBackgroundColor = @"inputBackgroundColor";
 
-    [UICollectionViewCell appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerInputController class], [RefractometerController class]]].themeBackgroundColor = @"inputBackgroundColor";
+    [UICollectionViewCell appearanceWhenContainedIn:
+        [RefractometerInputController class], [RefractometerController class], nil].themeBackgroundColor = @"inputBackgroundColor";
 
-    [VerticalRefractionNeedle appearanceWhenContainedInInstancesOfClasses:
-        @[[RefractometerInputController class], [RefractometerController class]]].backgroundColor = [UIColor clearColor];
+    [VerticalRefractionNeedle appearanceWhenContainedIn:
+        [RefractometerInputController class], [RefractometerController class], nil].backgroundColor = [UIColor clearColor];
 
-    [UIView appearanceWhenContainedInInstancesOfClasses:
-        @[[UIButton class], [RefractometerController class]]].themeBackgroundColor = @"inputBackgroundColor";
+    [UIView appearanceWhenContainedIn:
+        [UIButton class], [RefractometerController class], nil].themeBackgroundColor = @"inputBackgroundColor";
 }
 
 
