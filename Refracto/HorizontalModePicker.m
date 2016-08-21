@@ -138,8 +138,6 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
     [self updateFisheyeTransform];
     [self updateLayerMask];
-
-    [self.collectionView reloadData];
 }
 
 
@@ -231,12 +229,13 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
     NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem:number - 1 inSection:section];
     CGSize lastSize = [self collectionView:collectionView layout:collectionViewLayout sizeForItemAtIndexPath:lastIndexPath];
 
-    CGSize viewSize = collectionView.bounds.size;
+    CGFloat width = MIN(collectionView.bounds.size.width, self.bounds.size.width);
+    CGFloat height = MIN(collectionView.bounds.size.height, self.bounds.size.height);
 
-    return UIEdgeInsetsMake((viewSize.height - self.lineHeight) / 2,
-                            (viewSize.width  - firstSize.width) / 2,
-                            (viewSize.height - self.lineHeight) / 2,
-                            (viewSize.width  - lastSize.width)  / 2);
+    return UIEdgeInsetsMake((height - self.lineHeight) / 2,
+                            (width  - firstSize.width) / 2,
+                            (height - self.lineHeight) / 2,
+                            (width  - lastSize.width)  / 2);
 }
 
 

@@ -33,12 +33,6 @@ NSInteger const kMaxRefraction = 30;
 }
 
 
-- (void)layoutSubviews {
-
-    [self.collectionView reloadData];
-}
-
-
 #pragma mark - View Rotation
 
 
