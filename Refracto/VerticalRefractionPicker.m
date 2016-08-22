@@ -33,6 +33,20 @@ NSInteger const kMaxRefraction = 30;
 }
 
 
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+
+    UIView *hitView = [super hitTest:point withEvent:event];
+
+    if (hitView == self) {
+
+        // The collection-subview may not cover the whole area of the picker => forward any events
+        return self.collectionView;
+    }
+
+    return hitView;
+}
+
+
 #pragma mark - View Rotation
 
 
