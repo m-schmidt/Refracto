@@ -200,7 +200,6 @@ static CGFloat previousContentYOffset = 0.0;
         if (indexPath) {
 
             [AppDelegate appDelegate].preferredGravityUnit = (RFGravityUnit)indexPath.row;
-
             [self updateDisplayUnitCell];
         }
     }
@@ -247,6 +246,12 @@ static CGFloat previousContentYOffset = 0.0;
 - (void)updateDisplayUnitCell {
 
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:kSettingsUnitRow inSection:kSettingsSection]];
+    [self configureDisplayUnitForCell:cell];
+}
+
+
+- (void)configureDisplayUnitForCell:(UITableViewCell *)cell {
+
     BOOL shortSGDetail = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad || CGRectGetWidth ([UIScreen mainScreen].bounds) <= 320);
 
     switch ([AppDelegate appDelegate].preferredGravityUnit) {
@@ -268,17 +273,21 @@ static CGFloat previousContentYOffset = 0.0;
 
     if ([cell isKindOfClass:[SliderCell class]]) {
 
-        SliderCell *wortCorrectionCell = (SliderCell *)cell;
-
-        NSDecimalNumber *divisor = [AppDelegate appDelegate].preferredWortCorrectionDivisor;
-
-        (wortCorrectionCell.detailLabel).text = [[AppDelegate numberFormatterWortCorrectionDivisor] stringFromNumber:divisor];
-        [wortCorrectionCell.slider setValue:divisor.floatValue animated:YES];
+        [self configureWortCorrectionForCell:(SliderCell *)cell];
     }
     else {
 
         ALog(@"Settings section contains cell of unexpected type: %@", [cell class]);
     }
+}
+
+
+- (void)configureWortCorrectionForCell:(SliderCell *)wortCorrectionCell {
+
+    NSDecimalNumber *divisor = [AppDelegate appDelegate].preferredWortCorrectionDivisor;
+
+    (wortCorrectionCell.detailLabel).text = [[AppDelegate numberFormatterWortCorrectionDivisor] stringFromNumber:divisor];
+    [wortCorrectionCell.slider setValue:divisor.floatValue animated:YES];
 }
 
 
@@ -383,8 +392,7 @@ static CGFloat previousContentYOffset = 0.0;
             cell.textLabel.text = NSLocalizedString(kSettingsItemGravityUnitKey, nil);
             cell.detailTextLabel.text = @"\u2014";
 
-            dispatch_async (dispatch_get_main_queue(), ^{ [self updateDisplayUnitCell]; });
-
+            [self configureDisplayUnitForCell:cell];
             return cell;
         }
         else if (indexPath.row == kSettingsWortCorrectionRow) {
@@ -394,8 +402,7 @@ static CGFloat previousContentYOffset = 0.0;
             sliderCell.descriptionLabel.text = NSLocalizedString(kSettingsItemWortCorrectionKey, nil);
             sliderCell.detailLabel.text = @"\u2014";
 
-            dispatch_async (dispatch_get_main_queue(), ^{ [self updateWortCorrectionCell]; });
-
+            [self configureWortCorrectionForCell:sliderCell];
             return sliderCell;
         }
     }
