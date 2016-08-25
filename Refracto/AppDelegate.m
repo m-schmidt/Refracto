@@ -35,7 +35,7 @@
 }
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     [[NSUserDefaults standardUserDefaults] registerDefaults:
         @{kSpecificGravityUnit:    @([self gravityUnitGuessedFromLocale]),
@@ -45,6 +45,12 @@
           kWortCorrectionDivisor:  [NSDecimalNumber decimalNumberWithMantissa:103 exponent:-2 isNegative:NO],
           kDarkInterface:          @(NO),
           kFirstLaunch:            @(YES)}];
+
+    return YES;
+}
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window.tintColor = [[Theme sharedTheme] tintColor];
     return YES;
