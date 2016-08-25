@@ -46,9 +46,7 @@
           kDarkInterface:          @(NO),
           kFirstLaunch:            @(YES)}];
 
-    [Theme sharedTheme].darkInterface = self.darkInterface;
     self.window.tintColor = [[Theme sharedTheme] tintColor];
-
     return YES;
 }
 

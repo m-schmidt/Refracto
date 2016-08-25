@@ -4,6 +4,7 @@
 
 #import "Theme.h"
 #import "RefractometerController.h"
+#import "AppDelegate.h"
 
 
 @interface Theme (private)
@@ -32,8 +33,8 @@
     dispatch_once(&once, ^{
 
         sharedInstance = [[self alloc] init];
+        sharedInstance.darkInterface = [AppDelegate appDelegate].darkInterface;
 
-        sharedInstance.darkInterface = NO;
         [sharedInstance installAppearance];
     });
 
