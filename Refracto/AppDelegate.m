@@ -100,6 +100,12 @@
     // Switch theme
     [Theme sharedTheme].darkInterface = darkTheme;
 
+    // Dismiss settings popover on iPad
+    if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPad) {
+
+        [self.window.rootViewController dismissViewControllerAnimated:NO completion:nil];
+    }
+
     // Reload view controllers from the storyboard
     UIViewController *viewController = [self.window.rootViewController.storyboard instantiateInitialViewController];
     self.window.rootViewController = viewController;
