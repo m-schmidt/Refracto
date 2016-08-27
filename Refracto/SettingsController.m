@@ -226,15 +226,17 @@ static CGFloat previousContentYOffset = 0.0;
 
         self.view.userInteractionEnabled = NO;
 
+        if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPhone) {
+
+            previousContentYOffset = self.tableView.contentOffset.y;
+        }
+
+        BOOL darkInterface = [sender isOn];
+
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 
-            if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPhone) {
-
-                previousContentYOffset = self.tableView.contentOffset.y;
-            }
-
             self.view.userInteractionEnabled = YES;
-            [AppDelegate appDelegate].darkInterface = [sender isOn];
+            [AppDelegate appDelegate].darkInterface = darkInterface;
         });
     }
 }

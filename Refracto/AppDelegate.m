@@ -99,7 +99,6 @@
 
     // Switch theme
     [Theme sharedTheme].darkInterface = darkTheme;
-    self.window.tintColor = [[Theme sharedTheme] tintColor];
 
     // Reload view controllers from the storyboard
     UIViewController *viewController = [self.window.rootViewController.storyboard instantiateInitialViewController];
@@ -111,6 +110,8 @@
     }
 
     // Fade from screenshot to new UI
+    self.window.tintColor = [[Theme sharedTheme] tintColor];
+
     [viewController.view addSubview:overlayView];
     [UIView animateWithDuration:0.2f
                           delay:0.1f
