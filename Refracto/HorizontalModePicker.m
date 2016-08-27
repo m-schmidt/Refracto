@@ -84,7 +84,7 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
 - (void)updateLayerMask {
 
-    CGRect visibleRect = (CGRect){self.collectionView.contentOffset, self.bounds.size};
+    CGRect visibleRect = (CGRect){self.collectionView.contentOffset, self.collectionView.bounds.size};
 
     [CATransaction begin];
     [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
