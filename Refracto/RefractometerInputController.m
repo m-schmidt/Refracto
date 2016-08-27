@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *beforeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *currentLabel;
 
-@property (nonatomic) BOOL propagateUpdatesOnScroll;
+@property (weak, nonatomic) IBOutlet UIButton *settingsButton;
 
 @end
 
@@ -32,22 +32,21 @@
 
     [super viewDidLoad];
 
-    self.beforePicker.alignment = RefractionPickerAlignmentRight;
-    self.currentPicker.alignment = RefractionPickerAlignmentLeft;
-    self.propagateUpdatesOnScroll = YES;
+    AppDelegate *sharedAppDelegate = [AppDelegate appDelegate];
 
-    if (self.settingsButton)
-        [self.settingsButton setImage:[Theme sharedTheme].settingsButtonImage forState:UIControlStateNormal];
+    self.beforePicker.alignment = RefractionPickerAlignmentRight;
+    self.beforePicker.refraction = sharedAppDelegate.recentBeforeRefraction;
+
+    self.currentPicker.alignment = RefractionPickerAlignmentLeft;
+    self.currentPicker.refraction = sharedAppDelegate.recentCurrentRefraction;
+
+    [self.settingsButton setImage:[Theme sharedTheme].settingsButtonImage forState:UIControlStateNormal];
 }
 
 
 - (void)viewDidAppear:(BOOL)animated {
 
     [super viewDidAppear:animated];
-
-    AppDelegate *sharedAppDelegate = [AppDelegate appDelegate];
-    self.beforePicker.refraction = sharedAppDelegate.recentBeforeRefraction;
-    self.currentPicker.refraction = sharedAppDelegate.recentCurrentRefraction;
 
     if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPad) {
 
@@ -103,30 +102,6 @@
                              self.view.userInteractionEnabled = YES;
                          }];
     }
-}
-
-
-#pragma mark - iPad Rotation
-
-
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-
-    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-
-    self.propagateUpdatesOnScroll = NO;
-
-    CGPoint beforeContentOffset = (self.beforePicker).contentOffsetSnappedToTickMarker;
-    CGPoint currentContentOffset = (self.currentPicker).contentOffsetSnappedToTickMarker;
-
-    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
-
-            [self.beforePicker handleSizeTransitionWithTargetContentOffset:beforeContentOffset];
-            [self.currentPicker handleSizeTransitionWithTargetContentOffset:currentContentOffset];
-        }
-        completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
-
-            self.propagateUpdatesOnScroll = YES;
-        }];
 }
 
 
@@ -191,9 +166,6 @@
 
 
 - (void)refractionPickerView:(VerticalRefractionPicker *)pickerView didSelectRefraction:(NSDecimalNumber *)refraction {
-
-    if (self.propagateUpdatesOnScroll == NO)
-        return;
 
     NSString *description = [[AppDelegate numberFormatterBrix] stringFromNumber:refraction];
 

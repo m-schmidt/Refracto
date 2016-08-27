@@ -18,6 +18,8 @@ NSInteger const kMaxRefraction = 30;
 
 @interface VerticalRefractionPicker () <UICollectionViewDataSource>
 
+@property (nonatomic) BOOL updateRefractionOnScrollEvents;
+
 @end
 
 
@@ -30,6 +32,8 @@ NSInteger const kMaxRefraction = 30;
 
     _alignment = RefractionPickerAlignmentLeft;
     _refraction = [NSDecimalNumber decimalNumberWithInteger:kMaxRefraction];
+
+    self.updateRefractionOnScrollEvents = NO;
 }
 
 
@@ -48,6 +52,20 @@ NSInteger const kMaxRefraction = 30;
 
 
 #pragma mark - View Rotation
+
+
+- (void)layoutSubviews {
+
+    self.updateRefractionOnScrollEvents = NO;
+    {
+        [super layoutSubviews];
+
+        [self handleSizeTransitionWithTargetContentOffset:
+            [self contentOffsetForItemAtIndexPath:
+                [self indexPathForRefractionValue:self.refraction]]];
+    }
+    self.updateRefractionOnScrollEvents = YES;
+}
 
 
 // Computed content insets that fit current bounds of view
@@ -101,18 +119,14 @@ NSInteger const kMaxRefraction = 30;
 
 - (void)setRefraction:(NSDecimalNumber *)refraction {
 
-    if (UIEdgeInsetsEqualToEdgeInsets(self.collectionView.contentInset, UIEdgeInsetsZero)) {
+    if (self.refraction != refraction) {
 
-        UIEdgeInsets insets = [self contentInsetsToFit];
-        self.collectionView.contentInset = insets;
-        self.collectionView.contentOffset = CGPointMake(0.0, -insets.top);
+        _refraction = refraction;
+        [self.delegate refractionPickerView:self didSelectRefraction:_refraction];
+
+        CGPoint contentOffset = [self contentOffsetForItemAtIndexPath:[self indexPathForRefractionValue:refraction]];
+        [self.collectionView setContentOffset:contentOffset animated:NO];
     }
-
-    _refraction = refraction;
-    [self.delegate refractionPickerView:self didSelectRefraction:_refraction];
-
-    CGPoint contentOffset = [self contentOffsetForItemAtIndexPath:[self indexPathForRefractionValue:refraction]];
-    [self.collectionView setContentOffset:contentOffset animated:NO];
 }
 
 
@@ -245,12 +259,15 @@ NSInteger const kMaxRefraction = 30;
 // Update current refraction on scrolling
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
-    NSDecimalNumber *newRefraction = [self refractionValueForItemAtIndexPath:[self indexPathForContentOffset:self.collectionView.contentOffset]];
+    if (self.updateRefractionOnScrollEvents) {
 
-    if ([_refraction compare:newRefraction] != NSOrderedSame) {
+        NSDecimalNumber *newRefraction = [self refractionValueForItemAtIndexPath:[self indexPathForContentOffset:self.collectionView.contentOffset]];
 
-        _refraction = newRefraction;
-        [self.delegate refractionPickerView:self didSelectRefraction:_refraction];
+        if ([_refraction compare:newRefraction] != NSOrderedSame) {
+
+            _refraction = newRefraction;
+            [self.delegate refractionPickerView:self didSelectRefraction:_refraction];
+        }
     }
 }
 

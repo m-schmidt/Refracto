@@ -18,6 +18,5 @@
 @interface RefractometerInputController : UIViewController <VerticalRecfractionPickerDelegate, UIPopoverPresentationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet id <RefractometerInputDelegate> delegate;
-@property (weak, nonatomic) IBOutlet UIButton *settingsButton;
 
 @end
