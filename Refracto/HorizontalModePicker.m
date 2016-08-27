@@ -136,6 +136,8 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
 - (void)layoutSubviews {
 
+    [super layoutSubviews];
+
     [self updateFisheyeTransform];
     [self updateLayerMask];
 }
@@ -229,8 +231,8 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
     NSIndexPath *lastIndexPath = [NSIndexPath indexPathForItem:number - 1 inSection:section];
     CGSize lastSize = [self collectionView:collectionView layout:collectionViewLayout sizeForItemAtIndexPath:lastIndexPath];
 
-    CGFloat width = MIN(collectionView.bounds.size.width, self.bounds.size.width);
-    CGFloat height = MIN(collectionView.bounds.size.height, self.bounds.size.height);
+    CGFloat width = collectionView.bounds.size.width;
+    CGFloat height = collectionView.bounds.size.height;
 
     return UIEdgeInsetsMake((height - self.lineHeight) / 2,
                             (width  - firstSize.width) / 2,
