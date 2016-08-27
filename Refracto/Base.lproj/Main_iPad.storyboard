@@ -36,12 +36,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96546226739883423" green="0.96543341875076294" blue="0.96544981002807617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xzk-uR-cFt" firstAttribute="top" secondItem="FyL-mb-SQu" secondAttribute="bottom" id="IEh-Xy-0g6"/>
+                            <constraint firstItem="FyL-mb-SQu" firstAttribute="bottom" secondItem="xzk-uR-cFt" secondAttribute="top" id="IEh-Xy-0g6"/>
                             <constraint firstItem="xzk-uR-cFt" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailing" id="IjN-YG-AZb"/>
                             <constraint firstItem="xzk-uR-cFt" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="bra-9W-blb"/>
                             <constraint firstItem="FyL-mb-SQu" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="ckd-8K-Sc6"/>
                             <constraint firstItem="FyL-mb-SQu" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="jt6-ja-cdd"/>
-                            <constraint firstAttribute="trailing" secondItem="FyL-mb-SQu" secondAttribute="trailing" id="kQu-Fr-EV4"/>
+                            <constraint firstItem="FyL-mb-SQu" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailing" id="kQu-Fr-EV4"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="xzk-uR-cFt" secondAttribute="bottom" id="qx6-NW-x4o"/>
                         </constraints>
                     </view>

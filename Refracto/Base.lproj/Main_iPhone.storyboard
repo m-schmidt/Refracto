@@ -36,13 +36,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xzk-uR-cFt" firstAttribute="top" secondItem="FyL-mb-SQu" secondAttribute="bottom" id="IEh-Xy-0g6"/>
+                            <constraint firstItem="FyL-mb-SQu" firstAttribute="bottom" secondItem="xzk-uR-cFt" secondAttribute="top" id="IEh-Xy-0g6"/>
                             <constraint firstItem="xzk-uR-cFt" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailing" id="IjN-YG-AZb"/>
                             <constraint firstItem="xzk-uR-cFt" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="bra-9W-blb"/>
                             <constraint firstItem="FyL-mb-SQu" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="ckd-8K-Sc6"/>
                             <constraint firstItem="FyL-mb-SQu" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="jt6-ja-cdd"/>
-                            <constraint firstAttribute="trailing" secondItem="FyL-mb-SQu" secondAttribute="trailing" id="kQu-Fr-EV4"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="xzk-uR-cFt" secondAttribute="bottom" id="qx6-NW-x4o"/>
+                            <constraint firstItem="FyL-mb-SQu" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailing" id="kQu-Fr-EV4"/>
+                            <constraint firstItem="xzk-uR-cFt" firstAttribute="bottom" secondItem="4ug-Mw-9AY" secondAttribute="top" id="qx6-NW-x4o"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Refractometer" image="Refracto" id="acW-dT-cKf"/>
@@ -61,7 +61,7 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SwitchCell" textLabel="tOX-wb-Wdo" style="IBUITableViewCellStyleDefault" id="z24-RX-sGe" userLabel="SwitchCell">
-                                <rect key="frame" x="0.0" y="119.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z24-RX-sGe" id="kcL-07-0Qx">
                                     <frame key="frameInset" width="375" height="43"/>
@@ -78,7 +78,7 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UnitCell" textLabel="2w2-pg-npw" detailTextLabel="w5T-0V-Xcw" style="IBUITableViewCellStyleValue1" id="bOy-Z4-yBj">
-                                <rect key="frame" x="0.0" y="163.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bOy-Z4-yBj" id="ghi-LL-aXq">
                                     <frame key="frameInset" width="342" height="43"/>
@@ -105,7 +105,7 @@
                                 </accessibility>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SliderCell" rowHeight="120" id="2pq-2O-MCC" userLabel="SliderCell" customClass="SliderCell">
-                                <rect key="frame" x="0.0" y="207.5" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="208" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2pq-2O-MCC" id="EZb-8F-xmF">
                                     <frame key="frameInset" width="375" height="119"/>
@@ -163,7 +163,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LinkCell" textLabel="fMI-UQ-Sv3" style="IBUITableViewCellStyleDefault" id="Jt0-dZ-XEL">
-                                <rect key="frame" x="0.0" y="327.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="328" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jt0-dZ-XEL" id="A5E-qf-QvA">
                                     <frame key="frameInset" width="375" height="43"/>
@@ -523,9 +523,9 @@
                                     <constraint firstAttribute="centerX" secondItem="d6V-1h-hN7" secondAttribute="centerX" id="LkT-1e-voU"/>
                                     <constraint firstItem="d6V-1h-hN7" firstAttribute="top" secondItem="J0S-0A-h0q" secondAttribute="top" id="QsT-Yy-rq7"/>
                                     <constraint firstItem="9cu-on-QxO" firstAttribute="top" secondItem="J0S-0A-h0q" secondAttribute="top" id="gSg-P0-j8d"/>
-                                    <constraint firstAttribute="trailing" secondItem="9cu-on-QxO" secondAttribute="trailing" id="kRg-uK-54b"/>
+                                    <constraint firstItem="9cu-on-QxO" firstAttribute="trailing" secondItem="J0S-0A-h0q" secondAttribute="trailing" id="kRg-uK-54b"/>
                                     <constraint firstAttribute="height" constant="44" id="nMF-Iq-OIK"/>
-                                    <constraint firstAttribute="bottom" secondItem="9cu-on-QxO" secondAttribute="bottom" id="oi5-Ow-kBM"/>
+                                    <constraint firstItem="9cu-on-QxO" firstAttribute="bottom" secondItem="J0S-0A-h0q" secondAttribute="bottom" id="oi5-Ow-kBM"/>
                                     <constraint firstItem="9cu-on-QxO" firstAttribute="leading" secondItem="J0S-0A-h0q" secondAttribute="leading" id="sOf-Nc-MWd"/>
                                 </constraints>
                                 <connections>
