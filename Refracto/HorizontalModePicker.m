@@ -136,10 +136,17 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
 - (void)layoutSubviews {
 
+    CGSize previousSize = self.collectionView.bounds.size;
+
     [super layoutSubviews];
 
-    [self updateFisheyeTransform];
-    [self updateLayerMask];
+    if (! CGSizeEqualToSize(previousSize, self.collectionView.bounds.size)) {
+
+        [self updateFisheyeTransform];
+        [self updateLayerMask];
+
+        [self.collectionView.collectionViewLayout invalidateLayout];
+    }
 }
 
 
