@@ -110,45 +110,45 @@
     [UITableViewCell appearance].themeSelectedBackgroundView = @"settingsSelectedCellBackgroundView";
     [UITableViewCell appearance].themeBackgroundColor = @"settingsCellBackgroundColor";
 
-    [UIView appearanceWhenContainedIn:
-        [RefractometerDisplayController class], nil].themeBackgroundColor = @"displayBackgroundColor";
+    [UIView appearanceWhenContainedInInstancesOfClasses:
+        @[[RefractometerDisplayController class]]].themeBackgroundColor = @"displayBackgroundColor";
 
-    [UILabel appearanceWhenContainedIn:
-        [UITableViewCell class], nil].themeTextColor = @"labelColorLevel0";
+    [UILabel appearanceWhenContainedInInstancesOfClasses:
+        @[[UITableViewCell class]]].themeTextColor = @"labelColorLevel0";
 
-    [UILabel appearanceWhenContainedIn:
-        [UITableViewHeaderFooterView class], nil].themeTextColor = @"labelColorLevel1";
+    [UILabel appearanceWhenContainedInInstancesOfClasses:
+        @[[UITableViewHeaderFooterView class]]].themeTextColor = @"labelColorLevel1";
 
-    [UILabel appearanceWhenContainedIn:
-        [RefractometerInputController class], [RefractometerController class], nil].themeBackgroundColor = @"inputBackgroundColor";
+    [UILabel appearanceWhenContainedInInstancesOfClasses:
+        @[[RefractometerInputController class], [RefractometerController class]]].themeBackgroundColor = @"inputBackgroundColor";
 
     [LabelL0 appearance].themeTextColor = @"labelColorLevel0";
     [LabelL1 appearance].themeTextColor = @"labelColorLevel1";
 
     [Background appearance].themeBackgroundColor = @"displayBackgroundColor";
 
-    [SeparatorL0 appearanceWhenContainedIn:
-        [RefractometerController class], nil].themeBackgroundColor = @"separatorColorLevel0";
+    [SeparatorL0 appearanceWhenContainedInInstancesOfClasses:
+        @[[RefractometerController class]]].themeBackgroundColor = @"separatorColorLevel0";
 
-    [SeparatorL1 appearanceWhenContainedIn:
-        [RefractometerController class], nil].themeBackgroundColor = @"separatorColorLevel1";
+    [SeparatorL1 appearanceWhenContainedInInstancesOfClasses:
+        @[[RefractometerController class]]].themeBackgroundColor = @"separatorColorLevel1";
 
-    [SeparatorL2 appearanceWhenContainedIn:
-        [RefractometerController class], nil].themeBackgroundColor = @"separatorColorLevel2";
+    [SeparatorL2 appearanceWhenContainedInInstancesOfClasses:
+        @[[RefractometerController class]]].themeBackgroundColor = @"separatorColorLevel2";
 
     [VerticalRefractionPicker appearance].themeBackgroundColor = @"inputBackgroundColor";
 
-    [UICollectionView appearanceWhenContainedIn:
-        [RefractometerInputController class], [RefractometerController class], nil].themeBackgroundColor = @"inputBackgroundColor";
+    [UICollectionView appearanceWhenContainedInInstancesOfClasses:
+        @[[RefractometerInputController class], [RefractometerController class]]].themeBackgroundColor = @"inputBackgroundColor";
 
-    [UICollectionViewCell appearanceWhenContainedIn:
-        [RefractometerInputController class], [RefractometerController class], nil].themeBackgroundColor = @"inputBackgroundColor";
+    [UICollectionViewCell appearanceWhenContainedInInstancesOfClasses:
+        @[[RefractometerInputController class], [RefractometerController class]]].themeBackgroundColor = @"inputBackgroundColor";
 
-    [VerticalRefractionNeedle appearanceWhenContainedIn:
-        [RefractometerInputController class], [RefractometerController class], nil].backgroundColor = [UIColor clearColor];
+    [VerticalRefractionNeedle appearanceWhenContainedInInstancesOfClasses:
+        @[[RefractometerInputController class], [RefractometerController class]]].backgroundColor = [UIColor clearColor];
 
-    [UIView appearanceWhenContainedIn:
-        [UIButton class], [RefractometerController class], nil].themeBackgroundColor = @"inputBackgroundColor";
+    [UIView appearanceWhenContainedInInstancesOfClasses:
+        @[[UIButton class], [RefractometerController class]]].themeBackgroundColor = @"inputBackgroundColor";
 }
 
 
