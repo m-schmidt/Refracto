@@ -112,27 +112,7 @@ static CGFloat previousContentYOffset = 0.0;
 
 - (void)visitWebsite {
 
-    NSURL *websiteURL = [NSURL URLWithString:kWebsiteURL];
-
-    if (NSClassFromString(@"SFSafariViewController") != nil) {
-
-        SFSafariViewController *safariController = [[SFSafariViewController alloc] initWithURL:websiteURL
-                                                                       entersReaderIfAvailable:NO];
-
-        safariController.delegate = self;
-
-        [self presentViewController:safariController animated:YES completion:nil];
-    }
-    else {
-
-        [[UIApplication sharedApplication] openURL:websiteURL];
-    }
-}
-
-
-- (void)safariViewControllerDidFinish:(SFSafariViewController *)controller {
-
-    [controller dismissViewControllerAnimated:YES completion:nil];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kWebsiteURL]];
 }
 
 
