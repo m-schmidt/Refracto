@@ -137,17 +137,29 @@ static CGFloat previousContentYOffset = 0.0;
 #pragma mark - User Actions - Mail to Support
 
 
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
+
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:nil];
+
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+
 - (void)mailComposeController:(MFMailComposeViewController *)mailComposer didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
 
     [self dismissViewControllerAnimated:YES completion:^{
 
             if (result == MFMailComposeResultFailed) {
 
-                [[[UIAlertView alloc] initWithTitle:NSLocalizedString(kMailFailedTitleKey, nil)
-                                            message:NSLocalizedString(kMailFailedMessageKey, nil)
-                                           delegate:self
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles:nil] show];
+                [self showAlertWithTitle:NSLocalizedString(kMailFailedTitleKey, nil)
+                                 message:NSLocalizedString(kMailFailedMessageKey, nil)];
             }
     }];
 }
@@ -168,12 +180,9 @@ static CGFloat previousContentYOffset = 0.0;
     }
     else {
 
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(kMailNoAccountTitleKey, nil)
-                                    message:[NSString stringWithFormat:NSLocalizedString(kMailNoAccountMessageKey, nil),
-                                                                       kSupportMailAddress]
-                                   delegate:self
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles:nil] show];
+        [self showAlertWithTitle:NSLocalizedString(kMailNoAccountTitleKey, nil)
+                         message:[NSString stringWithFormat:NSLocalizedString(kMailNoAccountMessageKey, nil),
+                                                            kSupportMailAddress]];
     }
 }
 
