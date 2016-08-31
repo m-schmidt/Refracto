@@ -403,7 +403,6 @@ static CGFloat previousContentYOffset = 0.0;
 
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LinkCell" forIndexPath:indexPath];
 
-        cell.textLabel.textColor = self.view.tintColor;
         cell.accessibilityTraits = UIAccessibilityTraitNone;
 
         if (indexPath.section == kSupportSection) {

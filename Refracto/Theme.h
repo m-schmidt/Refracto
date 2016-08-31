@@ -110,3 +110,8 @@
 @interface SeparatorL2 : UIView
 
 @end
+
+
+@interface LinkCell : UITableViewCell
+
+@end

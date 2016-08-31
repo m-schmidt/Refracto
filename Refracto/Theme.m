@@ -117,6 +117,9 @@
         @[[UITableViewCell class]]].themeTextColor = @"labelColorLevel0";
 
     [UILabel appearanceWhenContainedInInstancesOfClasses:
+        @[[LinkCell class]]].themeTextColor = @"tintColor";
+
+    [UILabel appearanceWhenContainedInInstancesOfClasses:
         @[[UITableViewHeaderFooterView class]]].themeTextColor = @"labelColorLevel1";
 
     [UILabel appearanceWhenContainedInInstancesOfClasses:
@@ -484,5 +487,10 @@
 
 
 @implementation SeparatorL2
+
+@end
+
+
+@implementation LinkCell
 
 @end
