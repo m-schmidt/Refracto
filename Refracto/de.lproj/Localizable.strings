@@ -12,6 +12,8 @@
 "mailNoAccountTitle" = "Kein Email-Account";
 "mailNoAccountMessage" = "Sie müssen zuerst einen Email-Account im System einrichten.\n\nAlternativ können Sie auf anderem Weg eine Email an %@ schreiben.";
 
+"alertOKTitleKey" = "OK";
+
 "settingsTitle" = "Einstellungen";
 
 "detailUnitPlato" = "°Plato (°P)";

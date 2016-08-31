@@ -12,6 +12,8 @@
 "mailNoAccountTitle" = "No Mail Account Configured";
 "mailNoAccountMessage" = "You must first configure a mail account for your system to contact support.\n\nAlternatively you can write to %@ by other means.";
 
+"alertOKTitleKey" = "OK";
+
 "settingsTitle" = "Settings";
 
 "detailUnitPlato" = "°Plato (°P)";

@@ -41,6 +41,8 @@ static NSString *kStoreURL           = @"https://itunes.apple.com/app/id95498182
 #define kMailNoAccountTitleKey         (@"mailNoAccountTitle")
 #define kMailNoAccountMessageKey       (@"mailNoAccountMessage")
 
+#define kAlertOKTitleKey               (@"alertOKTitleKey")
+
 // Setting tableview contents
 #define kSettingsTitleKey              (@"settingsTitle")
 
@@ -143,7 +145,7 @@ static CGFloat previousContentYOffset = 0.0;
                                                                    message:message
                                                             preferredStyle:UIAlertControllerStyleAlert];
 
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(kAlertOKTitleKey, nil)
                                                        style:UIAlertActionStyleDefault
                                                      handler:nil];
 
