@@ -9,6 +9,7 @@
 #import "SettingsController.h"
 #import "SliderCell.h"
 #import "AppDelegate.h"
+#import "Theme.h"
 
 
 // Section indexes
@@ -154,6 +155,7 @@ static CGFloat previousContentYOffset = 0.0;
         MFMailComposeViewController *mailComposer = [MFMailComposeViewController new];
 
         mailComposer.mailComposeDelegate = self;
+        mailComposer.view.tintColor = [Theme sharedTheme].systemTintColor;
         [mailComposer setToRecipients:@[kSupportMailAddress]];
         [mailComposer setSubject:NSLocalizedString(kSupportMailSubjectKey, nil)];
         [mailComposer setMessageBody:NSLocalizedString(kSupportMailBodyKey, nil) isHTML:NO];

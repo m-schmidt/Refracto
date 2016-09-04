@@ -43,6 +43,9 @@
 // Color for slider knob in settings table view
 - (UIColor *)settingsKnobColor;
 
+// Global default tint color of iOS
+- (UIColor *)systemTintColor;
+
 // Global tint color
 - (UIColor *)tintColor;
 

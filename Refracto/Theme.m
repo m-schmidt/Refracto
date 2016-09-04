@@ -286,6 +286,12 @@
 }
 
 
+- (UIColor *)systemTintColor {
+
+    return [UIColor colorWithRed:0.0 green:0.478431 blue:1.0 alpha:1.0];
+}
+
+
 - (UIColor *)tintColor {
 
     if (_darkInterface) {
