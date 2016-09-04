@@ -34,6 +34,7 @@ NSInteger const kMaxRefraction = 30;
     _refraction = [NSDecimalNumber decimalNumberWithInteger:kMaxRefraction];
 
     self.updateRefractionOnScrollEvents = NO;
+    self.collectionView.scrollsToTop = NO;
 }
 
 
