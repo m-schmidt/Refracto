@@ -83,24 +83,32 @@
 
     if (appDelegate.onceOnFirstAppLaunch) {
 
+        NSDecimalNumber *before  = self.beforePicker.refraction;
+        NSDecimalNumber *current = self.currentPicker.refraction;
+        NSDecimalNumber *offset  = [NSDecimalNumber decimalNumberWithMantissa:2 exponent:-1 isNegative:NO];
+
         self.view.userInteractionEnabled = NO;
 
-        NSDecimalNumber *before = self.beforePicker.refraction;
-        NSDecimalNumber *current = self.currentPicker.refraction;
+        [UIView animateKeyframesWithDuration:0.6 delay:0.3 options:UIViewKeyframeAnimationOptionCalculationModeCubic animations:^{
 
-        [UIView animateWithDuration:0.4
-                              delay:0.2
-                            options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionCurveEaseInOut
-                         animations:^{
-                             NSDecimalNumber *offset = [NSDecimalNumber decimalNumberWithMantissa:2 exponent:-1 isNegative:NO];
-                             self.beforePicker.refraction = [appDelegate constrainRefractionValue:[before decimalNumberByAdding:offset]];
-                             self.currentPicker.refraction = [appDelegate constrainRefractionValue:[current decimalNumberBySubtracting:offset]];
-                         }
-                         completion:^(BOOL finished) {
-                             self.beforePicker.refraction = before;
-                             self.currentPicker.refraction = current;
-                             self.view.userInteractionEnabled = YES;
-                         }];
+                [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.5 animations:^{
+
+                    [self.beforePicker scrollToRefraction:[appDelegate constrainRefractionValue:[before decimalNumberByAdding:offset]]];
+                    [self.currentPicker scrollToRefraction:[appDelegate constrainRefractionValue:[current decimalNumberBySubtracting:offset]]];
+                    [self.view layoutIfNeeded];
+                }];
+
+                [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.5 animations:^{
+
+                    [self.beforePicker scrollToRefraction:before];
+                    [self.currentPicker scrollToRefraction:current];
+                    [self.view layoutIfNeeded];
+                }];
+            }
+            completion:^(BOOL finished) {
+
+                self.view.userInteractionEnabled = YES;
+            }];
     }
 }
 
