@@ -41,4 +41,7 @@ extern NSInteger const kMaxRefraction;
 // Update contentInset and -offset to handle size changes
 - (void)handleSizeTransitionWithTargetContentOffset:(CGPoint)contentOffset;
 
+// Scroll the picker, used for view animation
+- (void)scrollToRefraction:(NSDecimalNumber *)refraction;
+
 @end

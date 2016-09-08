@@ -124,10 +124,15 @@ NSInteger const kMaxRefraction = 30;
 
         _refraction = refraction;
         [self.delegate refractionPickerView:self didSelectRefraction:_refraction];
-
-        CGPoint contentOffset = [self contentOffsetForItemAtIndexPath:[self indexPathForRefractionValue:refraction]];
-        [self.collectionView setContentOffset:contentOffset animated:NO];
+        [self scrollToRefraction:_refraction];
     }
+}
+
+
+- (void)scrollToRefraction:(NSDecimalNumber *)refraction {
+
+    CGPoint contentOffset = [self contentOffsetForItemAtIndexPath:[self indexPathForRefractionValue:refraction]];
+    [self.collectionView setContentOffset:contentOffset animated:NO];
 }
 
 
