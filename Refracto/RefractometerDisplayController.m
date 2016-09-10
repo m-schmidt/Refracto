@@ -45,7 +45,9 @@
 
     [super viewWillAppear:animated];
 
+    [self.view layoutIfNeeded];
     [self.modePicker setupTextAttributes];
+    [self.modePicker selectItemAtIndex:(NSInteger)[AppDelegate appDelegate].preferredSpecificGravityMode animated:NO];
 }
 
 
@@ -54,12 +56,10 @@
     [super viewDidAppear:animated];
 
     dispatch_async(dispatch_get_main_queue(), ^{ [self updateContent]; });
-
-    [self.modePicker selectItemAtIndex:(NSInteger)[AppDelegate appDelegate].preferredSpecificGravityMode animated:NO];
 }
 
 
-#pragma mark - Content Rotationon iPad
+#pragma mark - Content Rotation on iPad
 
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
