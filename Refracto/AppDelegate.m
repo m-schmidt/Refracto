@@ -100,7 +100,7 @@
     // Switch theme
     [Theme sharedTheme].darkInterface = darkTheme;
 
-    // Dismiss settings popover on iPad
+    // Dismiss settings popover/transition view on iPad
     if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPad) {
 
         [self.window.rootViewController dismissViewControllerAnimated:NO completion:nil];
@@ -108,6 +108,7 @@
 
     // Reload view controllers from the storyboard
     UIViewController *viewController = [self.window.rootViewController.storyboard instantiateInitialViewController];
+    UIView *reloadedContentView = viewController.view;
     self.window.rootViewController = viewController;
 
     if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPhone) {
@@ -127,6 +128,16 @@
                      }
                      completion:^(BOOL finished) {
                          [overlayView removeFromSuperview];
+
+                         // Hack: remove old content view from view hierarchy
+                         // http://stackoverflow.com/questions/26763020/leaking-views-when-changing-rootviewcontroller-inside-transitionwithview
+                         if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPad) {
+                             for (UIView *subview in self.window.subviews) {
+                                if (subview != reloadedContentView) {
+                                    [subview removeFromSuperview];
+                                }
+                             }
+                         }
                      }];
 }
 
