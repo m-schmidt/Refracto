@@ -13,7 +13,7 @@
 
 // Default value range in °Brix for picker
 NSInteger const kMinRefraction =  0;
-NSInteger const kMaxRefraction = 30;
+NSInteger const kMaxRefraction = 32;
 
 
 @interface VerticalRefractionPicker () <UICollectionViewDataSource>
