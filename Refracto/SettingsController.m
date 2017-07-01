@@ -29,7 +29,7 @@ static NSInteger const kSupportMailRow    = 1;
 // Strings for support stuff
 static NSString *kWebsiteURL         = @"https://mschmidt.me/refracto.html";
 static NSString *kSupportMailAddress = @"refracto@mschmidt.me";
-static NSString *kStoreURL           = @"https://itunes.apple.com/app/id954981822";
+static NSString *kStoreURL           = @"itms-apps://itunes.apple.com/app/id954981822?action=write-review";
 
 
 // Mail contents and alerts
