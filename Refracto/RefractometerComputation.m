@@ -354,10 +354,10 @@
     // Compute alcoholic content
     NSDecimalNumber *result = nil;
 
-    // tmp = (corrected RIi - true gravity)/0.79  (Note: Sean Terrill's converter uses 0.819 instead of 0.79 which leads to slightly lower ABV)
+    // tmp = (corrected RIi - true gravity)/0.79336
     result = [[correctedInitial decimalNumberBySubtracting:trueGravity]
                  decimalNumberByDividingBy:
-                     [NSDecimalNumber decimalNumberWithMantissa:79 exponent:-2 isNegative:NO]];
+                     [NSDecimalNumber decimalNumberWithMantissa:79336 exponent:-5 isNegative:NO]];
 
     // result = tmp / (2.0665 - 0.010665*corrected RIi)
     result = [result decimalNumberByDividingBy:
