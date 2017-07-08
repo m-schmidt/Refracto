@@ -3,7 +3,7 @@
 "modeTerrillCubic" = "Terrill Cubic";
 "modeKleier" = "Kleier";
 
-"mailSubject" = "About Refracto";
+"mailSubject" = "Regarding Refracto";
 "mailBody" = "Hello,\n\n";
 
 "mailFailedTitle" = "Sending Failed";
