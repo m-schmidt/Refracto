@@ -11,6 +11,7 @@
 
 - (void)prepareForReuse {
 
+    [super prepareForReuse];
     self.descriptionLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     self.detailLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 }
