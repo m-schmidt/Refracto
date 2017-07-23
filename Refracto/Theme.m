@@ -288,7 +288,14 @@
 
 - (UIColor *)systemTintColor {
 
-    return [UIColor colorWithRed:0.0 green:0.478431 blue:1.0 alpha:1.0];
+    UIColor *systemTintColor = [[UIView alloc] init].tintColor;
+
+    // Catch nil, since the color is needed as text attribute value
+    if (systemTintColor == nil) {
+        systemTintColor = [UIColor colorWithRed:0.0 green:0.478431 blue:1.0 alpha:1.0];
+    }
+
+    return systemTintColor;
 }
 
 
@@ -300,7 +307,7 @@
     }
     else {
 
-        return [UIColor colorWithRed:0.0 green:0.478431 blue:1.0 alpha:1.0];
+        return self.systemTintColor;
     }
 }
 
