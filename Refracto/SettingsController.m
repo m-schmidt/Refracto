@@ -113,7 +113,9 @@ static CGFloat previousContentYOffset = 0.0;
 
 - (void)visitWebsite {
 
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kWebsiteURL]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kWebsiteURL]
+                                       options:@{}
+                             completionHandler:nil];
 }
 
 
@@ -176,7 +178,9 @@ static CGFloat previousContentYOffset = 0.0;
 
 - (void)rateOnAppStore {
 
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kStoreURL]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kStoreURL]
+                                       options:@{}
+                             completionHandler:nil];
 }
 
 
