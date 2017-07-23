@@ -600,7 +600,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Refracto/Refracto-Prefix.pch";
 				INFOPLIST_FILE = Refracto/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.mschmidt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Refracto;
@@ -620,7 +620,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Refracto/Refracto-Prefix.pch";
 				INFOPLIST_FILE = Refracto/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.mschmidt.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Refracto;
