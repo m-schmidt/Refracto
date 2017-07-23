@@ -89,6 +89,10 @@ static CGFloat previousContentYOffset = 0.0;
 
     [super viewDidLoad];
 
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = YES;
+    }
+
     self.tableView.estimatedRowHeight = 44.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
 
