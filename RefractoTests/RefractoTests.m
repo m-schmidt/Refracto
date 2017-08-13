@@ -119,13 +119,13 @@
 
     // Alcohol Convertion
     XCTAssert([[RefractometerComputation alcoholByVolumeForInitialRefraction:initial apparentSpecificGravity:[NSDecimalNumber decimalNumberWithString:@"1.0119"]]
-               compare:[NSDecimalNumber decimalNumberWithString:@"4.96354905"]] == NSOrderedSame, @"ABV 12.8 °Bx -> 1.0119 SG");
+               compare:[NSDecimalNumber decimalNumberWithString:@"4.94252767"]] == NSOrderedSame, @"ABV 12.8 °Bx -> 1.0119 SG");
 
     XCTAssert([[RefractometerComputation alcoholByVolumeForInitialRefraction:initial apparentSpecificGravity:[NSDecimalNumber decimalNumberWithString:@"1.0110"]]
-               compare:[NSDecimalNumber decimalNumberWithString:@"5.08571395"]] == NSOrderedSame, @"ABV 12.8 °Bx -> 1.0110 SG");
+               compare:[NSDecimalNumber decimalNumberWithString:@"5.06417518"]] == NSOrderedSame, @"ABV 12.8 °Bx -> 1.0110 SG");
 
     XCTAssert([[RefractometerComputation alcoholByVolumeForInitialRefraction:initial apparentSpecificGravity:[NSDecimalNumber decimalNumberWithString:@"1.0102"]]
-               compare:[NSDecimalNumber decimalNumberWithString:@"5.19445462"]] == NSOrderedSame, @"ABV 12.8 °Bx -> 1.0102 SG");
+               compare:[NSDecimalNumber decimalNumberWithString:@"5.17245531"]] == NSOrderedSame, @"ABV 12.8 °Bx -> 1.0102 SG");
 }
 
 @end
