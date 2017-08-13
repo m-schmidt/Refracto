@@ -23,7 +23,7 @@
 "headerSupport" = "Support";
 "headerStore" = "App Store";
 
-"footerSettings" = "Mit dem Würzekorrekturfaktor wird der Brechungsindex von unvergorener Würze in °Plato umgerechnet.";
+"footerSettings" = "Mit dem Würzekorrekturfaktor wird der Brechungsindex von unvergorener Würze in die Stammwürze (°P oder SG) umgerechnet.";
 "footerStore" = "Wenn Ihnen Refracto gefällt, schreiben Sie bitte eine nette Bewertung. Vielen Dank!";
 
 "itemDarkInterfaceTitle" = "Nachtmodus";
