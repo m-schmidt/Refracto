@@ -32,7 +32,7 @@
     XCTAssert([[AppDelegate appDelegate] refractionValueIsValid:[NSDecimalNumber decimalNumberWithMantissa:30 exponent:0 isNegative:NO]]);
 
     XCTAssert(![[AppDelegate appDelegate] refractionValueIsValid:[NSDecimalNumber decimalNumberWithMantissa:1 exponent:0 isNegative:YES]]);
-    XCTAssert(![[AppDelegate appDelegate] refractionValueIsValid:[NSDecimalNumber decimalNumberWithMantissa:31 exponent:0 isNegative:NO]]);
+    XCTAssert(![[AppDelegate appDelegate] refractionValueIsValid:[NSDecimalNumber decimalNumberWithMantissa:33 exponent:0 isNegative:NO]]);
 }
 
 
