@@ -205,7 +205,7 @@
         <!--GravityUnit-->
         <scene sceneID="rpt-dD-j9i">
             <objects>
-                <tableViewController storyboardIdentifier="UnitSettings" title="Gravity Unit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lYu-q2-S98" userLabel="GravityUnit" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="UnitSettings" title="Gravity Unit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lYu-q2-S98" userLabel="GravityUnit" customClass="UnitController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Wi0-D2-LII">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

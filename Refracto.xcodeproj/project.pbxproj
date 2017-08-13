@@ -15,6 +15,7 @@
 		4D35850719EF104E007EEC22 /* VerticalRefractionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D35850619EF104E007EEC22 /* VerticalRefractionLayout.m */; };
 		4D35850A19EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D35850919EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m */; };
 		4D40A6E11D577DBC0018ADED /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D40A6E01D577DBC0018ADED /* Theme.m */; };
+		4D4CF25C1F406E0100F4C729 /* UnitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CF25B1F406E0100F4C729 /* UnitController.m */; };
 		4D4F860619F3D67500DEDB55 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4F860519F3D67500DEDB55 /* MessageUI.framework */; };
 		4D6A5F4A1B3F240A00BD8883 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6A5F491B3F240A00BD8883 /* SafariServices.framework */; };
 		4D9E61E31B415058001895D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9E61E51B415058001895D0 /* LaunchScreen.storyboard */; };
@@ -62,6 +63,8 @@
 		4D35850919EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionSupplementaryView.m; sourceTree = "<group>"; };
 		4D40A6DF1D577DBC0018ADED /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
 		4D40A6E01D577DBC0018ADED /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
+		4D4CF25B1F406E0100F4C729 /* UnitController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitController.m; sourceTree = "<group>"; };
+		4D4CF25D1F406E1900F4C729 /* UnitController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitController.h; sourceTree = "<group>"; };
 		4D4F860519F3D67500DEDB55 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4D6A5F491B3F240A00BD8883 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		4D70FE5D1B4150BD00309C50 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				4D3584FC19EC6B9B007EEC22 /* SliderCell.m */,
 				4D3584F419EC5067007EEC22 /* SettingsController.h */,
 				4D3584F519EC5067007EEC22 /* SettingsController.m */,
+				4D4CF25D1F406E1900F4C729 /* UnitController.h */,
+				4D4CF25B1F406E0100F4C729 /* UnitController.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -432,6 +437,7 @@
 				4D40A6E11D577DBC0018ADED /* Theme.m in Sources */,
 				4D35850019EEBDE8007EEC22 /* VerticalRefractionPicker.m in Sources */,
 				4DAB299E19C24DF100AF04FF /* RefractometerComputation.m in Sources */,
+				4D4CF25C1F406E0100F4C729 /* UnitController.m in Sources */,
 				4DB117A119C7932E0027AB70 /* HorizontalModePicker.m in Sources */,
 				4DEE84591A50217C004BFAC3 /* NSDecimalNumber+Refracto.m in Sources */,
 				4DA96B2E1A2FBE8F00E4091A /* RefractometerDisplayController.m in Sources */,
