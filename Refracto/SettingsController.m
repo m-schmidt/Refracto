@@ -158,15 +158,22 @@ static CGFloat previousContentYOffset = 0.0;
 
     if ([MFMailComposeViewController canSendMail]) {
 
-        MFMailComposeViewController *mailComposer = [MFMailComposeViewController new];
+        // Temporarily switch to default theme
+        Theme *theme = [Theme sharedTheme];
+        BOOL originalTheme = theme.darkInterface;
+        theme.darkInterface = NO;
 
+        MFMailComposeViewController *mailComposer = [MFMailComposeViewController new];
         mailComposer.mailComposeDelegate = self;
-        mailComposer.view.tintColor = [Theme sharedTheme].systemTintColor;
+        mailComposer.view.tintColor = theme.systemTintColor;
         [mailComposer setToRecipients:@[kSupportMailAddress]];
         [mailComposer setSubject:NSLocalizedString(kSupportMailSubjectKey, nil)];
         [mailComposer setMessageBody:NSLocalizedString(kSupportMailBodyKey, nil) isHTML:NO];
 
-        [self presentViewController:mailComposer animated:YES completion:nil];
+        [self presentViewController:mailComposer animated:YES completion:^{
+            // restore original theme after animation
+            theme.darkInterface = originalTheme;
+        }];
     }
     else {
 
