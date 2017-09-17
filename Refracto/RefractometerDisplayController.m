@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "NSDecimalNumber+Refracto.h"
+#import "UIFont+Monospaced.h"
 
 
 // Indicators for invalid values in display
@@ -41,6 +42,13 @@
 
 @implementation RefractometerDisplayController
 
+- (void)viewDidLoad {
+
+    [super viewDidLoad];
+    [self setupMonospacedFontAttributes];
+}
+
+
 - (void)viewWillAppear:(BOOL)animated  {
 
     [super viewWillAppear:animated];
@@ -56,6 +64,23 @@
     [super viewDidAppear:animated];
 
     dispatch_async(dispatch_get_main_queue(), ^{ [self updateContent]; });
+}
+
+
+#pragma mark - Font Handling
+
+
+- (void)setupMonospacedFontAttributes {
+
+    for (UILabel *label in @[ self.originalGravity,
+                              self.finalGravity,
+                              self.actualFinalGravity,
+                              self.attenuation,
+                              self.realAttenuation,
+                              self.alcoholByVolume,
+                              ]) {
+        label.font = [UIFont monospacedDigitFontVariant:label.font];
+    }
 }
 
 

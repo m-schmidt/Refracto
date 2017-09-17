@@ -7,6 +7,7 @@
 #import "RefractometerInputController.h"
 #import "AppDelegate.h"
 #import "NSDecimalNumber+Refracto.h"
+#import "UIFont+Monospaced.h"
 #import "Theme.h"
 
 
@@ -41,6 +42,8 @@
     self.currentPicker.refraction = sharedAppDelegate.recentCurrentRefraction;
 
     [self.settingsButton setImage:[Theme sharedTheme].settingsButtonImage forState:UIControlStateNormal];
+
+    [self setupMonospacedFontAttributes];
 }
 
 
@@ -68,6 +71,14 @@
     [super viewDidDisappear:animated];
 
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
+- (void)setupMonospacedFontAttributes {
+
+    for (UILabel *label in @[ self.beforeLabel, self.currentLabel]) {
+        label.font = [UIFont monospacedDigitFontVariant:label.font];
+    }
 }
 
 

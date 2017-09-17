@@ -18,6 +18,7 @@
 		4D4CF25C1F406E0100F4C729 /* UnitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CF25B1F406E0100F4C729 /* UnitController.m */; };
 		4D4F860619F3D67500DEDB55 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4F860519F3D67500DEDB55 /* MessageUI.framework */; };
 		4D6A5F4A1B3F240A00BD8883 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6A5F491B3F240A00BD8883 /* SafariServices.framework */; };
+		4D879CDE1F6F0C7600D27AEB /* UIFont+Monospaced.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879CDD1F6F0C7600D27AEB /* UIFont+Monospaced.m */; };
 		4D9E61E31B415058001895D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9E61E51B415058001895D0 /* LaunchScreen.storyboard */; };
 		4DA96B2E1A2FBE8F00E4091A /* RefractometerDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA96B2D1A2FBE8F00E4091A /* RefractometerDisplayController.m */; };
 		4DA96B311A2FC30500E4091A /* RefractometerInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA96B301A2FC30500E4091A /* RefractometerInputController.m */; };
@@ -68,6 +69,8 @@
 		4D4F860519F3D67500DEDB55 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4D6A5F491B3F240A00BD8883 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		4D70FE5D1B4150BD00309C50 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4D879CDC1F6F0C1200D27AEB /* UIFont+Monospaced.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Monospaced.h"; sourceTree = "<group>"; };
+		4D879CDD1F6F0C7600D27AEB /* UIFont+Monospaced.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Monospaced.m"; sourceTree = "<group>"; };
 		4D9796A41A521E1100B91C6C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
 		4D9E61E41B415058001895D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DA96B2C1A2FBE8F00E4091A /* RefractometerDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefractometerDisplayController.h; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 			children = (
 				4DEE84571A50217C004BFAC3 /* NSDecimalNumber+Refracto.h */,
 				4DEE84581A50217C004BFAC3 /* NSDecimalNumber+Refracto.m */,
+				4D879CDC1F6F0C1200D27AEB /* UIFont+Monospaced.h */,
+				4D879CDD1F6F0C7600D27AEB /* UIFont+Monospaced.m */,
 				4DF58A3A1A5615B0007F508B /* RootTabController.h */,
 				4DF58A3B1A5615B0007F508B /* RootTabController.m */,
 			);
@@ -433,6 +438,7 @@
 			files = (
 				4DA96B311A2FC30500E4091A /* RefractometerInputController.m in Sources */,
 				4DAB297919C24CF300AF04FF /* AppDelegate.m in Sources */,
+				4D879CDE1F6F0C7600D27AEB /* UIFont+Monospaced.m in Sources */,
 				4DAB297C19C24CF300AF04FF /* RefractometerController.m in Sources */,
 				4D40A6E11D577DBC0018ADED /* Theme.m in Sources */,
 				4D35850019EEBDE8007EEC22 /* VerticalRefractionPicker.m in Sources */,
