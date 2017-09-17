@@ -1,6 +1,6 @@
 //
 //  UIFont+Monospaced.h
-//  Extensions for San Franciso Monospaced Number Attributes
+//  Extension for San Franciso Monospaced Number Attributes
 //
 
 
