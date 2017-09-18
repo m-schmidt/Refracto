@@ -5,6 +5,7 @@
 
 
 #import "SliderCell.h"
+#import "UIFont+Monospaced.h"
 
 
 @implementation SliderCell
@@ -12,8 +13,10 @@
 - (void)prepareForReuse {
 
     [super prepareForReuse];
-    self.descriptionLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-    self.detailLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+
+    UIFont *font = [UIFont monospacedDigitFontVariant:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];
+    self.descriptionLabel.font = font;
+    self.detailLabel.font = font;
 }
 
 

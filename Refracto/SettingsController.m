@@ -409,6 +409,7 @@ static CGFloat previousContentYOffset = 0.0;
 
             SliderCell *sliderCell = (SliderCell *)[tableView dequeueReusableCellWithIdentifier:@"SliderCell" forIndexPath:indexPath];
 
+            [sliderCell prepareForReuse];
             sliderCell.descriptionLabel.text = NSLocalizedString(kSettingsItemWortCorrectionKey, nil);
             sliderCell.detailLabel.text = @"\u2014";
 
