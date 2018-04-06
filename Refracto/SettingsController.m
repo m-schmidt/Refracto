@@ -234,9 +234,11 @@ static CGFloat previousContentYOffset = 0.0;
 
         self.view.userInteractionEnabled = NO;
 
+        // Restoring the y-contentOffset works reliably only on iOS < 11
         if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPhone) {
-
-            previousContentYOffset = self.tableView.contentOffset.y;
+            if ([[UIDevice currentDevice].systemVersion hasPrefix:@"10."]) {
+                previousContentYOffset = self.tableView.contentOffset.y;
+            }
         }
 
         BOOL darkInterface = [sender isOn];
