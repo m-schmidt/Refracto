@@ -40,6 +40,8 @@ typedef NS_ENUM(NSInteger, RFSpecificGravityMode) {
 @property (strong, nonatomic) NSDecimalNumber *recentBeforeRefraction;
 @property (strong, nonatomic) NSDecimalNumber *recentCurrentRefraction;
 
+- (void)generateSelectionFeedback;
+
 - (NSDecimalNumber *)constrainRefractionValue:(NSDecimalNumber *)refraction;
 - (BOOL)refractionValueIsValid:(NSDecimalNumber *)refraction;
 

@@ -106,6 +106,7 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
             if (currentSelectedItemIndex > 0) {
 
+                [AppDelegate.appDelegate generateSelectionFeedback];
                 [self selectItemAtIndex:currentSelectedItemIndex - 1 animated:YES];
             }
         }
@@ -113,6 +114,7 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
             if (currentSelectedItemIndex < [self.datasource numberOfItemsInPickerView:self] - 1) {
 
+                [AppDelegate.appDelegate generateSelectionFeedback];
                 [self selectItemAtIndex:currentSelectedItemIndex + 1 animated:YES];
             }
         }
@@ -126,6 +128,7 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
 
     if (itemIndexPath) {
 
+        [AppDelegate.appDelegate generateSelectionFeedback];
         [self selectItemAtIndex:itemIndexPath.item animated:YES];
     }
 }
@@ -182,6 +185,13 @@ NSDictionary *horizontalModeSelectedTextAttributes = nil;
     }
 
     return 0;
+}
+
+
+- (void)feedback {
+    UISelectionFeedbackGenerator *generator = [[UISelectionFeedbackGenerator alloc] init];
+    [generator prepare];
+    [generator selectionChanged];
 }
 
 

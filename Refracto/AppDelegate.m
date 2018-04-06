@@ -50,6 +50,13 @@
 }
 
 
+- (void)generateSelectionFeedback {
+    UISelectionFeedbackGenerator *generator = [[UISelectionFeedbackGenerator alloc] init];
+    [generator prepare];
+    [generator selectionChanged];
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window.tintColor = [[Theme sharedTheme] tintColor];
