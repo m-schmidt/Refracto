@@ -21,6 +21,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JrY-69-Y9G" userLabel="BackgroundBottom" customClass="BackgroundBottom">
+                                <rect key="frame" x="0.0" y="264" width="768" height="760"/>
+                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyL-mb-SQu" userLabel="Display">
                                 <rect key="frame" x="0.0" y="20" width="768" height="240"/>
                                 <constraints>
@@ -39,8 +42,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.96546226739883423" green="0.96543341875076294" blue="0.96544981002807617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="JrY-69-Y9G" secondAttribute="bottom" id="5Qe-pV-678"/>
+                            <constraint firstItem="JrY-69-Y9G" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="B6c-Dl-dgL"/>
                             <constraint firstItem="FyL-mb-SQu" firstAttribute="bottom" secondItem="xzk-uR-cFt" secondAttribute="top" id="IEh-Xy-0g6"/>
                             <constraint firstItem="xzk-uR-cFt" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailing" id="IjN-YG-AZb"/>
+                            <constraint firstItem="JrY-69-Y9G" firstAttribute="top" secondItem="xzk-uR-cFt" secondAttribute="top" constant="4" id="Scz-wI-jip"/>
+                            <constraint firstAttribute="trailing" secondItem="JrY-69-Y9G" secondAttribute="trailing" id="UVY-v4-ulX"/>
                             <constraint firstItem="xzk-uR-cFt" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="bra-9W-blb"/>
                             <constraint firstItem="FyL-mb-SQu" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="ckd-8K-Sc6"/>
                             <constraint firstItem="FyL-mb-SQu" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="jt6-ja-cdd"/>
@@ -957,10 +964,10 @@
                             <constraint firstItem="ckx-sO-xbs" firstAttribute="top" secondItem="gUP-ih-lxa" secondAttribute="bottom" constant="1" id="2s8-yA-Csj"/>
                             <constraint firstItem="ckx-sO-xbs" firstAttribute="leading" secondItem="GN9-OF-BlS" secondAttribute="leading" id="3kb-Zz-Utz"/>
                             <constraint firstItem="XCZ-Bi-U3x" firstAttribute="leading" secondItem="ckx-sO-xbs" secondAttribute="trailing" constant="1" id="AJz-pS-DOy"/>
-                            <constraint firstItem="ckx-sO-xbs" firstAttribute="bottom" secondItem="6pJ-v9-Oq4" secondAttribute="top" id="K7d-RB-luG"/>
+                            <constraint firstItem="ckx-sO-xbs" firstAttribute="bottom" secondItem="GN9-OF-BlS" secondAttribute="bottom" id="K7d-RB-luG"/>
                             <constraint firstItem="XCZ-Bi-U3x" firstAttribute="trailing" secondItem="GN9-OF-BlS" secondAttribute="trailing" id="ULH-T5-c4U"/>
                             <constraint firstItem="ckx-sO-xbs" firstAttribute="width" secondItem="GN9-OF-BlS" secondAttribute="width" multiplier="0.5" id="Vp7-uo-Bd8"/>
-                            <constraint firstItem="XCZ-Bi-U3x" firstAttribute="bottom" secondItem="6pJ-v9-Oq4" secondAttribute="top" id="Yy5-Dw-nGF"/>
+                            <constraint firstItem="XCZ-Bi-U3x" firstAttribute="bottom" secondItem="GN9-OF-BlS" secondAttribute="bottom" id="Yy5-Dw-nGF"/>
                             <constraint firstItem="XCZ-Bi-U3x" firstAttribute="top" secondItem="gUP-ih-lxa" secondAttribute="bottom" constant="1" id="xTA-he-LMX"/>
                         </constraints>
                     </view>

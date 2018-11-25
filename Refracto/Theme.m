@@ -129,6 +129,7 @@
     [LabelL1 appearance].themeTextColor = @"labelColorLevel1";
 
     [Background appearance].themeBackgroundColor = @"displayBackgroundColor";
+    [BackgroundBottom appearance].themeBackgroundColor = @"inputBackgroundColor";
 
     [SeparatorL0 appearanceWhenContainedInInstancesOfClasses:
         @[[RefractometerController class]]].themeBackgroundColor = @"separatorColorLevel0";
@@ -475,6 +476,11 @@
 
 
 @implementation Background
+
+@end
+
+
+@implementation BackgroundBottom
 
 @end
 
