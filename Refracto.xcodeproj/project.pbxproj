@@ -346,7 +346,7 @@
 			};
 			buildConfigurationList = 4DAB296B19C24CF300AF04FF /* Build configuration list for PBXProject "Refracto" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
