@@ -108,7 +108,7 @@
     [Theme sharedTheme].darkInterface = darkTheme;
 
     // Dismiss settings popover/transition view on iPad
-    if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPad) {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
 
         UIView *oldContentView = self.window.rootViewController.view;
         [self.window.rootViewController dismissViewControllerAnimated:NO completion:^{
@@ -123,7 +123,7 @@
     UIViewController *viewController = [self.window.rootViewController.storyboard instantiateInitialViewController];
     self.window.rootViewController = viewController;
 
-    if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPhone) {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 
         [(UITabBarController *)viewController setSelectedIndex:1];
     }
@@ -446,7 +446,7 @@
         formatterRegular = [[NSNumberFormatter alloc] init];
         formatterCompact = [[NSNumberFormatter alloc] init];
 
-        if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPad) {
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
 
             formatterRegular.positiveFormat = @"#0.0000";
             formatterCompact.positiveFormat = @"#0.000";

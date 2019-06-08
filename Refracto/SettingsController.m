@@ -235,7 +235,7 @@ static CGFloat previousContentYOffset = 0.0;
         self.view.userInteractionEnabled = NO;
 
         // Restoring the y-contentOffset works reliably only on iOS < 11
-        if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPhone) {
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
             if ([[UIDevice currentDevice].systemVersion hasPrefix:@"10."]) {
                 previousContentYOffset = self.tableView.contentOffset.y;
             }
@@ -264,7 +264,7 @@ static CGFloat previousContentYOffset = 0.0;
 
 - (void)configureDisplayUnitForCell:(UITableViewCell *)cell {
 
-    BOOL shortSGDetail = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad || CGRectGetWidth ([UIScreen mainScreen].bounds) <= 320);
+    BOOL shortSGDetail = ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad || CGRectGetWidth ([UIScreen mainScreen].bounds) <= 320);
 
     switch ([AppDelegate appDelegate].preferredGravityUnit) {
 
