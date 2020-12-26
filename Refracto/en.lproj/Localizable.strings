@@ -1,36 +1,74 @@
-"modeStandard" = "Standard";
-"modeTerrillLinear" = "Terrill Linear";
-"modeTerrillCubic" = "Terrill Cubic";
-"modeKleier" = "Kleier";
+"Refracto" = "Refractometer";
+"Settings" = "Settings";
 
-"mailSubject" = "Refracto App";
-"mailBody" = "Hello,\n\n";
+"HeaderSettings" = "Refracto";
+"FooterSettings" = "The wort correction factor is used to convert the °Brix measurement of unfermented wort to Original Gravity (°P or SG)";
 
-"mailFailedTitle" = "Sending Failed";
-"mailFailedMessage" = "Your mail could not be sent. Please check your network settings or try again later.";
+"HeaderSupport" = "Support";
+"FooterSupportNoMail" = "No mail account is configured on this device. To contact support, write to refracto@mschmidt.me by other means.";
 
-"mailNoAccountTitle" = "No Mail Account Configured";
-"mailNoAccountMessage" = "You must first configure a mail account for your system to contact support.\n\nAlternatively you can write to %@ by other means.";
+"HeaderStore" = "App Store";
+"FooterStore" = "If you like Refracto, please take the time to give it a nice review. It really helps. Thanks and Happy Brewing!";
 
-"alertOKTitleKey" = "OK";
+"CorrectionTitle" = "Wort Correction Factor";
+"WebsiteTitle" = "Visit Refracto Website";
+"ContactTitle" = "Contact Support";
+"RateAppTitle" = "Rate on App Store";
 
-"settingsTitle" = "Settings";
+"MailSubject" = "Refracto App";
+"MailBody" = "Hello,\n\n";
 
-"detailUnitPlato" = "°Plato (°P)";
-"detailUnitSG" = "Specific Gravity (SG)";
-"detailUnitSGShort" = "Specific Gravity (SG)";
+"MailFailedTitle" = "Sending Failed";
+"MailFailedMessage" = "Your mail could not be sent. Please check your network settings or try again later.";
 
-"headerSupport" = "Support";
-"headerStore" = "App Store";
+"ThemeTitle" = "Theme";
+"ThemeFooter" = "When selecting the System theme, Refracto matches the global appearance configured for your device.";
+"ThemeSystem" = "System";
+"ThemeLight" = "Light";
+"ThemeDark" = "Dark";
+"ThemeBlue" = "Blue";
+"ThemeGray" = "Gray";
+"ThemeBlack" = "Black";
 
-"footerSettings" = "The wort correction factor is used to convert from °Brix to Original Gravity (°P or SG) for unfermented wort.";
-"footerStore" = "If you like Refracto, please take the time to give it a nice review. It really helps.";
+"AppIconTitle" = "Icon";
+"AppIconGreen" = "Green";
+"AppIconBlue" = "Blue";
+"AppIconRed" = "Red";
+"AppIconYellow" = "Yellow";
+"AppIconWhite" = "White";
+"AppIconBlack" = "Black";
 
-"itemDarkInterfaceTitle" = "Dark Interface";
-"itemUnitTitle" = "Gravity Unit";
-"itemCorrectionTitle" = "Wort Correction Factor";
-"itemWebsiteTitle" = "Visit Refracto Website";
-"itemContactTitle" = "Contact Support";
-"itemRateTitle" = "Rate on App Store";
+"DisplaySchemeTitle" = "Display";
+"DisplaySchemeFooter" = "The modern scheme displays °Plato together with Specific Gracity but skips the uncommon values for real attenuation and actual final gravity.\n\nThe classic schemes stick to a single unit and show the additional values like earlier versions of Refracto.";
+"DisplaySchemeModern" = "Modern  –  °Plato and SG";
+"DisplaySchemeModernShort" = "°Plato and SG";
+"DisplaySchemeOldSG" = "Classic  –  SG";
+"DisplaySchemeOldSGShort" = "SG";
+"DisplaySchemeOldPlato" = "Classic  –  °Plato";
+"DisplaySchemeOldPlatoShort" = "°Plato";
 
-"outOfRange" = "Value out of range";
+"FormulaStandard" = "Standard";
+"FormulaNovotnyLinear" = "Novotný Linear";
+"FormulaNovotnyQuadratic" = "Novotný Quadratic";
+"FormulaTerrillLinear" = "Terrill Linear";
+"FormulaTerrillCubic" = "Terrill Cubic";
+
+"Original Gravity" = "Original Gravity";
+"Final Gravity" = "Final Gravity";
+"Attenuation" = "Attenuation";
+"Alcohol %vol" = "Alcohol %vol";
+"(actual)" = "(actual)";
+"(real)" = "(real)";
+
+"AccessibilityOutOfRange" = "Value out of range";
+
+"AccessibilityLabelComputationMode" = "Computation mode";
+
+"AccessibilityLabelOriginalRefraction" = "Original refraction value";
+"AccessibilityHintOriginalRefraction" = "Refractometer reading before start of fermentation";
+
+"AccessibilityLabelCurrentRefraction" = "Current refraction value";
+"AccessibilityHintCurrentRefraction" = "Refractometer reading after start of fermentation";
+
+"AccessibilityBrixFormatter" = "#0.0' degree Brix'";
+"AccessibilityPlatoFormatter" = "#0.0' degree Plato'";

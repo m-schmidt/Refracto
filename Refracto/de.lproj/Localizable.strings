@@ -1,36 +1,74 @@
-"modeStandard" = "Standard";
-"modeTerrillLinear" = "Terrill Linear";
-"modeTerrillCubic" = "Terrill Kubisch";
-"modeKleier" = "Kleier";
+"Refracto" = "Refraktometer";
+"Settings" = "Einstellungen";
 
-"mailSubject" = "Refracto-App";
-"mailBody" = "Hallo,\n\n";
+"HeaderSettings" = "Refracto";
+"FooterSettings" = "Mit dem Würzekorrekturfaktor wird der Brechungsindex von unvergorener Würze in die Stammwürze (°P bzw. SG) um\U00ADgerechnet.";
 
-"mailFailedTitle" = "Senden Fehlgeschlagen";
-"mailFailedMessage" = "Ihre Email konnte nicht gesendet werden. Überprüfen Sie ihre Netzwerkeinstellungen oder versuchen Sie es später noch einmal.";
+"HeaderSupport" = "Support";
+"FooterSupportNoMail" = "Für dieses Gerät ist kein Email-Account konfiguriert. Der Support ist unter refracto@mschmidt.me erreichbar.";
 
-"mailNoAccountTitle" = "Kein Email-Account";
-"mailNoAccountMessage" = "Sie müssen zuerst einen Email-Account im System einrichten.\n\nAlternativ können Sie auf anderem Weg eine Email an %@ schreiben.";
+"HeaderStore" = "App Store";
+"FooterStore" = "Falls Ihnen Refracto gefällt, schreiben Sie bitte eine nette Be\U00ADwertung. Vielen Dank und gut' Sud!";
 
-"alertOKTitleKey" = "OK";
+"CorrectionTitle" = "Würze\U00ADkorrek\U00ADtur\U00ADfaktor";
+"WebsiteTitle" = "Refracto Webseite besuchen";
+"ContactTitle" = "Email an Support schreiben";
+"RateAppTitle" = "Im App Store bewerten";
 
-"settingsTitle" = "Einstellungen";
+"MailSubject" = "Refracto-App";
+"MailBody" = "Hallo,\n\n";
 
-"detailUnitPlato" = "°Plato (°P)";
-"detailUnitSG" = "Spezifisches Gewicht (SG)";
-"detailUnitSGShort" = "Spezif. Gewicht (SG)";
+"MailFailedTitle" = "Senden Fehlgeschlagen";
+"MailFailedMessage" = "Ihre Email konnte nicht gesendet werden. Überprüfen Sie ihre Netzwerkeinstellungen oder versuchen Sie es später noch einmal.";
 
-"headerSupport" = "Support";
-"headerStore" = "App Store";
+"ThemeTitle" = "Farbschema";
+"ThemeFooter" = "Das Farbschema System entspricht dem globalen Farb\U00ADschema für das Gerät.";
+"ThemeSystem" = "System";
+"ThemeLight" = "Hell";
+"ThemeDark" = "Dunkel";
+"ThemeBlue" = "Blau";
+"ThemeGray" = "Grau";
+"ThemeBlack" = "Schwarz";
 
-"footerSettings" = "Mit dem Würzekorrekturfaktor wird der Brechungsindex von unvergorener Würze in die Stammwürze (°P oder SG) umgerechnet.";
-"footerStore" = "Wenn Ihnen Refracto gefällt, schreiben Sie bitte eine nette Bewertung. Vielen Dank!";
+"AppIconTitle" = "Icon";
+"AppIconGreen" = "Grün";
+"AppIconBlue" = "Blau";
+"AppIconRed" = "Rot";
+"AppIconYellow" = "Gelb";
+"AppIconWhite" = "Weiß";
+"AppIconBlack" = "Schwarz";
 
-"itemDarkInterfaceTitle" = "Nachtmodus";
-"itemUnitTitle" = "Anzeige";
-"itemCorrectionTitle" = "Würzekorrekturfaktor";
-"itemWebsiteTitle" = "Refracto Webseite besuchen";
-"itemContactTitle" = "Email an Support schreiben";
-"itemRateTitle" = "Im App Store bewerten";
+"DisplaySchemeTitle" = "Anzeige";
+"DisplaySchemeFooter" = "Das moderne Schema zeigt °Plato und SG an verzichtet aber auf Werte für tatsächlichen Vergärungsgrad und Restextrakt (wird selten benötigt).\n\nDie klassichen Schemata zeigen wie frühere Versionen von Refracto nur die jeweilge Einheit aber mit den zusätzlichen Werten an.";
+"DisplaySchemeModern" = "Modern  –  °Plato und SG";
+"DisplaySchemeModernShort" = "°Plato und SG";
+"DisplaySchemeOldSG" = "Klassisch  –  SG";
+"DisplaySchemeOldSGShort" = "SG";
+"DisplaySchemeOldPlato" = "Klassisch  –  °Plato";
+"DisplaySchemeOldPlatoShort" = "°Plato";
 
-"outOfRange" = "Wert nicht berechenbar";
+"FormulaStandard" = "Standard";
+"FormulaNovotnyQuadratic" = "Novotný Quadratisch";
+"FormulaNovotnyLinear" = "Novotný Linear";
+"FormulaTerrillCubic" = "Terrill Kubisch";
+"FormulaTerrillLinear" = "Terrill Linear";
+
+"Original Gravity" = "Stammwürze";
+"Final Gravity" = "Restextrakt";
+"Attenuation" = "Vergärungsgrad";
+"Alcohol %vol" = "Alkohol %vol";
+"(actual)" = "(tatsächlich)";
+"(real)" = "(tatsächlich)";
+
+"AccessibilityOutOfRange" = "Wert nicht berechenbar";
+
+"AccessibilityLabelComputationMode" = "Berechnungsformel";
+
+"AccessibilityLabelOriginalRefraction" = "Ursprünglicher Brechungsindex";
+"AccessibilityHintOriginalRefraction" = "Messwert vor Beginn der Gärung";
+
+"AccessibilityLabelCurrentRefraction" = "Aktueller Brechungsindex";
+"AccessibilityHintCurrentRefraction" = "Messwert nach Beginn der Gärung";
+
+"AccessibilityBrixFormatter" = "#0.0' Grad Brix'";
+"AccessibilityPlatoFormatter" = "#0.0' Grad Plato'";

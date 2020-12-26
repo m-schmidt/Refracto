@@ -3,121 +3,160 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D247D841A92A23A00FA5525 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D247D861A92A23A00FA5525 /* Main_iPad.storyboard */; };
-		4D3584F619EC5067007EEC22 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3584F519EC5067007EEC22 /* SettingsController.m */; };
-		4D3584FD19EC6B9B007EEC22 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3584FC19EC6B9B007EEC22 /* SliderCell.m */; };
-		4D35850019EEBDE8007EEC22 /* VerticalRefractionPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3584FF19EEBDE8007EEC22 /* VerticalRefractionPicker.m */; };
-		4D35850419EED827007EEC22 /* VerticalRefractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D35850319EED827007EEC22 /* VerticalRefractionCell.m */; };
-		4D35850719EF104E007EEC22 /* VerticalRefractionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D35850619EF104E007EEC22 /* VerticalRefractionLayout.m */; };
-		4D35850A19EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D35850919EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m */; };
-		4D40A6E11D577DBC0018ADED /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D40A6E01D577DBC0018ADED /* Theme.m */; };
-		4D4CF25C1F406E0100F4C729 /* UnitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CF25B1F406E0100F4C729 /* UnitController.m */; };
-		4D4F860619F3D67500DEDB55 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4F860519F3D67500DEDB55 /* MessageUI.framework */; };
-		4D6A5F4A1B3F240A00BD8883 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D6A5F491B3F240A00BD8883 /* SafariServices.framework */; };
-		4D879CDE1F6F0C7600D27AEB /* UIFont+Monospaced.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D879CDD1F6F0C7600D27AEB /* UIFont+Monospaced.m */; };
-		4D9E61E31B415058001895D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9E61E51B415058001895D0 /* LaunchScreen.storyboard */; };
-		4DA96B2E1A2FBE8F00E4091A /* RefractometerDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA96B2D1A2FBE8F00E4091A /* RefractometerDisplayController.m */; };
-		4DA96B311A2FC30500E4091A /* RefractometerInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA96B301A2FC30500E4091A /* RefractometerInputController.m */; };
-		4DAB297619C24CF300AF04FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB297519C24CF300AF04FF /* main.m */; };
-		4DAB297919C24CF300AF04FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB297819C24CF300AF04FF /* AppDelegate.m */; };
-		4DAB297C19C24CF300AF04FF /* RefractometerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB297B19C24CF300AF04FF /* RefractometerController.m */; };
-		4DAB298219C24CF300AF04FF /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB298019C24CF300AF04FF /* Main_iPhone.storyboard */; };
-		4DAB298419C24CF300AF04FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DAB298319C24CF300AF04FF /* Images.xcassets */; };
-		4DAB299319C24CF300AF04FF /* RefractoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB299219C24CF300AF04FF /* RefractoTests.m */; };
-		4DAB299E19C24DF100AF04FF /* RefractometerComputation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB299D19C24DF100AF04FF /* RefractometerComputation.m */; };
-		4DB1179E19C788420027AB70 /* HorizontalModeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1179D19C788420027AB70 /* HorizontalModeCell.m */; };
-		4DB117A119C7932E0027AB70 /* HorizontalModePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB117A019C7932E0027AB70 /* HorizontalModePicker.m */; };
-		4DDFD44B1A52BBA6003AD7F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DDFD44D1A52BBA6003AD7F7 /* Localizable.strings */; };
-		4DEE84561A4F5DF6004BFAC3 /* VerticalRefractionNeedle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE84551A4F5DF6004BFAC3 /* VerticalRefractionNeedle.m */; };
-		4DEE84591A50217C004BFAC3 /* NSDecimalNumber+Refracto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE84581A50217C004BFAC3 /* NSDecimalNumber+Refracto.m */; };
-		4DF58A3C1A5615B0007F508B /* RootTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF58A3B1A5615B0007F508B /* RootTabController.m */; };
+		4D0A09FE2561952D0086B6BD /* ValueDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0A09FD2561952D0086B6BD /* ValueDisplay.swift */; };
+		4D0B6B36258EA2CC00504315 /* AppIconBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D0B6B32258EA2CC00504315 /* AppIconBlack@2x.png */; };
+		4D0B6B37258EA2CC00504315 /* AppIconBlack@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D0B6B33258EA2CC00504315 /* AppIconBlack@2x~ipad.png */; };
+		4D0B6B38258EA2CC00504315 /* AppIconBlack@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D0B6B34258EA2CC00504315 /* AppIconBlack@3x.png */; };
+		4D0B6B39258EA2CC00504315 /* AppIconBlackPro@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D0B6B35258EA2CC00504315 /* AppIconBlackPro@2x~ipad.png */; };
+		4D399E3D25892A4D00079CE9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D399E3C25892A4D00079CE9 /* Colors.swift */; };
+		4D399E41258942A500079CE9 /* SettingsBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D399E40258942A500079CE9 /* SettingsBaseTableViewCell.swift */; };
+		4D44AE042513FE5300ED5142 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44AE032513FE5300ED5142 /* AppDelegate.swift */; };
+		4D44AE062513FE5300ED5142 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44AE052513FE5300ED5142 /* SceneDelegate.swift */; };
+		4D44AE0D2513FE5400ED5142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D44AE0C2513FE5400ED5142 /* Assets.xcassets */; };
+		4D44AE102513FE5400ED5142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D44AE0E2513FE5400ED5142 /* LaunchScreen.storyboard */; };
+		4D44AE1B2513FE5400ED5142 /* RefractoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44AE1A2513FE5400ED5142 /* RefractoTests.swift */; };
+		4D54B03625152E570017C3DD /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B03525152E570017C3DD /* SettingsController.swift */; };
+		4D54B040251531260017C3DD /* RefractometerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B03F251531260017C3DD /* RefractometerController.swift */; };
+		4D54B04825153E8C0017C3DD /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D54B04725153E8C0017C3DD /* String+Localizable.swift */; };
+		4D5AFD3F258B959300C7D7E1 /* SeparatorLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5AFD3E258B959300C7D7E1 /* SeparatorLine.swift */; };
+		4D7D9426255837690089F864 /* RefractometerDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D9425255837690089F864 /* RefractometerDisplay.swift */; };
+		4D7D942D2558434E0089F864 /* RefractionInputNeedle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D942C2558434E0089F864 /* RefractionInputNeedle.swift */; };
+		4D7D943125584A700089F864 /* FormulaInputDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7D943025584A700089F864 /* FormulaInputDot.swift */; };
+		4D800D3F2593FFCB005AFD5A /* NSLayoutConstraint+Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D800D3E2593FFCB005AFD5A /* NSLayoutConstraint+Priority.swift */; };
+		4D8944C1252082B0004A132D /* UIView+Embedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8944C0252082B0004A132D /* UIView+Embedding.swift */; };
+		4D8944C9252085B5004A132D /* RefractometerNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8944C8252085B5004A132D /* RefractometerNavigationController.swift */; };
+		4D8944CF25208E60004A132D /* UIFont+MonospacedNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8944CE25208E60004A132D /* UIFont+MonospacedNumbers.swift */; };
+		4D9035092556C4BB00F6ABC3 /* RefractionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9035082556C4BB00F6ABC3 /* RefractionInput.swift */; };
+		4D9F45F825671F13001A6A15 /* RefractometerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9F45F725671F13001A6A15 /* RefractometerModel.swift */; };
+		4DA0CD242513FFE80087DD9C /* Computations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0CD232513FFE80087DD9C /* Computations.swift */; };
+		4DA0CD29251400350087DD9C /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0CD28251400350087DD9C /* Formatters.swift */; };
+		4DA9FE77251A6117008C0BB4 /* UIViewController+Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9FE76251A6117008C0BB4 /* UIViewController+Scene.swift */; };
+		4DC3645D258AC68800DF5B8D /* DisclosureIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3645C258AC68800DF5B8D /* DisclosureIndicator.swift */; };
+		4DE51EAC251D027300C6DBE8 /* WortCorrectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE51EAB251D027300C6DBE8 /* WortCorrectionCell.swift */; };
+		4DF0E0F22595F509007C2D0E /* ReadableWidthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF0E0F12595F509007C2D0E /* ReadableWidthView.swift */; };
+		4DF18BC0255804C900CFE63F /* FormulaInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF18BBF255804C900CFE63F /* FormulaInput.swift */; };
+		4DF2ECE5252F8975007A0CDD /* FormulaInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A18F22522620200938ED7 /* FormulaInputCell.swift */; };
+		4DF2ECE8252F8987007A0CDD /* RefractionInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A18F72522621E00938ED7 /* RefractionInputCell.swift */; };
+		4DF2ECEB252F8991007A0CDD /* RefractionInputLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A18F62522621E00938ED7 /* RefractionInputLabel.swift */; };
+		4DF2ECEE252F89E7007A0CDD /* RefractionInputLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A18F82522621E00938ED7 /* RefractionInputLayout.swift */; };
+		4DFEE8A12515684100D50171 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE8A32515684100D50171 /* Localizable.strings */; };
+		4DFEE8AB251569DA00D50171 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DFEE8AA251569DA00D50171 /* MessageUI.framework */; };
+		4DFEE8AF251611BC00D50171 /* ItemPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEE8AE251611BC00D50171 /* ItemPickerController.swift */; };
+		4DFEE9112517697D00D50171 /* AppIconBlue@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE90D2517697D00D50171 /* AppIconBlue@2x~ipad.png */; };
+		4DFEE9122517697D00D50171 /* AppIconBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE90E2517697D00D50171 /* AppIconBlue@3x.png */; };
+		4DFEE9132517697D00D50171 /* AppIconBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE90F2517697D00D50171 /* AppIconBlue@2x.png */; };
+		4DFEE9142517697D00D50171 /* AppIconBluePro@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE9102517697D00D50171 /* AppIconBluePro@2x~ipad.png */; };
+		4DFEE91B2517698900D50171 /* AppIconRed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE9172517698900D50171 /* AppIconRed@3x.png */; };
+		4DFEE91C2517698900D50171 /* AppIconRedPro@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE9182517698900D50171 /* AppIconRedPro@2x~ipad.png */; };
+		4DFEE91D2517698900D50171 /* AppIconRed@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE9192517698900D50171 /* AppIconRed@2x~ipad.png */; };
+		4DFEE91E2517698900D50171 /* AppIconRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE91A2517698900D50171 /* AppIconRed@2x.png */; };
+		4DFEE9252517699300D50171 /* AppIconYellow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE9212517699300D50171 /* AppIconYellow@3x.png */; };
+		4DFEE9262517699300D50171 /* AppIconYellowPro@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE9222517699300D50171 /* AppIconYellowPro@2x~ipad.png */; };
+		4DFEE9272517699300D50171 /* AppIconYellow@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE9232517699300D50171 /* AppIconYellow@2x~ipad.png */; };
+		4DFEE9282517699300D50171 /* AppIconYellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE9242517699300D50171 /* AppIconYellow@2x.png */; };
+		4DFEE92F2517699B00D50171 /* AppIconWhitePro@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE92B2517699B00D50171 /* AppIconWhitePro@2x~ipad.png */; };
+		4DFEE9302517699B00D50171 /* AppIconWhite@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE92C2517699B00D50171 /* AppIconWhite@2x~ipad.png */; };
+		4DFEE9312517699B00D50171 /* AppIconWhite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE92D2517699B00D50171 /* AppIconWhite@3x.png */; };
+		4DFEE9322517699B00D50171 /* AppIconWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DFEE92E2517699B00D50171 /* AppIconWhite@2x.png */; };
+		4DFEE9452517EDD400D50171 /* ItemPickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEE9442517EDD400D50171 /* ItemPickable.swift */; };
+		4DFEE94B2517EE2700D50171 /* ItemPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEE94A2517EE2700D50171 /* ItemPickerCell.swift */; };
+		4DFEE94F2517EE5900D50171 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEE94E2517EE5900D50171 /* ItemCell.swift */; };
+		4DFEE95E25192B1800D50171 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEE95D25192B1800D50171 /* Settings.swift */; };
+		4DFEE96525193DB700D50171 /* LinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEE96425193DB700D50171 /* LinkCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4DAB298D19C24CF300AF04FF /* PBXContainerItemProxy */ = {
+		4D44AE172513FE5400ED5142 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4DAB296819C24CF300AF04FF /* Project object */;
+			containerPortal = 4D44ADF82513FE5300ED5142 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4DAB296F19C24CF300AF04FF;
-			remoteInfo = Refractometer;
+			remoteGlobalIDString = 4D44ADFF2513FE5300ED5142;
+			remoteInfo = Refracto;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D247D851A92A23A00FA5525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		4D247D881A92A23C00FA5525 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPad.strings; sourceTree = "<group>"; };
-		4D3584F419EC5067007EEC22 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
-		4D3584F519EC5067007EEC22 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
-		4D3584FB19EC6B9B007EEC22 /* SliderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
-		4D3584FC19EC6B9B007EEC22 /* SliderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderCell.m; sourceTree = "<group>"; };
-		4D3584FE19EEBDE8007EEC22 /* VerticalRefractionPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalRefractionPicker.h; sourceTree = "<group>"; };
-		4D3584FF19EEBDE8007EEC22 /* VerticalRefractionPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionPicker.m; sourceTree = "<group>"; };
-		4D35850219EED827007EEC22 /* VerticalRefractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalRefractionCell.h; sourceTree = "<group>"; };
-		4D35850319EED827007EEC22 /* VerticalRefractionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionCell.m; sourceTree = "<group>"; };
-		4D35850519EF104E007EEC22 /* VerticalRefractionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalRefractionLayout.h; sourceTree = "<group>"; };
-		4D35850619EF104E007EEC22 /* VerticalRefractionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionLayout.m; sourceTree = "<group>"; };
-		4D35850819EFB92C007EEC22 /* VerticalRefractionSupplementaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalRefractionSupplementaryView.h; sourceTree = "<group>"; };
-		4D35850919EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionSupplementaryView.m; sourceTree = "<group>"; };
-		4D40A6DF1D577DBC0018ADED /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theme.h; sourceTree = "<group>"; };
-		4D40A6E01D577DBC0018ADED /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theme.m; sourceTree = "<group>"; };
-		4D4CF25B1F406E0100F4C729 /* UnitController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitController.m; sourceTree = "<group>"; };
-		4D4CF25D1F406E1900F4C729 /* UnitController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitController.h; sourceTree = "<group>"; };
-		4D4F860519F3D67500DEDB55 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		4D6A5F491B3F240A00BD8883 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
-		4D70FE5D1B4150BD00309C50 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		4D879CDC1F6F0C1200D27AEB /* UIFont+Monospaced.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Monospaced.h"; sourceTree = "<group>"; };
-		4D879CDD1F6F0C7600D27AEB /* UIFont+Monospaced.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Monospaced.m"; sourceTree = "<group>"; };
-		4D9796A41A521E1100B91C6C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main_iPhone.strings; sourceTree = "<group>"; };
-		4D9E61E41B415058001895D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4DA96B2C1A2FBE8F00E4091A /* RefractometerDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefractometerDisplayController.h; sourceTree = "<group>"; };
-		4DA96B2D1A2FBE8F00E4091A /* RefractometerDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefractometerDisplayController.m; sourceTree = "<group>"; };
-		4DA96B2F1A2FC30500E4091A /* RefractometerInputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefractometerInputController.h; sourceTree = "<group>"; };
-		4DA96B301A2FC30500E4091A /* RefractometerInputController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefractometerInputController.m; sourceTree = "<group>"; };
-		4DAB297019C24CF300AF04FF /* Refracto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Refracto.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DAB297419C24CF300AF04FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DAB297519C24CF300AF04FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4DAB297719C24CF300AF04FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4DAB297819C24CF300AF04FF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4DAB297A19C24CF300AF04FF /* RefractometerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefractometerController.h; sourceTree = "<group>"; };
-		4DAB297B19C24CF300AF04FF /* RefractometerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefractometerController.m; sourceTree = "<group>"; };
-		4DAB298119C24CF300AF04FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		4DAB298319C24CF300AF04FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4DAB298C19C24CF300AF04FF /* RefractoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RefractoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DAB299119C24CF300AF04FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DAB299219C24CF300AF04FF /* RefractoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RefractoTests.m; sourceTree = "<group>"; };
-		4DAB299C19C24DF100AF04FF /* RefractometerComputation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefractometerComputation.h; sourceTree = "<group>"; };
-		4DAB299D19C24DF100AF04FF /* RefractometerComputation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefractometerComputation.m; sourceTree = "<group>"; };
-		4DB1179C19C788420027AB70 /* HorizontalModeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalModeCell.h; sourceTree = "<group>"; };
-		4DB1179D19C788420027AB70 /* HorizontalModeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalModeCell.m; sourceTree = "<group>"; };
-		4DB1179F19C7932E0027AB70 /* HorizontalModePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalModePicker.h; sourceTree = "<group>"; };
-		4DB117A019C7932E0027AB70 /* HorizontalModePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalModePicker.m; sourceTree = "<group>"; };
-		4DB117A219C79E080027AB70 /* Refracto-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Refracto-Prefix.pch"; sourceTree = "<group>"; };
-		4DD7E21A19C5BE7400E9447E /* StyleSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StyleSettings.plist; sourceTree = "<group>"; };
-		4DDFD44C1A52BBA6003AD7F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4DDFD44E1A52BBA8003AD7F7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4DEE84541A4F5DF6004BFAC3 /* VerticalRefractionNeedle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalRefractionNeedle.h; sourceTree = "<group>"; };
-		4DEE84551A4F5DF6004BFAC3 /* VerticalRefractionNeedle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefractionNeedle.m; sourceTree = "<group>"; };
-		4DEE84571A50217C004BFAC3 /* NSDecimalNumber+Refracto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Refracto.h"; sourceTree = "<group>"; };
-		4DEE84581A50217C004BFAC3 /* NSDecimalNumber+Refracto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Refracto.m"; sourceTree = "<group>"; };
-		4DF58A3A1A5615B0007F508B /* RootTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabController.h; sourceTree = "<group>"; };
-		4DF58A3B1A5615B0007F508B /* RootTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabController.m; sourceTree = "<group>"; };
+		4D0A09FD2561952D0086B6BD /* ValueDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueDisplay.swift; sourceTree = "<group>"; };
+		4D0B6B32258EA2CC00504315 /* AppIconBlack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconBlack@2x.png"; sourceTree = "<group>"; };
+		4D0B6B33258EA2CC00504315 /* AppIconBlack@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconBlack@2x~ipad.png"; sourceTree = "<group>"; };
+		4D0B6B34258EA2CC00504315 /* AppIconBlack@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconBlack@3x.png"; sourceTree = "<group>"; };
+		4D0B6B35258EA2CC00504315 /* AppIconBlackPro@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconBlackPro@2x~ipad.png"; sourceTree = "<group>"; };
+		4D399E3C25892A4D00079CE9 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		4D399E40258942A500079CE9 /* SettingsBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBaseTableViewCell.swift; sourceTree = "<group>"; };
+		4D44AE002513FE5300ED5142 /* Refracto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Refracto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D44AE032513FE5300ED5142 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D44AE052513FE5300ED5142 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4D44AE0C2513FE5400ED5142 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D44AE0F2513FE5400ED5142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D44AE112513FE5400ED5142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D44AE162513FE5400ED5142 /* RefractoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RefractoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D44AE1A2513FE5400ED5142 /* RefractoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefractoTests.swift; sourceTree = "<group>"; };
+		4D44AE1C2513FE5400ED5142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D54B03525152E570017C3DD /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		4D54B03F251531260017C3DD /* RefractometerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefractometerController.swift; sourceTree = "<group>"; };
+		4D54B04725153E8C0017C3DD /* String+Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
+		4D5AFD3E258B959300C7D7E1 /* SeparatorLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorLine.swift; sourceTree = "<group>"; };
+		4D7D9425255837690089F864 /* RefractometerDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefractometerDisplay.swift; sourceTree = "<group>"; };
+		4D7D942C2558434E0089F864 /* RefractionInputNeedle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefractionInputNeedle.swift; sourceTree = "<group>"; };
+		4D7D943025584A700089F864 /* FormulaInputDot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaInputDot.swift; sourceTree = "<group>"; };
+		4D800D3E2593FFCB005AFD5A /* NSLayoutConstraint+Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Priority.swift"; sourceTree = "<group>"; };
+		4D8944C0252082B0004A132D /* UIView+Embedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Embedding.swift"; sourceTree = "<group>"; };
+		4D8944C8252085B5004A132D /* RefractometerNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefractometerNavigationController.swift; sourceTree = "<group>"; };
+		4D8944CE25208E60004A132D /* UIFont+MonospacedNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+MonospacedNumbers.swift"; sourceTree = "<group>"; };
+		4D9035082556C4BB00F6ABC3 /* RefractionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefractionInput.swift; sourceTree = "<group>"; };
+		4D9A18F22522620200938ED7 /* FormulaInputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormulaInputCell.swift; sourceTree = "<group>"; };
+		4D9A18F62522621E00938ED7 /* RefractionInputLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefractionInputLabel.swift; sourceTree = "<group>"; };
+		4D9A18F72522621E00938ED7 /* RefractionInputCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefractionInputCell.swift; sourceTree = "<group>"; };
+		4D9A18F82522621E00938ED7 /* RefractionInputLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefractionInputLayout.swift; sourceTree = "<group>"; };
+		4D9F45F725671F13001A6A15 /* RefractometerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefractometerModel.swift; sourceTree = "<group>"; };
+		4DA0CD232513FFE80087DD9C /* Computations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Computations.swift; sourceTree = "<group>"; };
+		4DA0CD28251400350087DD9C /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		4DA9FE76251A6117008C0BB4 /* UIViewController+Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Scene.swift"; sourceTree = "<group>"; };
+		4DC3645C258AC68800DF5B8D /* DisclosureIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureIndicator.swift; sourceTree = "<group>"; };
+		4DE51EAB251D027300C6DBE8 /* WortCorrectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WortCorrectionCell.swift; sourceTree = "<group>"; };
+		4DF0E0F12595F509007C2D0E /* ReadableWidthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadableWidthView.swift; sourceTree = "<group>"; };
+		4DF18BBF255804C900CFE63F /* FormulaInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaInput.swift; sourceTree = "<group>"; };
+		4DFEE8A22515684100D50171 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4DFEE8A6251568CD00D50171 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4DFEE8AA251569DA00D50171 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4DFEE8AE251611BC00D50171 /* ItemPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPickerController.swift; sourceTree = "<group>"; };
+		4DFEE90D2517697D00D50171 /* AppIconBlue@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconBlue@2x~ipad.png"; sourceTree = "<group>"; };
+		4DFEE90E2517697D00D50171 /* AppIconBlue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconBlue@3x.png"; sourceTree = "<group>"; };
+		4DFEE90F2517697D00D50171 /* AppIconBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconBlue@2x.png"; sourceTree = "<group>"; };
+		4DFEE9102517697D00D50171 /* AppIconBluePro@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconBluePro@2x~ipad.png"; sourceTree = "<group>"; };
+		4DFEE9172517698900D50171 /* AppIconRed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconRed@3x.png"; sourceTree = "<group>"; };
+		4DFEE9182517698900D50171 /* AppIconRedPro@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconRedPro@2x~ipad.png"; sourceTree = "<group>"; };
+		4DFEE9192517698900D50171 /* AppIconRed@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconRed@2x~ipad.png"; sourceTree = "<group>"; };
+		4DFEE91A2517698900D50171 /* AppIconRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconRed@2x.png"; sourceTree = "<group>"; };
+		4DFEE9212517699300D50171 /* AppIconYellow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconYellow@3x.png"; sourceTree = "<group>"; };
+		4DFEE9222517699300D50171 /* AppIconYellowPro@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconYellowPro@2x~ipad.png"; sourceTree = "<group>"; };
+		4DFEE9232517699300D50171 /* AppIconYellow@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconYellow@2x~ipad.png"; sourceTree = "<group>"; };
+		4DFEE9242517699300D50171 /* AppIconYellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconYellow@2x.png"; sourceTree = "<group>"; };
+		4DFEE92B2517699B00D50171 /* AppIconWhitePro@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconWhitePro@2x~ipad.png"; sourceTree = "<group>"; };
+		4DFEE92C2517699B00D50171 /* AppIconWhite@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconWhite@2x~ipad.png"; sourceTree = "<group>"; };
+		4DFEE92D2517699B00D50171 /* AppIconWhite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconWhite@3x.png"; sourceTree = "<group>"; };
+		4DFEE92E2517699B00D50171 /* AppIconWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconWhite@2x.png"; sourceTree = "<group>"; };
+		4DFEE9442517EDD400D50171 /* ItemPickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPickable.swift; sourceTree = "<group>"; };
+		4DFEE94A2517EE2700D50171 /* ItemPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPickerCell.swift; sourceTree = "<group>"; };
+		4DFEE94E2517EE5900D50171 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		4DFEE95D25192B1800D50171 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		4DFEE96425193DB700D50171 /* LinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4DAB296D19C24CF300AF04FF /* Frameworks */ = {
+		4D44ADFD2513FE5300ED5142 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D6A5F4A1B3F240A00BD8883 /* SafariServices.framework in Frameworks */,
-				4D4F860619F3D67500DEDB55 /* MessageUI.framework in Frameworks */,
+				4DFEE8AB251569DA00D50171 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4DAB298919C24CF300AF04FF /* Frameworks */ = {
+		4D44AE132513FE5400ED5142 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -127,224 +166,286 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D3584FA19EC69BD007EEC22 /* Settings */ = {
+		4D0B6B25258EA29200504315 /* Icon Black */ = {
 			isa = PBXGroup;
 			children = (
-				4D3584FB19EC6B9B007EEC22 /* SliderCell.h */,
-				4D3584FC19EC6B9B007EEC22 /* SliderCell.m */,
-				4D3584F419EC5067007EEC22 /* SettingsController.h */,
-				4D3584F519EC5067007EEC22 /* SettingsController.m */,
-				4D4CF25D1F406E1900F4C729 /* UnitController.h */,
-				4D4CF25B1F406E0100F4C729 /* UnitController.m */,
+				4D0B6B32258EA2CC00504315 /* AppIconBlack@2x.png */,
+				4D0B6B33258EA2CC00504315 /* AppIconBlack@2x~ipad.png */,
+				4D0B6B34258EA2CC00504315 /* AppIconBlack@3x.png */,
+				4D0B6B35258EA2CC00504315 /* AppIconBlackPro@2x~ipad.png */,
 			);
-			name = Settings;
+			name = "Icon Black";
 			sourceTree = "<group>";
 		};
-		4D35850119EEBE13007EEC22 /* Vertical Picker for Refraction Values */ = {
+		4D44ADF72513FE5300ED5142 = {
 			isa = PBXGroup;
 			children = (
-				4D3584FE19EEBDE8007EEC22 /* VerticalRefractionPicker.h */,
-				4D3584FF19EEBDE8007EEC22 /* VerticalRefractionPicker.m */,
-				4D35850519EF104E007EEC22 /* VerticalRefractionLayout.h */,
-				4D35850619EF104E007EEC22 /* VerticalRefractionLayout.m */,
-				4D35850219EED827007EEC22 /* VerticalRefractionCell.h */,
-				4D35850319EED827007EEC22 /* VerticalRefractionCell.m */,
-				4D35850819EFB92C007EEC22 /* VerticalRefractionSupplementaryView.h */,
-				4D35850919EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m */,
-				4DEE84541A4F5DF6004BFAC3 /* VerticalRefractionNeedle.h */,
-				4DEE84551A4F5DF6004BFAC3 /* VerticalRefractionNeedle.m */,
-			);
-			name = "Vertical Picker for Refraction Values";
-			sourceTree = "<group>";
-		};
-		4D4F860919F3DEE200DEDB55 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4D6A5F491B3F240A00BD8883 /* SafariServices.framework */,
-				4D4F860519F3D67500DEDB55 /* MessageUI.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4D4F860E19F3F13D00DEDB55 /* Refractometer */ = {
-			isa = PBXGroup;
-			children = (
-				4DAB299C19C24DF100AF04FF /* RefractometerComputation.h */,
-				4DAB299D19C24DF100AF04FF /* RefractometerComputation.m */,
-				4DAB297A19C24CF300AF04FF /* RefractometerController.h */,
-				4DAB297B19C24CF300AF04FF /* RefractometerController.m */,
-				4DA96B2C1A2FBE8F00E4091A /* RefractometerDisplayController.h */,
-				4DA96B2D1A2FBE8F00E4091A /* RefractometerDisplayController.m */,
-				4DA96B2F1A2FC30500E4091A /* RefractometerInputController.h */,
-				4DA96B301A2FC30500E4091A /* RefractometerInputController.m */,
-			);
-			name = Refractometer;
-			sourceTree = "<group>";
-		};
-		4D9F8CF41BA58844006264F2 /* Customizations */ = {
-			isa = PBXGroup;
-			children = (
-				4DEE84571A50217C004BFAC3 /* NSDecimalNumber+Refracto.h */,
-				4DEE84581A50217C004BFAC3 /* NSDecimalNumber+Refracto.m */,
-				4D879CDC1F6F0C1200D27AEB /* UIFont+Monospaced.h */,
-				4D879CDD1F6F0C7600D27AEB /* UIFont+Monospaced.m */,
-				4DF58A3A1A5615B0007F508B /* RootTabController.h */,
-				4DF58A3B1A5615B0007F508B /* RootTabController.m */,
-			);
-			name = Customizations;
-			sourceTree = "<group>";
-		};
-		4DAB296719C24CF300AF04FF = {
-			isa = PBXGroup;
-			children = (
-				4DAB297219C24CF300AF04FF /* Refracto */,
-				4DAB298F19C24CF300AF04FF /* RefractoTests */,
-				4D4F860919F3DEE200DEDB55 /* Frameworks */,
-				4DAB297119C24CF300AF04FF /* Products */,
+				4D44AE022513FE5300ED5142 /* Refracto */,
+				4D44AE192513FE5400ED5142 /* RefractoTests */,
+				4D44AE012513FE5300ED5142 /* Products */,
+				4DFEE8A9251569DA00D50171 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		4DAB297119C24CF300AF04FF /* Products */ = {
+		4D44AE012513FE5300ED5142 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4DAB297019C24CF300AF04FF /* Refracto.app */,
-				4DAB298C19C24CF300AF04FF /* RefractoTests.xctest */,
+				4D44AE002513FE5300ED5142 /* Refracto.app */,
+				4D44AE162513FE5400ED5142 /* RefractoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4DAB297219C24CF300AF04FF /* Refracto */ = {
+		4D44AE022513FE5300ED5142 /* Refracto */ = {
 			isa = PBXGroup;
 			children = (
-				4DAB297719C24CF300AF04FF /* AppDelegate.h */,
-				4DAB297819C24CF300AF04FF /* AppDelegate.m */,
-				4D40A6DF1D577DBC0018ADED /* Theme.h */,
-				4D40A6E01D577DBC0018ADED /* Theme.m */,
-				4DB1179819C783A00027AB70 /* Horizontal Picker for Computation Mode */,
-				4D35850119EEBE13007EEC22 /* Vertical Picker for Refraction Values */,
-				4D4F860E19F3F13D00DEDB55 /* Refractometer */,
-				4D3584FA19EC69BD007EEC22 /* Settings */,
-				4D9F8CF41BA58844006264F2 /* Customizations */,
-				4DAB297319C24CF300AF04FF /* Supporting Files */,
-				4DDFD44F1A52BBCE003AD7F7 /* Resources */,
-				4DAB298319C24CF300AF04FF /* Images.xcassets */,
+				4D44AE032513FE5300ED5142 /* AppDelegate.swift */,
+				4D44AE052513FE5300ED5142 /* SceneDelegate.swift */,
+				4DFEE96B25193E3100D50171 /* Refractometer */,
+				4DFEE96325193DA000D50171 /* Settings */,
+				4DA0CD2D251400470087DD9C /* Computations */,
+				4D54B04B25153E980017C3DD /* Extensions */,
+				4DA0CD38251401F00087DD9C /* Resources */,
 			);
 			path = Refracto;
 			sourceTree = "<group>";
 		};
-		4DAB297319C24CF300AF04FF /* Supporting Files */ = {
+		4D44AE192513FE5400ED5142 /* RefractoTests */ = {
 			isa = PBXGroup;
 			children = (
-				4DB117A219C79E080027AB70 /* Refracto-Prefix.pch */,
-				4DAB297519C24CF300AF04FF /* main.m */,
-				4DAB297419C24CF300AF04FF /* Info.plist */,
-				4DD7E21A19C5BE7400E9447E /* StyleSettings.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4DAB298F19C24CF300AF04FF /* RefractoTests */ = {
-			isa = PBXGroup;
-			children = (
-				4DAB299219C24CF300AF04FF /* RefractoTests.m */,
-				4DAB299019C24CF300AF04FF /* Supporting Files */,
+				4D44AE1A2513FE5400ED5142 /* RefractoTests.swift */,
+				4D44AE1C2513FE5400ED5142 /* Info.plist */,
 			);
 			path = RefractoTests;
 			sourceTree = "<group>";
 		};
-		4DAB299019C24CF300AF04FF /* Supporting Files */ = {
+		4D54B04B25153E980017C3DD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4DAB299119C24CF300AF04FF /* Info.plist */,
+				4D54B04725153E8C0017C3DD /* String+Localizable.swift */,
+				4D8944C0252082B0004A132D /* UIView+Embedding.swift */,
+				4DA9FE76251A6117008C0BB4 /* UIViewController+Scene.swift */,
+				4D8944CE25208E60004A132D /* UIFont+MonospacedNumbers.swift */,
+				4D800D3E2593FFCB005AFD5A /* NSLayoutConstraint+Priority.swift */,
 			);
-			name = "Supporting Files";
+			name = Extensions;
 			sourceTree = "<group>";
 		};
-		4DB1179819C783A00027AB70 /* Horizontal Picker for Computation Mode */ = {
+		4D7D9429255837700089F864 /* Display */ = {
 			isa = PBXGroup;
 			children = (
-				4DB1179F19C7932E0027AB70 /* HorizontalModePicker.h */,
-				4DB117A019C7932E0027AB70 /* HorizontalModePicker.m */,
-				4DB1179C19C788420027AB70 /* HorizontalModeCell.h */,
-				4DB1179D19C788420027AB70 /* HorizontalModeCell.m */,
+				4D7D9425255837690089F864 /* RefractometerDisplay.swift */,
+				4D0A09FD2561952D0086B6BD /* ValueDisplay.swift */,
 			);
-			name = "Horizontal Picker for Computation Mode";
+			name = Display;
 			sourceTree = "<group>";
 		};
-		4DDFD44F1A52BBCE003AD7F7 /* Resources */ = {
+		4DA0CD2D251400470087DD9C /* Computations */ = {
 			isa = PBXGroup;
 			children = (
-				4DDFD44D1A52BBA6003AD7F7 /* Localizable.strings */,
-				4DAB298019C24CF300AF04FF /* Main_iPhone.storyboard */,
-				4D247D861A92A23A00FA5525 /* Main_iPad.storyboard */,
-				4D9E61E51B415058001895D0 /* LaunchScreen.storyboard */,
+				4D399E3C25892A4D00079CE9 /* Colors.swift */,
+				4DA0CD232513FFE80087DD9C /* Computations.swift */,
+				4DA0CD28251400350087DD9C /* Formatters.swift */,
+			);
+			name = Computations;
+			sourceTree = "<group>";
+		};
+		4DA0CD38251401F00087DD9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D44AE112513FE5400ED5142 /* Info.plist */,
+				4D44AE0E2513FE5400ED5142 /* LaunchScreen.storyboard */,
+				4DFEE8A32515684100D50171 /* Localizable.strings */,
+				4D44AE0C2513FE5400ED5142 /* Assets.xcassets */,
+				4DFEE939251769E300D50171 /* Alternate Icons */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		4DF2ECF1252F8A78007A0CDD /* Refraction Input */ = {
+			isa = PBXGroup;
+			children = (
+				4D9035082556C4BB00F6ABC3 /* RefractionInput.swift */,
+				4D9A18F72522621E00938ED7 /* RefractionInputCell.swift */,
+				4D9A18F62522621E00938ED7 /* RefractionInputLabel.swift */,
+				4D9A18F82522621E00938ED7 /* RefractionInputLayout.swift */,
+				4D7D942C2558434E0089F864 /* RefractionInputNeedle.swift */,
+			);
+			name = "Refraction Input";
+			sourceTree = "<group>";
+		};
+		4DF2ECF2252F8A96007A0CDD /* Formula Selection */ = {
+			isa = PBXGroup;
+			children = (
+				4DF18BBF255804C900CFE63F /* FormulaInput.swift */,
+				4D9A18F22522620200938ED7 /* FormulaInputCell.swift */,
+				4D7D943025584A700089F864 /* FormulaInputDot.swift */,
+			);
+			name = "Formula Selection";
+			sourceTree = "<group>";
+		};
+		4DFEE8A9251569DA00D50171 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DFEE8AA251569DA00D50171 /* MessageUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DFEE935251769B600D50171 /* Icon Blue */ = {
+			isa = PBXGroup;
+			children = (
+				4DFEE90F2517697D00D50171 /* AppIconBlue@2x.png */,
+				4DFEE90D2517697D00D50171 /* AppIconBlue@2x~ipad.png */,
+				4DFEE90E2517697D00D50171 /* AppIconBlue@3x.png */,
+				4DFEE9102517697D00D50171 /* AppIconBluePro@2x~ipad.png */,
+			);
+			name = "Icon Blue";
+			sourceTree = "<group>";
+		};
+		4DFEE936251769BE00D50171 /* Icon Red */ = {
+			isa = PBXGroup;
+			children = (
+				4DFEE91A2517698900D50171 /* AppIconRed@2x.png */,
+				4DFEE9192517698900D50171 /* AppIconRed@2x~ipad.png */,
+				4DFEE9172517698900D50171 /* AppIconRed@3x.png */,
+				4DFEE9182517698900D50171 /* AppIconRedPro@2x~ipad.png */,
+			);
+			name = "Icon Red";
+			sourceTree = "<group>";
+		};
+		4DFEE937251769C600D50171 /* Icon Yellow */ = {
+			isa = PBXGroup;
+			children = (
+				4DFEE9242517699300D50171 /* AppIconYellow@2x.png */,
+				4DFEE9232517699300D50171 /* AppIconYellow@2x~ipad.png */,
+				4DFEE9212517699300D50171 /* AppIconYellow@3x.png */,
+				4DFEE9222517699300D50171 /* AppIconYellowPro@2x~ipad.png */,
+			);
+			name = "Icon Yellow";
+			sourceTree = "<group>";
+		};
+		4DFEE938251769CE00D50171 /* Icon White */ = {
+			isa = PBXGroup;
+			children = (
+				4DFEE92E2517699B00D50171 /* AppIconWhite@2x.png */,
+				4DFEE92C2517699B00D50171 /* AppIconWhite@2x~ipad.png */,
+				4DFEE92D2517699B00D50171 /* AppIconWhite@3x.png */,
+				4DFEE92B2517699B00D50171 /* AppIconWhitePro@2x~ipad.png */,
+			);
+			name = "Icon White";
+			sourceTree = "<group>";
+		};
+		4DFEE939251769E300D50171 /* Alternate Icons */ = {
+			isa = PBXGroup;
+			children = (
+				4D0B6B25258EA29200504315 /* Icon Black */,
+				4DFEE935251769B600D50171 /* Icon Blue */,
+				4DFEE936251769BE00D50171 /* Icon Red */,
+				4DFEE937251769C600D50171 /* Icon Yellow */,
+				4DFEE938251769CE00D50171 /* Icon White */,
+			);
+			name = "Alternate Icons";
+			sourceTree = "<group>";
+		};
+		4DFEE9522517EE8300D50171 /* ItemPicker */ = {
+			isa = PBXGroup;
+			children = (
+				4DFEE9442517EDD400D50171 /* ItemPickable.swift */,
+				4DFEE94A2517EE2700D50171 /* ItemPickerCell.swift */,
+				4DC3645C258AC68800DF5B8D /* DisclosureIndicator.swift */,
+				4DFEE8AE251611BC00D50171 /* ItemPickerController.swift */,
+				4DFEE94E2517EE5900D50171 /* ItemCell.swift */,
+			);
+			name = ItemPicker;
+			sourceTree = "<group>";
+		};
+		4DFEE96325193DA000D50171 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4DFEE95D25192B1800D50171 /* Settings.swift */,
+				4D54B03525152E570017C3DD /* SettingsController.swift */,
+				4D8944C8252085B5004A132D /* RefractometerNavigationController.swift */,
+				4D399E40258942A500079CE9 /* SettingsBaseTableViewCell.swift */,
+				4DFEE96425193DB700D50171 /* LinkCell.swift */,
+				4DE51EAB251D027300C6DBE8 /* WortCorrectionCell.swift */,
+				4DFEE9522517EE8300D50171 /* ItemPicker */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		4DFEE96B25193E3100D50171 /* Refractometer */ = {
+			isa = PBXGroup;
+			children = (
+				4D54B03F251531260017C3DD /* RefractometerController.swift */,
+				4D9F45F725671F13001A6A15 /* RefractometerModel.swift */,
+				4D5AFD3E258B959300C7D7E1 /* SeparatorLine.swift */,
+				4DF0E0F12595F509007C2D0E /* ReadableWidthView.swift */,
+				4D7D9429255837700089F864 /* Display */,
+				4DF2ECF2252F8A96007A0CDD /* Formula Selection */,
+				4DF2ECF1252F8A78007A0CDD /* Refraction Input */,
+			);
+			name = Refractometer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4DAB296F19C24CF300AF04FF /* Refracto */ = {
+		4D44ADFF2513FE5300ED5142 /* Refracto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4DAB299619C24CF300AF04FF /* Build configuration list for PBXNativeTarget "Refracto" */;
+			buildConfigurationList = 4D44AE2A2513FE5400ED5142 /* Build configuration list for PBXNativeTarget "Refracto" */;
 			buildPhases = (
-				4DAB296C19C24CF300AF04FF /* Sources */,
-				4DAB296D19C24CF300AF04FF /* Frameworks */,
-				4DAB296E19C24CF300AF04FF /* Resources */,
-				4D759E041A6C2EA200A2DFD2 /* Update Build Number */,
-				4D3233111C8F499300251375 /* Warnings for FIXME and TODO */,
+				4D44ADFC2513FE5300ED5142 /* Sources */,
+				4D44ADFD2513FE5300ED5142 /* Frameworks */,
+				4D44ADFE2513FE5300ED5142 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Refracto;
-			productName = Refractometer;
-			productReference = 4DAB297019C24CF300AF04FF /* Refracto.app */;
+			productName = Refracto;
+			productReference = 4D44AE002513FE5300ED5142 /* Refracto.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4DAB298B19C24CF300AF04FF /* RefractoTests */ = {
+		4D44AE152513FE5400ED5142 /* RefractoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4DAB299919C24CF300AF04FF /* Build configuration list for PBXNativeTarget "RefractoTests" */;
+			buildConfigurationList = 4D44AE2D2513FE5400ED5142 /* Build configuration list for PBXNativeTarget "RefractoTests" */;
 			buildPhases = (
-				4DAB298819C24CF300AF04FF /* Sources */,
-				4DAB298919C24CF300AF04FF /* Frameworks */,
-				4DAB298A19C24CF300AF04FF /* Resources */,
+				4D44AE122513FE5400ED5142 /* Sources */,
+				4D44AE132513FE5400ED5142 /* Frameworks */,
+				4D44AE142513FE5400ED5142 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4DAB298E19C24CF300AF04FF /* PBXTargetDependency */,
+				4D44AE182513FE5400ED5142 /* PBXTargetDependency */,
 			);
 			name = RefractoTests;
-			productName = RefractometerTests;
-			productReference = 4DAB298C19C24CF300AF04FF /* RefractoTests.xctest */;
+			productName = RefractoTests;
+			productReference = 4D44AE162513FE5400ED5142 /* RefractoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4DAB296819C24CF300AF04FF /* Project object */ = {
+		4D44ADF82513FE5300ED5142 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "Michael Schmidt";
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					4DAB296F19C24CF300AF04FF = {
-						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = V3YNQKY4J7;
-						ProvisioningStyle = Automatic;
+					4D44ADFF2513FE5300ED5142 = {
+						CreatedOnToolsVersion = 12.0;
 					};
-					4DAB298B19C24CF300AF04FF = {
-						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = V3YNQKY4J7;
-						TestTargetID = 4DAB296F19C24CF300AF04FF;
+					4D44AE152513FE5400ED5142 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 4D44ADFF2513FE5300ED5142;
 					};
 				};
 			};
-			buildConfigurationList = 4DAB296B19C24CF300AF04FF /* Build configuration list for PBXProject "Refracto" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = 4D44ADFB2513FE5300ED5142 /* Build configuration list for PBXProject "Refracto" */;
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -352,31 +453,49 @@
 				Base,
 				de,
 			);
-			mainGroup = 4DAB296719C24CF300AF04FF;
-			productRefGroup = 4DAB297119C24CF300AF04FF /* Products */;
+			mainGroup = 4D44ADF72513FE5300ED5142;
+			productRefGroup = 4D44AE012513FE5300ED5142 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4DAB296F19C24CF300AF04FF /* Refracto */,
-				4DAB298B19C24CF300AF04FF /* RefractoTests */,
+				4D44ADFF2513FE5300ED5142 /* Refracto */,
+				4D44AE152513FE5400ED5142 /* RefractoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4DAB296E19C24CF300AF04FF /* Resources */ = {
+		4D44ADFE2513FE5300ED5142 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D247D841A92A23A00FA5525 /* Main_iPad.storyboard in Resources */,
-				4DAB298219C24CF300AF04FF /* Main_iPhone.storyboard in Resources */,
-				4DDFD44B1A52BBA6003AD7F7 /* Localizable.strings in Resources */,
-				4D9E61E31B415058001895D0 /* LaunchScreen.storyboard in Resources */,
-				4DAB298419C24CF300AF04FF /* Images.xcassets in Resources */,
+				4DFEE9252517699300D50171 /* AppIconYellow@3x.png in Resources */,
+				4DFEE91D2517698900D50171 /* AppIconRed@2x~ipad.png in Resources */,
+				4DFEE91B2517698900D50171 /* AppIconRed@3x.png in Resources */,
+				4DFEE9122517697D00D50171 /* AppIconBlue@3x.png in Resources */,
+				4D44AE102513FE5400ED5142 /* LaunchScreen.storyboard in Resources */,
+				4DFEE9142517697D00D50171 /* AppIconBluePro@2x~ipad.png in Resources */,
+				4DFEE8A12515684100D50171 /* Localizable.strings in Resources */,
+				4D0B6B39258EA2CC00504315 /* AppIconBlackPro@2x~ipad.png in Resources */,
+				4DFEE9132517697D00D50171 /* AppIconBlue@2x.png in Resources */,
+				4DFEE9312517699B00D50171 /* AppIconWhite@3x.png in Resources */,
+				4DFEE9262517699300D50171 /* AppIconYellowPro@2x~ipad.png in Resources */,
+				4DFEE9282517699300D50171 /* AppIconYellow@2x.png in Resources */,
+				4DFEE9322517699B00D50171 /* AppIconWhite@2x.png in Resources */,
+				4D0B6B38258EA2CC00504315 /* AppIconBlack@3x.png in Resources */,
+				4DFEE9302517699B00D50171 /* AppIconWhite@2x~ipad.png in Resources */,
+				4DFEE91E2517698900D50171 /* AppIconRed@2x.png in Resources */,
+				4DFEE91C2517698900D50171 /* AppIconRedPro@2x~ipad.png in Resources */,
+				4DFEE92F2517699B00D50171 /* AppIconWhitePro@2x~ipad.png in Resources */,
+				4DFEE9112517697D00D50171 /* AppIconBlue@2x~ipad.png in Resources */,
+				4DFEE9272517699300D50171 /* AppIconYellow@2x~ipad.png in Resources */,
+				4D44AE0D2513FE5400ED5142 /* Assets.xcassets in Resources */,
+				4D0B6B37258EA2CC00504315 /* AppIconBlack@2x~ipad.png in Resources */,
+				4D0B6B36258EA2CC00504315 /* AppIconBlack@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4DAB298A19C24CF300AF04FF /* Resources */ = {
+		4D44AE142513FE5400ED5142 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -385,116 +504,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4D3233111C8F499300251375 /* Warnings for FIXME and TODO */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Warnings for FIXME and TODO";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "KEYWORDS=\"TODO|FIXME|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" \\) -print0 | \\\nxargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | \\\nperl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
-		};
-		4D759E041A6C2EA200A2DFD2 /* Update Build Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Update Build Number";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "git=`sh /etc/profile; which git`\nappBuild=`\"$git\" rev-list --all | wc -l`\nappBuild=$(($appBuild + 110))\n\nif [ $CONFIGURATION = \"Debug\" ]; then\nbranchName=`\"$git\" rev-parse --abbrev-ref HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nelse\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nfi\n\necho \"Updated ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		4DAB296C19C24CF300AF04FF /* Sources */ = {
+		4D44ADFC2513FE5300ED5142 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DA96B311A2FC30500E4091A /* RefractometerInputController.m in Sources */,
-				4DAB297919C24CF300AF04FF /* AppDelegate.m in Sources */,
-				4D879CDE1F6F0C7600D27AEB /* UIFont+Monospaced.m in Sources */,
-				4DAB297C19C24CF300AF04FF /* RefractometerController.m in Sources */,
-				4D40A6E11D577DBC0018ADED /* Theme.m in Sources */,
-				4D35850019EEBDE8007EEC22 /* VerticalRefractionPicker.m in Sources */,
-				4DAB299E19C24DF100AF04FF /* RefractometerComputation.m in Sources */,
-				4D4CF25C1F406E0100F4C729 /* UnitController.m in Sources */,
-				4DB117A119C7932E0027AB70 /* HorizontalModePicker.m in Sources */,
-				4DEE84591A50217C004BFAC3 /* NSDecimalNumber+Refracto.m in Sources */,
-				4DA96B2E1A2FBE8F00E4091A /* RefractometerDisplayController.m in Sources */,
-				4DF58A3C1A5615B0007F508B /* RootTabController.m in Sources */,
-				4D3584FD19EC6B9B007EEC22 /* SliderCell.m in Sources */,
-				4DEE84561A4F5DF6004BFAC3 /* VerticalRefractionNeedle.m in Sources */,
-				4DB1179E19C788420027AB70 /* HorizontalModeCell.m in Sources */,
-				4D35850719EF104E007EEC22 /* VerticalRefractionLayout.m in Sources */,
-				4D35850A19EFB92C007EEC22 /* VerticalRefractionSupplementaryView.m in Sources */,
-				4D3584F619EC5067007EEC22 /* SettingsController.m in Sources */,
-				4D35850419EED827007EEC22 /* VerticalRefractionCell.m in Sources */,
-				4DAB297619C24CF300AF04FF /* main.m in Sources */,
+				4D9035092556C4BB00F6ABC3 /* RefractionInput.swift in Sources */,
+				4D54B03625152E570017C3DD /* SettingsController.swift in Sources */,
+				4D44AE042513FE5300ED5142 /* AppDelegate.swift in Sources */,
+				4DFEE95E25192B1800D50171 /* Settings.swift in Sources */,
+				4D399E3D25892A4D00079CE9 /* Colors.swift in Sources */,
+				4DA9FE77251A6117008C0BB4 /* UIViewController+Scene.swift in Sources */,
+				4D44AE062513FE5300ED5142 /* SceneDelegate.swift in Sources */,
+				4D800D3F2593FFCB005AFD5A /* NSLayoutConstraint+Priority.swift in Sources */,
+				4DFEE9452517EDD400D50171 /* ItemPickable.swift in Sources */,
+				4D8944CF25208E60004A132D /* UIFont+MonospacedNumbers.swift in Sources */,
+				4DFEE96525193DB700D50171 /* LinkCell.swift in Sources */,
+				4D8944C1252082B0004A132D /* UIView+Embedding.swift in Sources */,
+				4DA0CD29251400350087DD9C /* Formatters.swift in Sources */,
+				4DF2ECE8252F8987007A0CDD /* RefractionInputCell.swift in Sources */,
+				4D399E41258942A500079CE9 /* SettingsBaseTableViewCell.swift in Sources */,
+				4DF2ECEB252F8991007A0CDD /* RefractionInputLabel.swift in Sources */,
+				4DFEE8AF251611BC00D50171 /* ItemPickerController.swift in Sources */,
+				4D5AFD3F258B959300C7D7E1 /* SeparatorLine.swift in Sources */,
+				4D8944C9252085B5004A132D /* RefractometerNavigationController.swift in Sources */,
+				4DE51EAC251D027300C6DBE8 /* WortCorrectionCell.swift in Sources */,
+				4D0A09FE2561952D0086B6BD /* ValueDisplay.swift in Sources */,
+				4DFEE94B2517EE2700D50171 /* ItemPickerCell.swift in Sources */,
+				4DFEE94F2517EE5900D50171 /* ItemCell.swift in Sources */,
+				4DA0CD242513FFE80087DD9C /* Computations.swift in Sources */,
+				4DF18BC0255804C900CFE63F /* FormulaInput.swift in Sources */,
+				4DF2ECE5252F8975007A0CDD /* FormulaInputCell.swift in Sources */,
+				4D54B040251531260017C3DD /* RefractometerController.swift in Sources */,
+				4D7D942D2558434E0089F864 /* RefractionInputNeedle.swift in Sources */,
+				4DC3645D258AC68800DF5B8D /* DisclosureIndicator.swift in Sources */,
+				4D7D9426255837690089F864 /* RefractometerDisplay.swift in Sources */,
+				4DF0E0F22595F509007C2D0E /* ReadableWidthView.swift in Sources */,
+				4D7D943125584A700089F864 /* FormulaInputDot.swift in Sources */,
+				4DF2ECEE252F89E7007A0CDD /* RefractionInputLayout.swift in Sources */,
+				4D54B04825153E8C0017C3DD /* String+Localizable.swift in Sources */,
+				4D9F45F825671F13001A6A15 /* RefractometerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4DAB298819C24CF300AF04FF /* Sources */ = {
+		4D44AE122513FE5400ED5142 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DAB299319C24CF300AF04FF /* RefractoTests.m in Sources */,
+				4D44AE1B2513FE5400ED5142 /* RefractoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4DAB298E19C24CF300AF04FF /* PBXTargetDependency */ = {
+		4D44AE182513FE5400ED5142 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4DAB296F19C24CF300AF04FF /* Refracto */;
-			targetProxy = 4DAB298D19C24CF300AF04FF /* PBXContainerItemProxy */;
+			target = 4D44ADFF2513FE5300ED5142 /* Refracto */;
+			targetProxy = 4D44AE172513FE5400ED5142 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4D247D861A92A23A00FA5525 /* Main_iPad.storyboard */ = {
+		4D44AE0E2513FE5400ED5142 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4D247D851A92A23A00FA5525 /* Base */,
-				4D247D881A92A23C00FA5525 /* de */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		4D9E61E51B415058001895D0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4D9E61E41B415058001895D0 /* Base */,
-				4D70FE5D1B4150BD00309C50 /* de */,
+				4D44AE0F2513FE5400ED5142 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		4DAB298019C24CF300AF04FF /* Main_iPhone.storyboard */ = {
+		4DFEE8A32515684100D50171 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4DAB298119C24CF300AF04FF /* Base */,
-				4D9796A41A521E1100B91C6C /* de */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		4DDFD44D1A52BBA6003AD7F7 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4DDFD44C1A52BBA6003AD7F7 /* en */,
-				4DDFD44E1A52BBA8003AD7F7 /* de */,
+				4DFEE8A22515684100D50171 /* en */,
+				4DFEE8A6251568CD00D50171 /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -502,21 +586,25 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4DAB299419C24CF300AF04FF /* Debug */ = {
+		4D44AE282513FE5400ED5142 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -525,16 +613,18 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = V3YNQKY4J7;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -542,35 +632,41 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		4DAB299519C24CF300AF04FF /* Release */ = {
+		4D44AE292513FE5400ED5142 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -579,16 +675,18 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = V3YNQKY4J7;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -596,89 +694,98 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		4DAB299719C24CF300AF04FF /* Debug */ = {
+		4D44AE2B2513FE5400ED5142 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 403;
 				DEVELOPMENT_TEAM = V3YNQKY4J7;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Refracto/Refracto-Prefix.pch";
 				INFOPLIST_FILE = Refracto/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.4.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.mschmidt.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Refracto;
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.mschmidt.Refracto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4DAB299819C24CF300AF04FF /* Release */ = {
+		4D44AE2C2513FE5400ED5142 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 403;
 				DEVELOPMENT_TEAM = V3YNQKY4J7;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Refracto/Refracto-Prefix.pch";
 				INFOPLIST_FILE = Refracto/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.4.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.mschmidt.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = Refracto;
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.mschmidt.Refracto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		4DAB299A19C24CF300AF04FF /* Debug */ = {
+		4D44AE2E2513FE5400ED5142 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Refracto/Refracto-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V3YNQKY4J7;
 				INFOPLIST_FILE = RefractoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.mschmidt.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = RefractoTests;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.mschmidt.RefractoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Refracto.app/Refracto";
 			};
 			name = Debug;
 		};
-		4DAB299B19C24CF300AF04FF /* Release */ = {
+		4D44AE2F2513FE5400ED5142 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Refracto/Refracto-Prefix.pch";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V3YNQKY4J7;
 				INFOPLIST_FILE = RefractoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.mschmidt.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = RefractoTests;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.mschmidt.RefractoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Refracto.app/Refracto";
 			};
 			name = Release;
@@ -686,34 +793,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4DAB296B19C24CF300AF04FF /* Build configuration list for PBXProject "Refracto" */ = {
+		4D44ADFB2513FE5300ED5142 /* Build configuration list for PBXProject "Refracto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4DAB299419C24CF300AF04FF /* Debug */,
-				4DAB299519C24CF300AF04FF /* Release */,
+				4D44AE282513FE5400ED5142 /* Debug */,
+				4D44AE292513FE5400ED5142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4DAB299619C24CF300AF04FF /* Build configuration list for PBXNativeTarget "Refracto" */ = {
+		4D44AE2A2513FE5400ED5142 /* Build configuration list for PBXNativeTarget "Refracto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4DAB299719C24CF300AF04FF /* Debug */,
-				4DAB299819C24CF300AF04FF /* Release */,
+				4D44AE2B2513FE5400ED5142 /* Debug */,
+				4D44AE2C2513FE5400ED5142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4DAB299919C24CF300AF04FF /* Build configuration list for PBXNativeTarget "RefractoTests" */ = {
+		4D44AE2D2513FE5400ED5142 /* Build configuration list for PBXNativeTarget "RefractoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4DAB299A19C24CF300AF04FF /* Debug */,
-				4DAB299B19C24CF300AF04FF /* Release */,
+				4D44AE2E2513FE5400ED5142 /* Debug */,
+				4D44AE2F2513FE5400ED5142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4DAB296819C24CF300AF04FF /* Project object */;
+	rootObject = 4D44ADF82513FE5300ED5142 /* Project object */;
 }
