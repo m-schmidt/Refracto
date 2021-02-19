@@ -14,9 +14,11 @@ class ItemPickerController<T>: UITableViewController where T: ItemPickable {
 
     private var selection: T?
     private let action: Action<T>
+    private let allowReselection: Bool
 
-    init(selection: T? = nil, action: @escaping Action<T>) {
+    init(selection: T? = nil, allowReselection:Bool = false, action: @escaping Action<T>) {
         self.selection = selection
+        self.allowReselection = allowReselection
         self.action = action
         super.init(style: .insetGrouped)
     }
@@ -44,7 +46,7 @@ class ItemPickerController<T>: UITableViewController where T: ItemPickable {
     }
 
     private func handleSelection(ofItem item: T) {
-        if item != selection {
+        if item != selection || allowReselection {
             action(item) { state in
                 switch state {
                 case .update:

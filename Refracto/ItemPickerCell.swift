@@ -13,17 +13,17 @@ class ItemPickerCell: SettingsBaseTableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure<T: ItemPickable>(value: T) {
+    func configure<T: ItemPickable>(value: T, enabled: Bool = true) {
         accessoryView = DisclosureIndicator()
 
         if let textLabel = textLabel {
             textLabel.text = T.localizedTitleDescription
-            textLabel.textColor = Colors.settingsCellForeground
+            textLabel.textColor = enabled ? Colors.settingsCellForeground : Colors.settingsCellDiabledForeground
         }
 
         if let detailTextLabel = detailTextLabel {
             detailTextLabel.text = value.localizedShortItemDescription
-            detailTextLabel.textColor = Colors.settingsCellSecondaryForeground
+            detailTextLabel.textColor = enabled ? Colors.settingsCellSecondaryForeground : Colors.settingsCellDiabledForeground
         }
     }
 }

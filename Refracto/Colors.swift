@@ -22,6 +22,8 @@ final class Colors {
                 return UIColor(hex: 0x66e5fe)
             case .Gray:
                 return UIColor(hex: 0xbbd553)
+            case .Steel:
+                return UIColor(hex: 0xfe661a)
             default:
                 return UIColor(named: "AccentColor")!
             }
@@ -37,6 +39,8 @@ final class Colors {
                 return UIColor(hex: 0x1f2533)
             case .Gray:
                 return UIColor(hex: 0x2e3033)
+            case .Steel:
+                return UIColor(hex: 0x292e33)
             default:
                 return .systemGroupedBackground
             }
@@ -48,7 +52,9 @@ final class Colors {
         case .Blue:
             return UIColor(hex: 0x36435a).withAlphaComponent(0.9)
         case .Gray:
-            return UIColor(hex: 0x45484C).withAlphaComponent(0.9)
+            return UIColor(hex: 0x45484c).withAlphaComponent(0.9)
+        case .Steel:
+            return UIColor(hex: 0x53575c).withAlphaComponent(0.9)
         default:
             return nil
         }
@@ -60,6 +66,8 @@ final class Colors {
             case .Blue:
                 return UIColor(hex: 0xfefefe)
             case .Gray:
+                return UIColor(hex: 0xfefefe)
+            case .Steel:
                 return UIColor(hex: 0xfefefe)
             default:
                 return .label
@@ -74,6 +82,8 @@ final class Colors {
                 return UIColor(hex: 0x7a8998)
             case .Gray:
                 return UIColor(hex: 0x899099)
+            case .Steel:
+                return UIColor(hex: 0xb7c1cb)
             default:
                 return .systemGray
             }
@@ -94,6 +104,8 @@ final class Colors {
                 return UIColor(hex: 0x171c26)
             case .Gray:
                 return UIColor(hex: 0x222426)
+            case .Steel:
+                return UIColor(hex: 0x1e2226)
             case .Black:
                 return UIColor(hex: 0x050505)
             default:
@@ -111,6 +123,8 @@ final class Colors {
                 return UIColor(hex: 0x1f2533)
             case .Gray:
                 return UIColor(hex: 0x2e3033)
+            case .Steel:
+                return UIColor(hex: 0x292e33)
             default:
                 return .secondarySystemGroupedBackground
             }
@@ -126,6 +140,8 @@ final class Colors {
                 return UIColor(hex: 0x2e384d)
             case .Gray:
                 return UIColor(hex: 0x45484c)
+            case .Steel:
+                return UIColor(hex: 0x3d444c)
             default:
                 return .systemGray4
             }
@@ -138,6 +154,8 @@ final class Colors {
             case .Blue:
                 return UIColor(hex: 0xfefefe)
             case .Gray:
+                return UIColor(hex: 0xfefefe)
+            case .Steel:
                 return UIColor(hex: 0xfefefe)
             default:
                 return .label
@@ -152,6 +170,8 @@ final class Colors {
                 return UIColor(hex: 0x7a8998)
             case .Gray:
                 return UIColor(hex: 0x899099)
+            case .Steel:
+                return UIColor(hex: 0xb7c1cb)
             default:
                 return .secondaryLabel
             }
@@ -165,6 +185,8 @@ final class Colors {
                 return UIColor(hex: 0x7a8998)
             case .Gray:
                 return UIColor(hex: 0x899099)
+            case .Steel:
+                return UIColor(hex: 0xb7c1cb)
             default:
                 return .systemGray
             }
@@ -177,7 +199,9 @@ final class Colors {
             case .Blue:
                 return UIColor(hex: 0x4b515c)
             case .Gray:
-                return UIColor(hex: 0x45484C)
+                return UIColor(hex: 0x45484c)
+            case .Steel:
+                return UIColor(hex: 0x3d444c)
             default:
                 return .opaqueSeparator
             }
@@ -191,6 +215,8 @@ final class Colors {
                 return UIColor(hex: 0x2e384d)
             case .Gray:
                 return UIColor(hex: 0x505459)
+            case .Steel:
+                return UIColor(hex: 0x475059)
             default:
                 return .systemGray4
             }
@@ -213,6 +239,8 @@ final class Colors {
                 return UIColor(hex: 0x1f2533)
             case .Gray:
                 return UIColor(hex: 0x2e3033)
+            case .Steel:
+                return UIColor(hex: 0x292e33)
             default:
                 return .systemBackground
             }
@@ -225,6 +253,8 @@ final class Colors {
             case .Blue:
                 return UIColor(hex: 0xfefefe)
             case .Gray:
+                return UIColor(hex: 0xfefefe)
+            case .Steel:
                 return UIColor(hex: 0xfefefe)
             default:
                 return .label
@@ -239,6 +269,8 @@ final class Colors {
                 return UIColor(hex: 0x7a8998)
             case .Gray:
                 return UIColor(hex: 0x899099)
+            case .Steel:
+                return UIColor(hex: 0xb7c1cb)
             default:
                 return .secondaryLabel
             }
@@ -254,6 +286,8 @@ final class Colors {
                 return UIColor(hex: 0x4b515c)
             case .Gray:
                 return UIColor(hex: 0x45484C)
+            case .Steel:
+                return UIColor(hex: 0x3d444c)
             default:
                 return .opaqueSeparator
             }
@@ -272,6 +306,8 @@ final class Colors {
                 return UIColor(hex: 0x1f2533)
             case .Gray:
                 return UIColor(hex: 0x2e3033)
+            case .Steel:
+                return UIColor(hex: 0x292e33)
             default:
                 return .systemBackground
             }
@@ -284,6 +320,8 @@ final class Colors {
             case .Blue:
                 return UIColor(hex: 0xfefefe)
             case .Gray:
+                return UIColor(hex: 0xfefefe)
+            case .Steel:
                 return UIColor(hex: 0xfefefe)
             default:
                 return .label
@@ -303,6 +341,8 @@ final class Colors {
                 return UIColor(hex: 0x171c26)
             case .Gray:
                 return UIColor(hex: 0x222426)
+            case .Steel:
+                return UIColor(hex: 0x1e2226)
             case .Black:
                 return .systemBackground
             default:
@@ -318,6 +358,8 @@ final class Colors {
                 return UIColor(hex: 0xfefefe)
             case .Gray:
                 return UIColor(hex: 0xfefefe)
+            case .Steel:
+                return UIColor(hex: 0xfefefe)
             default:
                 return .label
             }
@@ -331,6 +373,8 @@ final class Colors {
                 return UIColor(hex: 0x7a8998)
             case .Gray:
                 return UIColor(hex: 0x899099)
+            case .Steel:
+                return UIColor(hex: 0xb7c1cb)
             default:
                 return .secondaryLabel
             }
@@ -345,7 +389,9 @@ final class Colors {
             case .Blue:
                 return UIColor(hex: 0x36435a)
             case .Gray:
-                return UIColor(hex: 0x45484C)
+                return UIColor(hex: 0x45484c)
+            case .Steel:
+                return UIColor(hex: 0x3d444c)
             default:
                 return .opaqueSeparator
             }

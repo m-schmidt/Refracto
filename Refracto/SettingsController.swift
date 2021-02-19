@@ -23,6 +23,16 @@ enum SupportRow: Int, CaseIterable {
 }
 
 
+fileprivate func canSendMail() -> Bool {
+    return MFMailComposeViewController.canSendMail()
+}
+
+fileprivate func supportsAlternateIcons() -> Bool {
+    return UIApplication.shared.supportsAlternateIcons
+}
+
+
+
 // MARK: - SettingsController
 
 class SettingsController: UITableViewController {
@@ -111,9 +121,16 @@ extension SettingsController {
     override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         switch Section(rawValue: indexPath.section)! {
         case .Settings:
-            return SettingsRow(rawValue: indexPath.row) != .WortCorrection
+            switch SettingsRow(rawValue: indexPath.row) {
+            case .Icon:
+                return supportsAlternateIcons()
+            case .WortCorrection:
+                return false
+            default:
+                return true
+            }
         case .Support:
-            return SupportRow(rawValue: indexPath.row) != .Contact || MFMailComposeViewController.canSendMail()
+            return SupportRow(rawValue: indexPath.row) != .Contact || canSendMail()
         case .AppStore:
             return true
         }
@@ -133,7 +150,7 @@ extension SettingsController {
                     }
                 }
             case .Icon:
-                controller = ItemPickerController<AppIcon>(selection: AppIcon.current) { icon, continuation in
+                controller = ItemPickerController<AppIcon>(selection: AppIcon.current, allowReselection: true) { icon, continuation in
                     UIApplication.shared.setAlternateIconName(icon.alternateIconId) { error in
                         continuation(error == nil ? .updateAndDismiss : .abort)
                     }
@@ -192,7 +209,7 @@ extension SettingsController {
         case .Settings:
             return "FooterSettings".localized
         case .Support:
-            return MFMailComposeViewController.canSendMail() ? nil : "FooterSupportNoMail".localized
+            return canSendMail() ? nil : "FooterSupportNoMail".localized
         case .AppStore:
             return "FooterStore".localized
         }
@@ -220,7 +237,7 @@ extension SettingsController {
                 case .Theme:
                     return pickerCell(forRowAt: indexPath, content: Settings.shared.theme)
                 case .Icon:
-                    return pickerCell(forRowAt: indexPath, content: AppIcon.current)
+                    return pickerCell(forRowAt: indexPath, content: AppIcon.current, enabled: supportsAlternateIcons())
                 case .Display:
                     return pickerCell(forRowAt: indexPath, content: Settings.shared.displayScheme)
                 case .WortCorrection:
@@ -234,7 +251,7 @@ extension SettingsController {
             case .Website:
                 return linkCell(forRowAt: indexPath, title: "WebsiteTitle".localized)
             case .Contact:
-                return linkCell(forRowAt: indexPath, title: "ContactTitle".localized, enabled: MFMailComposeViewController.canSendMail(), isLink: false)
+                return linkCell(forRowAt: indexPath, title: "ContactTitle".localized, enabled: canSendMail(), isLink: false)
             default:
                 fatalError("Illegal row \(indexPath.row) for Support section requested")
             }
@@ -245,9 +262,9 @@ extension SettingsController {
         }
     }
 
-    fileprivate func pickerCell<T: ItemPickable>(forRowAt indexPath: IndexPath, content: T) -> UITableViewCell {
+    fileprivate func pickerCell<T: ItemPickable>(forRowAt indexPath: IndexPath, content: T, enabled: Bool = true) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: ItemPickerCell.identifier, for: indexPath) as! ItemPickerCell
-        cell.configure(value: content)
+        cell.configure(value: content, enabled: enabled)
         return cell
     }
 

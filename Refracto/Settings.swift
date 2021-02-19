@@ -9,6 +9,7 @@ enum Theme: String, Codable, ItemPickable {
     case Dark   = "ThemeDark"
     case Blue   = "ThemeBlue"
     case Gray   = "ThemeGray"
+    case Steel  = "ThemeSteel"
     case Black  = "ThemeBlack"
 }
 
@@ -20,6 +21,7 @@ extension Theme {
         case .Dark:   return .lightContent
         case .Blue:   return .lightContent
         case .Gray:   return .lightContent
+        case .Steel:  return .lightContent
         case .Black:  return .lightContent
         }
     }
@@ -31,6 +33,7 @@ extension Theme {
         case .Dark:   return .dark
         case .Blue:   return .unspecified
         case .Gray:   return .unspecified
+        case .Steel:  return .unspecified
         case .Black:  return .dark
         }
     }

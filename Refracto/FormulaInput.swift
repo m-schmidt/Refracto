@@ -63,10 +63,9 @@ class FormulaInput: ReadableWidthView {
         dot.translatesAutoresizingMaskIntoConstraints = false
         addSubview(dot)
 
-        let constraints = [
+        NSLayoutConstraint.activate([
             dot.centerXAnchor.constraint(equalTo: centerXAnchor),
-            dot.topAnchor.constraint(equalTo: topAnchor) ]
-        NSLayoutConstraint.activate(constraints)
+            dot.topAnchor.constraint(equalTo: topAnchor) ])
     }
 }
 

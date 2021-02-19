@@ -38,13 +38,13 @@ extension AppDelegate {
 // MARK: - Porting Old Preferences
 
 extension AppDelegate {
-    private func remove(key: String) {
+    private func removeObject(forKey key: String) {
         guard let _ = UserDefaults.standard.object(forKey: key) else { return }
         UserDefaults.standard.removeObject(forKey: key)
         UserDefaults.standard.synchronize()
     }
 
-    private func extractAndRemoveValue<T>(forKey key: String) -> T? {
+    private func extractAndRemoveObject<T>(forKey key: String) -> T? {
         guard let v = UserDefaults.standard.object(forKey: key) as? T else { return nil }
         UserDefaults.standard.removeObject(forKey: key)
         if UserDefaults.standard.synchronize() {
@@ -57,22 +57,22 @@ extension AppDelegate {
     private func transitionOldPreferences() {
         guard Settings.shared.isFirstLaunch else { return }
 
-        remove(key: "displayUnit")
-        remove(key: "darkInterface")
+        removeObject(forKey: "displayUnit")
+        removeObject(forKey: "darkInterface")
 
-        if let v: Bool = extractAndRemoveValue(forKey: "firstLaunch") {
+        if let v: Bool = extractAndRemoveObject(forKey: "firstLaunch") {
             Settings.shared.isFirstLaunch = v
         }
-        if let v: Double = extractAndRemoveValue(forKey: "inputBeforeRefraction") {
+        if let v: Double = extractAndRemoveObject(forKey: "inputBeforeRefraction") {
             Settings.shared.initialRefraction = v
         }
-        if let v: Double = extractAndRemoveValue(forKey: "inputCurrentRefraction") {
+        if let v: Double = extractAndRemoveObject(forKey: "inputCurrentRefraction") {
             Settings.shared.finalRefraction = v
         }
-        if let v: Double = extractAndRemoveValue(forKey: "wortCorrectionDivisor") {
+        if let v: Double = extractAndRemoveObject(forKey: "wortCorrectionDivisor") {
             Settings.shared.wortCorrection = v
         }
-        if let v: Double = extractAndRemoveValue(forKey: "specificGravityMode") {
+        if let v: Double = extractAndRemoveObject(forKey: "specificGravityMode") {
             switch v {
             case 1: Settings.shared.formula = .Standard
             case 2: Settings.shared.formula = .TerrillLinear
