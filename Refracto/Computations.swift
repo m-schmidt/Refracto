@@ -1,6 +1,6 @@
 //  Computations.swift - Refractometer Computations
 //
-//  Refractometer formula ""Standard" is according Louis K. Bonham
+//  Refractometer formula "Standard" is according Louis K. Bonham:
 //  "The Use of Handheld Refractometers by Homebrewers" in the Zymurgy January/February 2001
 //
 //  Refractometer formulas of Petr Novotný:
