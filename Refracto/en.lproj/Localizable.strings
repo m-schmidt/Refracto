@@ -40,7 +40,7 @@
 "AppIconBlack" = "Black";
 
 "DisplaySchemeTitle" = "Display";
-"DisplaySchemeFooter" = "The modern scheme displays °Plato together with Specific Gracity but skips the uncommon values for real attenuation and actual final gravity.\n\nThe classic schemes stick to a single unit and show the additional values like earlier versions of Refracto.";
+"DisplaySchemeFooter" = "The modern scheme displays °Plato together with Specific Gravity but skips the uncommon values for real attenuation and actual final gravity.\n\nThe classic schemes stick to a single unit and show the additional values like earlier versions of Refracto.";
 "DisplaySchemeModern" = "Modern  –  °Plato and SG";
 "DisplaySchemeModernShort" = "°Plato and SG";
 "DisplaySchemeOldSG" = "Classic  –  SG";
