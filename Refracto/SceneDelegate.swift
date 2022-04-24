@@ -34,6 +34,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         root.tabBar.isTranslucent = false
         root.tabBar.unselectedItemTintColor = Colors.barSecondaryForeground
+
+        // See also [https://developer.apple.com/forums/thread/682420]
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = Colors.barBackground
+            root.tabBar.standardAppearance = appearance
+            root.tabBar.scrollEdgeAppearance = appearance
+        }
+
         return root
     }
 }
