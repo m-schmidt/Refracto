@@ -4,37 +4,40 @@ import Foundation
 import UIKit
 
 enum Theme: String, Codable, ItemPickable {
-    case System = "ThemeSystem"
-    case Light  = "ThemeLight"
-    case Dark   = "ThemeDark"
-    case Blue   = "ThemeBlue"
-    case Gray   = "ThemeGray"
-    case Steel  = "ThemeSteel"
-    case Black  = "ThemeBlack"
+    case System     = "ThemeSystem"
+    case Light      = "ThemeLight"
+    case Dark       = "ThemeDark"
+    case Blue       = "ThemeBlue"
+    case Gray       = "ThemeGray"
+    case Steel      = "ThemeSteel"
+    case Black      = "ThemeBlack"
+    case YellowBlue = "ThemeYellowBlue"
 }
 
 extension Theme {
     var statusBarStyle: UIStatusBarStyle {
         switch self {
-        case .System: return .default
-        case .Light:  return .darkContent
-        case .Dark:   return .lightContent
-        case .Blue:   return .lightContent
-        case .Gray:   return .lightContent
-        case .Steel:  return .lightContent
-        case .Black:  return .lightContent
+        case .System:     return .default
+        case .Light:      return .darkContent
+        case .Dark:       return .lightContent
+        case .Blue:       return .lightContent
+        case .Gray:       return .lightContent
+        case .Steel:      return .lightContent
+        case .Black:      return .lightContent
+        case .YellowBlue: return .lightContent
         }
     }
 
     var overrideUserInterfaceStyle: UIUserInterfaceStyle {
         switch self {
-        case .System: return .unspecified
-        case .Light:  return .light
-        case .Dark:   return .dark
-        case .Blue:   return .unspecified
-        case .Gray:   return .unspecified
-        case .Steel:  return .unspecified
-        case .Black:  return .dark
+        case .System:     return .unspecified
+        case .Light:      return .light
+        case .Dark:       return .dark
+        case .Blue:       return .unspecified
+        case .Gray:       return .unspecified
+        case .Steel:      return .unspecified
+        case .Black:      return .dark
+        case .YellowBlue: return .unspecified
         }
     }
 }
