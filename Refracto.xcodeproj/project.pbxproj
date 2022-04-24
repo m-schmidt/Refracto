@@ -342,8 +342,8 @@
 				4D0B6B25258EA29200504315 /* Icon Black */,
 				4DFEE935251769B600D50171 /* Icon Blue */,
 				4DFEE936251769BE00D50171 /* Icon Red */,
-				4DFEE937251769C600D50171 /* Icon Yellow */,
 				4DFEE938251769CE00D50171 /* Icon White */,
+				4DFEE937251769C600D50171 /* Icon Yellow */,
 			);
 			name = "Alternate Icons";
 			sourceTree = "<group>";
