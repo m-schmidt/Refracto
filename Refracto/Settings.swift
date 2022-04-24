@@ -91,7 +91,7 @@ final class Settings {
     @Setting(defaultValue: .Modern, notification: Settings.updateNotification)
     var displayScheme: DisplayScheme
 
-    @Setting(defaultValue: .Standard, notification: Settings.updateNotification)
+    @Setting(defaultValue: .NovotnyLinear, notification: Settings.updateNotification)
     var formula: RefractometerFormula
 
     @Setting(key: "WortCorrection", defaultValue: 1.030, notification: Settings.updateNotification)
