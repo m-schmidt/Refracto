@@ -12,8 +12,8 @@ extension UIFont {
 private extension UIFontDescriptor {
     var monospacedDigitFontDescriptor: UIFontDescriptor {
         let settings =
-            [[ UIFontDescriptor.FeatureKey.featureIdentifier: kNumberSpacingType,
-               UIFontDescriptor.FeatureKey.typeIdentifier: kMonospacedNumbersSelector]
+            [[ UIFontDescriptor.FeatureKey.type: kNumberSpacingType,
+               UIFontDescriptor.FeatureKey.selector: kMonospacedNumbersSelector]
             ]
         let attributes = [UIFontDescriptor.AttributeName.featureSettings: settings]
         return self.addingAttributes(attributes)
