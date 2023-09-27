@@ -10,13 +10,13 @@ enum PickerActionState {
 }
 
 class ItemPickerController<T>: UITableViewController where T: ItemPickable {
-    typealias Action<T> = (T, @escaping (PickerActionState) -> Void) -> Void
+    typealias Action = (T, @escaping (PickerActionState) -> Void) -> Void
 
     private var selection: T?
-    private let action: Action<T>
+    private let action: Action
     private let allowReselection: Bool
 
-    init(selection: T? = nil, allowReselection:Bool = false, action: @escaping Action<T>) {
+    init(selection: T? = nil, allowReselection:Bool = false, action: @escaping Action) {
         self.selection = selection
         self.allowReselection = allowReselection
         self.action = action
