@@ -3,8 +3,21 @@
 import UIKit
 
 class ReadableWidthView: UIView {
-    private var firstLayout = true
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.registerForTraitChanges([UITraitHorizontalSizeClass.self]) { (self: Self, previousTraitCollection: UITraitCollection) in
+            if self.traitCollection.horizontalSizeClass != previousTraitCollection.horizontalSizeClass {
+                self.handleTraitChange()
+            }
+        }
+    }
 
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private var firstLayout = true
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         if firstLayout {
@@ -13,15 +26,8 @@ class ReadableWidthView: UIView {
         }
     }
 
-    var regularConstraints: [NSLayoutConstraint] = []
-    var compactConstraints: [NSLayoutConstraint] = []
-
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        if traitCollection.horizontalSizeClass != previousTraitCollection?.horizontalSizeClass {
-            handleTraitChange()
-        }
-    }
+    private var regularConstraints: [NSLayoutConstraint] = []
+    private var compactConstraints: [NSLayoutConstraint] = []
 
     private func handleTraitChange() {
         if traitCollection.horizontalSizeClass == .compact && traitCollection.verticalSizeClass == .regular {
