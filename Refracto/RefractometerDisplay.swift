@@ -24,7 +24,7 @@ class RefractometerDisplay: ReadableWidthView {
     }
 
     deinit {
-        unregisterUpdateNotifications()
+        NotificationCenter.default.removeObserver(self)
     }
 
     override var intrinsicContentSize: CGSize {
@@ -40,12 +40,10 @@ extension RefractometerDisplay {
         let notification = Settings.updateNotification
         let main = OperationQueue.main
         NotificationCenter.default.addObserver(forName: notification, object: nil, queue: main) { [weak self] _ in
-            self?.update()
+            Task { @MainActor [weak self] in
+                self?.update()
+            }
         }
-    }
-
-    private func unregisterUpdateNotifications() {
-        NotificationCenter.default.removeObserver(self)
     }
 
     func update() {

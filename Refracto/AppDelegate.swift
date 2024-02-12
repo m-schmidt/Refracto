@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 // MARK: - Haptic Feedback
 
+@MainActor
 fileprivate var generator: UIImpactFeedbackGenerator? = nil
 
 extension AppDelegate {

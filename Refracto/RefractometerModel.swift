@@ -2,6 +2,7 @@
 
 import Foundation
 
+@MainActor
 final class RefractometerModel: NSObject {
     static var originalExtract: Double {
         let s = Settings.shared

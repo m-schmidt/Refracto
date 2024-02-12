@@ -54,6 +54,7 @@ enum AppIcon: String, Codable, ItemPickable {
 extension AppIcon {
     static let defaultIcon: AppIcon = .IconGreen
 
+    @MainActor
     static var current: Self {
         guard let id = UIApplication.shared.alternateIconName, let icon = AppIcon(rawValue: id) else { return Self.defaultIcon }
         return icon

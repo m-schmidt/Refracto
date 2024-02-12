@@ -23,10 +23,12 @@ enum SupportRow: Int, CaseIterable {
 }
 
 
+@MainActor
 fileprivate func canSendMail() -> Bool {
     return MFMailComposeViewController.canSendMail()
 }
 
+@MainActor
 fileprivate func supportsAlternateIcons() -> Bool {
     return UIApplication.shared.supportsAlternateIcons
 }
@@ -92,13 +94,15 @@ extension SettingsController {
 // MARK: - MFMailComposeViewControllerDelegate
 
 extension SettingsController : MFMailComposeViewControllerDelegate {
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        dismiss(animated: true) {
-            if result == .failed {
-                let ok = UIAlertAction(title: "OK", style: .default)
-                let alert = UIAlertController(title: "MailFailedTitle".localized,  message: "MailFailedMessage".localized, preferredStyle: .alert)
-                alert.addAction(ok)
-                self.present(alert, animated: true)
+    nonisolated func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        Task { @MainActor in
+            dismiss(animated: true) {
+                if result == .failed {
+                    let ok = UIAlertAction(title: "OK", style: .default)
+                    let alert = UIAlertController(title: "MailFailedTitle".localized,  message: "MailFailedMessage".localized, preferredStyle: .alert)
+                    alert.addAction(ok)
+                    self.present(alert, animated: true)
+                }
             }
         }
     }

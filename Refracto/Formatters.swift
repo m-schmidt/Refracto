@@ -36,6 +36,7 @@ extension NumberFormatter {
     }
 }
 
+@MainActor
 struct Formatter {
     static var brix: NumberFormatter = {
         formatter("#0.0")
