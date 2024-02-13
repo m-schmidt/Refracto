@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+  <head>
+    <title>Refracto</title>
+
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Refracto,Refractometer,Refraktometer,Brix,Plato,Specific Gracity,Homebrew,Hobbybrauer,Beer,Bier,All Grain,Brewing,App,iOS,iPhone,iPad">
+    <meta name="description" content="Refracto is an iOS app for homebrewers to convert refractometer measurements during fermentation processes to useful values like final gravity and attenuation.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="supported-color-schemes" content="light dark">
+
+    <link rel="stylesheet" href="Site/css/fonts.min.css">
+    <link rel="stylesheet" href="Site/css/style.min.css">
+    <link rel="stylesheet" href="Site/css/animate.min.css">
+    <link rel="stylesheet" href="Site/css/magnific-popup.min.css">
+
+    <script src="Site/js/jquery.min.js"></script>
+    <script src="Site/js/jquery.animate.js"></script>
+    <script src="Site/js/jquery.magnific-popup.min.js"></script>
+
+    <meta name="theme-color" content="#d95c31" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#994123" media="(prefers-color-scheme: dark)">
+  </head>
+
+  <body>
+    <div class="page-box">
+
+      <main>
+        <div class="main-box">
+
+          <div class="vspace-l">
+            <h1>Refracto</h1>
+            <p><em>Refracto</em> is a user friendly tool for homebrewers that will help you to convert your re&shy;frac&shy;tome&shy;ter mea&shy;sure&shy;ments during a fer&shy;men&shy;ta&shy;tion process from <em>°Brix</em> to <em>SG</em> and <em>°Plato</em>. It au&shy;to&shy;matical&shy;ly com&shy;pen&shy;sates for the alcohol effect during fer&shy;men&shy;ta&shy;tion.</p>
+            <div class="topspace-s">
+              <h4>System Requirements</h4>
+              <p>iPhone or iPad running iOS 16 and a Re&shy;frac&shy;tome&shy;ter with a <em>Brix</em> scale.</p>
+            </div>
+            <div class="topspace-l">
+              <div class="center">
+                <div class="appstore appstore--normal">
+                  <a href="https://apps.apple.com/app/id954981822" title="Download on the App Store">
+                    <img src="Site/images/AppStore.svg" alt="Download on the App Store" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alternate-background">
+            <div class="alternate-box">
+              <h2>How to Use Refracto</h2>
+              <div class="column-container">
+                <div class="column-45">
+                  <div class="frame-left">
+                    <p>
+                      <ol>
+                        <li><p>Swipe vertically to enter your <em>initial</em> re&shy;frac&shy;tome&shy;ter reading, i.e. the mea&shy;sure&shy;ment result for the <em>original wort</em>, just before adding the yeast.</p></li>
+                        <li><p>Swipe vertically to enter your <em>current</em> re&shy;frac&shy;tome&shy;ter reading, i.e. a mea&shy;sure&shy;ment result <em>after</em> the fer&shy;men&shy;ta&shy;tion process has started.</p></li>
+                        <li><p>Swipe horizontally to switch between the <em>computation modes</em>. Available modes are the <em>Standard</em> formula according <em>Louis K. Bonham</em>, the linear and quadratic formula of <em>Petr Novotný</em>, as well as <em>Sean Terrill’s</em> linear and cubic formulas.</p>
+                            <p>In general, the Standard and Novotný formulas compute the best overall results. The Terrill formulas are optimized for already finished fermentations.</p></li>
+                        <li><p>You are done!</p>
+                            <p>In the upper part of the screen you can now see the computed values for your beer. The next section describes the computed values in detail.</p></li>
+                      </ol>
+                    </p>
+                  </div>
+                </div>
+                <div class="column-55">
+                  <div class="frame-right">
+                    <div class="topspace-m">
+                      <picture>
+                        <source srcset="Site/images/RefractoInputDark.png" media="(prefers-color-scheme: dark)">
+                        <img width="360" src="Site/images/RefractoInput.png" alt="How to use Refracto  — Description of Input Areas at Lower Part of Screen." />
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alternate-background">
+            <div class="alternate-box">
+              <h2>Computed Values</h2>
+              <p><em>Refracto</em> computes the following values whenever you change any of its input values:</p>
+              <div class="column-container">
+                <div class="column-45">
+                  <div class="frame-left">
+                    <p>
+                      <ol>
+                        <li><p>The resulting <em>Original</em> and <em>Final Gravity</em> expressed as degrees Plato (°P).</p></li>
+                        <li><p>The resulting <em>Original</em> and <em>Final Gravity</em> expressed as Specific Gravity (SG).</p></li>
+                        <li><p>The amount of sugars consumed by the yeast so far, displayed as <em>apparent</em> attenuation and the estimated <em>alcohol concentration</em> as percent by volume (ABV).</p>
+                            <p>The apparent gravity corresponds to the value you would measure with a hy&shy;drom&shy;e&shy;ter.</p></li>
+                      </ol>
+                    </p>
+                    <p>The computed values can be customized. This is described in the next section.</p>
+                  </div>
+                </div>
+                <div class="column-55">
+                  <div class="frame-right">
+                    <div class="topspace-m">
+                      <picture>
+                        <source srcset="Site/images/RefractoOutputDark.png" media="(prefers-color-scheme: dark)">
+                        <img width="360" src="Site/images/RefractoOutput.png" alt="Computed values — Detailed Description of Output Area at Upper Part of Screen." />
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alternate-background">
+            <div class="alternate-box">
+              <h2>Settings</h2>
+              <p>The settings tab allows you to configure <em>Refracto</em> to your needs. Available options are:</p>
+              <div class="column-container">
+                <div class="column-45">
+                  <div class="frame-left">
+                    <p>
+                      <ol>
+                        <li><p>Use this item to select between the available themes. The Screenshots section below shows the variants in full detail.</p></li>
+                        <li><p>Use this item to select the application icon for <em>Refracto</em> on the Home Screen.</p></li>
+                        <li><p>Here you can customize how computed values are displayed. Select either the default to display Plato and SG at the same time or choose a single unit like older versions of <em>Refracto</em>.</p></li>
+                        <li><p>The <em>Wort Correction Factor</em> is used to convert your initial Brix reading of the unfermented wort into the Original Gravity.</p>
+                            <p>The brewing literature mentions typical values for this factor in the range from 1∕1.02 to 1∕1.06. By default <em>Refracto</em> uses 1∕1.03.</p>
+                            <p>In doubt, select a factor between 1∕1.03 and 1∕1.04 which are the most commonly used values.</p></li>
+                      </ol>
+                    </p>
+                  </div>
+                </div>
+                <div class="column-55">
+                  <div class="frame-right">
+                    <div class="topspace-m">
+                      <picture>
+                        <source srcset="Site/images/RefractoSettingsDark.png" media="(prefers-color-scheme: dark)">
+                        <img width="360" src="Site/images/RefractoSettings.png" alt="Settings Tab — Description of Application Preferences." />
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="vspace-l">
+            <div class="testimonials center hugeprint">
+              <div class="testimonial-box">
+                <div class="vspace-m">
+                  <div class="testimonial pulse animated delay-1s">
+                    <p>“After using this App, I’m going to put my hy&shy;drom&shy;e&shy;ter on a dusty shelf.”</p>
+                  </div>
+                  <div class="fineprint testimonial-name">
+                    <p>User “52guitars”</p>
+                  </div>
+                </div>
+                <div class="vspace-m">
+                  <div class="testimonial vspace-m pulse animated delay-2s">
+                    <p>“Excellent companion.”</p>
+                  </div>
+                  <div class="fineprint testimonial-name">
+                    <p>User “Forquare”</p>
+                  </div>
+                </div>
+                <div class="vspace-m">
+                  <div class="testimonial vspace-m pulse animated delay-2s">
+                    <p>“Die Umsetzung befriedet Spieltrieb und Lernkurve gleichermaßen. Ein must-have für die Hosentasche.”</p>
+                  </div>
+                  <div class="fineprint testimonial-name">
+                    <p>User “Olibaer”</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alternate-background">
+            <div class="alternate-box center">
+              <h1>Available Themes</h1>
+              <div class="vspace-s">
+              </div>
+              <div class="column-container">
+                <div class="column-33">
+                  <div class="frame-left">
+                    <a href="Site/images/RefractoThemeLight.png" class="screenshot-link">
+                      <img width="200" src="Site/images/RefractoThemeLight.png" loading="lazy" alt="Bright Theme" />
+                    </a>
+                  </div>
+                </div>
+                <div class="column-33">
+                  <a href="Site/images/RefractoThemeDark.png" class="screenshot-link">
+                    <img width="200" src="Site/images/RefractoThemeDark.png" loading="lazy" alt="Dark Theme" />
+                  </a>
+                </div>
+                <div class="column-33">
+                  <div class="frame-right">
+                    <a href="Site/images/RefractoThemeBlue.png" class="screenshot-link">
+                      <img width="200" src="Site/images/RefractoThemeBlue.png" loading="lazy" alt="Blue Theme" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="vspace-s">
+              </div>
+              <div class="column-container">
+                <div class="column-33">
+                  <div class="frame-left">
+                    <a href="Site/images/RefractoThemeGray.png" class="screenshot-link">
+                      <img width="200" src="Site/images/RefractoThemeGray.png" loading="lazy" alt="Gray Theme" class="thumbnail" />
+                    </a>
+                  </div>
+                </div>
+                <div class="column-33">
+                  <a href="Site/images/RefractoThemeSteel.png" class="screenshot-link">
+                    <img width="200" src="Site/images/RefractoThemeSteel.png" loading="lazy" alt="Steel Theme" class="thumbnail" />
+                  </a>
+                </div>
+                <div class="column-33">
+                  <div class="frame-right">
+                    <a href="Site/images/RefractoThemeBlack.png" class="screenshot-link">
+                      <img width="200" src="Site/images/RefractoThemeBlack.png" loading="lazy" alt="Black Theme" class="thumbnail" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="vspace-l">
+            <p class="first center largeprint pulse animated delay-1s">
+              <em>Refracto</em> is Open Source. Get the source code on <a href="https://github.com/m-schmidt/Refracto">GitHub.com</a>
+            </p>
+          </div>
+
+          <div class="alternate-green-background">
+            <div class="alternate-box center">
+              <div class="appstore appstore--inverted">
+                <a href="https://apps.apple.com/app/id954981822" title="Download on the App Store">
+                  <img src="Site/images/AppStore.svg" alt="Download on the App Store" />
+                </a>
+              </div>
+              <div class="topspace-m fineprint">
+                <p>© 2015-2024 Michael Schmidt. All rights reserved.</p>
+                <p><em>Apple, the Apple logo, iPad, and iPhone are trademarks of Apple&nbsp;Inc., registered in the U.S. and other countries. App&nbsp;Store is a service mark of Apple&nbsp;Inc.</em></p>
+              </div>
+             </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+    <script>
+    $('.screenshot-link').magnificPopup({
+      type: 'image',
+      removalDelay: 300,
+      mainClass: 'mfp-fade',
+      closeOnContentClick: true,
+    });
+    </script>
+
+  </body>
+</html>
