@@ -71,7 +71,7 @@ class SettingsController: UITableViewController {
 
 extension SettingsController {
     func openWebsite() {
-        guard let websiteURL = URLComponents(string: "http://mschmidt.me/refracto.html") else { return }
+        guard let websiteURL = URLComponents(string: "https://m-schmidt.github.io/Refracto/") else { return }
         UIApplication.shared.open(websiteURL.url!)
     }
 
