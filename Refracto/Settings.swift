@@ -84,6 +84,7 @@ enum RefractometerFormula: String, Codable, ItemPickable {
     case TerrillCubic     = "FormulaTerrillCubic"
 }
 
+@MainActor
 final class Settings {
     static let updateNotification = Notification.Name(rawValue: "SettingsUpdated")
 

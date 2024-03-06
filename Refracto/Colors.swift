@@ -2,6 +2,7 @@
 
 import UIKit
 
+@MainActor
 final class Colors {
     fileprivate static func effectiveTheme(_ traits: UITraitCollection) -> Theme {
         if Settings.shared.theme == .System {
